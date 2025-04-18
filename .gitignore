@@ -1,0 +1,12 @@
+# dipendenze
+/node_modules
+/.pnp
+.pnp.js
+
+# build
+/dist
+/build
+/.vite
+
+# ambiente
+.env

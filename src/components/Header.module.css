@@ -1,0 +1,44 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--white);
+  box-shadow: 0 2px 8px var(--shadow);
+  z-index: 1000;
+  animation: fadeInUp .8s ease-out;
+}
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.logo {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--blue-dark);
+  text-transform: uppercase;
+}
+.nav a {
+  margin-left: 2rem;
+  color: var(--gray-dark);
+  font-weight: 500;
+  position: relative;
+  transition: color .3s ease;
+}
+.nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--blue-mid);
+  bottom: -4px;
+  left: 0;
+  transition: width .3s ease;
+}
+.nav a:hover {
+  color: var(--blue-dark);
+}
+.nav a:hover::after {
+  width: 100%;
+}

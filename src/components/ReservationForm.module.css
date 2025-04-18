@@ -1,0 +1,46 @@
+.form {
+  max-width: 500px;
+  margin: 2rem auto;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: .5rem;
+  box-shadow: 0 4px 16px var(--shadow);
+  animation: fadeInUp .8s ease-out;
+}
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--blue-dark);
+  text-align: center;
+}
+.field {
+  margin-bottom: 1rem;
+}
+.input,
+.select {
+  width: 100%;
+  padding: .75rem 1rem;
+  border: 1px solid var(--gray-light);
+  border-radius: .25rem;
+  transition: border-color .3s ease;
+}
+.input:focus,
+.select:focus {
+  border-color: var(--blue-mid);
+  outline: none;
+}
+.button {
+  width: 100%;
+  padding: .75rem;
+  background-color: var(--blue-dark);
+  color: var(--white);
+  border: none;
+  border-radius: .25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color .3s ease, transform .3s ease;
+}
+.button:hover {
+  background-color: var(--blue-mid);
+  transform: scale(1.02);
+}

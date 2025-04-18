@@ -1,0 +1,19 @@
+.footer {
+  background-color: var(--blue-dark);
+  color: var(--white);
+  padding: 2rem 0;
+  text-align: center;
+}
+.footerText {
+  font-size: 0.9rem;
+  color: var(--white);
+}
+.footerLink {
+  color: var(--blue-light);
+  text-decoration: none;
+  margin: 0 .5rem;
+  transition: color .3s ease;
+}
+.footerLink:hover {
+  color: var(--white);
+}

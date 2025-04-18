@@ -1,0 +1,53 @@
+.cucina {
+  padding: 4rem 0;
+}
+.title {
+  font-size: 2.75rem;
+  color: var(--blue-dark);
+  text-align: center;
+  margin-bottom: 1rem;
+  animation: fadeInUp .8s ease-out;
+}
+.description {
+  font-size: 1rem;
+  color: var(--gray-dark);
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeInUp .8s ease-out .2s both;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.card {
+  background-color: var(--white);
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 16px var(--shadow);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+.cardImage {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  animation: fadeInUp .8s ease-out;
+}
+.cardContent {
+  padding: 1.5rem;
+}
+.cardTitle {
+  font-size: 1.25rem;
+  color: var(--blue-dark);
+  margin-bottom: .5rem;
+}
+.cardPrice {
+  font-size: 1rem;
+  color: var(--blue-mid);
+  font-weight: bold;
+}
