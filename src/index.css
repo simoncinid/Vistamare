@@ -1,61 +1,51 @@
-/* Reset */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-html, body {
-  height: 100%;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: var(--white);
-  color: var(--gray-dark);
-  scroll-behavior: smooth;
-}
+/* ------------------------------------------------------------------
+   Google Fonts – titoli in "Playfair Display", testi in "Source Sans Pro"
+------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
 
-/* Palette */
+/* ------------------------------------------------------------------
+   Palette & variabili CSS
+------------------------------------------------------------------- */
 :root {
-  --blue-dark: #003366;
+  --blue-dark: #002c5f;
   --blue-mid:  #0059a3;
-  --blue-light: #cce7ff;
-  --white:      #ffffff;
-  --gray-dark:  #333333;
-  --gray-light: #777777;
-  --shadow:     rgba(0, 0, 0, 0.1);
+  --blue-light:#d4e9ff;
+  --white:     #ffffff;
+  --gray-dark: #444;
+  --shadow:    rgba(0,0,0,.12);
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body:    'Source Sans Pro', sans-serif;
 }
 
-/* Utility Classes */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-.text-center { text-align: center; }
-.mt-4       { margin-top: 1rem; }
-.py-6       { padding: 1.5rem 0; }
-.btn {
-  display: inline-block;
-  padding: .75rem 1.5rem;
-  background-color: var(--blue-dark);
-  color: var(--white);
-  border-radius: .25rem;
-  text-decoration: none;
-  transition: background-color .3s ease, transform .3s ease;
-}
-.btn:hover {
-  background-color: var(--blue-mid);
-  transform: scale(1.05);
+/* ------------------------------------------------------------------
+   Reset di base + tipografia
+------------------------------------------------------------------- */
+*,
+*::before,
+*::after { box-sizing:border-box; margin:0; padding:0; }
+
+html,body { height:100%; }
+
+body{
+  font-family:var(--font-body);
+  color:var(--gray-dark);
+  background:#f5f9ff;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
+h1,h2,h3,h4,h5,h6{
+  font-family:var(--font-heading);
+  font-weight:700;
+  letter-spacing:.5px;
 }
-@keyframes zoomIn {
-  from { opacity: 0; transform: scale(1.2); }
-  to   { opacity: 1; transform: scale(1); }
-}
-@keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-50px); }
-  to   { opacity: 1; transform: translateX(0); }
+
+/* ------------------------------------------------------------------
+   Utilità rapide
+------------------------------------------------------------------- */
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 1rem;
 }
