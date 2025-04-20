@@ -1,26 +1,34 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './Header.module.css';
+import logo from '../assets/logo.png';
 
 export default function Header() {
+  const location = useLocation();
+
   return (
-    <motion.header
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      className={styles.header}
-    >
-      <div className={`${styles.inner} container`}>
-        <Link to="/" className={styles.logo}>
-          Vistamare
+    <header className={styles.header}>
+      <img src={logo} alt="Vistamare" className={styles.logo} />
+      <nav className={styles.nav}>
+        <Link 
+          to="/" 
+          className={`${styles.link} ${location.pathname === '/' ? styles.active : ''}`}
+        >
+          Home
         </Link>
-        <nav className={styles.nav}>
-          <Link to="/" >Home</Link>
-          <Link to="/cucina" >La Nostra Cucina</Link>
-          <Link to="/esperienze" >Le Nostre Esperienze</Link>
-        </nav>
-      </div>
-    </motion.header>
+        <Link 
+          to="/menu" 
+          className={`${styles.link} ${location.pathname === '/menu' ? styles.active : ''}`}
+        >
+          Menu
+        </Link>
+        <Link 
+          to="/prenotazioni" 
+          className={`${styles.link} ${location.pathname === '/prenotazioni' ? styles.active : ''}`}
+        >
+          Prenotazioni
+        </Link>
+      </nav>
+    </header>
   );
 }

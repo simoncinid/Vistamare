@@ -1,17 +1,20 @@
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
 import Home from './pages/Home';
-import Cucina from './pages/Cucina';
-import Esperienze from './pages/Esperienze';
+import Menu from './pages/Menu';
+import ScrollProgress from './components/ScrollProgress';
+import './App.css';
 
-export default function App() {
+function App() {
   return (
-    <Layout>
+    <div className="App">
+      <ScrollProgress />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cucina" element={<Cucina />} />
-        <Route path="/esperienze" element={<Esperienze />} />
+        <Route path="/menu" element={<Menu />} />
       </Routes>
-    </Layout>
+    </div>
   );
 }
+
+export default App;

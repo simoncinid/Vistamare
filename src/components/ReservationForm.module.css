@@ -1,46 +1,260 @@
-.form {
-  max-width: 500px;
-  margin: 2rem auto;
-  background-color: var(--white);
+.formContainer {
+  max-width: 600px;
+  margin: 0 auto;
   padding: 2rem;
-  border-radius: .5rem;
-  box-shadow: 0 4px 16px var(--shadow);
-  animation: fadeInUp .8s ease-out;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: -2rem;
 }
-.title {
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 2rem;
+  filter: brightness(0) invert(1);
+}
+
+.formHeader h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.step {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.step.active {
+  background: white;
+  transform: scale(1.1);
+}
+
+.step::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 1rem;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%);
+}
+
+.step:last-child::after {
+  display: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.formStep {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.input:focus, .textarea:focus {
+  outline: none;
+  border-bottom-color: white;
+}
+
+.label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label,
+.textarea:focus + .label,
+.textarea:not(:placeholder-shown) + .label {
+  top: -1.5rem;
+  left: 0;
+  font-size: 0.875rem;
+  color: white;
+}
+
+.focusBorder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.input:focus ~ .focusBorder,
+.textarea:focus ~ .focusBorder {
+  width: 100%;
+}
+
+.textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+.formActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.buttonPrimary, .buttonSecondary {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buttonPrimary {
+  background: white;
+  color: #2c5282;
+  border: none;
+}
+
+.buttonPrimary:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+.buttonSecondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.buttonSecondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.successMessage {
+  text-align: center;
+  padding: 2rem;
+}
+
+.checkmark {
+  width: 60px;
+  height: 60px;
+  background: white;
+  color: #2c5282;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1.5rem;
+}
+
+.successMessage h3 {
+  color: white;
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--blue-dark);
-  text-align: center;
 }
-.field {
-  margin-bottom: 1rem;
-}
-.input,
-.select {
-  width: 100%;
-  padding: .75rem 1rem;
-  border: 1px solid var(--gray-light);
-  border-radius: .25rem;
-  transition: border-color .3s ease;
-}
-.input:focus,
-.select:focus {
-  border-color: var(--blue-mid);
-  outline: none;
-}
-.button {
-  width: 100%;
-  padding: .75rem;
-  background-color: var(--blue-dark);
-  color: var(--white);
-  border: none;
-  border-radius: .25rem;
+
+.successMessage p {
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1rem;
-  cursor: pointer;
-  transition: background-color .3s ease, transform .3s ease;
 }
-.button:hover {
-  background-color: var(--blue-mid);
-  transform: scale(1.02);
+
+/* Animazioni personalizzate per i campi */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+.inputGroup:hover .label {
+  animation: float 2s infinite;
+}
+
+/* Stili per il select */
+select.input {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+  padding-right: 2.5rem;
+}
+
+/* Stili per date e time */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* Effetto hover per i bottoni */
+.buttonPrimary:hover, .buttonSecondary:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 1.5rem;
+  }
+
+  .formHeader h2 {
+    font-size: 1.5rem;
+  }
+
+  .steps {
+    gap: 0.5rem;
+  }
+
+  .step {
+    width: 20px;
+    height: 20px;
+  }
+
+  .buttonPrimary, .buttonSecondary {
+    padding: 0.75rem 1.5rem;
+  }
 }
