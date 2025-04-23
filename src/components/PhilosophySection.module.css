@@ -34,7 +34,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   border: 1px solid #e2e8f0;
-  scale: 3;
 }
 
 .card:hover {
@@ -63,6 +62,7 @@
   width: 80px;
   height: auto;
   z-index: 2;
+  scale: 3;
 }
 
 @media (max-width: 768px) {
