@@ -56,8 +56,8 @@
 
 .cardImage {
   position: absolute;
-  top: 30px;
-  left: 80%;
+  top: -70px;
+  left: 70%;
   transform: translateX(-50%);
   width: 80px;
   height: auto;

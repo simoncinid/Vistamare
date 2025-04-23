@@ -93,17 +93,29 @@
 
 /* ---------- RESERVATION STRIP ---------- */
 .reservationStrip{
+  z-index: 0;
   position: relative;
+  width: 100%;
+  background: var(--blue-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 6rem 1rem 5rem;
+  overflow: hidden;
+}
+.reservationStrip::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: url('/assets/backform.png') center/cover no-repeat;
   background-size: cover;
-  color:var(--white);
-  padding:6rem 1rem 5rem;
-  text-align:center;
+  transform: scale(1);
+  transform-origin: center;
+  z-index: -1;
 }
 .reservationStrip h2{
-  font-family:var(--font-heading);
-  font-size:2.5rem;
-  margin-bottom:2rem;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 /* ---------- FOOTER ---------- */
@@ -148,23 +160,6 @@
   text-align: center;
   font-size: 1.15rem;
   line-height: 1.6;
-}
-
-.reservationStrip {
-  position: relative;
-  width: 100%;
-  background: url('/assets/backform.png') center/cover no-repeat;
-  background-size: cover;
-  color: #fff;
-  text-align: center;
-  padding: 6rem 1rem;
-  margin-top: 0;
-}
-
-.reservationStrip h2 {
-  font-family: var(--font-heading);
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
 }
 
 .footer {
