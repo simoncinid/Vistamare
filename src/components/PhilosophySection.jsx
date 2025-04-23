@@ -8,6 +8,7 @@ const PhilosophySection = () => {
         <h2 className={styles.title}>La Nostra Filosofia</h2>
         <div className={styles.grid}>
           <div className={styles.card}>
+            <img src="/assets/km0.png" alt="Km 0" className={styles.cardImage} />
             <h3>Km 0</h3>
             <p>
               Ogni ingrediente racconta una storia di territorio. Lavoriamo esclusivamente con 
@@ -16,6 +17,7 @@ const PhilosophySection = () => {
             </p>
           </div>
           <div className={styles.card}>
+            <img src="/assets/km02.png" alt="Pesce del Giorno" className={styles.cardImage} />
             <h3>Pesce del Giorno</h3>
             <p>
               Il nostro menu è un omaggio al mare. Ogni giorno, basiamo le nostre creazioni 
@@ -24,6 +26,7 @@ const PhilosophySection = () => {
             </p>
           </div>
           <div className={styles.card}>
+            <img src="/assets/km03.png" alt="Sostenibilità" className={styles.cardImage} />
             <h3>Sostenibilità</h3>
             <p>
               Rispettiamo il mare e i suoi ritmi. Utilizziamo tecniche di pesca sostenibili 
