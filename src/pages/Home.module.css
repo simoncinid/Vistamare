@@ -93,7 +93,9 @@
 
 /* ---------- RESERVATION STRIP ---------- */
 .reservationStrip{
-  background:var(--blue-dark);
+  position: relative;
+  background: url('/assets/backform.png') center/cover no-repeat;
+  background-size: cover;
   color:var(--white);
   padding:6rem 1rem 5rem;
   text-align:center;
@@ -149,13 +151,14 @@
 }
 
 .reservationStrip {
+  position: relative;
   width: 100%;
-  background: #002c5f;
+  background: url('/assets/backform.png') center/cover no-repeat;
+  background-size: cover;
   color: #fff;
   text-align: center;
   padding: 6rem 1rem;
   margin-top: 0;
-  
 }
 
 .reservationStrip h2 {
