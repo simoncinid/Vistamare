@@ -1,9 +1,56 @@
+/* Nuovo layout per la sezione "La nostra filosofia" */
 .philosophy {
-  padding: 4rem 2rem;
-  background-color: #c4ddf8;
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
   display: flex;
+  position: relative;
+}
+
+.imagePart {
+  width: 75%;
+  height: 100%;
+  background-image: url('/assets/filosofia.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.textPart {
+  width: 25%;
+  height: 100%;
+  background-color: var(--blue-light);
+}
+
+.box {
+  position: absolute;
+  top: 10%;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 80%;
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.box h2 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--blue-dark);
+}
+
+.box p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--gray-dark);
+  line-height: 1.6;
 }
 
 .content {
@@ -63,6 +110,14 @@
   height: auto;
   z-index: 2;
   scale: 3;
+}
+
+/* Stile per l'immagine slideshow */
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 @media (max-width: 768px) {
