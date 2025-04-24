@@ -5,7 +5,8 @@ import * as FaIcons from 'react-icons/fa';
 const MapSection = () => {
   return (
     <section className={styles.mapSection}>
-      <h2 className={styles.sectionTitle}>Ti aspettiamo a Vistamare</h2>
+      <h2 className={styles.sectionTitle}>TI ASPETTIAMO A VISTAMARE</h2>
+      <p className={styles.sectionDescription}>Ogni ingrediente racconta una storia di territorio. Lavoriamo esclusivamente con produttori locali, garantendo la freschezza e la qualità dei nostri piatti, riducendo al minimo l'impatto ambientale.</p>
       
       <div className={styles.sectionContent}>
         <div className={styles.mapContainer}>

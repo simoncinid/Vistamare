@@ -95,7 +95,10 @@
 .reservationStrip{
   position: relative;
   width: 100%;
-  background: var(--blue-dark);
+  background-image: linear-gradient(rgba(10, 38, 94, 0.7), rgba(2, 10, 27, 0.7)), url('/assets/backform.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--white);
   text-align: center;
   padding: 6rem 1rem 5rem;
@@ -103,7 +106,7 @@
 .reservationStrip h2{
   font-family: var(--font-heading);
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 /* ---------- FOOTER ---------- */
@@ -135,16 +138,11 @@
   z-index: 1;
 }
 
-.contentSection p {
-  margin: 0;
-  padding: 5rem;
-}
-
 .intro {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 7rem 1rem;
   text-align: center;
   font-size: 1.15rem;
   line-height: 1.6;

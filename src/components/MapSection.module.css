@@ -6,8 +6,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 2rem 2rem 4rem;
-  gap: 2rem;
+  padding: 4rem 2rem 4rem 4rem;
+  gap: 3rem;
   position: relative;
   overflow: hidden;
 }
@@ -19,9 +19,18 @@
   font-size: 2.5rem;
   font-weight: 700;
   color: #002c5f;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   position: relative;
   z-index: 1;
+}
+
+.sectionDescription {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--gray-dark);
 }
 
 .sectionContent {

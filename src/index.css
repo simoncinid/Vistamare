@@ -1,7 +1,20 @@
 /* ------------------------------------------------------------------
-   Google Fonts – titoli in "Playfair Display", testi in "Source Sans Pro"
+   Google Fonts – titoli in "Playfair Display", testi in "Source Sans Pro"
 ------------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./fonts/SourceSansPro-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/SourceSansPro-Regular.otf') format('opentype');
+}
 
 /* ------------------------------------------------------------------
    Palette & variabili CSS

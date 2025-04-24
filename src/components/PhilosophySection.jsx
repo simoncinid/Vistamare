@@ -5,7 +5,7 @@ const PhilosophySection = () => {
   return (
     <section className={styles.philosophy}>
       <div className={styles.content}>
-        <h2 className={styles.title}>La Nostra Filosofia</h2>
+        <h2 className={styles.title}>LA NOSTRA FILOSOFIA</h2>
         <div className={styles.grid}>
           <div className={styles.card}>
             <img src="/assets/km0.png" alt="Km 0" className={styles.cardImage} />

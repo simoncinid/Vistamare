@@ -6,7 +6,7 @@
   height: 60px;
   width: 90%;
   max-width: 1200px;
-  background: rgba(230, 242, 255, 0.4);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   display: flex;
@@ -33,14 +33,14 @@
 }
 
 .link {
-  color: #2c5282;
+  color: var(--blue-dark);
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
   position: relative;
   padding: 0.5rem 0;
   transition: all 0.3s ease;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  text-shadow: none;
 }
 
 .link::after {
@@ -66,7 +66,7 @@
 }
 
 .active {
-  color: #1a365d;
+  color: var(--blue-dark);
   font-weight: 600;
 }
 

@@ -1,32 +1,34 @@
 .formContainer {
   position: relative;
-  max-width: 600px;
+  width: 50%;
+  max-width: none;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   z-index: 1;
-  background: #80d3fd33;
+  background: rgb(140, 163, 216);
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  margin-top: -2rem;
+  margin-top: -1rem;
+  
 }
 
 .formHeader {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .logo {
   max-width: 200px;
   height: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   filter: brightness(0) invert(1);
 }
 
 .formHeader h2 {
   color: white;
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: 600;
 }
 
@@ -34,7 +36,7 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .step {
@@ -69,18 +71,18 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .formStep {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .inputGroup {
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .input, .textarea {
@@ -141,11 +143,11 @@
 .formActions {
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .buttonPrimary, .buttonSecondary {
-  padding: 1rem 2rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 600;

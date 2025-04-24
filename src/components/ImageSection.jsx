@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './ImageSection.module.css';
 
 import img1 from '../assets/1.png';
@@ -23,7 +24,7 @@ export default function ImageSection() {
         />
         <div className={`${styles.overlay} ${hoverLeft ? styles.visible : ''}`}>
           <img src={pattern} alt="Pattern" className={styles.pattern} />
-          <p className={styles.text}>Testo sinistro</p>
+          <Link to="/menu" className={styles.text}>MENU</Link>
         </div>
       </div>
       <div 
@@ -38,7 +39,7 @@ export default function ImageSection() {
         />
         <div className={`${styles.overlay} ${hoverRight ? styles.visible : ''}`}>
           <img src={pattern} alt="Pattern" className={styles.pattern} />
-          <p className={styles.text}>Testo destro</p>
+          <Link to="/esperienze" className={styles.text}>ESPERIENZE</Link>
         </div>
       </div>
     </section>
