@@ -25,7 +25,7 @@ const PhilosophySection = () => {
       <div className={styles.textPart}>
         <div className={styles.box}>
           <h2>LA NOSTRA FILOSOFIA</h2>
-          <p>La nostra filosofia unisce ingredienti a km 0 e pescato fresco del giorno per valorizzare il territorio e il mare, garantendo freschezza, autenticità e varietà, con un impegno costante verso la sostenibilità per ridurre gli sprechi e rispettare l'ambiente.</p>
+          <p>La nostra filosofia unisce <span className={styles.highlight}>ingredienti</span> a km 0 e pescato fresco del giorno per valorizzare il territorio e il mare, garantendo <span className={styles.highlight}>freschezza</span>, autenticità e varietà, con un impegno costante verso la <span className={styles.highlight}>sostenibilità</span> per ridurre gli sprechi e rispettare l'ambiente.</p>
         </div>
       </div>
     </section>

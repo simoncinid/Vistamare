@@ -53,6 +53,13 @@
   line-height: 1.6;
 }
 
+/* Stile per parole evidenziate */
+.highlight {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: var(--blue-dark);
+}
+
 .content {
   max-width: 1200px;
   margin: 0 auto;

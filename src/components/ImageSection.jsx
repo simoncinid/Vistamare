@@ -4,7 +4,8 @@ import styles from './ImageSection.module.css';
 
 import img1 from '../assets/1.png';
 import img3 from '../assets/3.png';
-import pattern from '../assets/pattern1.png';
+import pattern1 from '../assets/pattern1.png';
+import pattern2 from '../assets/pattern2.png';
 
 export default function ImageSection() {
   const [hoverLeft, setHoverLeft] = useState(false);
@@ -23,7 +24,7 @@ export default function ImageSection() {
           className={`${styles.image} ${hoverLeft ? styles.hidden : ''}`}
         />
         <div className={`${styles.overlay} ${hoverLeft ? styles.visible : ''}`}>
-          <img src={pattern} alt="Pattern" className={styles.pattern} />
+          <img src={pattern1} alt="Pattern" className={styles.pattern} />
           <Link to="/menu" className={styles.text}>MENU</Link>
         </div>
       </div>
@@ -38,8 +39,8 @@ export default function ImageSection() {
           className={`${styles.image} ${hoverRight ? styles.hidden : ''}`}
         />
         <div className={`${styles.overlay} ${hoverRight ? styles.visible : ''}`}>
-          <img src={pattern} alt="Pattern" className={styles.pattern} />
-          <Link to="/esperienze" className={styles.text}>ESPERIENZE</Link>
+          <img src={pattern2} alt="Pattern" className={styles.pattern} />
+          <Link to="/esperienze" className={styles.text2}>ESPERIENZE</Link>
         </div>
       </div>
     </section>
