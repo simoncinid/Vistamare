@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────────────────────
 //  src/pages/Home.jsx   •   Pagina Home completa
 // ─────────────────────────────────────────────────────────────
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import HeroPlatter from '../components/HeroPlatter';
 import ReservationForm from '../components/ReservationForm';
 import styles from './Home.module.css';
@@ -15,15 +15,51 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export default function Home() {
+  const [showHero, setShowHero] = useState(true);
+  
+  // Controlla se la hero section deve essere mostrata
+  useEffect(() => {
+    function checkHeroStatus() {
+      try {
+        const heroRemoved = localStorage.getItem('heroRemoved') === 'true';
+        if (heroRemoved) {
+          setShowHero(false);
+          document.body.style.overflow = 'auto'; // Assicuriamoci che lo scroll sia abilitato
+        }
+      } catch (e) {
+        console.error('LocalStorage non disponibile:', e);
+      }
+    }
+    
+    // Controlla subito lo stato
+    checkHeroStatus();
+    
+    // Ascolta l'evento di rimozione hero dal componente HeroPlatter
+    const handleHeroRemoved = () => {
+      setShowHero(false);
+    };
+    
+    window.addEventListener('heroRemoved', handleHeroRemoved);
+    // Ascolta anche modifiche a localStorage in altre tab
+    window.addEventListener('storage', checkHeroStatus);
+    
+    return () => {
+      window.removeEventListener('heroRemoved', handleHeroRemoved);
+      window.removeEventListener('storage', checkHeroStatus);
+    };
+  }, []);
+  
   return (
     <div className={styles.page}>
       <Header />
       
-      <div className={styles.heroSection}>
-        <HeroPlatter />
-      </div>
+      {showHero && (
+        <div className={styles.heroSection}>
+          <HeroPlatter />
+        </div>
+      )}
       
-      <div className={styles.contentSection}>
+      <div className={!showHero ? styles.contentSectionFirst : styles.contentSection}>
         <section className={styles.intro}>
           <p>
             Vistamare è un <span className={styles.highlight}>rifugio</span> sospeso tra il blu del cielo e il respiro delle
@@ -34,11 +70,10 @@ export default function Home() {
           </p>
         </section>
 
-        <div className={`${styles.fadeBottom}`} style={{ position: 'relative', zIndex: 1 }}>
+        <div style={{ position: 'relative', zIndex: 1 }}>
           <PhilosophySection />
         </div>
-        <div className={styles.sectionSpacer} />
-
+        
         <div className={styles.fadeBottom}>
           <ImageSection />
         </div>

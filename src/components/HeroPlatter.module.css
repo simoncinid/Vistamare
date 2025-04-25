@@ -21,7 +21,7 @@
   .overlay{
     position:fixed;
     inset:0;
-    background:var(--blue-dark);
+    background:black;
     mix-blend-mode:multiply;
     pointer-events:none;
     z-index:-1;

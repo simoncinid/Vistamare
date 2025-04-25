@@ -148,6 +148,16 @@
   z-index: 1;
 }
 
+/* Quando non c'è la hero section, la contentSection diventa la prima */
+.contentSectionFirst {
+  width: 100%;
+  background: #f5f9ff;
+  padding-top: 100px; /* Aggiungiamo spazio in alto quando è la prima sezione */
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
+}
+
 .intro {
   position: relative;
   width: 100%;
