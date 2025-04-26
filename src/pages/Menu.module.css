@@ -1,255 +1,327 @@
 .menuPage {
   width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-/* Hero section */
+/* Hero Section */
 .heroSection {
-  width: 100%;
-  height: 90vh;
-  overflow: hidden;
   position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.heroImage {
+.heroSlide {
+  position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
 }
 
-/* Title section */
-.titleSection {
-  width: 90%;
-  max-width: 1200px;
-  padding: 4rem 0;
+.heroBullets {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 5;
+}
+
+.bullet, .bulletActive {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.bulletActive {
+  background: var(--blue-light);
+}
+
+/* Menu Intro */
+.menuIntro {
+  padding: 6rem 2rem 4rem;
   text-align: center;
-}
-
-.mainTitle {
-  font-family: var(--font-heading);
-  font-size: 3rem;
-  font-weight: 300;
-  color: var(--blue-dark);
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.description {
-  font-family: var(--font-body);
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--gray-dark);
   max-width: 800px;
   margin: 0 auto;
 }
 
-.highlight {
-  font-weight: 600;
-  color: var(--red-dark);
+.menuTitle {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  color: var(--blue-dark);
+  margin-bottom: 2rem;
+  font-weight: 400;
 }
 
-/* Dishes section */
+.menuDescription {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--gray-dark);
+}
+
+/* Dishes Section */
 .dishesSection {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
   width: 100%;
+}
+
+.dishItem {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.dishHeader {
   display: flex;
-  flex-direction: column;
-  margin-top: -2rem;
-  padding: 0 0 5rem;
-  position: relative;
-}
-
-/* Golden Line */
-.goldenLineContainer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.goldenLine {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  filter: blur(0.5px);
-}
-
-/* Linea sinuosa con SVG integrato */
-.goldenLine::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1000 2100' preserveAspectRatio='none'%3E%3Cpath d='M270,100 C100,150 700,250 600,350 C500,450 100,450 200,550 C300,650 800,650 700,750 C600,850 100,850 200,950 C300,1050 800,1050 700,1150 C600,1250 100,1250 200,1350 C300,1450 800,1450 700,1550 C600,1650 100,1650 200,1750 C300,1850 800,1850 700,1950' stroke='rgba(30, 144, 255, 0.8)' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M270,100 C100,150 700,250 600,350 C500,450 100,450 200,550 C300,650 800,650 700,750 C600,850 100,850 200,950 C300,1050 800,1050 700,1150 C600,1250 100,1250 200,1350 C300,1450 800,1450 700,1550 C600,1650 100,1650 200,1750 C300,1850 800,1850 700,1950' stroke='rgba(135, 206, 250, 0.6)' stroke-width='1' fill='none' stroke-linecap='round' filter='drop-shadow(0 0 1px rgba(135, 206, 250, 0.3))'/%3E%3C/svg%3E");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
-.dishRow {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-  position: relative;
-  z-index: 2;
-}
-
-.dishRow:first-child {
-  margin-top: 0;
-}
-
-.dishContent {
-  width: 95%;
-  max-width: 1400px;
-  display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
-  position: relative;
-  z-index: 2;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.reversed .dishContent {
-  flex-direction: row-reverse;
-}
-
-.imageContainer {
-  width: 375px;
-  height: 300px;
-  overflow: hidden;
-  flex-shrink: 0;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  position: relative;
-  z-index: 3;
-  background-color: white;
-}
-
-.dishImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  position: relative;
-  z-index: 2;
-}
-
-.dishInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: 500px;
-  padding: 1.5rem;
-  position: relative;
-  z-index: 2;
+.dishHeader:hover {
+  background-color: rgba(206, 242, 255, 0.669);
 }
 
 .dishName {
   font-family: var(--font-heading);
-  font-size: 1.8rem;
-  font-weight: 300;
-  color: var(--blue-dark);
+  color: #5d4037; /* Marrone scuro */
+  font-size: 1.5rem;
+  font-weight: 400;
   margin: 0;
+}
+
+.expandButton {
+  background: none;
+  border: none;
+  color: #5d4037;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expandButton:hover {
+  color: var(--blue-dark);
+}
+
+/* Dish Details */
+.dishDetails {
+  overflow: hidden;
+  padding: 0 1rem 2rem;
+}
+
+.dishGallery {
+  display: flex;
+  width: 100%;
+  height: 220px;
+  margin-bottom: 1.5rem;
+  gap: 0;
+}
+
+.galleryImage {
+  flex: 1 1 25%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.galleryImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+.galleryImage img:hover {
+  transform: scale(1.05);
 }
 
 .dishDescription {
   font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.5;
   color: var(--gray-dark);
-  margin: 0;
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
 .dishPrice {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 300;
   color: var(--red-dark);
-  margin-top: 0.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
 }
 
-.spacer {
-  flex: 1;
-}
-
-/* Bottom section */
-.bottomSection {
-  width: 80%;
-  max-width: 800px;
-  padding: 4rem 0 6rem;
+/* Allergens */
+.allergensContainer {
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.allergenIcon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
   align-items: center;
-  gap: 3rem;
+  justify-content: center;
+  cursor: help;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 8px;
 }
 
-.bottomText {
-  font-family: var(--font-body);
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--gray-dark);
-  text-align: center;
+.allergenIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.bottomLogo {
-  width: 120px;
-  height: auto;
+.allergenTooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+  pointer-events: none;
+  white-space: nowrap;
 }
 
-/* Responsive */
+.allergenIcon:hover .allergenTooltip {
+  opacity: 1;
+  visibility: visible;
+  bottom: calc(100% + 10px);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightboxContent {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightboxImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.lightboxNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.lightboxNav:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.lightboxPrev {
+  left: 20px;
+}
+
+.lightboxNext {
+  right: 20px;
+}
+
 @media (max-width: 768px) {
-  .titleSection,
-  .dishContent,
-  .bottomSection {
-    width: 90%;
+  .menuTitle {
+    font-size: 2.5rem;
   }
   
-  .mainTitle {
-    font-size: 2.2rem;
-  }
-  
-  .dishContent {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .reversed .dishContent {
-    flex-direction: column;
-  }
-  
-  .dishRow {
-    margin-top: -1rem;
-  }
-  
-  .dishInfo {
-    align-items: center;
-    width: 100%;
-    margin-top: -1rem;
+  .menuDescription {
+    font-size: 1rem;
   }
   
   .dishesSection {
-    gap: 1rem;
+    padding: 1rem;
   }
   
-  .imageContainer {
-    width: 100%;
-    max-width: 375px;
-    height: auto;
-    aspect-ratio: 5/4;
+  .dishHeader {
+    padding: 1rem 0;
   }
-
-  .goldenLine::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1000 2100' preserveAspectRatio='none'%3E%3Cpath d='M500,100 C400,150 600,250 500,350 C400,450 600,450 500,550 C400,650 600,650 500,750 C400,850 600,850 500,950 C400,1050 600,1050 500,1150 C400,1250 600,1250 500,1350 C400,1450 600,1450 500,1550 C400,1650 600,1650 500,1750 C400,1850 600,1850 500,1950' stroke='rgba(30, 144, 255, 0.8)' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M500,100 C400,150 600,250 500,350 C400,450 600,450 500,550 C400,650 600,650 500,750 C400,850 600,850 500,950 C400,1050 600,1050 500,1150 C400,1250 600,1250 500,1350 C400,1450 600,1450 500,1550 C400,1650 600,1650 500,1750 C400,1850 600,1850 500,1950' stroke='rgba(135, 206, 250, 0.6)' stroke-width='1' fill='none' stroke-linecap='round' filter='drop-shadow(0 0 1px rgba(135, 206, 250, 0.3))'/%3E%3C/svg%3E");
+  
+  .dishName {
+    font-size: 1.3rem;
+  }
+  
+  .dishGallery {
+    height: 180px;
+    flex-wrap: wrap;
+  }
+  
+  .galleryImage {
+    flex: 1 1 50%;
+  }
+  
+  .lightboxContent {
+    width: 95%;
+  }
+  
+  .lightboxNav {
+    width: 40px;
+    height: 40px;
   }
 }

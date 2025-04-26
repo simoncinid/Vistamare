@@ -23,10 +23,10 @@ export default function Header() {
           Menu
         </Link>
         <Link 
-          to="/prenotazioni" 
-          className={`${styles.link} ${location.pathname === '/prenotazioni' ? styles.active : ''}`}
+          to="/esperienze" 
+          className={`${styles.link} ${location.pathname === '/esperienze' ? styles.active : ''}`}
         >
-          Prenotazioni
+          Esperienze
         </Link>
       </nav>
     </header>

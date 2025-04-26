@@ -101,9 +101,6 @@ export default function HeroPlatter() {
       }
     };
     
-    // Attiva la visibilità dei piatti
-    setVisible(true);
-    
     // Imposta il listener per la rotellina del mouse
     window.addEventListener('wheel', handleWheel, { passive: false });
     
@@ -135,7 +132,7 @@ export default function HeroPlatter() {
         className={styles.circle}
         style={{ 
           transform:`translate(-50%,-50%) rotate(${rot}deg)`,
-          opacity: visible ? 1 : 0,
+          opacity: rot >= 10 ? 1 : 0,
           display: showPlates ? 'block' : 'none'
         }}
       >

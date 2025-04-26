@@ -43,7 +43,7 @@ html,body { height:100%; }
 body{
   font-family:var(--font-body);
   color:var(--gray-dark);
-  background:#f5f9ff;
+  background:#ffffff;
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }

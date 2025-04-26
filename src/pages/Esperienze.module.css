@@ -65,7 +65,7 @@
 
 .expDesc {
   color: var(--gray-dark);
-  line-height: 1.6;
+  line-height: 0.5;
 }
 
 .wineSection {
@@ -121,3 +121,483 @@
   font-weight: 600;
   margin-top: 0.5rem;
 }
+
+.pageContainer {
+  width: 100%;
+  min-height: 120vh;
+  position: relative;
+  
+}
+
+/* Stile sezione filosofia copiato dallo stesso stile nella home */
+.philosophySection {
+  display: flex;
+  height: 80vh;
+  min-height: 500px;
+  width: 100%;
+  position: relative;
+  isolation: isolate;
+  z-index: 5;
+  background-color: white;
+}
+
+.philosophySection.reversed {
+  flex-direction: row-reverse;
+}
+
+.philosophySection .imagePart {
+  width: 60%;
+  height: 100%;
+  background-color: #000;
+  overflow: hidden;
+  position: relative;
+}
+
+.philosophySection .imagePart img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.philosophySection .imagePart img:hover {
+  transform: scale(1.03);
+}
+
+.philosophySection .textPart {
+  width: 40%;
+  height: 100%;
+  background-color: #f0f5fa;
+  position: relative;
+  overflow: visible;
+}
+
+.philosophySection .textPart::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/pattern1.png');
+  background-size: 300px;
+  background-repeat: repeat;
+  opacity: 0.07;
+}
+
+/* Box posizionato a livello di sezione ma disegnato come se fosse nella posizione originale */
+.philosophySection .box {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(-30%);
+  background-color: white;
+  padding: 2.5rem;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  z-index: 10000 !important;
+}
+
+.philosophySection.reversed .box {
+  left: auto;
+  right: 0;
+  transform: translateY(-50%) translateX(30%);
+}
+
+.philosophySection .box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--blue-dark);
+  font-family: var(--font-heading);
+}
+
+.philosophySection .box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--gray-dark);
+}
+
+/* Sezione dettagli menu degustazione */
+.menuDetailSection {
+  background-color: #f9f9f9;
+  
+  width: 100%;
+  margin: 0 auto 5rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* Corso */
+.course {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.courseName {
+  font-size: 1.5rem;
+  color: var(--blue-dark);
+  margin: 1.5rem 0 0.5rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.courseName::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -0.5rem;
+  width: 30px;
+  height: 1px;
+  background-color: var(--blue-light);
+  transform: translateX(-50%);
+}
+
+.courseDescription {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--gray-dark);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.courseHighlight {
+  color: var(--blue-mid);
+  font-weight: 600;
+}
+
+.pricing {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.price {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: var(--blue-dark);
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Paragrafo con testo evidenziato */
+.paragraphSection {
+  padding: 5rem 4rem 0rem 4rem;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  background-color: white;
+}
+
+.paragraphSection p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--gray-dark);
+  margin-bottom: 2rem;
+}
+
+.highlight {
+  color: var(--blue-dark);
+  font-weight: 600;
+}
+
+.decoration {
+  width: 150px;
+  height: auto;
+  opacity: 0.7;
+}
+
+/* Slider cantina a schermo intero */
+.cantinaSlider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cantinaSliderWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.cantinaSlide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 1;
+}
+
+.activeSlide {
+  opacity: 1;
+  z-index: 2;
+}
+
+.cantinaSlide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.cantinaSliderDots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 999 !important;
+}
+
+.cantinaSliderDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeDot {
+  background-color: white;
+  transform: scale(1.2);
+}
+
+/* Media query per responsività */
+@media (max-width: 992px) {
+  .philosophySection {
+    height: auto;
+  }
+  
+  .philosophySection .imagePart,
+  .philosophySection .textPart {
+    width: 50%;
+  }
+  
+  .philosophySection .box {
+    padding: 2rem;
+    transform: translateY(-50%) translateX(-20%);
+  }
+  
+  .philosophySection.reversed .box {
+    transform: translateY(-50%) translateX(20%);
+  }
+  
+  .philosophySection::after {
+    left: 35%;
+    width: 20%;
+  }
+  
+  .philosophySection.reversed::after {
+    left: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .philosophySection {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  
+  .philosophySection.reversed {
+    flex-direction: column;
+  }
+  
+  .philosophySection .imagePart,
+  .philosophySection .textPart {
+    width: 100%;
+  }
+  
+  .philosophySection .imagePart {
+    height: 300px;
+  }
+  
+  .philosophySection .textPart {
+    height: 200px;
+  }
+  
+  .philosophySection .box {
+    position: relative;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+  
+  .philosophySection.reversed .box {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  
+  .philosophySection::after,
+  .philosophySection.reversed::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .philosophySection .imagePart {
+    height: 250px;
+  }
+  
+  .philosophySection .box {
+    padding: 1.5rem;
+    top: -40px;
+  }
+  
+  .paragraphSection p,
+  .menuDescription {
+    font-size: 1rem;
+  }
+}
+
+/* Aggiungi i font eleganti */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap');
+.menuTitle {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--blue-dark);
+  margin-bottom: 2.5rem;
+  font-family: var(--font-heading);
+}
+
+.menuDescription {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--gray-dark);
+
+  margin: 0 5rem;
+}
+
+.coursesList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+/* Sezione parallasse per il menu */
+.parallaxMenuContainer {
+  position: relative;
+  height: auto;
+  min-height: 120vh;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+.parallaxBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/assets/1.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
+  transform: translateZ(0);
+}
+
+.parallaxContent {
+  position: relative;
+  z-index: 3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem;
+  
+  
+  backdrop-filter: blur(3px);
+}
+
+.menuCard {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3.5rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 5px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+  transition: transform 0.3s ease-out;
+}
+
+.menuCard:hover {
+  transform: translateY(-5px);
+}
+
+.menuCardTitle {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--blue-dark);
+  margin-bottom: 2.5rem;
+  font-family: var(--font-heading);
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.menuCardTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background-color: var(--blue-light);
+}
+
+/* Stili media queries per la sezione parallasse */
+@media (max-width: 768px) {
+  .parallaxContent {
+    padding: 2rem 1rem;
+  }
+  
+  .menuCard {
+    padding: 2rem 1rem;
+  }
+  
+  .menuCardTitle {
+    font-size: 1.8rem;
+  }
+}
+
+/* Elemento di transizione tra la sezione parallasse e il resto del contenuto */
+.parallaxTransition {
+  position: relative;
+  z-index: 4; /* Più alto degli elementi della parallasse */
+  height: 150px;
+  margin-top: -150px; /* Si sovrappone alla fine della sezione parallasse */
+  background: linear-gradient(to bottom, 
+                            rgba(255,255,255,0) 0%, 
+                            rgba(255,255,255,0.9) 70%, 
+                            rgba(255,255,255,1) 100%);
+  pointer-events: none; /* Assicura che i click passino attraverso */
+}
+

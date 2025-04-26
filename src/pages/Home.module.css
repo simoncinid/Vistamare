@@ -97,6 +97,7 @@
   width: 100%;
   background-color: var(--blue-dark);
   background-image: linear-gradient(rgba(0, 44, 95, 0.7), rgba(0, 44, 95, 0.7)), url('/assets/backform.png');
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -142,7 +143,7 @@
 
 .contentSection {
   width: 100%;
-  background: #f5f9ff;
+  background: #ffffff;
   padding: 0;
   position: relative;
   z-index: 1;
@@ -151,7 +152,7 @@
 /* Quando non c'è la hero section, la contentSection diventa la prima */
 .contentSectionFirst {
   width: 100%;
-  background: #f5f9ff;
+  background: #ffffff;
   padding-top: 100px; /* Aggiungiamo spazio in alto quando è la prima sezione */
   position: relative;
   z-index: 1;

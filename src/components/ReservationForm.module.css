@@ -5,12 +5,11 @@
   margin: 0 auto;
   padding: 0.75rem;
   z-index: 1;
-  background: rgb(140, 163, 216);
+  background: rgb(85, 132, 189);
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   margin-top: -0.75rem;
-  
 }
 
 .formHeader {

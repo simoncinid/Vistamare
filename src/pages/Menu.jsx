@@ -1,134 +1,301 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Menu.module.css';
-import logo from '../assets/logo.png';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { BsChevronDown, BsChevronUp, BsArrowLeftShort, BsArrowRightShort, BsX } from 'react-icons/bs';
+import TripAdvisorReviews from '../components/TripAdvisorReviews';
 
+// Immagini per lo slider hero
+const heroImages = [
+  '/assets/menu/heromenu.png',
+  '/assets/2.png',
+  '/assets/3.png',
+  '/assets/4.png',
+  '/assets/5.png'
+];
+
+// Percorsi delle immagini per gli allergeni
+const allergensIcons = {
+  latte: '/src/assets/latte.png',
+  glutine: '/src/assets/glutine.png',
+  arachidi: '/src/assets/arachidi.png',
+  uova: '/src/assets/uova.png',
+  crostacei: '/src/assets/crostacei.png',
+  molluschi: '/src/assets/molluschi.png',
+  frutta: '/src/assets/frutta.png',
+  pesce: '/src/assets/pesce.png'
+};
+
+// Dati piatti - aggiorno con allergie e immagini galleria
 const dishesData = [
   {
     id: 1,
     name: "Carpaccio di Tonno",
     description: "Carpaccio di tonno fresco con scorza di limone, olio d'oliva e sale marino",
     price: "€18",
-    image: "/assets/menu/piatto1.png"
+    allergens: ["pesce", "frutta"],
+    images: ["/assets/1.png", "/assets/2.png", "/assets/3.png", "/assets/4.png"]
   },
   {
     id: 2,
     name: "Linguine allo Scoglio",
     description: "Linguine con frutti di mare misti del giorno, aglio, peperoncino e prezzemolo",
     price: "€22",
-    image: "/assets/menu/piatto2.png"
+    allergens: ["glutine", "crostacei", "molluschi"],
+    images: ["/assets/6.png", "/assets/7.png", "/assets/8.png", "/assets/9.png"]
   },
   {
     id: 3,
     name: "Orata alla Griglia",
     description: "Orata fresca alla griglia servita con patate e verdure di stagione",
     price: "€24",
-    image: "/assets/menu/piatto3.png"
+    allergens: ["pesce"],
+    images: ["/assets/2.png", "/assets/3.png", "/assets/4.png", "/assets/5.png"]
   },
   {
     id: 4,
     name: "Fritto Misto",
     description: "Selezione di pesce fritto misto con calamari, gamberi e pescato del giorno",
     price: "€22",
-    image: "/assets/menu/piatto4.png"
+    allergens: ["glutine", "pesce", "crostacei", "molluschi"],
+    images: ["/assets/7.png", "/assets/8.png", "/assets/9.png", "/assets/10.png"]
   },
   {
     id: 5,
     name: "Risotto alla Pescatora",
     description: "Risotto con frutti di mare, pomodorini e un tocco di zafferano",
     price: "€20",
-    image: "/assets/menu/piatto5.png"
+    allergens: ["latte", "crostacei", "molluschi"],
+    images: ["/assets/3.png", "/assets/4.png", "/assets/5.png", "/assets/6.png"]
   },
   {
     id: 6,
     name: "Polpo alla Griglia",
     description: "Polpo grigliato servito su crema di patate con olive e capperi",
     price: "€26",
-    image: "/assets/menu/piatto6.png"
+    allergens: ["molluschi", "latte"],
+    images: ["/assets/8.png", "/assets/9.png", "/assets/10.png", "/assets/1.png"]
   },
   {
     id: 7,
     name: "Tartare di Ricciola",
     description: "Tartare di ricciola fresca con avocado, lime e sale maldon",
     price: "€20",
-    image: "/assets/menu/piatto7.png"
+    allergens: ["pesce", "frutta"],
+    images: ["/assets/4.png", "/assets/5.png", "/assets/6.png", "/assets/7.png"]
   },
   {
     id: 8,
     name: "Spaghetti alle Vongole",
     description: "Spaghetti con vongole veraci fresche, aglio, olio e prezzemolo",
     price: "€20",
-    image: "/assets/menu/piatto8.png"
+    allergens: ["glutine", "molluschi"],
+    images: ["/assets/9.png", "/assets/10.png", "/assets/1.png", "/assets/2.png"]
   },
   {
     id: 9,
     name: "Grigliata Mista",
     description: "Selezione del pescato del giorno alla griglia con verdure di stagione",
     price: "€28",
-    image: "/assets/menu/piatto9.png"
+    allergens: ["pesce", "crostacei", "molluschi"],
+    images: ["/assets/5.png", "/assets/6.png", "/assets/7.png", "/assets/8.png"]
   },
   {
     id: 10,
     name: "Millefoglie ai Frutti di Mare",
     description: "Millefoglie di pasta fresca con frutti di mare e salsa al basilico",
     price: "€24",
-    image: "/assets/menu/piatto10.png"
+    allergens: ["glutine", "uova", "crostacei", "molluschi", "latte"],
+    images: ["/assets/10.png", "/assets/1.png", "/assets/2.png", "/assets/3.png"]
   }
 ];
 
 const Menu = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [expandedDish, setExpandedDish] = useState(null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState(0);
+  const [lightboxDish, setLightboxDish] = useState(null);
+
+  // Gestione slider hero
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Toggle espansione piatto
+  const toggleDish = (id) => {
+    setExpandedDish(expandedDish === id ? null : id);
+  };
+
+  // Apri lightbox per l'immagine
+  const openLightbox = (dishId, imageIndex) => {
+    setLightboxDish(dishId);
+    setLightboxImage(imageIndex);
+    setLightboxOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  // Chiudi lightbox
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    document.body.style.overflow = 'auto';
+  };
+
+  // Naviga tra le immagini nel lightbox
+  const navigateLightbox = (direction) => {
+    const dish = dishesData.find(dish => dish.id === lightboxDish);
+    if (!dish) return;
+    
+    const totalImages = dish.images.length;
+    
+    if (direction === 'prev') {
+      setLightboxImage((prev) => (prev - 1 + totalImages) % totalImages);
+    } else {
+      setLightboxImage((prev) => (prev + 1) % totalImages);
+    }
+  };
+
   return (
     <div className={styles.menuPage}>
-      {/* Hero section */}
-      <div className={styles.heroSection}>
-        <img src="/assets/menu/heromenu.png" alt="Menu Hero" className={styles.heroImage} />
-      </div>
+      {/* Header fluttuante uguale alla home */}
+      <Header />
 
-      {/* Title section */}
-      <div className={styles.titleSection}>
-        <h1 className={styles.mainTitle}>IL MENU DI VISTAMARE</h1>
-        <p className={styles.description}>
-          Il nostro menu è sempre diverso, perché seguiamo il ritmo del mare. Ogni giorno selezioniamo con cura il
-          <span className={styles.highlight}> pescato fresco </span>
-          che arriva direttamente dai pescatori locali. Il nostro chef crea piatti che esaltano il
-          <span className={styles.highlight}> sapore autentico del mare </span>
-          e la freschezza degli ingredienti, per garantirvi un'esperienza gastronomica
-          <span className={styles.highlight}> sempre nuova </span>
-          e sorprendente.
-        </p>
-      </div>
+      {/* Hero a schermo intero con slider */}
+      <section className={styles.heroSection}>
+        <AnimatePresence>
+          {heroImages.map((img, index) => (
+            index === currentSlide && (
+              <motion.div
+                key={index}
+                className={styles.heroSlide}
+                style={{ backgroundImage: `url(${img})` }}
+                initial={{ opacity: 0, scale: 1.1 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+              />
+            )
+          ))}
+        </AnimatePresence>
 
-      {/* Dishes section */}
-      <div className={styles.dishesSection}>
-        <div className={styles.goldenLineContainer}>
-          <div className={styles.goldenLine}></div>
+        {/* Indicatori dello slider */}
+        <div className={styles.heroBullets}>
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              className={index === currentSlide ? styles.bulletActive : styles.bullet}
+              onClick={() => setCurrentSlide(index)}
+              aria-label={`Slide ${index + 1}`}
+            />
+          ))}
         </div>
-        
-        {dishesData.map((dish, index) => (
-          <div key={dish.id} className={`${styles.dishRow} ${index % 2 !== 0 ? styles.reversed : ''}`}>
-            <div className={styles.dishContent}>
-              <div className={styles.imageContainer}>
-                <img src={dish.image} alt={dish.name} className={styles.dishImage} />
-              </div>
-              <div className={styles.dishInfo}>
-                <h2 className={styles.dishName}>{dish.name}</h2>
-                <p className={styles.dishDescription}>{dish.description}</p>
-                <span className={styles.dishPrice}>{dish.price}</span>
-              </div>
-              <div className={styles.spacer}></div>
+      </section>
+
+      {/* Titolo e introduzione */}
+      <section className={styles.menuIntro}>
+        <h1 className={styles.menuTitle}>MENU</h1>
+        <p className={styles.menuDescription}>
+          Le nostre proposte variano giornalmente in base al pescato fresco 
+          disponibile. 
+          <br></br>Il nostro chef seleziona personalmente gli ingredienti 
+          migliori per offrirvi un'esperienza culinaria autentica e di alta qualità.
+        </p>
+      </section>
+
+      {/* Lista dei piatti */}
+      <section className={styles.dishesSection}>
+        {dishesData.map((dish) => (
+          <div key={dish.id} className={styles.dishItem}>
+            <div 
+              className={styles.dishHeader} 
+              onClick={() => toggleDish(dish.id)}
+            >
+              <h2 className={styles.dishName}>{dish.name}</h2>
+              <button className={styles.expandButton}>
+                {expandedDish === dish.id ? <BsChevronUp /> : <BsChevronDown />}
+              </button>
             </div>
+
+            {/* Contenuto espandibile */}
+            <AnimatePresence>
+              {expandedDish === dish.id && (
+                <motion.div
+                  className={styles.dishDetails}
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {/* Galleria di immagini */}
+                  <div className={styles.dishGallery}>
+                    {dish.images.map((img, index) => (
+                      <div 
+                        key={index} 
+                        className={styles.galleryImage}
+                        onClick={() => openLightbox(dish.id, index)}
+                      >
+                        <img src={img} alt={`${dish.name} - immagine ${index + 1}`} />
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Descrizione */}
+                  <p className={styles.dishDescription}>{dish.description}</p>
+                  <p className={styles.dishPrice}>{dish.price}</p>
+
+                  {/* Allergeni */}
+                  <div className={styles.allergensContainer}>
+                    {dish.allergens.map((allergen) => (
+                      <div key={allergen} className={styles.allergenIcon} title={allergen}>
+                        <img src={allergensIcons[allergen]} alt={allergen} />
+                        <span className={styles.allergenTooltip}>{allergen}</span>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ))}
-      </div>
+      </section>
 
-      {/* Bottom section */}
-      <div className={styles.bottomSection}>
-        <p className={styles.bottomText}>
-          Ogni piatto del nostro menu è preparato con amore e rispetto per le tradizioni culinarie del mare. 
-          Ci impegniamo a offrirvi solo ingredienti di prima qualità, selezionati e cucinati per esaltare il loro sapore naturale.
-          Per qualsiasi informazione su allergeni o esigenze alimentari specifiche, non esitate a chiedere al nostro staff.
-        </p>
-        <img src={logo} alt="Vistamare Logo" className={styles.bottomLogo} />
-      </div>
+      {/* TripAdvisor Recensioni */}
+      <TripAdvisorReviews />
+
+      {/* Lightbox per visualizzare le immagini */}
+      {lightboxOpen && lightboxDish && (
+        <div className={styles.lightbox} onClick={closeLightbox}>
+          <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
+            <button className={styles.lightboxClose} onClick={closeLightbox}>
+              <BsX size={30} />
+            </button>
+            <img 
+              src={dishesData.find(dish => dish.id === lightboxDish).images[lightboxImage]} 
+              alt={`Immagine ${lightboxImage + 1}`} 
+              className={styles.lightboxImage}
+            />
+            <button 
+              className={`${styles.lightboxNav} ${styles.lightboxPrev}`}
+              onClick={() => navigateLightbox('prev')}
+            >
+              <BsArrowLeftShort size={40} />
+            </button>
+            <button 
+              className={`${styles.lightboxNav} ${styles.lightboxNext}`}
+              onClick={() => navigateLightbox('next')}
+            >
+              <BsArrowRightShort size={40} />
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Footer uguale alla home */}
+      <Footer />
     </div>
   );
 };
