@@ -72,7 +72,7 @@ export default function HeroPlatter() {
         // Incrementa la rotazione con lo scroll
         setRot(prev => {
           // Calcola nuova rotazione
-          const newRot = prev + (e.deltaY > 0 ? 14 : -6);
+          const newRot = prev + (e.deltaY > 0 ? 13 : -6);
           
           // Limita la rotazione tra 0 e 360 gradi
           const limitedRot = Math.max(0, Math.min(newRot, 360));
