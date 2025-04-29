@@ -47,17 +47,21 @@
 }
 
 .box p {
-  font-family: var(--font-heading);
+  /*font-family: var(--font-heading);
   font-size: clamp(0.5rem,1vw,1rem);
   color: var(--gray-dark);
-  line-height: 1.5;
+  line-height: 1.5;*/
+  font-family: 'Playfair Display', serif;
+  color: #2c2c2c;
+  font-size: clamp(12px, 5vw, 17px);
+  line-height: 1.8;
+  letter-spacing: 0.05em;
 }
 
 /* Stile per parole evidenziate */
 .highlight {
-  font-size: 1.3em;
-  font-weight: bold;
-  color: var(--blue-dark);
+  color: #4A90E2;
+  font-weight: 600;
 }
 
 .content {

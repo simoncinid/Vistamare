@@ -103,6 +103,10 @@
   z-index: 5;
 }
 
+.overlay h5{
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(15px, 10vw, 20px);
+}
 
 .title {
   font-family: 'Playfair Display', serif;

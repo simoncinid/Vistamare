@@ -9,6 +9,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet"></link>
+
       <ScrollProgress />
       <Routes>
         <Route path="/" element={<Home />} />
