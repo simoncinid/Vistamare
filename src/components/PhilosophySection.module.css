@@ -47,10 +47,10 @@
 }
 
 .box p {
-  font-family: var(--font-body);
-  font-size: 1rem;
+  font-family: var(--font-heading);
+  font-size: clamp(0.5rem,1vw,1rem);
   color: var(--gray-dark);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* Stile per parole evidenziate */
