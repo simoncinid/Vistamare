@@ -3,6 +3,7 @@
 // ─────────────────────────────────────────────────────────────
 import React from 'react';
 import HeroStatic from '../components/HeroStatic';
+import Carousel from '../components/Carousel';
 import ReservationForm from '../components/ReservationForm';
 import styles from './Home.module.css';
 // import linea from '../assets/linea.png';
@@ -19,12 +20,17 @@ export default function Home() {
     <div className={styles.page}>
       <Header />
       
-      <div className={styles.heroSection}>
-        <HeroStatic />
+      <div>
+        <Carousel />
       </div>
       
       <div className={styles.contentSection}>
         <section className={styles.intro}>
+        <img 
+            src="../assets/logo.png" 
+            alt="Vistamare Logo" 
+            className={styles.logo} 
+          />
           <p>
             Vistamare è un <span className={styles.highlight}>rifugio</span> sospeso tra il blu del cielo e il respiro delle
             onde: una terrazza che celebra la cucina del territorio con <span className={styles.highlight}>eleganza</span> 
@@ -34,9 +40,9 @@ export default function Home() {
           </p>
         </section>
 
-        <div style={{ position: 'relative', zIndex: 1 }}>
+        <div style={{ position: 'relative', zIndex: 1, marginBottom: '100px' }}>
           <PhilosophySection />
-        </div>
+        </div>        
         
         <div className={styles.fadeBottom}>
           <ImageSection />
