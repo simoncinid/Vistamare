@@ -1,19 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Menu.module.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { BsChevronDown, BsChevronUp, BsArrowLeftShort, BsArrowRightShort, BsX } from 'react-icons/bs';
 import TripAdvisorReviews from '../components/TripAdvisorReviews';
-
-// Immagini per lo slider hero
-const heroImages = [
-  '/assets/menu/heromenu.png',
-  '/assets/2.png',
-  '/assets/3.png',
-  '/assets/4.png',
-  '/assets/5.png'
-];
+import HeroPlatter from '../components/HeroPlatter';
 
 // Percorsi delle immagini per gli allergeni
 const allergensIcons = {
@@ -112,19 +104,10 @@ const dishesData = [
 ];
 
 const Menu = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [expandedDish, setExpandedDish] = useState(null);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxImage, setLightboxImage] = useState(0);
   const [lightboxDish, setLightboxDish] = useState(null);
-
-  // Gestione slider hero
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % heroImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   // Toggle espansione piatto
   const toggleDish = (id) => {
@@ -161,39 +144,8 @@ const Menu = () => {
 
   return (
     <div className={styles.menuPage}>
-      {/* Header fluttuante uguale alla home */}
+      <HeroPlatter />
       <Header />
-
-      {/* Hero a schermo intero con slider */}
-      <section className={styles.heroSection}>
-        <AnimatePresence>
-          {heroImages.map((img, index) => (
-            index === currentSlide && (
-              <motion.div
-                key={index}
-                className={styles.heroSlide}
-                style={{ backgroundImage: `url(${img})` }}
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1.5, ease: "easeOut" }}
-              />
-            )
-          ))}
-        </AnimatePresence>
-
-        {/* Indicatori dello slider */}
-        <div className={styles.heroBullets}>
-          {heroImages.map((_, index) => (
-            <button
-              key={index}
-              className={index === currentSlide ? styles.bulletActive : styles.bullet}
-              onClick={() => setCurrentSlide(index)}
-              aria-label={`Slide ${index + 1}`}
-            />
-          ))}
-        </div>
-      </section>
 
       {/* Titolo e introduzione */}
       <section className={styles.menuIntro}>
@@ -294,7 +246,6 @@ const Menu = () => {
         </div>
       )}
 
-      {/* Footer uguale alla home */}
       <Footer />
     </div>
   );

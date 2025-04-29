@@ -14,55 +14,24 @@ const PLATES = [
   { src: pE, angle: 270 }
 ];
 
-const setHeroRemoved = () => {
-  try {
-    localStorage.setItem('heroRemoved', 'true');
-    
-    // Forziamo un evento per notificare la Home che la hero è stata rimossa
-    const event = new CustomEvent('heroRemoved');
-    window.dispatchEvent(event);
-    
-    // Dopo aver rimosso l'hero, ricarica la pagina per garantire che la struttura sia corretta
-    window.location.reload();
-  } catch (e) {
-    console.error('LocalStorage non disponibile:', e);
-  }
-};
-
 export default function HeroPlatter() {
   const ref = useRef(null);
   const [rot,  setRot]  = useState(0);   // 0‑360°
   const [dark, setDark] = useState(0);   // 0‑0.9
-  const [visible, setVisible] = useState(false);
   const [showPlates, setShowPlates] = useState(true);
   const [rotationCompleted, setRotationCompleted] = useState(false);
-  const [shouldRender, setShouldRender] = useState(true);
   
-  // Controlla se l'hero è già stata rimossa (controllo separato)
-  useEffect(() => {
-    try {
-      const heroRemoved = localStorage.getItem('heroRemoved') === 'true';
-      if (heroRemoved) {
-        setShouldRender(false);
-      }
-    } catch (e) {
-      console.error('LocalStorage non disponibile:', e);
-    }
-  }, []);
-  
+  console.log('HeroPlatter renderizzato'); // Debug
+
   // Effetto per gestire la rotazione e lo scorrimento
   useEffect(() => {
-    if (!shouldRender) return; // Non facciamo nulla se non dobbiamo renderizzare
-    
     const hero = ref.current;
-    if (!hero) return; // Usciamo se l'hero è null
+    if (!hero) {
+      console.log('Hero ref non trovato'); // Debug
+      return;
+    }
     
-    const h = hero.offsetHeight;
-    const vh = window.innerHeight;
-    const originalOverflow = document.body.style.overflow;
-    
-    // Blocca lo scorrimento all'inizio
-    document.body.style.overflow = 'hidden';
+    console.log('Hero ref trovato:', hero); // Debug
     
     // Gestione del wheel event per la rotazione
     const handleWheel = (e) => {
@@ -82,22 +51,16 @@ export default function HeroPlatter() {
             setTimeout(() => {
               setShowPlates(false);
               setRotationCompleted(true);
-              
-              // Sblocca lo scorrimento
-              document.body.style.overflow = 'auto';
-              
-              // Aspetta che i piatti scompaiano, poi rimuovi l'hero
-              setTimeout(() => {
-                setHeroRemoved();
-              }, 500);
             }, 300);
           }
           
           return limitedRot;
         });
         
-        // Aggiorna l'oscuramento in base alla rotazione
-        setDark(Math.min(rot / 360 * 0.9, 0.9));
+        // Aggiorna l'oscuramento in base alla rotazione solo se non è stata completata
+        if (!rotationCompleted) {
+          setDark(Math.min(rot / 360 * 0.9, 0.9));
+        }
       }
     };
     
@@ -107,14 +70,8 @@ export default function HeroPlatter() {
     // Cleanup al dismount
     return () => {
       window.removeEventListener('wheel', handleWheel);
-      document.body.style.overflow = originalOverflow;
     };
-  }, [rot, rotationCompleted, shouldRender]);
-
-  // Se non dobbiamo renderizzare l'hero, returniamo null
-  if (!shouldRender) {
-    return null;
-  }
+  }, [rot, rotationCompleted]);
 
   /* raggio dinamico: metà viewport – metà piatto (70 px) */
   const rX = `calc(50vw - 70px)`;
@@ -124,10 +81,10 @@ export default function HeroPlatter() {
     <section 
       ref={ref} 
       className={styles.hero}
-      style={{ height: '295vh' }}
+      style={{ height: '100vh' }}
     >
       <div className={styles.bg} style={{ backgroundImage:`url(${bg})` }} />
-      <div className={styles.overlay} style={{ opacity: dark }} />
+      <div className={styles.overlay} style={{ opacity: rotationCompleted ? 0 : dark }} />
       <div
         className={styles.circle}
         style={{ 

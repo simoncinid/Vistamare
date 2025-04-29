@@ -2,6 +2,7 @@
 .hero{
     position:relative;
     height: calc(295vh); /* Modificato da 400vh a 295vh per allinearsi con la rotazione massima */
+    border: 5px solid red; /* Bordo temporaneo per debug */
     overflow:hidden;
     z-index:1;
   }
