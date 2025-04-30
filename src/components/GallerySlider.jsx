@@ -2,6 +2,18 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import styles from './GallerySlider.module.css';
 
 function GallerySlider() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   // Immagini per lo slider principale (lato sinistro)
   const sliderImages = [
     '/assets/1.png',
@@ -137,40 +149,42 @@ function GallerySlider() {
         </div>
       </div>
       
-      {/* Sezione destra - slider verticale continuo */}
-      <div className={styles.rightGallery} ref={rightGalleryRef}>
-        <div className={styles.verticalContinuousSlider}>
-          {verticalImages.map((image, index) => (
-            <div
-              key={index}
-              className={styles.verticalSlideItem}
-            >
-              <img 
-                src={image} 
-                alt={`Immagine verticale ${index + 1}`} 
-                className={styles.verticalImage} 
-              />
-              {index < verticalImages.length - 1 && (
+      {/* Sezione destra - slider verticale continuo (solo su desktop) */}
+      {!isMobile && (
+        <div className={styles.rightGallery} ref={rightGalleryRef}>
+          <div className={styles.verticalContinuousSlider}>
+            {verticalImages.map((image, index) => (
+              <div
+                key={index}
+                className={styles.verticalSlideItem}
+              >
+                <img 
+                  src={image} 
+                  alt={`Immagine verticale ${index + 1}`} 
+                  className={styles.verticalImage} 
+                />
+                {index < verticalImages.length - 1 && (
+                  <div className={styles.dividerLine}></div>
+                )}
+              </div>
+            ))}
+            {/* Duplicare le prime immagini per creare un loop infinito */}
+            {verticalImages.slice(0, 2).map((image, index) => (
+              <div
+                key={`dup-${index}`}
+                className={styles.verticalSlideItem}
+              >
+                <img 
+                  src={image} 
+                  alt={`Immagine verticale ${index + 1}`} 
+                  className={styles.verticalImage} 
+                />
                 <div className={styles.dividerLine}></div>
-              )}
-            </div>
-          ))}
-          {/* Duplicare le prime immagini per creare un loop infinito */}
-          {verticalImages.slice(0, 2).map((image, index) => (
-            <div
-              key={`dup-${index}`}
-              className={styles.verticalSlideItem}
-            >
-              <img 
-                src={image} 
-                alt={`Immagine verticale ${index + 1}`} 
-                className={styles.verticalImage} 
-              />
-              <div className={styles.dividerLine}></div>
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

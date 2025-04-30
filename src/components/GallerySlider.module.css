@@ -8,7 +8,7 @@
 
 /* Parte sinistra (50%) */
 .leftGallery {
-  width: 50%;
+  width: 70%;
   height: 100%;
   margin-right: 4px;
   position: relative;
@@ -17,8 +17,9 @@
 
 /* Parte destra (50%) */
 .rightGallery {
-  width: 50%;
+  width: 30%;
   height: 100%;
+  background-color: black;
   overflow: hidden;
 }
 

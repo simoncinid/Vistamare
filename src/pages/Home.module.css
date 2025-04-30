@@ -267,6 +267,12 @@
   display: none;
 }
 
+@media (min-width: 769px) {
+  :global(.rightGallery_1u7cr_37) {
+    background-color: #000 !important;
+  }
+}
+
 @media (max-width: 768px) {
   .heroSection {
     height: 70vh;
@@ -301,6 +307,9 @@
 
   .sectionSpacerLarge {
     padding: 3rem 1rem;
+    background: var(--white);
+    position: relative;
+    z-index: 10;
   }
 
   .sectionSpacerLarge p {
@@ -316,6 +325,7 @@
   .mobileGallery {
     display: block;
     margin: 2rem 0;
+    height: 50vh;
   }
 
   .mobileGallery :global(.gallery-container) {
@@ -326,8 +336,13 @@
     padding: 0 !important;
   }
 
-  .mobileGallery :global(.gallery-bottom) {
+  .mobileGallery :global(.rightGallery_1u7cr_37) {
     display: none !important;
+  }
+
+  /* Nascondi la gallery desktop su mobile */
+  .fadeBottom:not(.mobileGallery) {
+    display: none;
   }
 
   .reservationStrip {

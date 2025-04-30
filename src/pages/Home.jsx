@@ -59,6 +59,10 @@ export default function Home() {
           </AnimatedText>
         </div>
 
+        <div className={`${styles.fadeBottom}`} style={{ position: 'relative', zIndex: 2 }}>
+          <GallerySlider />
+        </div>
+
         <div className={`${styles.fadeBottom} ${styles.mobileGallery}`}>
           <GallerySlider />
         </div>
