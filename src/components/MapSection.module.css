@@ -175,7 +175,22 @@
 
   .infoContainer {
     height: auto;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
+  }
+
+  .infoCard {
+    padding: 1rem;
+    height: auto;
+    min-height: 120px;
+  }
+
+  .infoCard .title {
+    font-size: 0.7rem;
+  }
+
+  .infoCard .value {
+    font-size: 1rem;
   }
 } 

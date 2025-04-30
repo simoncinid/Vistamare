@@ -132,23 +132,95 @@
   transition: opacity 0.5s ease-in-out;
 }
 
+.philosophySection {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  padding: 4rem 0;
+}
+
+.philosophyContent {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.philosophyTitle {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--blue-dark);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.philosophyGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.philosophyCard {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.philosophyCard:hover {
+  transform: translateY(-5px);
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--blue-dark);
+  margin-bottom: 1rem;
+}
+
+.cardText {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--gray-dark);
+}
 
 @media (max-width: 768px) {
-  .philosophy {
-    padding: 3rem 1rem;
-    min-height: auto;
+  .philosophySection {
+    padding: 3rem 0;
   }
 
-  .title {
+  .philosophyContent {
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+
+  .philosophyTitle {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
-  .grid {
+  .philosophyGrid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
-  .card {
-    padding: 3rem 1.5rem 1.5rem;
+  .philosophyCard {
+    padding: 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1.3rem;
+  }
+
+  .cardText {
+    font-size: 0.95rem;
   }
 } 

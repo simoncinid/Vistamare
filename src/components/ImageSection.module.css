@@ -58,7 +58,7 @@
   font-style: normal;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   letter-spacing: 3px;
-} 
+}
 
 .text2 {
   position: relative;
@@ -73,7 +73,7 @@
   font-style: normal;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   letter-spacing: 3px;
-} 
+}
 
 @media (max-width: 768px) {
   .section {
