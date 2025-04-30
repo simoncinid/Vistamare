@@ -269,21 +269,21 @@
   }
 
   .contentSection {
-    height: 30vh;
-    min-height: 30vh;
+    padding: 2rem 1rem;
   }
 
   .intro {
     padding: 2rem 1rem;
     font-size: 1rem;
     line-height: 1.5;
-    max-width: 90%;
+    max-width: 100%;
     margin-top: 1rem;
   }
 
   .intro p {
     margin: 0 auto;
     max-width: 100%;
+    font-size: 1.1rem;
   }
 
   .highlight {
@@ -293,5 +293,19 @@
   .reservationStrip h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+  }
+
+  .sectionSpacerLarge {
+    padding: 3rem 1rem;
+  }
+
+  .sectionSpacerLarge p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  /* Regola per uniformare la dimensione del font di MENU ed ESPERIENZE */
+  .philosophySection h2 {
+    font-size: 2rem !important;
   }
 }
