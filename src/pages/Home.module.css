@@ -263,6 +263,10 @@
   /*filter: drop-shadow(0 0 10px var(--blue-light));*/
 }
 
+.mobileGallery {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .heroSection {
     height: 70vh;
@@ -307,5 +311,18 @@
   /* Regola per uniformare la dimensione del font di MENU ed ESPERIENZE */
   .philosophySection h2 {
     font-size: 2rem !important;
+  }
+
+  .mobileGallery {
+    display: block;
+    margin: 2rem 0;
+  }
+
+  .mobileGallery :global(.gallery-container) {
+    background: none !important;
+  }
+
+  .mobileGallery :global(.gallery-slider) {
+    padding: 0 !important;
   }
 }
