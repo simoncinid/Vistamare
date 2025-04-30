@@ -73,7 +73,9 @@ export default function Home() {
 
         <div className={styles.sectionSpacerLarge}>
           <AnimatedText delay={800}>
+            <img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />
             <p>Vieni a <span className={styles.highlight}>immergerti</span> nel calore della nostra ospitalità: ogni piatto, dal taglio più delicato al sapore più <span className={styles.highlight}>deciso</span>, è concepito per stupire il palato e <span className={styles.highlight}>accendere</span> i sensi, trasformando ogni momento in un ricordo prezioso.</p>
+            <img src="/assets/decorazione.png" alt="" className={styles.decoration} />
           </AnimatedText>
         </div>
       </div>

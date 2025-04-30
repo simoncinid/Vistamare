@@ -134,7 +134,7 @@
 .page {
   width: 100%;
   min-height: 100vh;
-  background-image: url('/assets/background2.png');
+  /*background-image: url('/assets/background2.png');*/
 }
 
 .heroSection {
@@ -145,7 +145,7 @@
 }
 
 .contentSection {
-  background-image: url('/assets/background2.png');
+  /*background-image: url('/assets/background2.png');*/
   width: 100%;
   /*background: #ffffff;*/
   padding: 0;
@@ -216,10 +216,10 @@
 
 /* Spazio consistente tra sezioni con testo */
 .sectionSpacerLarge {
-  background-image: url('/assets/background2.png');
+  /*background-image: url('/assets/background2.png');*/
   position: relative;
   z-index: 10;
-  padding: 6rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .sectionSpacerLarge p {
