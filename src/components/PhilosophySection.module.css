@@ -194,7 +194,8 @@
 
 @media (max-width: 768px) {
   .philosophySection {
-    padding: 3rem 0;
+    padding: 2rem 0;
+    min-height: auto;
   }
 
   .philosophyContent {
@@ -203,7 +204,7 @@
   }
 
   .philosophyTitle {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 1.5rem;
   }
 
@@ -214,13 +215,17 @@
 
   .philosophyCard {
     padding: 1.5rem;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
   }
 
   .cardTitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
   }
 
   .cardText {
     font-size: 0.95rem;
+    line-height: 1.5;
   }
 } 

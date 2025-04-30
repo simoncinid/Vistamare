@@ -166,10 +166,11 @@
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 7rem 1rem;
+  padding: 4rem 1rem;
   text-align: center;
   font-size: 1.15rem;
   line-height: 1.6;
+  margin-top: 2rem;
 }
 
 .intro p {
@@ -268,11 +269,11 @@
   }
 
   .intro {
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
     font-size: 1rem;
     line-height: 1.5;
     max-width: 90%;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .intro p {
