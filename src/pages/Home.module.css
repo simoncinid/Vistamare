@@ -325,4 +325,21 @@
   .mobileGallery :global(.gallery-slider) {
     padding: 0 !important;
   }
+
+  .mobileGallery :global(.gallery-bottom) {
+    display: none !important;
+  }
+
+  .reservationStrip {
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
