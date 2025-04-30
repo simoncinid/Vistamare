@@ -137,7 +137,7 @@
 }
 
 .heroSection {
-  height: 70vh;
+  height: 100vh;
   position: relative;
   overflow: hidden;
   margin-bottom: 0;
@@ -266,6 +266,11 @@
 @media (max-width: 768px) {
   .heroSection {
     height: 70vh;
+  }
+
+  .contentSection {
+    height: 30vh;
+    min-height: 30vh;
   }
 
   .intro {
