@@ -164,13 +164,12 @@
 .intro {
   position: relative;
   width: 100%;
-  max-width: 50vw;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 4rem 1rem 7rem 1rem;
+  padding: 7rem 1rem;
   text-align: center;
   font-size: 1.15rem;
-  line-height: 1.8;
-  font-family: var(--font-heading);
+  line-height: 1.6;
 }
 
 .intro p {
@@ -261,4 +260,26 @@
   height: auto;
   margin-bottom: 20px;
   /*filter: drop-shadow(0 0 10px var(--blue-light));*/
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 70vh;
+  }
+
+  .intro {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 90%;
+  }
+
+  .intro p {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .highlight {
+    font-size: 1.1em;
+  }
 }

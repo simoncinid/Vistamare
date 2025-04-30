@@ -240,11 +240,27 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 /* Responsive */
 @media (max-width: 768px) {
   .formContainer {
+    width: 90%;
     padding: 1.5rem;
+    margin-top: 1rem;
   }
 
   .formHeader h2 {
     font-size: 1.5rem;
+  }
+
+  .form {
+    gap: 1rem;
+  }
+
+  .input, .textarea {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .buttonPrimary, .buttonSecondary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
   }
 
   .steps {
@@ -254,9 +270,5 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   .step {
     width: 20px;
     height: 20px;
-  }
-
-  .buttonPrimary, .buttonSecondary {
-    padding: 0.75rem 1.5rem;
   }
 }
