@@ -34,12 +34,14 @@ export default function Home() {
             />
           </AnimatedText>
           <AnimatedText delay={200}>
+          <img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />
             <p>
               Vistamare è un <span className={styles.highlight}>rifugio</span> sospeso tra il blu del cielo e il respiro delle
               onde: una terrazza che celebra la cucina del territorio con <span className={styles.highlight}>eleganza </span> 
               contemporanea. Ingredienti a miglio 0, ricerca costante e una <span className={styles.highlight}>vista</span> che toglie il fiato — benvenuto dove i sapori incontrano
               l'orizzonte.
             </p>
+            <img src="/assets/decorazione.png" alt="" className={styles.decoration} />
           </AnimatedText>
         </section>
 
@@ -52,10 +54,12 @@ export default function Home() {
         </div>
         <div className={styles.sectionSpacerLarge}>
           <AnimatedText delay={400}>
+          <img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />
             <p>Il nostro ristorante è un <span className={styles.highlight}>viaggio</span> di sapori tra mare e terra, dove ingredienti locali e <span className={styles.highlight}>pescato fresco</span> si fondono in creazioni uniche, espressione di tradizione, <span className={styles.highlight}>passione</span> e continua ricerca di eccellenza culinaria.</p>
           </AnimatedText>
           <AnimatedText delay={600}>
             <img src="/assets/decorazione.png" alt="" className={styles.decoration} />
+            
           </AnimatedText>
         </div>
 
