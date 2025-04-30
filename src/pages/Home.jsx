@@ -60,9 +60,6 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={`${styles.fadeBottom}`} style={{ position: 'relative', zIndex: 2 }}>
-        <GallerySlider />
-      </div>
       <div className={styles.sectionSpacerLarge}>
         <AnimatedText delay={800}>
           <p>Vieni a <span className={styles.highlight}>immergerti</span> nel calore della nostra ospitalità: ogni piatto, dal taglio più delicato al sapore più <span className={styles.highlight}>deciso</span>, è concepito per stupire il palato e <span className={styles.highlight}>accendere</span> i sensi, trasformando ogni momento in un ricordo prezioso.</p>
@@ -72,9 +69,13 @@ export default function Home() {
         </AnimatedText>
       </div>
 
+      <div className={`${styles.fadeBottom}`} style={{ position: 'relative', zIndex: 2 }}>
+        <GallerySlider />
+      </div>
+
       <section className={styles.reservationStrip}>
         <AnimatedText delay={1200}>
-          <h2>TI ASPETTIAMO DA VISTAMARE</h2>
+          <h2>TI ASPETTIAMO</h2>
         </AnimatedText>
         <AnimatedText delay={1400}>
           <ReservationForm />
