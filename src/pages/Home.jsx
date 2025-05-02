@@ -8,7 +8,6 @@ import ReservationForm from '../components/ReservationForm';
 import styles from './Home.module.css';
 // import linea from '../assets/linea.png';
 import ImageSection from '../components/ImageSection';
-import MapSection from '../components/MapSection';
 import GallerySlider from '../components/GallerySlider';
 import PhilosophySection from '../components/PhilosophySection';
 import AnimatedText from '../components/AnimatedText';
@@ -94,10 +93,6 @@ export default function Home() {
           <ReservationForm />
         </AnimatedText>
       </section>
-
-      <div style={{ position: 'relative', zIndex: 1 }}>
-        <MapSection />
-      </div>
 
       <Footer />
     </div>
