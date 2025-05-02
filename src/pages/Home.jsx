@@ -45,7 +45,7 @@ export default function Home() {
           </AnimatedText>
         </section>
 
-        <div style={{ position: 'relative', zIndex: 1, marginBottom: '100px' }}>
+        <div className={styles.divPhilosophy} style={{ position: 'relative', zIndex: 1}}>
           <PhilosophySection />
         </div>        
         
@@ -55,9 +55,11 @@ export default function Home() {
         <div className={styles.sectionSpacerLarge}>
           <AnimatedText delay={400}>
           <img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />
-            <p>Il nostro ristorante è un <span className={styles.highlight}>viaggio</span> di sapori tra mare e terra, dove ingredienti locali e <span className={styles.highlight}>pescato fresco</span> si fondono in creazioni uniche, espressione di tradizione, <span className={styles.highlight}>passione</span> e continua ricerca di eccellenza culinaria.</p>
           </AnimatedText>
           <AnimatedText delay={600}>
+            <p>Il nostro ristorante è un <span className={styles.highlight}>viaggio</span> di sapori tra mare e terra, dove ingredienti locali e <span className={styles.highlight}>pescato fresco</span> si fondono in creazioni uniche, espressione di tradizione, <span className={styles.highlight}>passione</span> e continua ricerca di eccellenza culinaria.</p>
+            </AnimatedText>
+          <AnimatedText delay={400}>
             <img src="/assets/decorazione.png" alt="" className={styles.decoration} />
             
           </AnimatedText>
@@ -72,9 +74,13 @@ export default function Home() {
         </div>
 
         <div className={styles.sectionSpacerLarge}>
-          <AnimatedText delay={800}>
+          <AnimatedText delay={400}>
             <img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />
+            </AnimatedText>
+            <AnimatedText delay={600}>
             <p>Vieni a <span className={styles.highlight}>immergerti</span> nel calore della nostra ospitalità: ogni piatto, dal taglio più delicato al sapore più <span className={styles.highlight}>deciso</span>, è concepito per stupire il palato e <span className={styles.highlight}>accendere</span> i sensi, trasformando ogni momento in un ricordo prezioso.</p>
+            </AnimatedText>
+            <AnimatedText delay={400}>
             <img src="/assets/decorazione.png" alt="" className={styles.decoration} />
           </AnimatedText>
         </div>
