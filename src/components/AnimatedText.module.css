@@ -22,4 +22,17 @@
   
 }
 
+@media (max-width: 768px) {
+  .animatedText p {
+    font-size: 1rem;
+    padding: 3rem;
+  }
+
+  .animatedText h2 {
+    font-size: 4rem;
+  }
+}
+
+
+
 

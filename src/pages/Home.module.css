@@ -401,8 +401,8 @@
   }
   /* Ti aspettiamo: font più piccolo */
   .reservationStrip h2 {
-    font-size: 1.1rem !important;
-    margin-bottom: 1rem;
+    font-size: 8rem !important;
+    margin-bottom: 2rem;
     letter-spacing: 0.01em;
     white-space: nowrap;
   }
