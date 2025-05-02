@@ -277,7 +277,7 @@
 }
 /* Logo intro */
 .logo {
-  max-width: 240px;
+  max-width: 340px;
   width: 100%;
   height: auto;
   /*filter: drop-shadow(0 0 10px var(--blue-light));*/
@@ -369,6 +369,13 @@
 
   .reservationStrip {
     animation: fadeIn 0.5s ease-in;
+  }
+
+  .logo {
+    max-width: 240px;
+    width: 100%;
+    height: auto;
+    /*filter: drop-shadow(0 0 10px var(--blue-light));*/
   }
 
   @keyframes fadeIn {
