@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './ImageSection.module.css';
 
 import img1 from '../assets/1.png';
-import img3 from '../assets/3.png';
+import img3 from '../assets/15.png';
 
 export default function ImageSection() {
   const [hoverLeft, setHoverLeft] = useState(false);

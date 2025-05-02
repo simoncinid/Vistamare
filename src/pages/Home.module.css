@@ -314,54 +314,97 @@
   }
 
   .highlight {
-    font-size: 1.1em;
+    font-size: 2.2em;
+    font-family: 'Tangerine', cursive;
+    font-weight: 700;
+    color: #6db1ff;
+    line-height: 1;
   }
-
-  .reservationStrip h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .sectionSpacerLarge {
-    padding: 3rem 1rem;
-    background: var(--white);
-    position: relative;
-    z-index: 10;
-  }
-
-  .sectionSpacerLarge p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-
-  /* Regola per uniformare la dimensione del font di MENU ed ESPERIENZE */
+  
   .philosophySection h2 {
-    font-size: 2rem !important;
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic;
+    color: #1a365d;
+    font-size: 2.2rem !important;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
   }
-  .divPhilosophy{
+  
+  .divPhilosophy {
     margin-bottom: 0;
+    position: relative;
+    z-index: 2;
   }
-  .mobileGallery {
-    display: block;
-    margin: 2rem 0;
-    height: 50vh;
+  
+  /* Box filosofia: width ridotta e sovrapposizione */
+  .philosophySection .box {
+    width: 85vw !important;
+    max-width: 350px;
+    margin: -3rem auto 0 auto !important;
+    z-index: 3;
+    position: relative;
+    background: linear-gradient(120deg, rgba(224,227,251,0.97) 60%, #e8f4ff 100%);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+    border-radius: 18px;
+    overflow: visible;
   }
-
-  .mobileGallery :global(.gallery-container) {
+  .philosophySection .box::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 30px;
+    background: linear-gradient(90deg, #e8f4ff 0%, rgba(224,227,251,0.7) 100%);
+    border-radius: 18px 18px 0 0;
+    z-index: 2;
+    opacity: 0.7;
+  }
+  .philosophySection .imagePart {
+    z-index: 1;
+    position: relative;
+  }
+  .philosophySection .box {
+    margin-top: -2.5rem !important;
+  }
+  /* Sovrapposizione box su foto */
+  .philosophySection {
+    margin-bottom: 0;
+    z-index: 2;
+  }
+  /* Sezione sotto filosofia: sfondo blu scuro */
+  .sectionSpacerLarge {
+    background: #001a38 !important;
+    color: #fff;
+  }
+  .sectionSpacerLarge p {
+    color: #fff;
+  }
+  /* Gallery: tolgo fasce blu sopra e sotto */
+  .fadeBottom::after {
     background: none !important;
   }
-
-  .mobileGallery :global(.gallery-slider) {
-    padding: 0 !important;
+  .mobileGallery {
+    background: none !important;
+    box-shadow: none !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
-
-  .mobileGallery :global(.rightGallery_1u7cr_37) {
-    display: none !important;
+  /* Testo sotto gallery: sfondo blu */
+  .sectionSpacerLarge:last-of-type {
+    background: #001a38 !important;
+    color: #fff;
   }
-
-  /* Nascondi la gallery desktop su mobile */
-  .fadeBottom:not(.mobileGallery) {
-    display: none;
+  .sectionSpacerLarge:last-of-type p {
+    color: #fff;
+  }
+  /* Ti aspettiamo: font più piccolo */
+  .reservationStrip h2 {
+    font-size: 1.1rem !important;
+    margin-bottom: 1rem;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
   }
 
   .reservationStrip {

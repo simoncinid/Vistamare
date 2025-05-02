@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import logo from '../assets/logo.png';
+import { FaInstagram, FaFacebook, FaTripadvisor } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -35,9 +36,9 @@ export default function Footer() {
         <div className={styles.column}>
           <h3>Seguici</h3>
           <div className={styles.socialLinks}>
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">TripAdvisor</a>
+            <a href="#" aria-label="Instagram"><FaInstagram /></a>
+            <a href="#" aria-label="Facebook"><FaFacebook /></a>
+            <a href="#" aria-label="TripAdvisor"><FaTripadvisor /></a>
           </div>
         </div>
       </div>
