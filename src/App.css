@@ -44,7 +44,10 @@
   color: #888;
 }
 
+
 /* Stile personalizzato per la scrollbar */
+@media (min-width: 769px) {
+  
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -61,6 +64,7 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #0066cc, #002c5f);
+}
 }
 
 /* Barra di progresso */

@@ -220,7 +220,7 @@
 
 /* Spazio consistente tra sezioni con testo */
 .sectionSpacerLarge {
-  /*background-image: url('/assets/background2.png');*/
+  /*background-image: url('/assets/pattern2.png');*/
   position: relative;
   z-index: 10;
   padding: 2rem 1rem;
