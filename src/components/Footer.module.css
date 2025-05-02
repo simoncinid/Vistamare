@@ -163,21 +163,48 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: 3rem 1rem 1rem;
+    padding: 2rem 0.5rem 1rem 0.5rem;
     min-height: auto;
   }
   .footerMainRow {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    align-items: center;
+    gap: 1.5rem;
     max-width: 100%;
+    width: 100%;
   }
   .mapFooterColumn {
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 1.2rem auto;
     align-items: center;
     max-width: 100%;
   }
+  .logoFooterMap {
+    height: 36px;
+    margin-bottom: 0.5rem;
+  }
+  .mapFooterColumn iframe {
+    width: 95vw !important;
+    max-width: 320px;
+    height: 90px !important;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.2rem;
+  }
   .column {
     padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .bottomBarFull {
+    padding-top: 1.2rem;
+  }
+  .legalLinksFull {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
