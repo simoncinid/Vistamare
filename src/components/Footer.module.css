@@ -113,7 +113,6 @@
 
 .logoFooterMap {
   display: block;
-  margin: 0 auto 1rem auto;
   height: 55px;
   width: auto;
   filter: brightness(0) invert(1);
@@ -186,7 +185,7 @@
   .mapFooterColumn iframe {
     width: 95vw !important;
     max-width: 320px;
-    height: 90px !important;
+    height: 200px !important;
   }
   .content {
     display: flex;

@@ -18,8 +18,6 @@ export default function Footer() {
             loading="lazy"
           ></iframe>
           <div style={{ fontSize: '0.95rem', color: '#1a365d', textAlign: 'left', marginLeft: 2 }}>
-            <div>Parcheggio gratuito</div>
-            <div>WiFi disponibile</div>
           </div>
         </div>
         <div className={styles.content}>
