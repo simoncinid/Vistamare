@@ -8,3 +8,18 @@
   opacity: 1;
   transform: translateY(0);
 } 
+
+.animatedText p{
+  color: rgb(241, 241, 254);
+}
+
+.animatedText h2{
+  color: rgb(241, 241, 254);
+  font-family: 'Tangerine', cursive;
+  font-weight: 700;
+  font-size: 8rem;
+  line-height: 0.85;
+  
+}
+
+

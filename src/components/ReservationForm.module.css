@@ -1,14 +1,14 @@
 .formContainer {
   position: relative;
-  width: 37.5%;
+  width: 70%;
   max-width: none;
   margin: 0 auto;
-  padding: 0.75rem;
+  padding: 3rem;
   z-index: 1;
-  background: rgb(85, 132, 189);
+  background: rgb(0, 35, 77);
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgb(255, 255, 255);
   margin-top: -0.75rem;
   opacity: 0;
   transform: translateY(20px);
@@ -167,8 +167,9 @@
 
 .buttonPrimary {
   background: white;
-  color: #2c5282;
+  color: #001939;
   border: none;
+  
 }
 
 .buttonPrimary:hover {

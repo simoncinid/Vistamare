@@ -208,10 +208,12 @@
 }
 
 .philosophySection .box h2 {
-  font-size: 1.8rem;
+  font-family: 'Lexend Zetta', sans-serif;
+  font-size: 2.5rem;
+  color: #1a365d;
   margin-bottom: 1.5rem;
-  color: var(--blue-dark);
-  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .philosophySection .box p {
@@ -476,10 +478,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap');
 .menuTitle {
   text-align: center;
+  font-family: 'Lexend Zetta', sans-serif;
   font-size: 2.2rem;
-  color: var(--blue-dark);
+  color: #1a365d;
   margin-bottom: 2.5rem;
-  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .menuDescription {
@@ -554,12 +558,13 @@
 
 .menuCardTitle {
   text-align: center;
+  font-family: 'Lexend Zetta', sans-serif;
   font-size: 2.2rem;
-  color: var(--blue-dark);
+  color: #1a365d;
   margin-bottom: 2.5rem;
-  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.08em;
   position: relative;
-  letter-spacing: 1px;
 }
 
 .menuCardTitle::after {

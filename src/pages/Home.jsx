@@ -87,7 +87,7 @@ export default function Home() {
 
       <section className={styles.reservationStrip}>
         <AnimatedText delay={800}>
-          <h2>TI ASPETTIAMO</h2>
+          <h2>Ti aspettiamo</h2>
         </AnimatedText>
         <AnimatedText delay={900}>
           <ReservationForm />

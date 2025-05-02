@@ -96,7 +96,7 @@
   position: relative;
   width: 100%;
   background-color: var(--blue-dark);
-  background-image: linear-gradient(rgba(0, 44, 95, 0.7), rgba(0, 44, 95, 0.7)), url('/assets/backform.png');
+  background-image: linear-gradient(rgba(0, 44, 95, 0.795), rgba(255, 255, 255, 0.808)), url('/assets/backform.png');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -122,8 +122,12 @@
   /*font-size: 1.3em;
   font-weight: bold;
   color: var(--blue-dark);*/
-  color: #002652;
-  font-weight: 600;
+  color: #6db1ff;
+  font-size: 3rem;
+  margin: 0;
+  line-height: 0.5;
+  font-family: 'Tangerine', cursive;
+  font-weight: 700;
 }
 
 /* ---------- FOOTER ---------- */
@@ -152,6 +156,7 @@
   /*background-image: url('/assets/background2.png');*/
   width: 100%;
   /*background: #ffffff;*/
+  background-color:#001a38;
   padding: 0;
   position: relative;
   z-index: 1;
@@ -160,7 +165,7 @@
 /* Quando non c'è la hero section, la contentSection diventa la prima */
 .contentSectionFirst {
   width: 100%;
-  background: #ffffff;
+  background: #001a38;
   padding-top: 100px; /* Aggiungiamo spazio in alto quando è la prima sezione */
   position: relative;
   z-index: 1;
@@ -176,7 +181,7 @@
   text-align: center;
   font-size: 1.15rem;
   line-height: 1.6;
-  margin-top: 2rem;
+  
 }
 
 .intro p {
@@ -191,13 +196,12 @@
   letter-spacing: 0.05em;
 }
 
-.footer {
-  width: 100%;
-  background: #001a38;
-  color: var(--white);
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: .9rem;
+/* Logo intro - reso chiaro sul bianco */
+.logo {
+  filter: brightness(0) invert(0.9);
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
 }
 
 /* Sezione bianca in fondo sotto la gallery */
@@ -274,13 +278,6 @@
   height: 3rem;
   /*background: linear-gradient(to bottom, transparent 0%, var(--blue-light));*/
   pointer-events: none;
-}
-/* Logo intro */
-.logo {
-  max-width: 340px;
-  width: 100%;
-  height: auto;
-  /*filter: drop-shadow(0 0 10px var(--blue-light));*/
 }
 
 .mobileGallery {

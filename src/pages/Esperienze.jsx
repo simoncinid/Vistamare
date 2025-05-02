@@ -141,7 +141,7 @@ const Esperienze = () => {
         </div>
         <div className={styles.textPart}>
           <div className={styles.box}>
-            <h2>LA NOSTRA CANTINA</h2>
+            <h2><span style={{ fontStyle: 'italic' }}>LA NOSTRA</span> CANTINA</h2>
             <p>Una selezione curata di vini locali e internazionali, scelti per 
             accompagnare perfettamente ogni portata del nostro menu degustazione. 
             Un viaggio enologico che completa l'esperienza gastronomica.</p>

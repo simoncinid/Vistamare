@@ -21,7 +21,7 @@ export default function ImageSection() {
           style={{ backgroundImage: `url(${img1})` }}
         ></div>
         <div className={`${styles.overlay} ${hoverLeft ? styles.visible : ''}`}>
-          <Link to="/menu" className={styles.text}>MENU</Link>
+          <Link to="/menu" className={styles.text}>Menù</Link>
         </div>
       </div>
       <div 
@@ -34,7 +34,7 @@ export default function ImageSection() {
           style={{ backgroundImage: `url(${img3})` }}
         ></div>
         <div className={`${styles.overlay} ${hoverRight ? styles.visible : ''}`}>
-          <Link to="/esperienze" className={styles.text2}>ESPERIENZE</Link>
+          <Link to="/esperienze" className={styles.text}>Esperienze</Link>
         </div>
       </div>
     </section>
