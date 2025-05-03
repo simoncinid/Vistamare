@@ -316,7 +316,11 @@
     font-size: 1rem;
     line-height: 1.5;
     max-width: 100%;
-    
+  }
+
+  /* Nascondi il logo Vistamare nella versione mobile */
+  .intro .logo {
+    display: none;
   }
 
   .intro p {
