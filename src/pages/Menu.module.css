@@ -289,6 +289,28 @@
   background-color: white;
 }
 
+/* Sezione finale con testo uguale all'inizio */
+.menuBottomSection {
+  background-color: #04062d;
+  padding: 0rem 2rem 6rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+/* Titolo TripAdvisor */
+.tripAdvisorTitle {
+  font-family: 'Tangerine', cursive;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #04062d;
+}
+
+.tripAdvisorSection {
+  background-color: white;
+  padding: 4rem 2rem 2rem;
+}
+
 /* Media queries */
 @media (max-width: 768px) {
   .menuTitle {

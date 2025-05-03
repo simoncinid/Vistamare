@@ -242,7 +242,7 @@ const Menu = () => {
                       {/* Immagine piatto a sinistra */}
                       <div className={styles.dishImageContainer}>
                         <img 
-                          src="/assets/3.png" 
+                          src="/assets/6.png" 
                           alt={`Immagine di ${dish.name}`} 
                           className={styles.dishImage}
                         />
@@ -276,9 +276,21 @@ const Menu = () => {
         </div>
       </section>
 
-      
-      
-      
+      {/* Paragrafo finale identico a quello iniziale */}
+      <section className={styles.menuBottomSection}>
+        <p className={styles.menuDescription}>
+          Le nostre proposte variano <span className={styles.highlight}> giornalmente</span> in base al pescato fresco 
+          disponibile. 
+          <br></br>
+          Il nostro chef <span className={styles.highlight}> seleziona</span> personalmente gli ingredienti 
+          migliori per offrirvi un'<span className={styles.highlight}> esperienza</span> culinaria autentica e di alta qualità.
+          <br></br>
+          <span className={styles.highlight}> Freschezza</span> e <span className={styles.highlight}>qualità</span> sono la nostra 
+          <span className={styles.highlight}> priorità</span>.
+        </p>
+      </section>
+
+     
 
       <Footer />
     </div>
