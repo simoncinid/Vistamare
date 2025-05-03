@@ -126,7 +126,7 @@
   width: 100%;
   min-height: 120vh;
   position: relative;
-  
+  background-color: #001a38;
 }
 
 /* Stile sezione filosofia copiato dallo stesso stile nella home */
@@ -138,7 +138,7 @@
   position: relative;
   isolation: isolate;
   z-index: 5;
-  background-color: white;
+  background-color: #001a38;
 }
 
 .philosophySection.reversed {
@@ -169,7 +169,7 @@
 .philosophySection .textPart {
   width: 40%;
   height: 100%;
-  background-color: #f0f5fa;
+  background-color: #001a38;
   position: relative;
   overflow: visible;
 }
@@ -217,6 +217,7 @@
 }
 
 .philosophySection .box p {
+  font-family: 'Playfair Display', serif;
   font-size: 1rem;
   line-height: 1.6;
   color: var(--gray-dark);
@@ -224,8 +225,7 @@
 
 /* Sezione dettagli menu degustazione */
 .menuDetailSection {
-  background-color: #f9f9f9;
-  
+  background-color: #001a38;
   width: 100%;
   margin: 0 auto 5rem;
   text-align: center;
@@ -268,11 +268,15 @@
   color: var(--gray-dark);
   max-width: 700px;
   margin: 0 auto;
+  font-family: 'Playfair Display', serif;
 }
 
 .courseHighlight {
-  color: var(--blue-mid);
+  color: #6db1ff;
   font-weight: 600;
+  font-family: 'Tangerine', cursive;
+  font-size: 2rem;
+  line-height: 0.5;
 }
 
 .pricing {
@@ -299,19 +303,23 @@
   text-align: center;
   position: relative;
   z-index: 10;
-  background-color: white;
+  background-color: #001a38;
 }
 
 .paragraphSection p {
+  font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
   line-height: 1.8;
-  color: var(--gray-dark);
+  color: #2c2c2c;
   margin-bottom: 2rem;
 }
 
 .highlight {
-  color: var(--blue-dark);
-  font-weight: 600;
+  color: #6db1ff;
+  font-family: 'Tangerine', cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 0.5;
 }
 
 .decoration {
@@ -475,7 +483,8 @@
 }
 
 /* Aggiungi i font eleganti */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&family=Tangerine:wght@400;700&display=swap');
+
 .menuTitle {
   text-align: center;
   font-family: 'Lexend Zetta', sans-serif;
@@ -490,8 +499,8 @@
   text-align: center;
   font-size: 1.1rem;
   line-height: 1.7;
-  color: var(--gray-dark);
-
+  color: #2c2c2c;
+  font-family: 'Playfair Display', serif;
   margin: 0 5rem;
 }
 
@@ -536,8 +545,6 @@
   justify-content: center;
   align-items: center;
   padding: 5rem 2rem;
-  
-  
   backdrop-filter: blur(3px);
 }
 
@@ -600,9 +607,9 @@
   height: 150px;
   margin-top: -150px; /* Si sovrappone alla fine della sezione parallasse */
   background: linear-gradient(to bottom, 
-                            rgba(255,255,255,0) 0%, 
-                            rgba(255,255,255,0.9) 70%, 
-                            rgba(255,255,255,1) 100%);
+                            rgba(0,26,56,0) 0%, 
+                            rgba(0,26,56,0.9) 70%, 
+                            rgba(0,26,56,1) 100%);
   pointer-events: none; /* Assicura che i click passino attraverso */
 }
 

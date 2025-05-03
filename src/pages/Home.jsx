@@ -67,11 +67,7 @@ export default function Home() {
         <div className={`${styles.fadeBottom}`} style={{ position: 'relative', zIndex: 2 }}>
           <GallerySlider />
         </div>
-
-        <div className={`${styles.fadeBottom} ${styles.mobileGallery}`}>
-          <GallerySlider />
-        </div>
-
+        
         <div className={styles.sectionSpacerLarge}>
           <AnimatedText delay={400}>
             <img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />
@@ -84,15 +80,7 @@ export default function Home() {
           </AnimatedText>
         </div>
 
-        {/* FASCIA MENU + ESPERIENZE SOLO MOBILE */}
-        <div className={styles.fadeBottom}>
-          <div className={styles.fadeBottomMenu}>
-            <span className={styles.underlineMobile}>menù</span>
-          </div>
-          <div className={styles.fadeBottomEsperienze}>
-            <span className={styles.underlineMobile}>esperienze</span>
-          </div>
-        </div>
+       
         {/* Fine fasce mobile */}
       </div>
 

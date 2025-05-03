@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './Esperienze.module.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import AnimatedText from '../components/AnimatedText';
 
 const Esperienze = () => {
   const [currentCantinaImage, setCurrentCantinaImage] = useState(0);
@@ -42,19 +43,26 @@ const Esperienze = () => {
       
       {/* Paragrafo introduttivo con parole evidenziate */}
       <div className={styles.paragraphSection}>
-        <p>
-          Il nostro <span className={styles.highlight}>menu degustazione</span> nasce 
-          dall'amore per la materia prima e dal desiderio di raccontare il territorio 
-          attraverso sapori <span className={styles.highlight}>autentici</span> e 
-          ricercati. Ogni boccone è un viaggio tra terra e mare, dove 
-          <span className={styles.highlight}>tradizione</span> e innovazione si 
-          incontrano creando un'esperienza sensoriale <span className={styles.highlight}>unica</span> 
-          e memorabile. Il percorso è studiato per <span className={styles.highlight}>sorprendere</span> 
-          ed emozionare, con piatti che cambiano al ritmo delle stagioni, 
-          celebrando la <span className={styles.highlight}>freschezza</span> e la 
-          qualità degli ingredienti locali.
-        </p>
-        <img src="/assets/decorazione.png" alt="" className={styles.decoration} />
+        <AnimatedText delay={400}>
+          <img src="/assets/decorazione.png" alt="" className={styles.decoration} style={{transform: 'rotate(180deg)'}} />
+        </AnimatedText>
+        <AnimatedText delay={600}>
+          <p>
+            Il nostro <span className={styles.highlight}>menu degustazione</span> nasce 
+            dall'amore per la materia prima e dal desiderio di raccontare il territorio 
+            attraverso sapori <span className={styles.highlight}>autentici</span> e 
+            ricercati. Ogni boccone è un viaggio tra terra e mare, dove 
+            <span className={styles.highlight}>tradizione</span> e innovazione si 
+            incontrano creando un'esperienza sensoriale <span className={styles.highlight}>unica</span> 
+            e memorabile. Il percorso è studiato per <span className={styles.highlight}>sorprendere</span> 
+            ed emozionare, con piatti che cambiano al ritmo delle stagioni, 
+            celebrando la <span className={styles.highlight}>freschezza</span> e la 
+            qualità degli ingredienti locali.
+          </p>
+        </AnimatedText>
+        <AnimatedText delay={400}>
+          <img src="/assets/decorazione.png" alt="" className={styles.decoration} />
+        </AnimatedText>
       </div>
       
      
@@ -70,7 +78,7 @@ const Esperienze = () => {
               <div className={styles.course}>
                 <h4 className={styles.courseName}>Benvenuto dello Chef</h4>
                 <p className={styles.courseDescription}>
-                  <span className={styles.courseHighlight}>Piccole creazioni a sorpresa</span> per 
+                  <span className={styles.courseHighlight}>Piccole creazioni</span> a sorpresa per 
                   aprire il palato e introdurre il viaggio gastronomico.
                 </p>
               </div>
@@ -78,7 +86,7 @@ const Esperienze = () => {
               <div className={styles.course}>
                 <h4 className={styles.courseName}>Crudo di Mare</h4>
                 <p className={styles.courseDescription}>
-                  <span className={styles.courseHighlight}>Selezione di pescato fresco</span> con 
+                  <span className={styles.courseHighlight}>Selezione</span> di pescato fresco con 
                   olio extravergine d'oliva, agrumi e sale di Cervia.
                 </p>
               </div>
@@ -86,7 +94,7 @@ const Esperienze = () => {
               <div className={styles.course}>
                 <h4 className={styles.courseName}>Antipasto Vistamare</h4>
                 <p className={styles.courseDescription}>
-                  <span className={styles.courseHighlight}>Tentacolo di polpo arrostito</span> su 
+                  <span className={styles.courseHighlight}>Tentacolo</span> di polpo arrostito su 
                   crema di patate, olive taggiasche e polvere di capperi.
                 </p>
               </div>
@@ -94,7 +102,7 @@ const Esperienze = () => {
               <div className={styles.course}>
                 <h4 className={styles.courseName}>Primo Piatto</h4>
                 <p className={styles.courseDescription}>
-                  <span className={styles.courseHighlight}>Paccheri al ragù di pescatrice</span> con 
+                  <span className={styles.courseHighlight}>Paccheri</span> al ragù di pescatrice con 
                   pomodorini confit e basilico fresco.
                 </p>
               </div>
@@ -102,7 +110,7 @@ const Esperienze = () => {
               <div className={styles.course}>
                 <h4 className={styles.courseName}>Secondo Piatto</h4>
                 <p className={styles.courseDescription}>
-                  <span className={styles.courseHighlight}>Filetto di branzino</span> in 
+                  <span className={styles.courseHighlight}>Filetto</span> di branzino in 
                   crosta di erbe aromatiche con verdure di stagione.
                 </p>
               </div>
@@ -110,7 +118,7 @@ const Esperienze = () => {
               <div className={styles.course}>
                 <h4 className={styles.courseName}>Pre-Dessert</h4>
                 <p className={styles.courseDescription}>
-                  <span className={styles.courseHighlight}>Sorbetto al limone e basilico</span> per 
+                  <span className={styles.courseHighlight}>Sorbetto</span> al limone e basilico per 
                   rinfrescare il palato.
                 </p>
               </div>
@@ -118,7 +126,7 @@ const Esperienze = () => {
               <div className={styles.course}>
                 <h4 className={styles.courseName}>Dessert</h4>
                 <p className={styles.courseDescription}>
-                  <span className={styles.courseHighlight}>Semisfera di cioccolato bianco</span> con 
+                  <span className={styles.courseHighlight}>Semisfera</span> di cioccolato bianco con 
                   cuore di frutta della passione e crumble salato.
                 </p>
               </div>
@@ -151,17 +159,24 @@ const Esperienze = () => {
       
       {/* Paragrafo sulla cantina con parole evidenziate */}
       <div className={styles.paragraphSection}>
-        <p>
-          La nostra <span className={styles.highlight}>cantina</span> è frutto di un'attenta 
-          ricerca e selezione di etichette provenienti dalle migliori 
-          <span className={styles.highlight}>realtà vinicole</span> toscane e nazionali. 
-          Particolare attenzione è dedicata ai <span className={styles.highlight}>vini biologici</span> 
-          e a basso impatto ambientale, espressione autentica del 
-          <span className={styles.highlight}>terroir</span> di provenienza. I nostri sommelier 
-          saranno felici di guidarvi in un percorso di <span className={styles.highlight}>abbinamenti</span> 
-          studiati per esaltare ogni singola portata del menu degustazione.
-        </p>
-        <img src="/assets/decorazione.png" alt="" className={styles.decoration} />
+        <AnimatedText delay={400}>
+          <img src="/assets/decorazione.png" alt="" className={styles.decoration} style={{transform: 'rotate(180deg)'}} />
+        </AnimatedText>
+        <AnimatedText delay={600}>
+          <p>
+            La nostra <span className={styles.highlight}>cantina</span> è frutto di un'attenta 
+            ricerca e selezione di etichette provenienti dalle migliori 
+            <span className={styles.highlight}>realtà vinicole</span> toscane e nazionali. 
+            Particolare attenzione è dedicata ai <span className={styles.highlight}>vini biologici</span> 
+            e a basso impatto ambientale, espressione autentica del 
+            <span className={styles.highlight}>terroir</span> di provenienza. I nostri sommelier 
+            saranno felici di guidarvi in un percorso di <span className={styles.highlight}>abbinamenti</span> 
+            studiati per esaltare ogni singola portata del menu degustazione.
+          </p>
+        </AnimatedText>
+        <AnimatedText delay={400}>
+          <img src="/assets/decorazione.png" alt="" className={styles.decoration} />
+        </AnimatedText>
       </div>
       
       {/* Slider immagini cantina */}
