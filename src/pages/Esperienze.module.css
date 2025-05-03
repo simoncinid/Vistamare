@@ -199,21 +199,26 @@
   max-width: 90%;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   z-index: 10000 !important;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .philosophySection.reversed .box {
   left: auto;
   right: 0;
   transform: translateY(-50%) translateX(30%);
+  text-align: center;
 }
 
 .philosophySection .box h2 {
-  font-family: 'Lexend Zetta', sans-serif;
-  font-size: 2.5rem;
-  color: #1a365d;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-family: Tangerine, cursive;
+    font-size: 3.5rem;
+    font-style: normal;
+    color: #1a365d;
+    margin-bottom: 1.5rem;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: .05em;
 }
 
 .philosophySection .box p {
@@ -427,6 +432,7 @@
   .philosophySection {
     flex-direction: column;
     margin-top: 30px;
+    z-index: 11;
   }
   
   .philosophySection.reversed {
@@ -474,6 +480,7 @@
   .philosophySection .box {
     padding: 1.5rem;
     top: -40px;
+    border-radius: 10px;
   }
   
   .paragraphSection p,

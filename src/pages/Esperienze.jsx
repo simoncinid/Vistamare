@@ -33,7 +33,7 @@ const Esperienze = () => {
         </div>
         <div className={styles.textPart}>
           <div className={styles.box}>
-            <h2>MENU DEGUSTAZIONE</h2>
+            <h2>Menu Degustazione</h2>
             <p>Un percorso culinario che celebra i sapori autentici del mare, con creazioni 
             innovative che rispettano la tradizione. Ogni piatto racconta una storia, 
             un territorio, una passione.</p>
