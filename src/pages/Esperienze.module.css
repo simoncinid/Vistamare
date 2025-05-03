@@ -112,13 +112,21 @@
 }
 
 .wineYear {
-  color: var(--gray-light);
-  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: rgb(73, 234, 255);
+  margin-left: 0.8rem;
+  font-style: italic;
+  font-weight: normal;
 }
 
 .winePrice {
-  color: var(--blue-mid);
+  display: block;
+  text-align: right;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
+  color: white;
+  font-size: 1.2rem;
   margin-top: 0.5rem;
 }
 
@@ -860,11 +868,6 @@
   font-family: 'Playfair Display', serif;
   font-size: 1rem;
   color: white;
-}
-
-.wineYear {
-  font-weight: 600;
-  margin-right: 0.5rem;
 }
 
 .wineRegion {

@@ -32,16 +32,66 @@ const Esperienze = () => {
 
   // Lista vini per la cantina
   const viniList = [
-    { nome: "Brunello di Montalcino Riserva", anno: "2018", regione: "Toscana" },
-    { nome: "Barolo DOCG", anno: "2017", regione: "Piemonte" },
-    { nome: "Amarone della Valpolicella", anno: "2019", regione: "Veneto" },
-    { nome: "Franciacorta Satèn", anno: "2020", regione: "Lombardia" },
-    { nome: "Vermentino di Gallura", anno: "2021", regione: "Sardegna" },
-    { nome: "Greco di Tufo", anno: "2022", regione: "Campania" },
-    { nome: "Chianti Classico Gran Selezione", anno: "2017", regione: "Toscana" },
-    { nome: "Montepulciano d'Abruzzo Riserva", anno: "2018", regione: "Abruzzo" },
-    { nome: "Etna Rosso DOC", anno: "2019", regione: "Sicilia" },
-    { nome: "Pinot Grigio Colli Orientali", anno: "2021", regione: "Friuli" }
+    { 
+      nome: "Brunello di Montalcino Riserva", 
+      descrizione: "Elegante e strutturato, con note di ciliegia matura, tabacco e spezie.", 
+      anno: "2018", 
+      prezzo: "€65"
+    },
+    { 
+      nome: "Barolo DOCG", 
+      descrizione: "Intenso e aristocratico, con sentori di viola, rosa e frutti rossi.", 
+      anno: "2017", 
+      prezzo: "€72"
+    },
+    { 
+      nome: "Amarone della Valpolicella", 
+      descrizione: "Potente e vellutato, con aromi di frutta secca, cioccolato e vaniglia.", 
+      anno: "2019", 
+      prezzo: "€68"
+    },
+    { 
+      nome: "Franciacorta Satèn", 
+      descrizione: "Raffinato e cremoso, con note di crosta di pane e agrumi.", 
+      anno: "2020", 
+      prezzo: "€48"
+    },
+    { 
+      nome: "Vermentino di Gallura", 
+      descrizione: "Fresco e minerale, con profumi di fiori bianchi e erbe mediterranee.", 
+      anno: "2021", 
+      prezzo: "€42"
+    },
+    { 
+      nome: "Greco di Tufo", 
+      descrizione: "Sapido e complesso, con sentori di pesca gialla e mandorla.", 
+      anno: "2022", 
+      prezzo: "€38"
+    },
+    { 
+      nome: "Chianti Classico Gran Selezione", 
+      descrizione: "Equilibrato e persistente, con note di frutti rossi e spezie dolci.", 
+      anno: "2017", 
+      prezzo: "€56"
+    },
+    { 
+      nome: "Montepulciano d'Abruzzo Riserva", 
+      descrizione: "Avvolgente e corposo, con aromi di mora, liquirizia e pepe nero.", 
+      anno: "2018", 
+      prezzo: "€45"
+    },
+    { 
+      nome: "Etna Rosso DOC", 
+      descrizione: "Elegante e minerale, con note di frutti rossi, erbe aromatiche e cenere vulcanica.", 
+      anno: "2019", 
+      prezzo: "€52"
+    },
+    { 
+      nome: "Pinot Grigio Colli Orientali", 
+      descrizione: "Delicato e floreale, con sentori di mela verde e fiori di campo.", 
+      anno: "2021", 
+      prezzo: "€36"
+    }
   ];
 
   // Effetto per far scorrere le immagini della cantina
@@ -148,13 +198,12 @@ const Esperienze = () => {
         </AnimatedText>
       </div>
       
-     
-      
-      {/* Nuova sezione parallax per il menu */}
+      {/* Menu degustazione */}
       <div className={styles.parallaxMenuContainer}>
-        <div className={styles.parallaxBackground}></div>
+        <div className={styles.parallaxBackground} style={{ backgroundImage: "url('/assets/1.png')" }}></div>
         <div className={styles.parallaxContent}>
           <div className={styles.menuCard}>
+            <h3 className={styles.menuCardTitle}>IL MENU DEGUSTAZIONE</h3>
             
             <div className={styles.coursesList}>
               <div className={styles.course}>
@@ -221,7 +270,8 @@ const Esperienze = () => {
         </div>
       </div>
       
-      {/* Elemento di transizione - aggiungiamo un'altezza extra per assicurare lo scorrimento */}
+      {/* Elemento di transizione */}
+      <div className={styles.parallaxTransition} style={{ height: '200px' }}></div>
       
       {/* Paragrafo sulla cantina con titolo */}
       <div className={styles.paragraphSection}>
@@ -247,22 +297,29 @@ const Esperienze = () => {
       </div>
       
       {/* Lista vini */}
-      <div className={styles.wineListSection}>
-        <div className={styles.wineListContainer}>
-          <h3 className={styles.wineListTitle}>I Nostri Vini Selezionati</h3>
-          <div className={styles.wineGrid}>
-            {viniList.map((vino, index) => (
-              <div key={index} className={styles.wineCard}>
-                <h4 className={styles.wineName}>{vino.nome}</h4>
-                <p className={styles.wineDetails}>
-                  <span className={styles.wineYear}>{vino.anno}</span> - 
-                  <span className={styles.wineRegion}>{vino.regione}</span>
-                </p>
-              </div>
-            ))}
+      <div className={styles.parallaxMenuContainer}>
+        <div className={styles.parallaxBackground} style={{ backgroundImage: "url('/assets/cantina4.png')" }}></div>
+        <div className={styles.parallaxContent}>
+          <div className={styles.menuCard}>
+            <h3 className={styles.menuCardTitle}>I NOSTRI VINI SELEZIONATI</h3>
+            
+            <div className={styles.coursesList}>
+              {viniList.map((vino, index) => (
+                <div key={index} className={styles.course}>
+                  <h4 className={styles.courseName}>{vino.nome} <span className={styles.wineYear}>{vino.anno}</span></h4>
+                  <p className={styles.courseDescription}>
+                    <span className={styles.courseHighlight}>{vino.descrizione}</span>
+                    <span className={styles.winePrice}>{vino.prezzo}</span>
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
+      
+      {/* Elemento di transizione prima dello slider cantina */}
+      <div className={styles.parallaxTransition} style={{ height: '200px' }}></div>
       
       {/* Slider immagini cantina */}
       <div className={styles.cantinaSlider}>
