@@ -120,9 +120,9 @@ const Esperienze = () => {
         <h1 className={styles.menuTitle}>Esperienze</h1>
         <p className={styles.menuDescription}>
           Vieni a scoprire le <span className={styles.highlight}>esperienze uniche</span> che ti aspettano da Vistamare.
-          <br></br>
+          <br />
           Assapora il nostro <span className={styles.highlight}>menu degustazione</span> curato dallo chef con materie prime fresche e di alta qualità.
-          <br></br>
+          <br />
           Esplora la nostra <span className={styles.highlight}>cantina</span> ricca di vini pregiati selezionati per accompagnare ogni piatto.
         </p>
       </section>
@@ -138,6 +138,7 @@ const Esperienze = () => {
                   src={image} 
                   alt={`Immagine statica ${index + 1}`} 
                   className={styles.staticImage} 
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -155,6 +156,7 @@ const Esperienze = () => {
                     src={image} 
                     alt={`Slide ${index + 1}`} 
                     className={styles.slideImage} 
+                    loading="lazy"
                   />
                 </div>
               ))}
@@ -177,7 +179,7 @@ const Esperienze = () => {
       <div className={styles.paragraphSection}>
         <h2 className={styles.sectionTitle}>Menu Degustazione</h2>
         <AnimatedText delay={400}>
-          <img src="/assets/decorazione.png" alt="" className={styles.decoration} style={{transform: 'rotate(180deg)'}} />
+          <img src="/assets/decorazione.png" alt="" className={styles.decoration} style={{transform: 'rotate(180deg)'}} loading="lazy" />
         </AnimatedText>
         <AnimatedText delay={600}>
           <p>
@@ -194,7 +196,7 @@ const Esperienze = () => {
           </p>
         </AnimatedText>
         <AnimatedText delay={400}>
-          <img src="/assets/decorazione.png" alt="" className={styles.decoration} />
+          <img src="/assets/decorazione.png" alt="" className={styles.decoration} loading="lazy" />
         </AnimatedText>
       </div>
       
@@ -270,14 +272,11 @@ const Esperienze = () => {
         </div>
       </div>
       
-      {/* Elemento di transizione */}
-      <div className={styles.parallaxTransition} style={{ height: '200px' }}></div>
-      
       {/* Paragrafo sulla cantina con titolo */}
       <div className={styles.paragraphSection}>
         <h2 className={styles.sectionTitle}>La Nostra Cantina</h2>
         <AnimatedText delay={400}>
-          <img src="/assets/decorazione.png" alt="" className={styles.decoration} style={{transform: 'rotate(180deg)'}} />
+          <img src="/assets/decorazione.png" alt="" className={styles.decoration} style={{transform: 'rotate(180deg)'}} loading="lazy" />
         </AnimatedText>
         <AnimatedText delay={600}>
           <p>
@@ -292,7 +291,7 @@ const Esperienze = () => {
           </p>
         </AnimatedText>
         <AnimatedText delay={400}>
-          <img src="/assets/decorazione.png" alt="" className={styles.decoration} />
+          <img src="/assets/decorazione.png" alt="" className={styles.decoration} loading="lazy" />
         </AnimatedText>
       </div>
       
@@ -306,7 +305,10 @@ const Esperienze = () => {
             <div className={styles.coursesList}>
               {viniList.map((vino, index) => (
                 <div key={index} className={styles.course}>
-                  <h4 className={styles.courseName}>{vino.nome} <span className={styles.wineYear}>{vino.anno}</span></h4>
+                  <h4 className={styles.courseName}>
+                    {vino.nome} 
+                    <span className={styles.wineYear}>{vino.anno}</span>
+                  </h4>
                   <p className={styles.courseDescription}>
                     <span className={styles.courseHighlight}>{vino.descrizione}</span>
                     <span className={styles.winePrice}>{vino.prezzo}</span>
@@ -318,9 +320,6 @@ const Esperienze = () => {
         </div>
       </div>
       
-      {/* Elemento di transizione prima dello slider cantina */}
-      <div className={styles.parallaxTransition} style={{ height: '200px' }}></div>
-      
       {/* Slider immagini cantina */}
       <div className={styles.cantinaSlider}>
         <div className={styles.cantinaSliderWrapper}>
@@ -329,7 +328,7 @@ const Esperienze = () => {
               key={index}
               className={`${styles.cantinaSlide} ${index === currentCantinaImage ? styles.activeSlide : ''}`}
             >
-              <img src={image} alt={`Cantina vista ${index + 1}`} />
+              <img src={image} alt={`Cantina vista ${index + 1}`} loading="lazy" />
             </div>
           ))}
         </div>

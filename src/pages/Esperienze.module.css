@@ -408,94 +408,292 @@
   transform: scale(1.2);
 }
 
-/* Media query per responsività */
+/* Media query migliorate per responsività completa */
 @media (max-width: 992px) {
   .philosophySection {
     height: auto;
   }
   
-  .philosophySection .imagePart,
-  .philosophySection .textPart {
-    width: 50%;
+  .parallaxMenuContainer {
+    min-height: auto;
+    padding: 2rem 0;
   }
   
-  .philosophySection .box {
-    padding: 2rem;
-    transform: translateY(-50%) translateX(-20%);
+  .parallaxContent {
+    padding: 4rem 1rem;
   }
   
-  .philosophySection.reversed .box {
-    transform: translateY(-50%) translateX(20%);
+  .menuCard {
+    padding: 2.5rem 1.5rem;
+    width: 90%;
+    max-width: 800px;
   }
   
-  .philosophySection::after {
-    left: 35%;
-    width: 20%;
+  .menuCardTitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
   }
   
-  .philosophySection.reversed::after {
-    left: 45%;
+  .courseName {
+    font-size: 1.4rem;
+  }
+  
+  .courseHighlight {
+    font-size: 1.8rem;
+  }
+  
+  .sectionTitle {
+    font-size: 4rem;
+  }
+  
+  .cantinaSlider {
+    height: 80vh;
   }
 }
 
 @media (max-width: 768px) {
-  .philosophySection {
-    flex-direction: column;
-    margin-top: 30px;
-    z-index: 11;
+  .menuTitle {
+    font-size: 4rem;
   }
   
-  .philosophySection.reversed {
-    flex-direction: column;
+  .menuDescription {
+    font-size: 1.1rem;
+    max-width: 90%;
+    margin: 0 auto;
   }
   
-  .philosophySection .imagePart,
-  .philosophySection .textPart {
+  .galleryContainer {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .staticImagesContainer {
     width: 100%;
+    height: 40vh;
   }
   
-  .philosophySection .imagePart {
-    height: 300px;
+  .sliderContainer {
+    width: 100%;
+    height: 50vh;
   }
   
-  .philosophySection .textPart {
-    height: 200px;
+  .parallaxMenuContainer {
+    padding-bottom: 0;
   }
   
-  .philosophySection .box {
-    position: relative;
-    top: -60px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
+  .parallaxContent {
+    padding: 3rem 1rem;
   }
   
-  .philosophySection.reversed .box {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
+  .menuCard {
+    padding: 2rem 1.2rem;
+    width: 95%;
   }
   
-  .philosophySection::after,
-  .philosophySection.reversed::after {
-    display: none;
+  .menuCardTitle {
+    font-size: 2.5rem;
+  }
+  
+  .courseName {
+    font-size: 1.3rem;
+  }
+  
+  .courseDescription {
+    font-size: 0.9rem;
+  }
+  
+  .courseHighlight {
+    font-size: 1.6rem;
+  }
+  
+  .paragraphSection {
+    padding: 3rem 1.5rem 1rem 1.5rem;
+  }
+  
+  .paragraphSection p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  
+  .highlight {
+    font-size: 2.5rem;
+  }
+  
+  .decoration {
+    width: 120px;
+  }
+  
+  .sectionTitle {
+    font-size: 3.5rem;
+  }
+  
+  .wineYear {
+    font-size: 1rem;
+    display: block;
+    margin-left: 0;
+    margin-top: 0.3rem;
+  }
+  
+  .cantinaSlider {
+    height: 70vh;
+  }
+  
+  .cantinaSliderDots {
+    bottom: 20px;
+  }
+  
+  .cantinaSliderDot {
+    width: 10px;
+    height: 10px;
   }
 }
 
-@media (max-width: 480px) {
-  .philosophySection .imagePart {
-    height: 250px;
+@media (max-width: 576px) {
+  .menuTitle {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
   }
   
-  .philosophySection .box {
-    padding: 1.5rem;
-    top: -40px;
-    border-radius: 10px;
-  }
-  
-  .paragraphSection p,
   .menuDescription {
     font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .staticImagesContainer {
+    height: 30vh;
+  }
+  
+  .sliderContainer {
+    height: 40vh;
+  }
+  
+  .paragraphSection {
+    padding: 2rem 1rem 1rem 1rem;
+  }
+  
+  .paragraphSection p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .highlight {
+    font-size: 2.2rem;
+  }
+  
+  .decoration {
+    width: 100px;
+  }
+  
+  .parallaxContent {
+    padding: 2.5rem 0.5rem;
+  }
+  
+  .menuCard {
+    padding: 1.5rem 1rem;
+    width: 100%;
+  }
+  
+  .menuCardTitle {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .courseName {
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .courseDescription {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .courseHighlight {
+    font-size: 1.4rem;
+  }
+  
+  .price {
+    font-size: 1.3rem;
+  }
+  
+  .sectionTitle {
+    font-size: 3rem;
+  }
+  
+  .winePrice {
+    font-size: 1rem;
+  }
+  
+  .cantinaSlider {
+    height: 60vh;
+  }
+  
+  .cantinaSliderDots {
+    bottom: 15px;
+  }
+  
+  .cantinaSliderDot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .menuTitle {
+    font-size: 3rem;
+  }
+  
+  .menuDescription {
+    font-size: 0.9rem;
+  }
+  
+  .staticImagesContainer {
+    height: 25vh;
+  }
+  
+  .sliderContainer {
+    height: 35vh;
+  }
+  
+  .menuCardTitle {
+    font-size: 2rem;
+  }
+  
+  .courseName {
+    font-size: 1rem;
+  }
+  
+  .courseDescription {
+    font-size: 0.8rem;
+  }
+  
+  .courseHighlight {
+    font-size: 1.2rem;
+  }
+  
+  .highlight {
+    font-size: 1.8rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+  
+  .paragraphSection p {
+    font-size: 0.9rem;
+  }
+  
+  .cantinaSlider {
+    height: 50vh;
+  }
+}
+
+/* Assicuriamo che lo sfondo parallax funzioni bene su dispositivi mobili */
+@supports (-webkit-touch-callout: none) {
+  /* Stili specifici per iOS per evitare problemi con fixed background */
+  .parallaxBackground {
+    background-attachment: scroll;
   }
 }
 
@@ -584,7 +782,7 @@
 
 .menuCardTitle {
   text-align: center;
-  font-family: 'Lexend Zetta', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 2.2rem;
   color: #1a365d;
   margin-bottom: 2.5rem;

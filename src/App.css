@@ -15,10 +15,12 @@
 }
 
 /* Stile generico per il cursore */
-html, body, a, button, input, textarea, select, [role="button"] {
+html, body, button, input, textarea, select, [role="button"] {
+  cursor: auto !important; /* Forza il cursore standard */
+}
+a {
   cursor: pointer !important; /* Forza il cursore standard */
 }
-
 .logo {
   height: 6em;
   padding: 1.5em;
