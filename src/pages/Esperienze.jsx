@@ -7,10 +7,41 @@ import AnimatedText from '../components/AnimatedText';
 
 const Esperienze = () => {
   const [currentCantinaImage, setCurrentCantinaImage] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
   const cantinaImages = [
     '/assets/cantina1.png',
     '/assets/cantina2.png',
     '/assets/cantina3.png'
+  ];
+
+  // Immagini per lo slider della galleria
+  const sliderImages = [
+    '/assets/1.png',
+    '/assets/2.png',
+    '/assets/3.png',
+    '/assets/4.png',
+    '/assets/5.png'
+  ];
+
+  // Immagini statiche per la galleria
+  const staticImages = [
+    '/assets/16.png',
+    '/assets/17.png'
+  ];
+
+  // Lista vini per la cantina
+  const viniList = [
+    { nome: "Brunello di Montalcino Riserva", anno: "2018", regione: "Toscana" },
+    { nome: "Barolo DOCG", anno: "2017", regione: "Piemonte" },
+    { nome: "Amarone della Valpolicella", anno: "2019", regione: "Veneto" },
+    { nome: "Franciacorta Satèn", anno: "2020", regione: "Lombardia" },
+    { nome: "Vermentino di Gallura", anno: "2021", regione: "Sardegna" },
+    { nome: "Greco di Tufo", anno: "2022", regione: "Campania" },
+    { nome: "Chianti Classico Gran Selezione", anno: "2017", regione: "Toscana" },
+    { nome: "Montepulciano d'Abruzzo Riserva", anno: "2018", regione: "Abruzzo" },
+    { nome: "Etna Rosso DOC", anno: "2019", regione: "Sicilia" },
+    { nome: "Pinot Grigio Colli Orientali", anno: "2021", regione: "Friuli" }
   ];
 
   // Effetto per far scorrere le immagini della cantina
@@ -22,27 +53,79 @@ const Esperienze = () => {
     return () => clearInterval(interval);
   }, [cantinaImages.length]);
 
+  // Effetto per far scorrere le immagini della galleria
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((currentSlide + 1) % sliderImages.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [currentSlide, sliderImages.length]);
+
   return (
     <div className={styles.pageContainer}>
       <Header />
       
-      {/* Sezione Menu Degustazione */}
-      <section className={styles.philosophySection}>
-        <div className={styles.imagePart}>
-          <img src="/assets/1.png" alt="Menu degustazione" />
-        </div>
-        <div className={styles.textPart}>
-          <div className={styles.box}>
-            <h2>Menu Degustazione</h2>
-            <p>Un percorso culinario che celebra i sapori autentici del mare, con creazioni 
-            innovative che rispettano la tradizione. Ogni piatto racconta una storia, 
-            un territorio, una passione.</p>
+      {/* Sezione titolo con sfondo blu */}
+      <section className={styles.menuTitleSection}>
+        <h1 className={styles.menuTitle}>Esperienze</h1>
+        <p className={styles.menuDescription}>
+          Vieni a scoprire le <span className={styles.highlight}>esperienze uniche</span> che ti aspettano da Vistamare.
+          <br></br>
+          Assapora il nostro <span className={styles.highlight}>menu degustazione</span> curato dallo chef con materie prime fresche e di alta qualità.
+          <br></br>
+          Esplora la nostra <span className={styles.highlight}>cantina</span> ricca di vini pregiati selezionati per accompagnare ogni piatto.
+        </p>
+      </section>
+      
+      {/* Sezione galleria */}
+      <section className={styles.gallerySection}>
+        <div className={styles.galleryContainer}>
+          {/* Immagini statiche a sinistra */}
+          <div className={styles.staticImagesContainer}>
+            {staticImages.map((image, index) => (
+              <div key={index} className={styles.staticImageWrapper}>
+                <img 
+                  src={image} 
+                  alt={`Immagine statica ${index + 1}`} 
+                  className={styles.staticImage} 
+                />
+              </div>
+            ))}
+          </div>
+          
+          {/* Slider a destra */}
+          <div className={styles.sliderContainer}>
+            <div className={styles.slider}>
+              {sliderImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`${styles.slide} ${index === currentSlide ? styles.active : ''}`}
+                >
+                  <img 
+                    src={image} 
+                    alt={`Slide ${index + 1}`} 
+                    className={styles.slideImage} 
+                  />
+                </div>
+              ))}
+              <div className={styles.dots}>
+                {sliderImages.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`${styles.dot} ${index === currentSlide ? styles.active : ''}`}
+                    onClick={() => setCurrentSlide(index)}
+                    aria-label={`Vai allo slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
       
-      {/* Paragrafo introduttivo con parole evidenziate */}
+      {/* Paragrafo introduttivo menu degustazione con titolo */}
       <div className={styles.paragraphSection}>
+        <h2 className={styles.sectionTitle}>Menu Degustazione</h2>
         <AnimatedText delay={400}>
           <img src="/assets/decorazione.png" alt="" className={styles.decoration} style={{transform: 'rotate(180deg)'}} />
         </AnimatedText>
@@ -72,7 +155,6 @@ const Esperienze = () => {
         <div className={styles.parallaxBackground}></div>
         <div className={styles.parallaxContent}>
           <div className={styles.menuCard}>
-            <h3 className={styles.menuCardTitle}>IL MENU DEGUSTAZIONE</h3>
             
             <div className={styles.coursesList}>
               <div className={styles.course}>
@@ -139,26 +221,11 @@ const Esperienze = () => {
         </div>
       </div>
       
-      {/* Elemento di transizione */}
-      <div className={styles.parallaxTransition}></div>
+      {/* Elemento di transizione - aggiungiamo un'altezza extra per assicurare lo scorrimento */}
       
-      {/* Sezione Cantina */}
-      <section className={styles.philosophySection + ' ' + styles.reversed}>
-        <div className={styles.imagePart}>
-          <img src="/assets/cantina4.png" alt="La nostra cantina" />
-        </div>
-        <div className={styles.textPart}>
-          <div className={styles.box}>
-            <h2><span style={{ fontStyle: 'italic' }}>LA NOSTRA</span> CANTINA</h2>
-            <p>Una selezione curata di vini locali e internazionali, scelti per 
-            accompagnare perfettamente ogni portata del nostro menu degustazione. 
-            Un viaggio enologico che completa l'esperienza gastronomica.</p>
-          </div>
-        </div>
-      </section>
-      
-      {/* Paragrafo sulla cantina con parole evidenziate */}
+      {/* Paragrafo sulla cantina con titolo */}
       <div className={styles.paragraphSection}>
+        <h2 className={styles.sectionTitle}>La Nostra Cantina</h2>
         <AnimatedText delay={400}>
           <img src="/assets/decorazione.png" alt="" className={styles.decoration} style={{transform: 'rotate(180deg)'}} />
         </AnimatedText>
@@ -177,6 +244,24 @@ const Esperienze = () => {
         <AnimatedText delay={400}>
           <img src="/assets/decorazione.png" alt="" className={styles.decoration} />
         </AnimatedText>
+      </div>
+      
+      {/* Lista vini */}
+      <div className={styles.wineListSection}>
+        <div className={styles.wineListContainer}>
+          <h3 className={styles.wineListTitle}>I Nostri Vini Selezionati</h3>
+          <div className={styles.wineGrid}>
+            {viniList.map((vino, index) => (
+              <div key={index} className={styles.wineCard}>
+                <h4 className={styles.wineName}>{vino.nome}</h4>
+                <p className={styles.wineDetails}>
+                  <span className={styles.wineYear}>{vino.anno}</span> - 
+                  <span className={styles.wineRegion}>{vino.regione}</span>
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
       
       {/* Slider immagini cantina */}
