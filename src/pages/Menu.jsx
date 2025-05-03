@@ -242,7 +242,7 @@ const Menu = () => {
                       {/* Immagine piatto a sinistra */}
                       <div className={styles.dishImageContainer}>
                         <img 
-                          src="/assets/4.png" 
+                          src="/assets/3.png" 
                           alt={`Immagine di ${dish.name}`} 
                           className={styles.dishImage}
                         />
