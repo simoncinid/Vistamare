@@ -138,4 +138,8 @@
   .carouselContainer {
     height: 70vh;
   }
+
+  .title {
+    font-size: 6rem;
+  }
 } 

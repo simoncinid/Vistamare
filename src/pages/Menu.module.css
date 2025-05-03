@@ -323,13 +323,7 @@
   }
   
   .staticImagesContainer {
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-  }
-  
-  .staticImageWrapper {
-    height: 30vh;
+    display: none;
   }
   
   .sliderContainer {
