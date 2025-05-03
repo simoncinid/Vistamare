@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Menu.module.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { BsChevronDown, BsChevronUp, BsArrowLeftShort, BsArrowRightShort, BsX } from 'react-icons/bs';
 import TripAdvisorReviews from '../components/TripAdvisorReviews';
-import HeroPlatter from '../components/HeroPlatter';
 
 // Percorsi delle immagini per gli allergeni
 const allergensIcons = {
@@ -105,146 +104,181 @@ const dishesData = [
 
 const Menu = () => {
   const [expandedDish, setExpandedDish] = useState(null);
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxImage, setLightboxImage] = useState(0);
-  const [lightboxDish, setLightboxDish] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Immagini per lo slider
+  const sliderImages = [
+    '/assets/1.png',
+    '/assets/2.png',
+    '/assets/3.png',
+    '/assets/4.png',
+    '/assets/5.png'
+  ];
+
+  // Immagini statiche
+  const staticImages = [
+    '/assets/16.png',
+    '/assets/17.png'
+  ];
+
+  // Gestione responsive
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Auto-avanzamento slider
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((currentSlide + 1) % sliderImages.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [currentSlide, sliderImages.length]);
 
   // Toggle espansione piatto
   const toggleDish = (id) => {
     setExpandedDish(expandedDish === id ? null : id);
   };
 
-  // Apri lightbox per l'immagine
-  const openLightbox = (dishId, imageIndex) => {
-    setLightboxDish(dishId);
-    setLightboxImage(imageIndex);
-    setLightboxOpen(true);
-    document.body.style.overflow = 'hidden';
-  };
-
-  // Chiudi lightbox
-  const closeLightbox = () => {
-    setLightboxOpen(false);
-    document.body.style.overflow = 'auto';
-  };
-
-  // Naviga tra le immagini nel lightbox
-  const navigateLightbox = (direction) => {
-    const dish = dishesData.find(dish => dish.id === lightboxDish);
-    if (!dish) return;
-    
-    const totalImages = dish.images.length;
-    
-    if (direction === 'prev') {
-      setLightboxImage((prev) => (prev - 1 + totalImages) % totalImages);
-    } else {
-      setLightboxImage((prev) => (prev + 1) % totalImages);
-    }
-  };
-
   return (
     <div className={styles.menuPage}>
-      <HeroPlatter />
       <Header />
-
-      {/* Titolo e introduzione */}
-      <section className={styles.menuIntro}>
-        <h1 className={styles.menuTitle}>MENU</h1>
+      
+      {/* Sezione titolo con sfondo blu */}
+      <section className={styles.menuTitleSection}>
+        <h1 className={styles.menuTitle}>Menù</h1>
         <p className={styles.menuDescription}>
-          Le nostre proposte variano giornalmente in base al pescato fresco 
+          Le nostre proposte variano <span className={styles.highlight}> giornalmente</span> in base al pescato fresco 
           disponibile. 
-          <br></br>Il nostro chef seleziona personalmente gli ingredienti 
-          migliori per offrirvi un'esperienza culinaria autentica e di alta qualità.
+          <br></br>
+          Il nostro chef <span className={styles.highlight}> seleziona</span> personalmente gli ingredienti 
+          migliori per offrirvi un'<span className={styles.highlight}> esperienza</span> culinaria autentica e di alta qualità.
+          <br></br>
+          <span className={styles.highlight}> Freschezza</span> e <span className={styles.highlight}>qualità</span> sono la nostra 
+          <span className={styles.highlight}> priorità</span>.
         </p>
       </section>
 
-      {/* Lista dei piatti */}
-      <section className={styles.dishesSection}>
-        {dishesData.map((dish) => (
-          <div key={dish.id} className={styles.dishItem}>
-            <div 
-              className={styles.dishHeader} 
-              onClick={() => toggleDish(dish.id)}
-            >
-              <h2 className={styles.dishName}>{dish.name}</h2>
-              <button className={styles.expandButton}>
-                {expandedDish === dish.id ? <BsChevronUp /> : <BsChevronDown />}
-              </button>
-            </div>
-
-            {/* Contenuto espandibile */}
-            <AnimatePresence>
-              {expandedDish === dish.id && (
-                <motion.div
-                  className={styles.dishDetails}
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {/* Galleria di immagini */}
-                  <div className={styles.dishGallery}>
-                    {dish.images.map((img, index) => (
-                      <div 
-                        key={index} 
-                        className={styles.galleryImage}
-                        onClick={() => openLightbox(dish.id, index)}
-                      >
-                        <img src={img} alt={`${dish.name} - immagine ${index + 1}`} />
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Descrizione */}
-                  <p className={styles.dishDescription}>{dish.description}</p>
-                  <p className={styles.dishPrice}>{dish.price}</p>
-
-                  {/* Allergeni */}
-                  <div className={styles.allergensContainer}>
-                    {dish.allergens.map((allergen) => (
-                      <div key={allergen} className={styles.allergenIcon} title={allergen}>
-                        <img src={allergensIcons[allergen]} alt={allergen} />
-                        <span className={styles.allergenTooltip}>{allergen}</span>
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+      {/* Sezione galleria */}
+      <section className={styles.gallerySection}>
+        <div className={styles.galleryContainer}>
+          {/* Immagini statiche a sinistra */}
+          <div className={styles.staticImagesContainer}>
+            {staticImages.map((image, index) => (
+              <div key={index} className={styles.staticImageWrapper}>
+                <img 
+                  src={image} 
+                  alt={`Immagine statica ${index + 1}`} 
+                  className={styles.staticImage} 
+                />
+              </div>
+            ))}
           </div>
-        ))}
-      </section>
-
-      {/* TripAdvisor Recensioni */}
-      <TripAdvisorReviews />
-
-      {/* Lightbox per visualizzare le immagini */}
-      {lightboxOpen && lightboxDish && (
-        <div className={styles.lightbox} onClick={closeLightbox}>
-          <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
-            <button className={styles.lightboxClose} onClick={closeLightbox}>
-              <BsX size={30} />
-            </button>
-            <img 
-              src={dishesData.find(dish => dish.id === lightboxDish).images[lightboxImage]} 
-              alt={`Immagine ${lightboxImage + 1}`} 
-              className={styles.lightboxImage}
-            />
-            <button 
-              className={`${styles.lightboxNav} ${styles.lightboxPrev}`}
-              onClick={() => navigateLightbox('prev')}
-            >
-              <BsArrowLeftShort size={40} />
-            </button>
-            <button 
-              className={`${styles.lightboxNav} ${styles.lightboxNext}`}
-              onClick={() => navigateLightbox('next')}
-            >
-              <BsArrowRightShort size={40} />
-            </button>
+          
+          {/* Slider a destra */}
+          <div className={styles.sliderContainer}>
+            <div className={styles.slider}>
+              {sliderImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`${styles.slide} ${index === currentSlide ? styles.active : ''}`}
+                >
+                  <img 
+                    src={image} 
+                    alt={`Slide ${index + 1}`} 
+                    className={styles.slideImage} 
+                  />
+                </div>
+              ))}
+              <div className={styles.dots}>
+                {sliderImages.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`${styles.dot} ${index === currentSlide ? styles.active : ''}`}
+                    onClick={() => setCurrentSlide(index)}
+                    aria-label={`Vai allo slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-      )}
+      </section>
+
+      {/* Elenco delle proposte */}
+      <section className={styles.proposteSection}>
+        <h2 className={styles.proposteTitle}>Le Nostre Proposte</h2>
+        <div className={styles.proposteList}>
+          {dishesData.map((dish) => (
+            <div key={dish.id} className={styles.proposteItem}>
+              <div 
+                className={styles.proposteHeader} 
+                onClick={() => toggleDish(dish.id)}
+              >
+                <h3 className={styles.proposteName}>{dish.name}</h3>
+                <span className={styles.propostePrice}>{dish.price}</span>
+                <button className={styles.expandButton}>
+                  {expandedDish === dish.id ? <BsChevronUp /> : <BsChevronDown />}
+                </button>
+              </div>
+
+              {/* Dettagli espandibili */}
+              <AnimatePresence>
+                {expandedDish === dish.id && (
+                  <motion.div
+                    className={styles.proposteDetails}
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <div className={styles.detailsContainer}>
+                      {/* Immagine piatto a sinistra */}
+                      <div className={styles.dishImageContainer}>
+                        <img 
+                          src="/assets/4.png" 
+                          alt={`Immagine di ${dish.name}`} 
+                          className={styles.dishImage}
+                        />
+                      </div>
+                      
+                      {/* Descrizione e allergeni a destra */}
+                      <div className={styles.dishInfo}>
+                        <p className={styles.proposteDescription}>{dish.description}</p>
+                        
+                        {/* Allergeni */}
+                        {dish.allergens && dish.allergens.length > 0 && (
+                          <div className={styles.allergensContainer}>
+                            {dish.allergens.map((allergen, index) => (
+                              <div key={index} className={styles.allergenIcon}>
+                                <img 
+                                  src={allergensIcons[allergen]} 
+                                  alt={`Allergene: ${allergen}`} 
+                                />
+                                <span className={styles.allergenTooltip}>{allergen}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      
+      
+      
 
       <Footer />
     </div>

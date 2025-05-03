@@ -1,10 +1,10 @@
 /* Hero alto 400vh per 360° di rotazione – z‑index basso (coperto dopo) */
 .hero{
     position:relative;
-    height: calc(295vh); /* Modificato da 400vh a 295vh per allinearsi con la rotazione massima */
-    border: 5px solid red; /* Bordo temporaneo per debug */
-    overflow:hidden;
-    z-index:1;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.5s ease;
   }
   
   /* SFONDO fisso */
@@ -14,7 +14,7 @@
     background-size:cover;
     background-position:center;
     transform:scale(1.05);
-    transition:transform 3s ease-out;
+    transition: transform 3s ease-out, opacity 0.5s ease;
     z-index:-2;
   }
   
@@ -32,11 +32,13 @@
   /* Cerchio centrato a 85vh (bordo nord = 40vh) */
   .circle{
     position:fixed;
-    top:160vh; left:50%;
+    top: 50%;
+    left: 50%;
     width:0; height:0;        /* size gestita dai translate */
     pointer-events:none;
     opacity:0;
     transition: opacity 0.5s ease;
+    z-index: 5;
   }
   
   /* Piatti scala 3:1 (~140px) */
@@ -46,5 +48,21 @@
     width:380px; height:380px;
     object-fit:contain;
     will-change:transform;
+  }
+  
+  @media (orientation: landscape) {
+    .hero {
+      height: 0 !important;
+      opacity: 0 !important;
+      z-index: -100 !important;
+      position: absolute !important;
+      overflow: hidden !important;
+    }
+    
+    .bg, .overlay, .circle {
+      position: absolute !important;
+      z-index: -100 !important;
+      opacity: 0 !important;
+    }
   }
   

@@ -3,112 +3,193 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-/* Hero Section */
-.heroSection {
   position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  font-family: var(--font-body);
 }
 
-.heroSlide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
-}
-
-.heroBullets {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 0.5rem;
-  z-index: 5;
-}
-
-.bullet, .bulletActive {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.bulletActive {
-  background: var(--blue-light);
-}
-
-/* Menu Intro */
-.menuIntro {
+/* Sezione titolo con sfondo blu */
+.menuTitleSection {
+  background-color: #04062d;
   padding: 6rem 2rem 4rem;
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+  color: white;
 }
 
 .menuTitle {
   font-family: 'Tangerine', cursive;
-  font-size: 3.5rem;
-  color: #1a365d;
+  font-size: 5rem;
+  color: white;
   margin-bottom: 2rem;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
 
 .menuDescription {
-  font-family: var(--font-body);
   font-size: 1.2rem;
   line-height: 1.6;
-  color: var(--gray-dark);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Dishes Section */
-.dishesSection {
-  padding: 3rem;
+.highlight {
+  font-family: 'Tangerine', cursive;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: rgb(73, 234, 255);
+}
+
+/* Sezione galleria (come GallerySlider ma con layout modificato) */
+.gallerySection {
   width: 100%;
-  margin: 0 auto 0;
-  z-index: 999;
-  background-color: white;
+  background-color: black;
+  overflow: hidden;
 }
 
-.dishItem {
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #eaeaea;
+.galleryContainer {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }
 
-.dishHeader {
+/* Immagini statiche sulla sinistra (40%) */
+.staticImagesContainer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.staticImageWrapper {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.staticImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Slider a destra (60%) */
+.sliderContainer {
+  width: 60%;
+  height: 100%;
+  position: relative;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  z-index: 1;
+  transform: translateX(100%);
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+  transform: translateX(0);
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Sezione proposte con sfondo blu */
+.proposteSection {
+  background-color: #04062d;
+  padding: 4rem 2rem;
+  color: white;
+}
+
+.proposteTitle {
+  font-family: 'Tangerine', cursive;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.proposteList {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.proposteItem {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.proposteHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 1rem;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.3s;
 }
 
-.dishHeader:hover {
-  background-color: rgba(206, 242, 255, 0.669);
+.proposteHeader:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.dishName {
-  font-family: var(--font-heading);
-  color: #5d4037; /* Marrone scuro */
-  font-size: 1.5rem;
-  font-weight: 400;
+.proposteName {
+  font-family: 'Tangerine', cursive;
+  font-size: 2.5rem;
   margin: 0;
+  flex: 1;
+}
+
+.propostePrice {
+  font-family: 'Tangerine', cursive;
+  font-size: 2rem;
+  margin: 0 2rem;
+  color: white;
 }
 
 .expandButton {
   background: none;
   border: none;
-  color: #5d4037;
+  color: white;
   font-size: 1.2rem;
   cursor: pointer;
   padding: 0.5rem;
@@ -117,58 +198,47 @@
   justify-content: center;
 }
 
-.expandButton:hover {
-  color: var(--blue-dark);
-}
-
-/* Dish Details */
-.dishDetails {
+.proposteDetails {
   overflow: hidden;
   padding: 0 1rem 2rem;
 }
 
-.dishGallery {
+/* Contenitore per layout a due colonne nei dettagli */
+.detailsContainer {
   display: flex;
   width: 100%;
-  height: 220px;
-  margin-bottom: 1.5rem;
-  gap: 0;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
-.galleryImage {
-  flex: 1 1 25%;
-  height: 100%;
-  overflow: hidden;
-  cursor: pointer;
+/* Contenitore immagine piatto (lato sinistro) */
+.dishImageContainer {
+  flex: 0 0 40%;
+  max-width: 40%;
 }
 
-.galleryImage img {
+.dishImage {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
-  border-radius: 0;
-  transition: transform 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.galleryImage img:hover {
-  transform: scale(1.05);
+/* Contenitore informazioni piatto (lato destro) */
+.dishInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.dishDescription {
-  font-family: var(--font-body);
-  color: var(--gray-dark);
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-
-.dishPrice {
-  font-family: var(--font-heading);
-  color: var(--red-dark);
-  font-size: 1.4rem;
+.proposteDescription {
+  font-size: 1.1rem;
+  line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
-/* Allergens */
+/* Allergeni */
 .allergensContainer {
   display: flex;
   gap: 1rem;
@@ -184,13 +254,12 @@
   justify-content: center;
   cursor: help;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .allergenIcon img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: contain;
 }
 
@@ -199,131 +268,113 @@
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
+  background-color: white;
+  color: #04062d;
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
   font-size: 0.8rem;
   opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s;
   pointer-events: none;
+  transition: opacity 0.3s;
   white-space: nowrap;
+  z-index: 10;
 }
 
 .allergenIcon:hover .allergenTooltip {
   opacity: 1;
-  visibility: visible;
-  bottom: calc(100% + 10px);
 }
 
-/* Lightbox */
-.lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+/* Sezione TripAdvisor */
+.tripAdvisorContainer {
+  background-color: white;
 }
 
-.lightboxContent {
-  position: relative;
-  width: 80%;
-  height: 80%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.lightboxImage {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.lightboxClose {
-  position: absolute;
-  top: -40px;
-  right: 0;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.lightboxNav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.lightboxNav:hover {
-  background: rgba(255, 255, 255, 0.4);
-}
-
-.lightboxPrev {
-  left: 20px;
-}
-
-.lightboxNext {
-  right: 20px;
-}
-
+/* Media queries */
 @media (max-width: 768px) {
   .menuTitle {
-    font-size: 2.5rem;
+    font-size: 4rem;
+  }
+  
+  .galleryContainer {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .staticImagesContainer {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+  }
+  
+  .staticImageWrapper {
+    height: 30vh;
+  }
+  
+  .sliderContainer {
+    width: 100%;
+    height: 60vh;
+  }
+  
+  .proposteTitle {
+    font-size: 3rem;
+  }
+  
+  .proposteName {
+    font-size: 2rem;
+  }
+  
+  .propostePrice {
+    font-size: 1.8rem;
+  }
+  
+  .proposteHeader {
+    padding: 1rem 0.5rem;
+  }
+  
+  .detailsContainer {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .dishImageContainer {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .dishImage {
+    max-height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuTitle {
+    font-size: 3.5rem;
   }
   
   .menuDescription {
     font-size: 1rem;
   }
   
-  .dishesSection {
-    padding: 1rem;
+  .staticImageWrapper {
+    height: 25vh;
   }
   
-  .dishHeader {
-    padding: 1rem 0;
+  .sliderContainer {
+    height: 50vh;
   }
   
-  .dishName {
-    font-size: 1.3rem;
+  .proposteTitle {
+    font-size: 2.5rem;
   }
   
-  .dishGallery {
-    height: 180px;
-    flex-wrap: wrap;
+  .proposteName {
+    font-size: 1.8rem;
   }
   
-  .galleryImage {
-    flex: 1 1 50%;
-  }
-  
-  .lightboxContent {
-    width: 95%;
-  }
-  
-  .lightboxNav {
-    width: 40px;
-    height: 40px;
+  .propostePrice {
+    font-size: 1.5rem;
+    margin: 0 1rem;
   }
 }

@@ -75,18 +75,19 @@
   justify-content:center;
   padding:4rem 2rem;
   font-family:var(--font-body);
-  background:#ffffff;
+  background:#04062d;
+  color: white;
 }
 .fullTxt h2{
   font-family:var(--font-heading);
   font-size:2.5rem;
-  color:var(--blue-dark);
+  color:white;
   margin-bottom:1rem;
 }
 .fullTxt p{
   font-size:1.1rem;
   max-width:600px;
-  color:var(--gray-dark);
+  color:white;
 }
 .fullReverse .fullImg{ order:2; }
 .fullReverse .fullTxt{ order:1; }
@@ -132,7 +133,7 @@
 
 /* ---------- FOOTER ---------- */
 .footer{
-  background:#001a38;
+  background:#04062d;
   color:var(--white);
   text-align:center;
   padding:2rem 1rem;
@@ -143,6 +144,7 @@
   width: 100%;
   min-height: 100vh;
   /*background-image: url('/assets/background2.png');*/
+  background-color: #04062d;
 }
 
 .heroSection {
@@ -156,7 +158,7 @@
   /*background-image: url('/assets/background2.png');*/
   width: 100%;
   /*background: #ffffff;*/
-  background-color:#001a38;
+  background-color: #04062d;
   padding: 0;
   position: relative;
   z-index: 1;
@@ -165,7 +167,7 @@
 /* Quando non c'è la hero section, la contentSection diventa la prima */
 .contentSectionFirst {
   width: 100%;
-  background: #001a38;
+  background: #04062d;
   padding-top: 100px; /* Aggiungiamo spazio in alto quando è la prima sezione */
   position: relative;
   z-index: 1;
@@ -190,7 +192,7 @@
   font-size: clamp(15px, 7.5vw, 25px);
   letter-spacing: 0.05em;*/
   font-family: 'Playfair Display', serif;
-  color: #2c2c2c;
+  color: white;
   font-size: clamp(15px, 7.5vw, 23px);
   line-height: 1.8;
   letter-spacing: 0.05em;
@@ -208,7 +210,8 @@
 .bottomSection {
   position: relative;
   z-index: 4;
-  background: var(--white);
+  background: #04062d;
+  color: white;
   margin-top: 4rem;
   padding: 7rem 1rem;
   min-height: 30vh;
@@ -217,7 +220,7 @@
 /* Spazio bianco tra sezioni */
 .sectionSpacer {
   height: 8rem;
-  background: var(--white);
+  background: #04062d;
   position: relative;
   z-index: 10;
 }
@@ -225,6 +228,7 @@
 /* Spazio consistente tra sezioni con testo */
 .sectionSpacerLarge {
   /*background-image: url('/assets/pattern2.png');*/
+  background-color: #04062d;
   position: relative;
   z-index: 10;
   padding: 2rem 1rem;
@@ -241,7 +245,7 @@
   max-width: 800px;
   margin: 0 auto;
   font-family: 'Playfair Display', serif;
-  color: #2c2c2c;
+  color: white;
   font-size: clamp(15px, 7.5vw, 23px);
   line-height: 1.8;
   letter-spacing: 0.05em;
@@ -276,7 +280,7 @@
   left: 0;
   width: 100%;
   height: 3rem;
-  /*background: linear-gradient(to bottom, transparent 0%, var(--blue-light));*/
+  background: linear-gradient(to bottom, transparent 0%, #04062d);
   pointer-events: none;
 }
 
@@ -304,7 +308,7 @@
     left: 0 !important;
     right: 0 !important;
     box-sizing: border-box !important;
-    background-color: #001a38;
+    background-color: #04062d;
   }
 
   .intro {
@@ -319,6 +323,7 @@
     margin: 0 auto;
     max-width: 100%;
     font-size: 1.1rem;
+    color: white;
   }
 
   .highlight {
@@ -332,7 +337,7 @@
   .philosophySection h2 {
     font-family: 'Playfair Display', serif !important;
     font-style: italic;
-    color: #1a365d;
+    color: #04062d;
     font-size: 2.2rem !important;
     letter-spacing: 0.05em;
     margin-bottom: 0.5rem;
@@ -383,7 +388,7 @@
   }
   /* Sezione sotto filosofia: sfondo blu scuro */
   .sectionSpacerLarge {
-    background: #001a38 !important;
+    background: #04062d !important;
     color: #fff;
   }
   .sectionSpacerLarge p {
@@ -397,21 +402,6 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: stretch;
-    position: relative !important;
-    background: none !important;
-    width: 100vw !important;
-    max-width: 100vw !important;
-    min-width: 100vw !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    left: unset !important;
-    right: unset !important;
-    box-shadow: none !important;
-    border: none !important;
-    overflow-x: visible !important;
-    overflow: visible !important;
-    transform: none !important;
-    clear: both !important;
   }
   .fadeBottomMenu {
     height: 7.5rem;
@@ -420,9 +410,9 @@
     justify-content: center;
     font-size: 2rem;
     font-family: 'Playfair Display', serif;
-    color: #1a365d;
+    color: #04062d;
     background: none;
-    border-bottom: 2px solid #1a365d;
+    border-bottom: 2px solid #04062d;
     width: 100vw;
     text-align: center;
   }
@@ -433,9 +423,9 @@
     justify-content: center;
     font-size: 2rem;
     font-family: 'Playfair Display', serif;
-    color: #1a365d;
+    color: #04062d;
     background: none;
-    border-top: 2px solid #1a365d;
+    border-top: 2px solid #04062d;
     width: 100vw;
     text-align: center;
   }
@@ -452,7 +442,7 @@
   }
   /* Testo sotto gallery: sfondo blu */
   .sectionSpacerLarge:last-of-type {
-    background: #001a38 !important;
+    background: #04062d !important;
     color: #fff;
   }
   .sectionSpacerLarge:last-of-type p {

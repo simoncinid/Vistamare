@@ -49,7 +49,7 @@
 
 .text {
   position: relative;
-  color: #1a365d;
+  color: #04062d;
   font-family: 'Tangerine', cursive;
   font-size: 7rem;
   text-align: center;
@@ -144,7 +144,7 @@
     font-weight: 900;
     letter-spacing: 2.5px;
     text-shadow: none;
-    color: #1a365d;
+    color: #04062d;
     font-family: 'Tangerine', cursive;
     
   }
@@ -152,7 +152,7 @@
     font-size: 3.2rem !important;
     font-weight: 900 !important;
     letter-spacing: 2.5px !important;
-    color: #1a365d !important;
+    color: #04062d !important;
     font-family: 'Tangerine', cursive !important;
     
     text-shadow: none !important;

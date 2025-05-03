@@ -3,11 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <title>Vite + React</title>
+    <style>
+      html, body {
+        height: 100% !important;
+        margin: 0;
+        padding: 0;
+        overflow-y: auto !important;
+        overflow-x: hidden;
+        position: relative;
+        -webkit-overflow-scrolling: touch;
+      }
+      #root {
+        height: 100%;
+        overflow-y: auto !important;
+        position: relative;
+      }
+      
+      /* Forza lo scrolling anche dopo la rotazione */
+      @media screen and (orientation: portrait), screen and (orientation: landscape) {
+        html, body, #root {
+          height: 100% !important;
+          overflow-y: auto !important;
+          -webkit-overflow-scrolling: touch;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>

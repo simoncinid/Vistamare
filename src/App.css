@@ -1,11 +1,17 @@
 #root {
   width: 100%;
   min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .App {
   width: 100%;
   min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
 }
 
 /* Stile generico per il cursore */

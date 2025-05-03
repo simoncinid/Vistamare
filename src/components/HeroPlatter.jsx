@@ -21,17 +21,13 @@ export default function HeroPlatter() {
   const [showPlates, setShowPlates] = useState(true);
   const [rotationCompleted, setRotationCompleted] = useState(false);
   
-  console.log('HeroPlatter renderizzato'); // Debug
+  // Stato per gestire la visibilità dell'hero dopo la rotazione del dispositivo
+  const [isVisible, setIsVisible] = useState(true);
 
   // Effetto per gestire la rotazione e lo scorrimento
   useEffect(() => {
     const hero = ref.current;
-    if (!hero) {
-      console.log('Hero ref non trovato'); // Debug
-      return;
-    }
-    
-    console.log('Hero ref trovato:', hero); // Debug
+    if (!hero) return;
     
     // Gestione del wheel event per la rotazione
     const handleWheel = (e) => {
@@ -64,12 +60,22 @@ export default function HeroPlatter() {
       }
     };
     
-    // Imposta il listener per la rotellina del mouse
+    // Gestione della rotazione del dispositivo
+    const handleOrientationChange = () => {
+      if (rotationCompleted) {
+        // Se la rotazione è completata, nascondi completamente l'hero
+        setIsVisible(false);
+      }
+    };
+    
+    // Imposta i listener
     window.addEventListener('wheel', handleWheel, { passive: false });
+    window.addEventListener('orientationchange', handleOrientationChange);
     
     // Cleanup al dismount
     return () => {
       window.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('orientationchange', handleOrientationChange);
     };
   }, [rot, rotationCompleted]);
 
@@ -77,20 +83,42 @@ export default function HeroPlatter() {
   const rX = `calc(50vw - 70px)`;
   const rY = `45vh`;                      // raggio verticale costante
 
+  // Se non è visibile, non renderizzare nulla
+  if (!isVisible && rotationCompleted) {
+    return null;
+  }
+
   return (
     <section 
       ref={ref} 
       className={styles.hero}
-      style={{ height: '100vh' }}
+      style={{ 
+        height: rotationCompleted ? '0' : '100vh',
+        overflow: 'hidden',
+        position: rotationCompleted ? 'absolute' : 'relative',
+        zIndex: rotationCompleted ? -1 : 1,
+        opacity: rotationCompleted ? 0 : 1,
+        transition: 'opacity 0.5s ease, height 0.5s ease'
+      }}
     >
-      <div className={styles.bg} style={{ backgroundImage:`url(${bg})` }} />
-      <div className={styles.overlay} style={{ opacity: rotationCompleted ? 0 : dark }} />
+      <div className={styles.bg} style={{ 
+        backgroundImage:`url(${bg})`,
+        position: rotationCompleted ? 'absolute' : 'fixed',
+        zIndex: rotationCompleted ? -10 : -2
+      }} />
+      <div className={styles.overlay} style={{ 
+        opacity: rotationCompleted ? 0 : dark,
+        position: rotationCompleted ? 'absolute' : 'fixed',
+        zIndex: rotationCompleted ? -9 : -1
+      }} />
       <div
         className={styles.circle}
         style={{ 
           transform:`translate(-50%,-50%) rotate(${rot}deg)`,
           opacity: rot >= 10 ? 1 : 0,
-          display: showPlates ? 'block' : 'none'
+          display: showPlates ? 'block' : 'none',
+          position: rotationCompleted ? 'absolute' : 'fixed',
+          zIndex: rotationCompleted ? -8 : 'auto'
         }}
       >
         {PLATES.map(({ src, angle }) => (

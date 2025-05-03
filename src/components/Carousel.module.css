@@ -106,18 +106,20 @@
 .overlay h5{
   font-family: 'Playfair Display', serif;
   font-size: clamp(15px, 10vw, 20px);
+  font-weight: 600;
 }
 
 .title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Tangerine', cursive;
   /*font-size: 4rem;*/
-  font-size: clamp(45px, 10vw, 100px);
-  font-weight: 700;
+  font-size: 13rem;
+  font-weight: 1000;
   color: white;
+  line-height: 0.8;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
   margin: 0;
-  text-transform: uppercase;
+  
 }
 
 /* Aggiungi un overlay scuro per migliorare la leggibilità */
