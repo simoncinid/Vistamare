@@ -59,6 +59,16 @@ function GallerySlider() {
               />
             </div>
           ))}
+          <div className={styles.dots}>
+            {sliderImages.map((_, index) => (
+              <button
+                key={index}
+                className={`${styles.dot} ${index === currentSlide ? styles.active : ''}`}
+                onClick={() => setCurrentSlide(index)}
+                aria-label={`Vai allo slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
       

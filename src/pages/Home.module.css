@@ -312,7 +312,7 @@
     font-size: 1rem;
     line-height: 1.5;
     max-width: 100%;
-    margin-top: 1rem;
+    
   }
 
   .intro p {
@@ -391,6 +391,13 @@
   }
   /* Gallery: tolgo fasce blu sopra e sotto */
   .fadeBottom {
+    min-height: 15rem !important;
+    height: 15rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    position: relative !important;
     background: none !important;
     width: 100vw !important;
     max-width: 100vw !important;
@@ -399,13 +406,43 @@
     padding: 0 !important;
     left: unset !important;
     right: unset !important;
-    position: relative !important;
     box-shadow: none !important;
     border: none !important;
     overflow-x: visible !important;
     overflow: visible !important;
     transform: none !important;
     clear: both !important;
+  }
+  .fadeBottomMenu {
+    height: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    color: #1a365d;
+    background: none;
+    border-bottom: 2px solid #1a365d;
+    width: 100vw;
+    text-align: center;
+  }
+  .fadeBottomEsperienze {
+    height: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    color: #1a365d;
+    background: none;
+    border-top: 2px solid #1a365d;
+    width: 100vw;
+    text-align: center;
+  }
+  .underlineMobile {
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    font-weight: 700;
   }
   .mobileGallery {
     background: none !important;

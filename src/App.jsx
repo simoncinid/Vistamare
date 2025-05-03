@@ -9,13 +9,14 @@ import SmoothScroll from './components/SmoothScroll';
 import './App.css';
 
 function App() {
+  const isDesktop = typeof window !== 'undefined' ? window.innerWidth >= 769 : true;
   return (
     <div className="App">
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet" />
 
-      <CustomCursor />
+      {isDesktop && <CustomCursor />}
       <SmoothScroll />
       <ScrollProgress />
       <Routes>

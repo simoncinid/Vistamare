@@ -83,6 +83,17 @@ export default function Home() {
             <img src="/assets/decorazione.png" alt="" className={styles.decoration} />
           </AnimatedText>
         </div>
+
+        {/* FASCIA MENU + ESPERIENZE SOLO MOBILE */}
+        <div className={styles.fadeBottom}>
+          <div className={styles.fadeBottomMenu}>
+            <span className={styles.underlineMobile}>menù</span>
+          </div>
+          <div className={styles.fadeBottomEsperienze}>
+            <span className={styles.underlineMobile}>esperienze</span>
+          </div>
+        </div>
+        {/* Fine fasce mobile */}
       </div>
 
       <section className={styles.reservationStrip}>

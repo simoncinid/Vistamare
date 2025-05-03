@@ -54,9 +54,11 @@ export default function ImageSection() {
           styles.overlay +
           ((isMobile || hoverRight) ? ' ' + styles.visible : '')
         }>
-          <Link to="/esperienze" className={styles.text + ' ' + styles.textMobile} tabIndex={0}>Esperienze</Link>
+          <Link to="/esperienze" className={styles.text + ' ' + styles.textMobile + ' ' + styles.underlineMobile} tabIndex={0}>Esperienze</Link>
         </div>
       </div>
     </section>
   );
+
+  
 } 

@@ -98,7 +98,7 @@
   .galleryContainer {
     flex-direction: column;
     height: auto;
-    min-height: 100vh;
+    
   }
   
   .leftGallery {
@@ -123,4 +123,28 @@
   .rightGallery {
     height: 60vh;
   }
+}
+
+.dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background: rgba(255, 255, 255, 1);
 } 

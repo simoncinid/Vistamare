@@ -22,6 +22,16 @@ const PhilosophySection = () => {
           alt={`Filosofia ${current + 1}`}
           className={styles.slideImage}
         />
+        <div className={styles.dots}>
+          {images.map((_, index) => (
+            <button
+              key={index}
+              className={`${styles.dot} ${index === current ? styles.active : ''}`}
+              onClick={() => setCurrent(index)}
+              aria-label={`Vai all'immagine ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
       <div className={styles.textPart}>
         <div className={styles.box}>

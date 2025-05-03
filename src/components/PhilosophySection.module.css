@@ -46,6 +46,7 @@
   align-items: center;
   text-align: center;
   z-index: 1;
+  border-radius: 10px;
 }
 
 .box h2 {
@@ -266,7 +267,7 @@
     z-index: 3;
     background: linear-gradient(120deg, rgba(224,227,251,0.97) 60%, #e8f4ff 100%);
     box-shadow: 0 8px 32px rgba(0,0,0,0.13);
-    border-radius: 18px;
+    border-radius: 10px;
     overflow: visible;
     padding: 1.5rem;
   }
@@ -334,4 +335,28 @@
     line-height: 1;
     letter-spacing: 0.05em;
   }
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background: rgba(255, 255, 255, 1);
 } 
