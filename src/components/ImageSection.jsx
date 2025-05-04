@@ -35,7 +35,7 @@ export default function ImageSection() {
           styles.overlay +
           ((isMobile || hoverLeft) ? ' ' + styles.visible : '')
         }>
-          <Link to="/menu" className={styles.text + ' ' + styles.textMobile} tabIndex={0}>Menù</Link>
+          <Link to="/menu" className={styles.text + ' ' + styles.textMobile + ' ' + styles.underlineMobile} tabIndex={0}>Menù</Link>
         </div>
       </div>
       <div 
