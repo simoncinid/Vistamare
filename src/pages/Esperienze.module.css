@@ -1,4 +1,18 @@
 /* src/pages/Esperienze.module.css */
+
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&family=Tangerine:wght@400;700&display=swap');
+
+/* Variabili e stili di base */
+.pageContainer {
+  width: 100%;
+  min-height: 120vh;
+  position: relative;
+  background-color: #04062d;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .section {
   padding-top: 6rem;
 }
@@ -10,15 +24,70 @@
   gap: 4rem;
 }
 
-.experiences {
-  animation: fadeInUp 0.8s ease both;
-}
-
+/* Titoli e testo */
 .title {
   font-size: 2.5rem;
   color: var(--blue-dark);
   margin-bottom: 2rem;
   animation: zoomIn 0.8s ease both;
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: var(--blue-dark);
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  font-family: 'Tangerine', cursive;
+  font-size: 4.5rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.menuTitle {
+  font-family: 'Tangerine', cursive;
+  font-size: 5rem;
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.menuDescription {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+}
+
+.highlight {
+  color: #6db1ff;
+  font-size: 3rem;
+  margin: 0;
+  line-height: 0.5;
+  font-family: 'Tangerine', cursive;
+  font-weight: 700;
+}
+
+.decoration {
+  display: block;
+  margin: 1rem auto 0;
+  width: 80px;
+  scale: 3;
+  height: auto;
+}
+
+/* Esperienze */
+.experiences {
+  animation: fadeInUp 0.8s ease both;
 }
 
 .gridExperiences {
@@ -68,14 +137,9 @@
   line-height: 0.5;
 }
 
+/* Sezione vini */
 .wineSection {
   animation: fadeInUp 0.8s ease both;
-}
-
-.subtitle {
-  font-size: 2rem;
-  color: var(--blue-dark);
-  margin-bottom: 1.5rem;
 }
 
 .gridWines {
@@ -130,16 +194,7 @@
   margin-top: 0.5rem;
 }
 
-.pageContainer {
-  width: 100%;
-  min-height: 120vh;
-  position: relative;
-  background-color: #04062d;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-/* Stile sezione filosofia copiato dallo stesso stile nella home */
+/* Sezione filosofia */
 .philosophySection {
   display: flex;
   height: 80vh;
@@ -197,7 +252,6 @@
   opacity: 0.07;
 }
 
-/* Box posizionato a livello di sezione ma disegnato come se fosse nella posizione originale */
 .philosophySection .box {
   position: absolute;
   top: 50%;
@@ -222,13 +276,13 @@
 
 .philosophySection .box h2 {
   font-family: Tangerine, cursive;
-    font-size: 3.5rem;
-    font-style: normal;
-    color: #1a365d;
-    margin-bottom: 1.5rem;
-    font-weight: 900;
-    line-height: 1;
-    letter-spacing: .05em;
+  font-size: 3.5rem;
+  font-style: normal;
+  color: #1a365d;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: .05em;
 }
 
 .philosophySection .box p {
@@ -238,7 +292,103 @@
   color: var(--gray-dark);
 }
 
-/* Sezione dettagli menu degustazione */
+/* Sezione parallasse menu */
+.parallaxMenuContainer {
+  position: relative;
+  height: auto;
+  min-height: 100vh;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.parallaxBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/1.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  z-index: 1;
+  transform: translateZ(0);
+}
+
+.parallaxContent {
+  position: relative;
+  z-index: 3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem;
+  background-color: rgba(0, 6, 45, 0.75);
+  backdrop-filter: blur(1px);
+}
+
+.parallaxTransition {
+  position: relative;
+  z-index: 4;
+  height: 200px;
+  margin-top: -150px;
+  background: linear-gradient(to bottom, 
+                            rgba(0,26,56,0) 0%, 
+                            rgba(0,26,56,0.9) 70%, 
+                            rgba(0,26,56,1) 100%);
+  pointer-events: none;
+}
+
+/* Menu Card */
+.menuCard {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3.5rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 5px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+  transition: transform 0.3s ease-out;
+}
+
+.menuCard:hover {
+  transform: translateY(-5px);
+}
+
+.menuCardTitle {
+  text-align: center;
+  font-family: 'Tangerine', cursive;
+  font-size: 5rem;
+  color: #1a365d;
+  margin-bottom: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  position: relative;
+}
+
+.menuCardTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background-color: var(--blue-light);
+}
+
+/* Sezione menu e corsi */
+.menuTitleSection {
+  background-color: #04062d;
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+  color: white;
+}
+
 .menuDetailSection {
   background-color: #04062d;
   width: 100%;
@@ -248,9 +398,14 @@
   z-index: 10;
 }
 
-/* Corso */
+.coursesList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
 .course {
-  
   text-align: center;
 }
 
@@ -310,7 +465,7 @@
   justify-content: center;
 }
 
-/* Paragrafo con testo evidenziato */
+/* Sezione paragrafo */
 .paragraphSection {
   padding: 5rem 4rem 0rem 4rem;
   width: 100%;
@@ -329,24 +484,101 @@
   letter-spacing: 0.05em;
 }
 
-.highlight {
-  color: #6db1ff;
-  font-size: 3rem;
-  margin: 0;
-  line-height: 0.5;
-  font-family: 'Tangerine', cursive;
-  font-weight: 700;
+/* Galleria e Slider */
+.gallerySection {
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
 }
 
-.decoration {
+.galleryContainer {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.staticImagesContainer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.staticImageWrapper {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.staticImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sliderContainer {
+  width: 60%;
+  height: 100%;
+  position: relative;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  z-index: 1;
+  transform: translateX(100%);
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+  transform: translateX(0);
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  margin: 1rem auto 0;
-  width: 80px;
-  scale: 3;
-  height: auto;
 }
 
-/* Slider cantina a schermo intero */
+.dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Slider cantina */
 .cantinaSlider {
   width: 100%;
   height: 100vh;
@@ -411,7 +643,68 @@
   transform: scale(1.2);
 }
 
-/* Media query migliorate per responsività completa */
+/* Lista vini */
+.wineListSection {
+  background-color: #04062d;
+  padding: 5rem 2rem;
+  color: white;
+}
+
+.wineListContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wineListTitle {
+  font-family: 'Tangerine', cursive;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.wineGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.wineCard {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.wineCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.wineName {
+  font-family: 'Tangerine', cursive;
+  font-size: 2.5rem;
+  color: rgb(73, 234, 255);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.wineDetails {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: white;
+}
+
+.wineRegion {
+  font-style: italic;
+  margin-left: 0.5rem;
+}
+
+/* Media queries */
 @media (max-width: 992px) {
   .philosophySection {
     height: auto;
@@ -433,7 +726,6 @@
   }
   
   .menuCardTitle {
-    font-family: 'Tangerine', cursive;
     font-size: 2.8rem;
     margin-bottom: 2rem;
   }
@@ -495,7 +787,7 @@
   }
   
   .menuCardTitle {
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
   
   .courseName {
@@ -521,9 +813,6 @@
   
   .highlight {
     font-size: 2.2em;
-    font-family: 'Tangerine', cursive;
-    font-weight: 700;
-    color: #6db1ff;
     line-height: 1;
   }
   
@@ -554,11 +843,27 @@
     width: 10px;
     height: 10px;
   }
+  
+  .sectionTitle {
+    font-size: 3.5rem;
+  }
+  
+  .wineListTitle {
+    font-size: 3rem;
+  }
+  
+  .wineGrid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+  
+  .wineName {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 576px) {
   .menuTitle {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin-bottom: 1.5rem;
   }
   
@@ -646,6 +951,36 @@
   }
 }
 
+@media (max-width: 480px) {
+  .menuTitle {
+    font-size: 4rem;
+  }
+  
+  .menuDescription {
+    font-size: 1.1rem;
+  }
+  
+  .staticImageWrapper {
+    height: 100%;
+  }
+  
+  .sliderContainer {
+    height: 40vh;
+  }
+  
+  .sectionTitle {
+    font-size: 3rem;
+  }
+  
+  .wineListTitle {
+    font-size: 2.5rem;
+  }
+  
+  .wineGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 400px) {
   .menuTitle {
     font-size: 3rem;
@@ -696,427 +1031,10 @@
   }
 }
 
-/* Assicuriamo che lo sfondo parallax funzioni bene su dispositivi mobili */
+/* Supporto per dispositivi iOS */
 @supports (-webkit-touch-callout: none) {
-  /* Stili specifici per iOS per evitare problemi con fixed background */
   .parallaxBackground {
     background-attachment: scroll;
-  }
-}
-
-/* Aggiungi i font eleganti */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&family=Tangerine:wght@400;700&display=swap');
-
-.menuTitle {
-  text-align: center;
-  font-family: 'Lexend Zetta', sans-serif;
-  font-size: 2.2rem;
-  color: #1a365d;
-  margin-bottom: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.menuDescription {
-  text-align: center;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: white;
-  font-family: 'Playfair Display', serif;
-  margin: 0 5rem;
-}
-
-.coursesList {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 1rem;
- 
-}
-
-/* Sezione parallasse per il menu */
-.parallaxMenuContainer {
-  position: relative;
-  height: auto;
-  min-height: 100vh;
-  overflow: visible;
-  margin: 0;
-  padding: 0;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.parallaxBackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/assets/1.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: scroll;
-  z-index: 1;
-  transform: translateZ(0);
-}
-
-.parallaxContent {
-  position: relative;
-  z-index: 3;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem 2rem;
-  background-color: rgba(0, 6, 45, 0.75);
-  backdrop-filter: blur(1px);
-}
-
-.menuCard {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 3.5rem;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 5px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-  transform: translateY(0);
-  transition: transform 0.3s ease-out;
-}
-
-.menuCard:hover {
-  transform: translateY(-5px);
-}
-
-.menuCardTitle {
-  text-align: center;
-  font-family: 'Tangerine', cursive;
-  font-size: 5rem;
-  color: #1a365d;
-  margin-bottom: 2.5rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  position: relative;
-}
-
-.menuCardTitle::after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 2px;
-  background-color: var(--blue-light);
-}
-
-/* Stili media queries per la sezione parallasse */
-@media (max-width: 768px) {
-  .parallaxContent {
-    padding: 2rem 1rem;
-  }
-  
-  .menuCard {
-    padding: 2rem 1rem;
-  }
-  
-  .menuCardTitle {
-    font-size: 1.8rem;
-  }
-}
-
-/* Elemento di transizione tra la sezione parallasse e il resto del contenuto */
-.parallaxTransition {
-  position: relative;
-  z-index: 4;
-  height: 200px;
-  margin-top: -150px;
-  background: linear-gradient(to bottom, 
-                            rgba(0,26,56,0) 0%, 
-                            rgba(0,26,56,0.9) 70%, 
-                            rgba(0,26,56,1) 100%);
-  pointer-events: none;
-}
-
-/* Stili aggiunti dalla pagina Menu */
-.menuTitleSection {
-  background-color: #04062d;
-  padding: 6rem 2rem 4rem;
-  text-align: center;
-  color: white;
-}
-
-.menuTitle {
-  font-family: 'Tangerine', cursive;
-  font-size: 5rem;
-  color: white;
-  margin-bottom: 2rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.menuDescription {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  font-family: 'Playfair Display', serif;
-  color: white;
-  font-size: 1.5rem;
-  line-height: 1.8;
-  letter-spacing: 0.05em;
-}
-
-.highlight {
-  color: #6db1ff;
-  font-size: 3rem;
-  margin: 0;
-  line-height: 0.5;
-  font-family: 'Tangerine', cursive;
-  font-weight: 700;
-}
-
-/* Sezione galleria */
-.gallerySection {
-  width: 100%;
-  background-color: black;
-  overflow: hidden;
-}
-
-.galleryContainer {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-
-/* Immagini statiche sulla sinistra (40%) */
-.staticImagesContainer {
-  width: 40%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.staticImageWrapper {
-  width: 100%;
-  height: 50%;
-  overflow: hidden;
-}
-
-.staticImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Slider a destra (60%) */
-.sliderContainer {
-  width: 60%;
-  height: 100%;
-  position: relative;
-}
-
-.slider {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
-  z-index: 1;
-  transform: translateX(100%);
-}
-
-.slide.active {
-  opacity: 1;
-  z-index: 2;
-  transform: translateX(0);
-}
-
-.slideImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.dots {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 10;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.dot.active {
-  background: rgba(255, 255, 255, 1);
-}
-
-/* Media queries */
-@media (max-width: 768px) {
-  .menuTitle {
-    font-size: 4rem;
-  }
-  
-  .galleryContainer {
-    flex-direction: column;
-    height: auto;
-  }
-  
-  .staticImagesContainer {
-    width: 100%;
-    height: 50vh;
-  }
-  
-  .sliderContainer {
-    width: 100%;
-    height: 50vh;
-  }
-  
-  .proposteTitle {
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .menuTitle {
-    font-size: 3.5rem;
-  }
-  
-  .menuDescription {
-    font-size: 1.1rem;
-  }
-  
-  .staticImageWrapper {
-    height: 100%;
-  }
-  
-  .sliderContainer {
-    height: 40vh;
-  }
-}
-
-/* Titolo sezione */
-.sectionTitle {
-  font-family: 'Tangerine', cursive;
-  font-size: 4.5rem;
-  color: white;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-}
-
-/* Sezione lista vini */
-.wineListSection {
-  background-color: #04062d;
-  padding: 5rem 2rem;
-  color: white;
-}
-
-.wineListContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.wineListTitle {
-  font-family: 'Tangerine', cursive;
-  font-size: 3.5rem;
-  text-align: center;
-  margin-bottom: 3rem;
-  color: white;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-}
-
-.wineGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.wineCard {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.wineCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.wineName {
-  font-family: 'Tangerine', cursive;
-  font-size: 2.5rem;
-  color: rgb(73, 234, 255);
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.wineDetails {
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem;
-  color: white;
-}
-
-.wineRegion {
-  font-style: italic;
-  margin-left: 0.5rem;
-}
-
-/* Media queries per la sezione vini */
-@media (max-width: 768px) {
-  .sectionTitle {
-    font-size: 3.5rem;
-  }
-  
-  .wineListTitle {
-    font-size: 3rem;
-  }
-  
-  .wineGrid {
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  }
-  
-  .wineName {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .sectionTitle {
-    font-size: 3rem;
-  }
-  
-  .wineListTitle {
-    font-size: 2.5rem;
-  }
-  
-  .wineGrid {
-    grid-template-columns: 1fr;
   }
 }
 
