@@ -335,11 +335,7 @@
   }
 
   .highlight {
-    font-size: 2.2em;
-    font-family: 'Tangerine', cursive;
-    font-weight: 700;
-    color: #6db1ff;
-    line-height: 1;
+    font-size: 2.5rem;
   }
   
   .staticImagesContainer {
@@ -356,7 +352,7 @@
   }
   
   .proposteName {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   
   .propostePrice {
@@ -386,7 +382,7 @@
 
 @media (max-width: 480px) {
   .menuTitle {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   
   .menuDescription {
@@ -402,7 +398,30 @@
   }
   
   .proposteTitle {
-    font-size: 4rem;
+    font-size: 3rem;
+  }
+  
+  .proposteName {
+    font-size: 2rem;
+  }
+  
+  .propostePrice {
+    font-size: 1.6rem;
+    margin: 0 1rem;
+  }
+  
+  .highlight {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .menuTitle {
+    font-size: 2.8rem;
+  }
+  
+  .proposteTitle {
+    font-size: 2.8rem;
   }
   
   .proposteName {
@@ -411,6 +430,9 @@
   
   .propostePrice {
     font-size: 1.5rem;
-    margin: 0 1rem;
+  }
+  
+  .highlight {
+    font-size: 2rem;
   }
 }

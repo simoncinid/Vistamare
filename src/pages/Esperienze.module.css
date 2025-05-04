@@ -40,7 +40,7 @@
 
 .sectionTitle {
   font-family: 'Tangerine', cursive;
-  font-size: 4.5rem;
+  font-size: 5rem;
   color: white;
   text-align: center;
   margin-bottom: 1.5rem;
@@ -134,7 +134,9 @@
 
 .expDesc {
   color: var(--gray-dark);
-  line-height: 0.5;
+  line-height: 1.8;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
 }
 
 /* Sezione vini */
@@ -288,7 +290,7 @@
 .philosophySection .box p {
   font-family: 'Playfair Display', serif;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.8;
   color: var(--gray-dark);
 }
 
@@ -433,8 +435,8 @@
 }
 
 .courseDescription {
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.8;
   color: var(--gray-dark);
   max-width: 700px;
   margin: 0 auto;
@@ -445,7 +447,7 @@
   color: #277bdc;
   font-weight: 900;
   font-family: 'Tangerine', cursive;
-  font-size: 2rem;
+  font-size: 3rem;
   line-height: 0.5;
 }
 
@@ -657,7 +659,7 @@
 
 .wineListTitle {
   font-family: 'Tangerine', cursive;
-  font-size: 3.5rem;
+  font-size: 5rem;
   text-align: center;
   margin-bottom: 3rem;
   color: white;
@@ -726,7 +728,7 @@
   }
   
   .menuCardTitle {
-    font-size: 2.8rem;
+    font-size: 3.5rem;
     margin-bottom: 2rem;
   }
   
@@ -735,11 +737,11 @@
   }
   
   .courseHighlight {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
   
   .sectionTitle {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   
   .cantinaSlider {
@@ -787,7 +789,7 @@
   }
   
   .menuCardTitle {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   
   .courseName {
@@ -795,11 +797,11 @@
   }
   
   .courseDescription {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   
   .courseHighlight {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
   }
   
   .paragraphSection {
@@ -808,11 +810,11 @@
   
   .paragraphSection p {
     font-size: 1.1rem;
-    line-height: 1.5;
+    line-height: 1.8;
   }
   
   .highlight {
-    font-size: 2.2em;
+    font-size: 2.5rem;
     line-height: 1;
   }
   
@@ -849,7 +851,7 @@
   }
   
   .wineListTitle {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   
   .wineGrid {
@@ -857,19 +859,19 @@
   }
   
   .wineName {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 
 @media (max-width: 576px) {
   .menuTitle {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-bottom: 1.5rem;
   }
   
   .menuDescription {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.8;
   }
   
   .staticImagesContainer {
@@ -886,7 +888,7 @@
   
   .paragraphSection p {
     font-size: 1rem;
-    line-height: 1.4;
+    line-height: 1.8;
   }
   
   .highlight {
@@ -907,7 +909,7 @@
   }
   
   .menuCardTitle {
-    font-size: 2.2rem;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
   }
   
@@ -917,12 +919,12 @@
   }
   
   .courseDescription {
-    font-size: 0.85rem;
-    line-height: 1.4;
+    font-size: 1rem;
+    line-height: 1.8;
   }
   
   .courseHighlight {
-    font-size: 1.4rem;
+    font-size: 2rem;
   }
   
   .price {
@@ -953,11 +955,11 @@
 
 @media (max-width: 480px) {
   .menuTitle {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   
   .menuDescription {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   
   .staticImageWrapper {
@@ -973,7 +975,7 @@
   }
   
   .wineListTitle {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   
   .wineGrid {
@@ -983,11 +985,11 @@
 
 @media (max-width: 400px) {
   .menuTitle {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
   
   .menuDescription {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   
   .staticImagesContainer {
@@ -999,31 +1001,31 @@
   }
   
   .menuCardTitle {
-    font-size: 2rem;
+    font-size: 2.8rem;
   }
   
   .courseName {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   
   .courseDescription {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   
   .courseHighlight {
-    font-size: 1.2rem;
-  }
-  
-  .highlight {
     font-size: 1.8rem;
   }
   
+  .highlight {
+    font-size: 2rem;
+  }
+  
   .sectionTitle {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
   
   .paragraphSection p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   
   .cantinaSlider {

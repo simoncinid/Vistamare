@@ -120,9 +120,6 @@
 
 /* Stile per parole evidenziate */
 .highlight {
-  /*font-size: 1.3em;
-  font-weight: bold;
-  color: var(--blue-dark);*/
   color: #6db1ff;
   font-size: 3rem;
   margin: 0;
@@ -326,12 +323,13 @@
   .intro p {
     margin: 0 auto;
     max-width: 100%;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    line-height: 1.8;
     color: white;
   }
 
   .highlight {
-    font-size: 2.2em;
+    font-size: 2.5rem;
     font-family: 'Tangerine', cursive;
     font-weight: 700;
     color: #6db1ff;
@@ -342,7 +340,7 @@
     font-family: 'Playfair Display', serif !important;
     font-style: italic;
     color: #04062d;
-    font-size: 2.2rem !important;
+    font-size: 3.5rem !important;
     letter-spacing: 0.05em;
     margin-bottom: 0.5rem;
   }
@@ -412,7 +410,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-family: 'Playfair Display', serif;
     color: #04062d;
     background: none;
@@ -425,7 +423,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-family: 'Playfair Display', serif;
     color: #04062d;
     background: none;
@@ -478,5 +476,42 @@
     to {
       opacity: 1;
     }
+  }
+}
+
+@media (max-width: 576px) {
+  .intro p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  
+  .highlight {
+    font-size: 2.2rem;
+  }
+  
+  .fadeBottomMenu, .fadeBottomEsperienze {
+    font-size: 1.8rem;
+  }
+  
+  .reservationStrip h2 {
+    font-size: 3.5rem !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .highlight {
+    font-size: 2rem;
+  }
+  
+  .philosophySection h2 {
+    font-size: 2.8rem !important;
+  }
+  
+  .reservationStrip h2 {
+    font-size: 3rem !important;
+  }
+  
+  .fadeBottomMenu, .fadeBottomEsperienze {
+    font-size: 1.5rem;
   }
 }
