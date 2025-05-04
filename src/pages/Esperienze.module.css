@@ -114,7 +114,7 @@
 .wineYear {
   font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
-  color: rgb(73, 234, 255);
+  color: rgb(8, 63, 97);
   margin-left: 0.8rem;
   font-style: italic;
   font-weight: normal;
@@ -134,7 +134,7 @@
   width: 100%;
   min-height: 120vh;
   position: relative;
-  background-color: #001a38;
+  background-color: #04062d;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -148,7 +148,7 @@
   position: relative;
   isolation: isolate;
   z-index: 5;
-  background-color: #001a38;
+  background-color: #04062d;
 }
 
 .philosophySection.reversed {
@@ -179,7 +179,7 @@
 .philosophySection .textPart {
   width: 40%;
   height: 100%;
-  background-color: #001a38;
+  background-color: #04062d;
   position: relative;
   overflow: visible;
 }
@@ -240,7 +240,7 @@
 
 /* Sezione dettagli menu degustazione */
 .menuDetailSection {
-  background-color: #001a38;
+  background-color: #04062d;
   width: 100%;
   margin: 0 auto 5rem;
   text-align: center;
@@ -250,7 +250,7 @@
 
 /* Corso */
 .course {
-  margin-bottom: 2rem;
+  
   text-align: center;
 }
 
@@ -287,8 +287,8 @@
 }
 
 .courseHighlight {
-  color: #6db1ff;
-  font-weight: 600;
+  color: #277bdc;
+  font-weight: 900;
   font-family: 'Tangerine', cursive;
   font-size: 2rem;
   line-height: 0.5;
@@ -318,29 +318,32 @@
   text-align: center;
   position: relative;
   z-index: 10;
-  background-color: #001a38;
+  background-color: #04062d;
 }
 
 .paragraphSection p {
   font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  line-height: 1.8;
   color: white;
-  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
 }
 
 .highlight {
   color: #6db1ff;
-  font-family: 'Tangerine', cursive;
   font-size: 3rem;
-  font-weight: 700;
+  margin: 0;
   line-height: 0.5;
+  font-family: 'Tangerine', cursive;
+  font-weight: 700;
 }
 
 .decoration {
-  width: 150px;
+  display: block;
+  margin: 1rem auto 0;
+  width: 80px;
+  scale: 3;
   height: auto;
-  opacity: 0.7;
 }
 
 /* Slider cantina a schermo intero */
@@ -430,7 +433,7 @@
   }
   
   .menuCardTitle {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Tangerine', cursive;
     font-size: 2.8rem;
     margin-bottom: 2rem;
   }
@@ -723,7 +726,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
+ 
 }
 
 /* Sezione parallasse per il menu */
@@ -782,11 +786,11 @@
 
 .menuCardTitle {
   text-align: center;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.2rem;
+  font-family: 'Tangerine', cursive;
+  font-size: 5rem;
   color: #1a365d;
   margin-bottom: 2.5rem;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: 0.08em;
   position: relative;
 }
@@ -848,17 +852,23 @@
 }
 
 .menuDescription {
-  font-size: 1.2rem;
-  line-height: 1.6;
+  text-align: center;
   max-width: 800px;
   margin: 0 auto;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
 }
 
 .highlight {
+  color: #6db1ff;
+  font-size: 3rem;
+  margin: 0;
+  line-height: 0.5;
   font-family: 'Tangerine', cursive;
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: rgb(73, 234, 255);
+  font-weight: 700;
 }
 
 /* Sezione galleria */

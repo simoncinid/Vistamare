@@ -205,7 +205,7 @@ const Esperienze = () => {
         <div className={styles.parallaxBackground} style={{ backgroundImage: "url('/assets/1.png')" }}></div>
         <div className={styles.parallaxContent}>
           <div className={styles.menuCard}>
-            <h3 className={styles.menuCardTitle}>IL MENU DEGUSTAZIONE</h3>
+            <h3 className={styles.menuCardTitle}>Menù Degustazione</h3>
             
             <div className={styles.coursesList}>
               <div className={styles.course}>
@@ -300,7 +300,7 @@ const Esperienze = () => {
         <div className={styles.parallaxBackground} style={{ backgroundImage: "url('/assets/cantina4.png')" }}></div>
         <div className={styles.parallaxContent}>
           <div className={styles.menuCard}>
-            <h3 className={styles.menuCardTitle}>I NOSTRI VINI SELEZIONATI</h3>
+            <h3 className={styles.menuCardTitle}>Carta Vini Selezionati</h3>
             
             <div className={styles.coursesList}>
               {viniList.map((vino, index) => (
@@ -311,7 +311,7 @@ const Esperienze = () => {
                   </h4>
                   <p className={styles.courseDescription}>
                     <span className={styles.courseHighlight}>{vino.descrizione}</span>
-                    <span className={styles.winePrice}>{vino.prezzo}</span>
+                    
                   </p>
                 </div>
               ))}

@@ -193,7 +193,7 @@
   letter-spacing: 0.05em;*/
   font-family: 'Playfair Display', serif;
   color: white;
-  font-size: clamp(15px, 7.5vw, 23px);
+  font-size: 1.5rem;
   line-height: 1.8;
   letter-spacing: 0.05em;
 }
@@ -246,7 +246,7 @@
   margin: 0 auto;
   font-family: 'Playfair Display', serif;
   color: white;
-  font-size: clamp(15px, 7.5vw, 23px);
+  font-size: 1.5rem;
   line-height: 1.8;
   letter-spacing: 0.05em;
 }
