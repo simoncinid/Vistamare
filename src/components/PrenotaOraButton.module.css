@@ -12,14 +12,16 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   
     /* prepariamo la transizione */
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease, background-color 0.4s ease;
     opacity: 1;
     transform: translateY(0);
     z-index: 1000;
+    cursor: pointer !important;
   }
   
   .prenotaButton:hover {
     box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    background-color: #3bb0ff;
   }
   
   /* la classe che attiva il fade-out */
