@@ -29,7 +29,7 @@ const PrenotaOraButton = () => {
       className={`${styles.prenotaButton} ${!visible ? styles.hidden : ''}`}
       onClick={handleClick}
     >
-      <span role="img" aria-label="calendario">📅</span> Prenota ora!
+      <i class="fa-regular fa-calendar-check" style={{ marginRight: '10px' }}></i> Prenota ora!
     </button>
   );
 };
