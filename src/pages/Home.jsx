@@ -13,6 +13,7 @@ import PhilosophySection from '../components/PhilosophySection';
 import AnimatedText from '../components/AnimatedText';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import PrenotaOraButton from '../components/PrenotaOraButton';
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
       <div>
         <Carousel />
       </div>
-      
+      <PrenotaOraButton />
       <div className={styles.contentSection}>
         <section className={styles.intro}>
           <AnimatedText>
@@ -84,7 +85,7 @@ export default function Home() {
         {/* Fine fasce mobile */}
       </div>
 
-      <section className={styles.reservationStrip}>
+      <section className={styles.reservationStrip} id="reservation-form">
         <AnimatedText delay={800}>
           <h2>Ti aspettiamo</h2>
         </AnimatedText>
