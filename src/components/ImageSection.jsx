@@ -35,7 +35,13 @@ export default function ImageSection() {
           styles.overlay +
           ((isMobile || hoverLeft) ? ' ' + styles.visible : '')
         }>
-          <Link to="/menu" className={styles.text + ' ' + styles.textMobile + ' ' + styles.underlineMobile} tabIndex={0}>Menù</Link>
+          {/*<Link to="/menu" className={styles.text + ' ' + styles.textMobile + ' ' + styles.underlineMobile} tabIndex={0}>Menù</Link>*/}
+          <a 
+          href="/menu" 
+          className={`${styles.text + ' ' + styles.textMobile + ' ' + styles.underlineMobile} ${location.pathname === '/menu' ? styles.active : ''}`}
+        >
+          Menù
+        </a>
         </div>
       </div>
       <div 
@@ -54,7 +60,13 @@ export default function ImageSection() {
           styles.overlay +
           ((isMobile || hoverRight) ? ' ' + styles.visible : '')
         }>
-          <Link to="/esperienze" className={styles.text + ' ' + styles.textMobile + ' ' + styles.underlineMobile} tabIndex={0}>Esperienze</Link>
+          {/*<Link to="/esperienze" className={styles.text + ' ' + styles.textMobile + ' ' + styles.underlineMobile} tabIndex={0}>Esperienze</Link>*/}
+          <a 
+          href="/esperienze" 
+          className={`${styles.text + ' ' + styles.textMobile + ' ' + styles.underlineMobile} ${location.pathname === '/esperienze' ? styles.active : ''}`}
+        >
+          Esperienze
+        </a>
         </div>
       </div>
     </section>
