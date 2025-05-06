@@ -292,7 +292,7 @@ const Esperienze = () => {
       <div className={styles.paragraphSection}>
         <h2 className={styles.sectionTitle}>La Nostra Cantina</h2>
         <AnimatedText delay={400}>
-          <img src="/assets/decorazione.png" alt="" className={styles.decoration} style={{transform: 'rotate(180deg)'}} loading="lazy" />
+        <img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />
         </AnimatedText>
         <AnimatedText delay={600}>
           <p>

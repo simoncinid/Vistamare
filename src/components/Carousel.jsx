@@ -99,7 +99,7 @@ function Carousel() {
         </div>
         
         {/* Pulsanti di navigazione */}
-        <button 
+        {/*<button 
           className={styles.prevButton} 
           onClick={prevSlide}
           aria-label="Slide precedente"
@@ -112,7 +112,7 @@ function Carousel() {
           aria-label="Slide successivo"
         >
           <span className={styles.arrow}>→</span>
-        </button>
+        </button>*/}
         
         <div className={styles.dots}>
           {sliderImages.map((_, index) => (
