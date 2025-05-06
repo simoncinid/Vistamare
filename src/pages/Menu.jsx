@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { BsChevronDown, BsChevronUp, BsArrowLeftShort, BsArrowRightShort, BsX } from 'react-icons/bs';
 import TripAdvisorReviews from '../components/TripAdvisorReviews';
+import AnimatedText from '../components/AnimatedText';
 
 // Percorsi delle immagini per gli allergeni
 const allergensIcons = {
@@ -153,6 +154,7 @@ const Menu = () => {
       {/* Sezione titolo con sfondo blu */}
       <section className={styles.menuTitleSection}>
         <h1 className={styles.menuTitle}>Menù</h1>
+        <AnimatedText delay={200}>
         <p className={styles.menuDescription}>
           Le nostre proposte variano <span className={styles.highlight}> giornalmente</span> in base al pescato fresco 
           disponibile. 
@@ -163,6 +165,7 @@ const Menu = () => {
           <span className={styles.highlight}> Freschezza</span> e <span className={styles.highlight}>qualità</span> sono la nostra 
           <span className={styles.highlight}> priorità</span>.
         </p>
+        </AnimatedText>
       </section>
 
       {/* Sezione galleria */}
@@ -196,6 +199,20 @@ const Menu = () => {
                   />
                 </div>
               ))}
+              <button 
+                className={styles.prevButton} 
+                onClick={() => setCurrentSlide((currentSlide - 1 + sliderImages.length) % sliderImages.length)}
+                aria-label="Slide precedente"
+              >
+                <span className={styles.arrow}>←</span>
+              </button>
+              <button 
+                className={styles.nextButton} 
+                onClick={() => setCurrentSlide((currentSlide + 1) % sliderImages.length)}
+                aria-label="Slide successivo"
+              >
+                <span className={styles.arrow}>→</span>
+              </button>
               <div className={styles.dots}>
                 {sliderImages.map((_, index) => (
                   <button
@@ -278,6 +295,7 @@ const Menu = () => {
 
       {/* Paragrafo finale identico a quello iniziale */}
       <section className={styles.menuBottomSection}>
+        <AnimatedText delay={200}>
         <p className={styles.menuDescription}>
           Le nostre proposte variano <span className={styles.highlight}> giornalmente</span> in base al pescato fresco 
           disponibile. 
@@ -288,6 +306,7 @@ const Menu = () => {
           <span className={styles.highlight}> Freschezza</span> e <span className={styles.highlight}>qualità</span> sono la nostra 
           <span className={styles.highlight}> priorità</span>.
         </p>
+        </AnimatedText>
       </section>
 
      

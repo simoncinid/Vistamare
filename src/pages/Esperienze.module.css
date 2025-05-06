@@ -784,22 +784,51 @@
   .menuCard {
     padding: 2rem 1.2rem;
     width: 95%;
+    margin: 0 auto;
   }
   
   .menuCardTitle {
-    font-size: 3.5rem;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .course {
+    margin-bottom: 1rem;
   }
   
   .courseName {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    margin: 1rem 0 0.3rem;
   }
   
   .courseDescription {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
   }
   
   .courseHighlight {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+    line-height: 0.8;
+  }
+  
+  .pricing {
+    margin-top: 1.5rem;
+  }
+  
+  .price {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+  }
+  
+  .wineYear {
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+  
+  .coursesList {
+    margin-bottom: 0.5rem;
   }
   
   .paragraphSection {
@@ -807,7 +836,7 @@
   }
   
   .paragraphSection p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.8;
   }
   
@@ -818,30 +847,6 @@
   
   .decoration {
     width: 120px;
-  }
-  
-  .sectionTitle {
-    font-size: 3.5rem;
-  }
-  
-  .wineYear {
-    font-size: 1rem;
-    display: block;
-    margin-left: 0;
-    margin-top: 0.3rem;
-  }
-  
-  .cantinaSlider {
-    height: 70vh;
-  }
-  
-  .cantinaSliderDots {
-    bottom: 20px;
-  }
-  
-  .cantinaSliderDot {
-    width: 10px;
-    height: 10px;
   }
   
   .sectionTitle {
@@ -911,22 +916,33 @@
     margin-bottom: 1.5rem;
   }
   
+  .course {
+    margin-bottom: 0.8rem;
+  }
+  
   .courseName {
     font-size: 1.1rem;
-    padding: 0 0.5rem;
+    margin: 0.8rem 0 0.2rem;
   }
   
   .courseDescription {
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 0.3rem;
   }
   
   .courseHighlight {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    line-height: 0.7;
+  }
+  
+  .pricing {
+    margin-top: 1rem;
   }
   
   .price {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
   }
   
   .sectionTitle {
@@ -978,6 +994,53 @@
   
   .wineGrid {
     grid-template-columns: 1fr;
+  }
+  
+  .menuCard {
+    padding: 1.5rem 1rem;
+    width: 100%;
+  }
+  
+  .menuCardTitle {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .course {
+    margin-bottom: 0.8rem;
+  }
+  
+  .courseName {
+    font-size: 1.1rem;
+    margin: 0.8rem 0 0.2rem;
+  }
+  
+  .courseDescription {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 0.3rem;
+  }
+  
+  .courseHighlight {
+    font-size: 1.6rem;
+    line-height: 0.7;
+  }
+  
+  .pricing {
+    margin-top: 1rem;
+  }
+  
+  .price {
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
+  }
+  
+  .wineYear {
+    font-size: 0.8rem;
+  }
+  
+  .coursesList {
+    margin-bottom: 0.3rem;
   }
 }
 
@@ -1035,6 +1098,67 @@
 @supports (-webkit-touch-callout: none) {
   .parallaxBackground {
     background-attachment: scroll;
+  }
+}
+
+.prevButton,
+.nextButton {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+}
+
+.prevButton {
+  left: 20px;
+}
+
+.nextButton {
+  right: 20px;
+}
+
+.prevButton:hover,
+.nextButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.arrow {
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .prevButton,
+  .nextButton {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .prevButton {
+    left: 10px;
+  }
+  
+  .nextButton {
+    right: 10px;
+  }
+  
+  .arrow {
+    font-size: 20px;
   }
 }
 

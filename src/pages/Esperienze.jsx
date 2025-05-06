@@ -118,6 +118,7 @@ const Esperienze = () => {
       {/* Sezione titolo con sfondo blu */}
       <section className={styles.menuTitleSection}>
         <h1 className={styles.menuTitle}>Esperienze</h1>
+        <AnimatedText delay={200}>
         <p className={styles.menuDescription}>
           Vieni a scoprire le <span className={styles.highlight}>esperienze uniche</span> che ti aspettano da Vistamare.
           <br />
@@ -125,6 +126,7 @@ const Esperienze = () => {
           <br />
           Esplora la nostra <span className={styles.highlight}>cantina</span> ricca di vini pregiati selezionati per accompagnare ogni piatto.
         </p>
+        </AnimatedText>
       </section>
       
       {/* Sezione galleria */}
@@ -160,6 +162,20 @@ const Esperienze = () => {
                   />
                 </div>
               ))}
+              <button 
+                className={styles.prevButton} 
+                onClick={() => setCurrentSlide((currentSlide - 1 + sliderImages.length) % sliderImages.length)}
+                aria-label="Slide precedente"
+              >
+                <span className={styles.arrow}>←</span>
+              </button>
+              <button 
+                className={styles.nextButton} 
+                onClick={() => setCurrentSlide((currentSlide + 1) % sliderImages.length)}
+                aria-label="Slide successivo"
+              >
+                <span className={styles.arrow}>→</span>
+              </button>
               <div className={styles.dots}>
                 {sliderImages.map((_, index) => (
                   <button
@@ -331,6 +347,20 @@ const Esperienze = () => {
               <img src={image} alt={`Cantina vista ${index + 1}`} loading="lazy" />
             </div>
           ))}
+          <button 
+            className={styles.prevButton} 
+            onClick={() => setCurrentCantinaImage((currentCantinaImage - 1 + cantinaImages.length) % cantinaImages.length)}
+            aria-label="Slide precedente"
+          >
+            <span className={styles.arrow}>←</span>
+          </button>
+          <button 
+            className={styles.nextButton} 
+            onClick={() => setCurrentCantinaImage((currentCantinaImage + 1) % cantinaImages.length)}
+            aria-label="Slide successivo"
+          >
+            <span className={styles.arrow}>→</span>
+          </button>
         </div>
         <div className={styles.cantinaSliderDots}>
           {cantinaImages.map((_, index) => (

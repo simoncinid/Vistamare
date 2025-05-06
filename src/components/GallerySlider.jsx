@@ -36,6 +36,11 @@ function GallerySlider() {
     setCurrentSlide((currentSlide + 1) % sliderImages.length);
   }, [currentSlide, sliderImages.length]);
 
+  // Funzione per passare al slide precedente
+  const prevSlide = useCallback(() => {
+    setCurrentSlide((currentSlide - 1 + sliderImages.length) % sliderImages.length);
+  }, [currentSlide, sliderImages.length]);
+
   // Auto-avanzamento per lo slider principale
   useEffect(() => {
     const timer = setInterval(nextSlide, 6000);
@@ -59,6 +64,20 @@ function GallerySlider() {
               />
             </div>
           ))}
+          <button 
+            className={styles.prevButton} 
+            onClick={prevSlide}
+            aria-label="Slide precedente"
+          >
+            <span className={styles.arrow}>←</span>
+          </button>
+          <button 
+            className={styles.nextButton} 
+            onClick={nextSlide}
+            aria-label="Slide successivo"
+          >
+            <span className={styles.arrow}>→</span>
+          </button>
           <div className={styles.dots}>
             {sliderImages.map((_, index) => (
               <button

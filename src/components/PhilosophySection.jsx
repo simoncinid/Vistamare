@@ -9,8 +9,17 @@ import filosofia4 from '../assets/filosofia4.png';
 const PhilosophySection = () => {
   const images = [filosofia1, filosofia2, filosofia3, filosofia4];
   const [current, setCurrent] = useState(0);
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev - 1 + images.length) % images.length);
+  };
+
   useEffect(() => {
-    const interval = setInterval(() => setCurrent(prev => (prev + 1) % images.length), 3000);
+    const interval = setInterval(nextSlide, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -22,6 +31,20 @@ const PhilosophySection = () => {
           alt={`Filosofia ${current + 1}`}
           className={styles.slideImage}
         />
+        <button 
+          className={styles.prevButton} 
+          onClick={prevSlide}
+          aria-label="Immagine precedente"
+        >
+          <span className={styles.arrow}>←</span>
+        </button>
+        <button 
+          className={styles.nextButton} 
+          onClick={nextSlide}
+          aria-label="Immagine successiva"
+        >
+          <span className={styles.arrow}>→</span>
+        </button>
         <div className={styles.dots}>
           {images.map((_, index) => (
             <button

@@ -251,7 +251,7 @@
 /* Stile per l'immagine decorativa nei spacer */
 .decoration {
   display: block;
-  margin: 1rem auto 0;
+  margin: 0 auto 0;
   width: 80px;
   scale: 3;
   height: auto;
@@ -259,7 +259,7 @@
 
 .decorationUpsideDown {
   display: block;
-  margin: 1rem auto 0;
+  margin: 0 auto 0;
   width: 80px;
   scale: 3;
   height: auto;

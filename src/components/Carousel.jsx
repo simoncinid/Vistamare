@@ -98,6 +98,22 @@ function Carousel() {
           <h5 style={{color: 'var(--white)', textTransform: 'uppercase'}}>RISTORANTE</h5>
         </div>
         
+        {/* Pulsanti di navigazione */}
+        <button 
+          className={styles.prevButton} 
+          onClick={prevSlide}
+          aria-label="Slide precedente"
+        >
+          <span className={styles.arrow}>←</span>
+        </button>
+        <button 
+          className={styles.nextButton} 
+          onClick={nextSlide}
+          aria-label="Slide successivo"
+        >
+          <span className={styles.arrow}>→</span>
+        </button>
+        
         <div className={styles.dots}>
           {sliderImages.map((_, index) => (
             <button
