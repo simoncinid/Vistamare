@@ -1,4 +1,9 @@
 .prenotaButton {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
     position: fixed;
     bottom: 20px;
     right: 20px;
