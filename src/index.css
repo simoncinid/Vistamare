@@ -28,7 +28,7 @@
   --shadow:    rgba(0,0,0,.12);
   --cursor-color: rgba(255, 255, 255, 0.342); /* Colore azzurro chiaro per il cursore */
 
-  --font-heading: 'Playfair Display', serif;
+  --font-heading: "Roboto", sans-serif;;
   --font-body:    'Source Sans Pro', sans-serif;
 }
 
