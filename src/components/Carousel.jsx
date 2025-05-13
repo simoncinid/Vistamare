@@ -5,8 +5,8 @@ function Carousel() {
   // Immagini per il carosello
   const sliderImages = [
     '../assets/2.png',
-    '../assets/14.png',
-    '../assets/17.png',
+    '../assets/18.png',
+    '../assets/19.png',
     '../assets/15.png',
     '../assets/16.png'
   ];

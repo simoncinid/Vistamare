@@ -195,7 +195,6 @@ const Esperienze = () => {
       <div className={styles.paragraphSection}>
         <h2 className={styles.sectionTitle}>Menu Degustazione</h2>
         <AnimatedText delay={400}>
-        <img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />
         </AnimatedText>
         <AnimatedText delay={600}>
           <p>
@@ -212,7 +211,6 @@ const Esperienze = () => {
           </p>
         </AnimatedText>
         <AnimatedText delay={400}>
-          <img src="/assets/decorazione.png" alt="" className={styles.decoration} loading="lazy" />
         </AnimatedText>
       </div>
       
@@ -292,7 +290,6 @@ const Esperienze = () => {
       <div className={styles.paragraphSection}>
         <h2 className={styles.sectionTitle}>La Nostra Cantina</h2>
         <AnimatedText delay={400}>
-        <img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />
         </AnimatedText>
         <AnimatedText delay={600}>
           <p>
@@ -307,7 +304,6 @@ const Esperienze = () => {
           </p>
         </AnimatedText>
         <AnimatedText delay={400}>
-          <img src="/assets/decorazione.png" alt="" className={styles.decoration} loading="lazy" />
         </AnimatedText>
       </div>
       

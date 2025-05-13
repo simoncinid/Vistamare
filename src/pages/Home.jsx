@@ -51,6 +51,7 @@ export default function Home() {
         
         <div className={styles.fadeBottom}>
           <ImageSection />
+
         </div>
         <div className={styles.sectionSpacerLarge}>
           <AnimatedText delay={400}>
@@ -70,17 +71,12 @@ export default function Home() {
         </div>
         
         <div className={styles.sectionSpacerLarge}>
-          <AnimatedText delay={400}>
-            {/*<img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />*/}
-            </AnimatedText>
+          
             <AnimatedText delay={600}>
             <p>Vieni a <span className={styles.highlight}>immergerti</span> nel calore della nostra ospitalità: ogni piatto, dal taglio più delicato al sapore più <span className={styles.highlight}>deciso</span>, è concepito per stupire il palato e <span className={styles.highlight}>accendere</span> i sensi, trasformando ogni momento in un ricordo prezioso.</p>
             </AnimatedText>
-            <AnimatedText delay={400}>
-            {/*<img src="/assets/decorazione.png" alt="" className={styles.decoration} />*/}
-          </AnimatedText>
+            
         </div>
-
        
         {/* Fine fasce mobile */}
       </div>
@@ -98,3 +94,4 @@ export default function Home() {
     </div>
   );
 }
+

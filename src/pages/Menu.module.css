@@ -27,21 +27,24 @@
 
 .menuDescription {
   text-align: center;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  font-family: 'Playfair Display', serif;
+  font-family: "Roboto", sans-serif;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.8;
-  letter-spacing: 0.05em;
+  letter-spacing: 5px;
+  font-weight: 500;
+  padding: 2rem 0;
+  text-transform: uppercase;
 }
 
 .highlight {
   color: #6db1ff;
-  font-size: 3rem;
+  /*font-size: 3rem;*/
   margin: 0;
   line-height: 0.5;
-  font-family: 'Tangerine', cursive;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
 
@@ -334,9 +337,9 @@
     height: auto;
   }
 
-  .highlight {
+  /*.highlight {
     font-size: 2.5rem;
-  }
+  }*/
   
   .staticImagesContainer {
     display: none;
@@ -410,9 +413,9 @@
     margin: 0 1rem;
   }
   
-  .highlight {
+  /*.highlight {
     font-size: 2.2rem;
-  }
+  }*/
 }
 
 @media (max-width: 400px) {
@@ -432,9 +435,9 @@
     font-size: 1.5rem;
   }
   
-  .highlight {
+  /*.highlight {
     font-size: 2rem;
-  }
+  }*/
 }
 
 .prevButton,
@@ -495,5 +498,79 @@
   
   .arrow {
     font-size: 20px;
+  }
+}
+
+.paragraph {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin: 2rem 0;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .paragraph {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+.paragraphSection {
+  padding: 5rem 3rem 0rem 3rem;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  background-color: #04062d;
+}
+
+.paragraphSection p {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  letter-spacing: 5px;
+  font-weight: 500;
+  padding: 2rem 0;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .menuDescription {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding: 2rem 0.5rem;
+  }
+
+  .paragraphSection {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+
+  .paragraphSection p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding: 2rem 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .menuDescription {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .paragraphSection p {
+    font-size: 1.1rem;
+    line-height: 1.8;
   }
 }

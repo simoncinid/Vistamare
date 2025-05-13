@@ -59,21 +59,24 @@
 
 .menuDescription {
   text-align: center;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  font-family: 'Playfair Display', serif;
+  font-family: "Roboto", sans-serif;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.8;
-  letter-spacing: 0.05em;
+  letter-spacing: 5px;
+  font-weight: 500;
+  padding: 2rem 0;
+  text-transform: uppercase;
 }
 
 .highlight {
   color: #6db1ff;
-  font-size: 3rem;
+  /*font-size: 3rem;*/
   margin: 0;
   line-height: 0.5;
-  font-family: 'Tangerine', cursive;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
 
@@ -478,7 +481,7 @@
 
 /* Sezione paragrafo */
 .paragraphSection {
-  padding: 5rem 4rem 0rem 4rem;
+  padding: 5rem 3rem 0rem 3rem;
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -488,11 +491,17 @@
 }
 
 .paragraphSection p {
-  font-family: 'Playfair Display', serif;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.8;
-  letter-spacing: 0.05em;
+  letter-spacing: 5px;
+  font-weight: 500;
+  padding: 2rem 0;
+  text-transform: uppercase;
 }
 
 /* Galleria e Slider */
@@ -764,8 +773,8 @@
   
   .menuDescription {
     font-size: 1.1rem;
-    max-width: 90%;
-    margin: 0 auto;
+    line-height: 1.8;
+    padding: 2rem 0.5rem;
   }
   
   .galleryContainer {
@@ -787,7 +796,7 @@
   }
   
   .parallaxContent {
-    padding: 3rem 1rem;
+    padding: 3rem 1rem 1rem 1rem;
   }
   
   .menuCard {
@@ -841,18 +850,19 @@
   }
   
   .paragraphSection {
-    padding: 3rem 1.5rem 1rem 1.5rem;
+    padding: 3rem 1rem 1rem 1rem;
   }
   
   .paragraphSection p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.8;
+    padding: 2rem 0.5rem;
   }
   
-  .highlight {
+  /*.highlight {
     font-size: 2.5rem;
     line-height: 1;
-  }
+  }*/
   
   
   .sectionTitle {
@@ -879,7 +889,7 @@
   }
   
   .menuDescription {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.8;
   }
   
@@ -896,13 +906,13 @@
   }
   
   .paragraphSection p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.8;
   }
   
-  .highlight {
+  /*.highlight {
     font-size: 2.2rem;
-  }
+  }*/
   
   .parallaxContent {
     padding: 2.5rem 0.5rem;
@@ -1079,9 +1089,9 @@
     font-size: 1.8rem;
   }
   
-  .highlight {
+  /*.highlight {
     font-size: 2rem;
-  }
+  }*/
   
   .sectionTitle {
     font-size: 2.8rem;
@@ -1161,6 +1171,26 @@
   
   .arrow {
     font-size: 20px;
+  }
+}
+
+.paragraph {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin: 2rem 0;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .paragraph {
+    font-size: 1rem;
+    padding: 0 1rem;
   }
 }
 
