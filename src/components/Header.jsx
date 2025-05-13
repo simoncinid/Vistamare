@@ -19,27 +19,27 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.headerContent}>
-        <img src={logo} alt="Vistamare" className={styles.logo} />
-        <nav className={styles.nav}>
-          <a 
-            href="/" 
-            className={`${styles.link} ${location.pathname === '/' ? styles.active : ''}`}
-          >
-            Home
-          </a>
-          <a 
-            href="/menu" 
-            className={`${styles.link} ${location.pathname === '/menu' ? styles.active : ''}`}
-          >
-            Menu
-          </a>
-          <a 
-            href="/esperienze" 
-            className={`${styles.link} ${location.pathname === '/esperienze' ? styles.active : ''}`}
-          >
-            Esperienze
-          </a>
-        </nav>
+      <img src={logo} alt="Vistamare" className={styles.logo} />
+      <nav className={styles.nav}>
+        <a 
+          href="/" 
+          className={`${styles.link} ${location.pathname === '/' ? styles.active : ''}`}
+        >
+          Home
+        </a>
+        <a 
+          href="/menu" 
+          className={`${styles.link} ${location.pathname === '/menu' ? styles.active : ''}`}
+        >
+          i Menù
+        </a>
+        <a 
+          href="/esperienze" 
+          className={`${styles.link} ${location.pathname === '/esperienze' ? styles.active : ''}`}
+        >
+          wine list
+        </a>
+      </nav>
       </div>
     </header>
   );

@@ -234,6 +234,7 @@
     height: auto;
     flex-direction: column;
     min-height: 100vh;
+    margin-bottom: 3rem;
   }
   
   .imagePart {
@@ -244,25 +245,17 @@
   .textPart {
     width: 100%;
     height: auto;
-    margin-bottom: 100px;
+    margin-bottom: 0;
     background-color: #04062d;
   }
   
-  .box {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding: 1.5rem;
-  }
-  
   .box h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+    font-size: 30px;
   }
   
   .filosofiaTitle {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    margin-top: -0.5rem;
+    font-size: 5rem;
+    margin-top: -1rem;
     margin-bottom: 1rem;
   }
   
@@ -270,6 +263,16 @@
     font-size: 0.9rem;
     padding: 1rem 0;
     letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 576px) {
+  .philosophy {
+    margin-bottom: 2rem;
+  }
+  
+  .imagePart {
+    height: 40vh;
   }
 }
 
@@ -287,11 +290,11 @@
     margin-bottom: 0.8rem;
   }
   
-  .filosofiaTitle {
+  /*.filosofiaTitle {
     font-size: clamp(2rem, 5vw, 3.5rem);
     margin-top: -0.3rem;
     margin-bottom: 0.8rem;
-  }
+  }*/
   
   .box p {
     font-size: 0.85rem;

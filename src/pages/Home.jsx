@@ -14,6 +14,7 @@ import AnimatedText from '../components/AnimatedText';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PrenotaOraButton from '../components/PrenotaOraButton';
+import ModernLinksSection from '../components/ModernLinksSection';
 
 export default function Home() {
   return (
@@ -50,8 +51,9 @@ export default function Home() {
         </div>        
         
         <div className={styles.fadeBottom}>
-          <ImageSection />
-
+          <h1>Scopri cosa offriamo:</h1>
+          {/* <ImageSection /> */}
+          <ModernLinksSection />
         </div>
         <div className={styles.sectionSpacerLarge}>
           <AnimatedText delay={400}>

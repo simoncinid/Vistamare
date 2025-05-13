@@ -155,7 +155,7 @@
   /*background-image: url('/assets/background2.png');*/
   width: 100%;
   /*background: #ffffff;*/
-  background-color: #04062d;
+  background-color: #0d1126fa;
   padding: 0;
   position: relative;
   z-index: 1;
@@ -176,7 +176,7 @@
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 1rem 1rem;
+  padding: 7rem 0;
   text-align: center;
   font-size: 1.15rem;
   line-height: 1.6;
@@ -250,7 +250,7 @@
   color: white;
   font-size: 1.3rem;
   line-height: 1.8;
-  padding: 2rem 0;
+  padding: 7rem 0;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: 500;
@@ -278,6 +278,19 @@
 .fadeBottom {
   position: relative;
 }
+.fadeBottom h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(2rem, 1vw, 5rem);
+  font-weight: 500;
+  color: white;
+  line-height: 0.8;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 10px;
+  margin: 0;
+  white-space: nowrap;
+  text-align: center;
+  text-transform: uppercase;
+}
 .fadeBottom::after {
   content: '';
   position: absolute;
@@ -285,7 +298,7 @@
   left: 0;
   width: 100%;
   height: 3rem;
-  background: linear-gradient(to bottom, transparent 0%, #04062d);
+  /*background: linear-gradient(to bottom, transparent 0%, #04062d);*/
   pointer-events: none;
 }
 
@@ -355,7 +368,7 @@
   }
   
   .divPhilosophy {
-    margin-bottom: 0;
+    margin-bottom: 2rem;
     position: relative;
     z-index: 2;
   }
@@ -408,8 +421,9 @@
   }
   /* Gallery: tolgo fasce blu sopra e sotto */
   .fadeBottom {
-    min-height: 15rem !important;
-    height: 15rem !important;
+    min-height: 20rem !important;
+    height: auto !important;
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
