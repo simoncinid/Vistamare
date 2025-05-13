@@ -280,16 +280,16 @@
 }
 .fadeBottom h1 {
   font-family: "Roboto", sans-serif;
-  font-size: clamp(2rem, 1vw, 5rem);
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
   font-weight: 500;
   color: white;
-  line-height: 0.8;
+  line-height: 1.2;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  letter-spacing: 10px;
-  margin: 0;
-  white-space: nowrap;
+  letter-spacing: clamp(3px, 1vw, 10px);
+  margin: 0 0 2rem 0;
   text-align: center;
   text-transform: uppercase;
+  padding: 0 1rem;
 }
 .fadeBottom::after {
   content: '';
