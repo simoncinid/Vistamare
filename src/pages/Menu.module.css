@@ -574,3 +574,118 @@
     line-height: 1.8;
   }
 }
+
+/* Sezione Gift Card */
+.giftCardSection {
+  background-color: #04062d;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #04062d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.giftCardSection::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(224, 227, 251, 0.897), rgb(255, 255, 255));
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.giftCardSection .menuDescription {
+  color: #2c2c2c;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  letter-spacing: 5px;
+  font-weight: 500;
+  padding: 2rem 0;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.giftCardSection .highlight {
+  color: #6db1ff;
+  font-weight: 700;
+}
+
+.giftCardTitle {
+  font-family: 'Tangerine', cursive;
+  font-size: 5rem;
+  color: #04062d;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive per la sezione Gift Card */
+@media (max-width: 768px) {
+  .giftCardSection {
+    padding: 3rem 1rem;
+  }
+  
+  .giftCardSection .menuDescription {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    letter-spacing: 3px;
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .giftCardTitle {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .giftCardSection {
+    padding: 2.5rem 1rem;
+  }
+  
+  .giftCardSection .menuDescription {
+    font-size: 1rem;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .giftCardTitle {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .giftCardSection {
+    padding: 2rem 0.8rem;
+  }
+  
+  .giftCardSection .menuDescription {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+  }
+  
+  .giftCardTitle {
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .giftCardTitle {
+    font-size: 2.8rem;
+  }
+}
