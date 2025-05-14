@@ -60,7 +60,9 @@ const PhilosophySection = () => {
         <div className={styles.box}>
           <h2 style={{ fontStyle: 'italic' }}>la nostra</h2>
           <h1 className={styles.filosofiaTitle}>filosofia</h1>
-          <p>La nostra filosofia si basa su ingredienti locali e pesce fresco del giorno, selezionati con cura per garantire la massima qualità e sostenibilità. Ogni piatto racconta la nostra passione per l'autenticità e la tradizione culinaria.</p>
+          <p>Scegliamo ingredienti <span className={styles.highlight}>locali</span> e <span className={styles.highlight}>biologici</span>, seguendo la stagionalità,
+            dal pescato fresco alla frutta e verdura di stagione,
+            sostenendo i piccoli produttori del territorio e proponendo un menù <span className={styles.highlight}>essenziale</span>, ma genuino.</p>
         </div>
       </div>
     </section>

@@ -37,10 +37,8 @@ export default function Home() {
           <AnimatedText delay={200}>
           {/*<img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />*/}
             <p>
-              Vistamare è un <span className={styles.highlight}>rifugio</span> sospeso tra il blu del cielo e il respiro delle
-              onde: una terrazza che celebra la cucina del territorio con <span className={styles.highlight}>eleganza </span> 
-              contemporanea. Ingredienti a miglio 0, ricerca costante e una <span className={styles.highlight}>vista</span> che toglie il fiato — benvenuto dove i sapori incontrano
-              l'orizzonte.
+            Benvenuti da Vistamare, dove ogni piatto racconta una storia di <span className={styles.highlight}>stagionalità</span>, <span className={styles.highlight}>sostenibilità</span> e <span className={styles.highlight}>territorio</span>.
+            Crediamo che mangiare bene significhi scegliere con cura — per il gusto, per la salute e per l'ambiente.              
             </p>
             {/*<img src="/assets/decorazione.png" alt="" className={styles.decoration} />*/}
           </AnimatedText>
@@ -60,7 +58,8 @@ export default function Home() {
           {/*<img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />*/}
           </AnimatedText>
           <AnimatedText delay={600}>
-            <p>Il nostro ristorante è un <span className={styles.highlight}>viaggio</span> di sapori tra mare e terra, dove ingredienti locali e <span className={styles.highlight}>pescato fresco</span> si fondono in creazioni uniche, espressione di tradizione, <span className={styles.highlight}>passione</span> e continua ricerca di eccellenza culinaria.</p>
+            <p> Utilizziamo <span className={styles.highlight}>materie prime fresche</span> e limitiamo l'uso della plastica grazie a filiere corte e pratiche di riuso.
+            Ogni giorno, piccoli gesti per un futuro più <span className={styles.highlight}>sostenibile</span>.</p>
             </AnimatedText>
           <AnimatedText delay={400}>
             {/*<img src="/assets/decorazione.png" alt="" className={styles.decoration} />*/}
@@ -75,7 +74,9 @@ export default function Home() {
         <div className={styles.sectionSpacerLarge}>
           
             <AnimatedText delay={600}>
-            <p>Vieni a <span className={styles.highlight}>immergerti</span> nel calore della nostra ospitalità: ogni piatto, dal taglio più delicato al sapore più <span className={styles.highlight}>deciso</span>, è concepito per stupire il palato e <span className={styles.highlight}>accendere</span> i sensi, trasformando ogni momento in un ricordo prezioso.</p>
+            <p>In un mondo che corre veloce, abbiamo scelto di rallentare.
+              Perché crediamo che solo così si possa tornare a <span className={styles.highlight}>gustare</span> davvero ciò che ci offre la <span className={styles.highlight}>natura</span>.
+              Vistamare è più di un ristorante: è un invito a vivere in modo più attento, più <span className={styles.highlight}>semplice</span>, più sostenibile.</p>
             </AnimatedText>
             
         </div>
