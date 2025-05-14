@@ -3,21 +3,43 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './ReservationForm.module.css';
 import logo from '../assets/logo.png';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import { registerLocale } from 'react-datepicker';
+import it from 'date-fns/locale/it';
+import { format, isToday, isBefore, addDays } from 'date-fns';
+import emailjs from 'emailjs-com';
+
+registerLocale('it', it);
+
+// Configurazione EmailJS
+emailjs.init("wdgc smro okea heia");
 
 const ReservationForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    date: '',
+    mealType: '',
+    date: null,
     time: '',
     guests: '2',
+    children: '0',
     message: ''
   });
 
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [availableTimes, setAvailableTimes] = useState([]);
+  const [errors, setErrors] = useState({});
+
+  const lunchTimes = ['12:00', '12:30', '13:00', '13:30', '14:00'];
+  const dinnerTimes = ['19:00', '19:30', '20:00', '20:30', '21:00', '21:30', '22:00'];
+
+  // Ottieni la data di oggi
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,9 +47,81 @@ const ReservationForm = () => {
       ...prev,
       [name]: value
     }));
+
+    // Aggiorna gli orari disponibili in base alla scelta pranzo/cena
+    if (name === 'mealType') {
+      setAvailableTimes(value === 'lunch' ? lunchTimes : dinnerTimes);
+      setFormData(prev => ({
+        ...prev,
+        time: '' // Resetta l'orario quando cambia il tipo di pasto
+      }));
+    }
+
+    // Validazione per il numero di bambini
+    if (name === 'guests' || name === 'children') {
+      const guests = name === 'guests' ? parseInt(value) : parseInt(formData.guests);
+      const children = name === 'children' ? parseInt(value) : parseInt(formData.children);
+
+      if (children >= guests) {
+        setErrors(prev => ({
+          ...prev,
+          children: 'Il numero di bambini deve essere inferiore al numero totale di ospiti'
+        }));
+      } else {
+        setErrors(prev => {
+          const newErrors = { ...prev };
+          delete newErrors.children;
+          return newErrors;
+        });
+      }
+    }
+  };
+
+  const handleDateChange = (date) => {
+    setFormData(prev => ({
+      ...prev,
+      date: date
+    }));
+
+    // Validazione per la data
+    if (date && isBefore(date, today) && !isToday(date)) {
+      setErrors(prev => ({
+        ...prev,
+        date: 'La data deve essere oggi o nel futuro'
+      }));
+    } else {
+      setErrors(prev => {
+        const newErrors = { ...prev };
+        delete newErrors.date;
+        return newErrors;
+      });
+    }
   };
 
   const nextStep = () => {
+    // Validazione prima di passare al passaggio successivo
+    if (currentStep === 2) {
+      // Controlla che la data sia valida
+      if (formData.date && isBefore(formData.date, today) && !isToday(formData.date)) {
+        setErrors(prev => ({
+          ...prev,
+          date: 'La data deve essere oggi o nel futuro'
+        }));
+        return;
+      }
+
+      // Controlla che il numero di bambini sia valido
+      const guests = parseInt(formData.guests);
+      const children = parseInt(formData.children);
+      if (children >= guests) {
+        setErrors(prev => ({
+          ...prev,
+          children: 'Il numero di bambini deve essere inferiore al numero totale di ospiti'
+        }));
+        return;
+      }
+    }
+
     setCurrentStep(prev => Math.min(prev + 1, 3));
   };
 
@@ -36,14 +130,72 @@ const ReservationForm = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    if (e) e.preventDefault();
+    
+    // Validazione finale prima dell'invio
+    const validationErrors = {};
+    
+    if (formData.date && isBefore(formData.date, today) && !isToday(formData.date)) {
+      validationErrors.date = 'La data deve essere oggi o nel futuro';
+    }
+    
+    const guests = parseInt(formData.guests);
+    const children = parseInt(formData.children);
+    if (children >= guests) {
+      validationErrors.children = 'Il numero di bambini deve essere inferiore al numero totale di ospiti';
+    }
+    
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+    
     setIsSubmitting(true);
     
-    // Simulazione invio dati
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setShowSuccess(true);
+    try {
+      // Formattazione dei dati per l'email
+      const formattedDate = formData.date ? format(formData.date, 'dd/MM/yyyy') : '';
+      const emailData = {
+        from_name: "Vistamare Prenotazioni",
+        to_email: "simoncinidiego10@gmail.com",
+        reply_to: formData.email || "noreply@vistamare.com",
+        message: `
+          Nuova prenotazione:
+          
+          Nome: ${formData.name}
+          Email: ${formData.email || 'Non fornita'}
+          Telefono: ${formData.phone}
+          
+          Tipo pasto: ${formData.mealType === 'lunch' ? 'Pranzo' : 'Cena'}
+          Data: ${formattedDate}
+          Orario: ${formData.time}
+          
+          Ospiti totali: ${formData.guests}
+          Di cui bambini: ${formData.children}
+          
+          Note aggiuntive: ${formData.message || 'Nessuna nota'}
+        `,
+        subject: `Prenotazione ${formData.mealType === 'lunch' ? 'Pranzo' : 'Cena'} - ${formData.name} - ${formattedDate}`
+      };
+      
+      // Invio dell'email
+      await emailjs.send(
+        'default_service', // Service ID
+        'template_reservation', // Template ID
+        emailData,
+        'aaaa aaaa aaaa aaaa' // User ID / Token
+      );
+      
+      setIsSubmitting(false);
+      setShowSuccess(true);
+    } catch (error) {
+      console.error('Errore nell\'invio dell\'email:', error);
+      setErrors(prev => ({
+        ...prev,
+        submit: 'Si è verificato un errore nell\'invio della prenotazione. Riprova più tardi.'
+      }));
+      setIsSubmitting(false);
+    }
   };
 
   const containerVariants = {
@@ -121,7 +273,7 @@ const ReservationForm = () => {
           <motion.form
             key="form"
             className={styles.form}
-            onSubmit={handleSubmit}
+            onSubmit={(e) => e.preventDefault()}
             variants={stepVariants}
             initial="enter"
             animate="center"
@@ -149,10 +301,9 @@ const ReservationForm = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    required
                     className={styles.input}
                   />
-                  <label className={styles.label}>Email</label>
+                  <label className={styles.label}>Email (facoltativa)</label>
                   <span className={styles.focusBorder} />
                 </motion.div>
 
@@ -173,54 +324,108 @@ const ReservationForm = () => {
 
             {currentStep === 2 && (
               <motion.div className={styles.formStep}>
-                <motion.div className={styles.inputGroup} variants={itemVariants}>
-                  <input
-                    type="date"
-                    name="date"
-                    value={formData.date}
-                    onChange={handleChange}
-                    required
-                    className={styles.input}
-                  />
-                  <label className={styles.label}>Data</label>
-                  <span className={styles.focusBorder} />
+                <motion.div className={styles.mealTypeSelection} variants={itemVariants}>
+                  <p className={styles.sectionLabel}>Seleziona il tipo di pasto:</p>
+                  <div className={styles.mealOptions}>
+                    <div 
+                      className={`${styles.mealOption} ${formData.mealType === 'lunch' ? styles.active : ''}`}
+                      onClick={() => handleChange({ target: { name: 'mealType', value: 'lunch' } })}
+                    >
+                      <span>Pranzo</span>
+                    </div>
+                    <div 
+                      className={`${styles.mealOption} ${formData.mealType === 'dinner' ? styles.active : ''}`}
+                      onClick={() => handleChange({ target: { name: 'mealType', value: 'dinner' } })}
+                    >
+                      <span>Cena</span>
+                    </div>
+                  </div>
                 </motion.div>
 
-                <motion.div className={styles.inputGroup} variants={itemVariants}>
-                  <input
-                    type="time"
-                    name="time"
-                    value={formData.time}
-                    onChange={handleChange}
-                    required
-                    className={styles.input}
-                  />
-                  <label className={styles.label}>Orario</label>
-                  <span className={styles.focusBorder} />
-                </motion.div>
+                {formData.mealType && (
+                  <>
+                    <motion.div className={styles.inputGroup} variants={itemVariants}>
+                      <div className={styles.datepickerWrapper}>
+                        <DatePicker
+                          selected={formData.date}
+                          onChange={handleDateChange}
+                          dateFormat="dd/MM/yyyy"
+                          minDate={today}
+                          locale="it"
+                          placeholderText="Seleziona una data"
+                          className={styles.datepicker}
+                          calendarClassName={styles.calendar}
+                          required
+                        />
+                        <label className={`${styles.label} ${formData.date ? styles.active : ''}`}>Data</label>
+                      </div>
+                      {errors.date && <p className={styles.errorMessage}>{errors.date}</p>}
+                    </motion.div>
 
-                <motion.div className={styles.inputGroup} variants={itemVariants}>
-                  <select
-                    name="guests"
-                    value={formData.guests}
-                    onChange={handleChange}
-                    required
-                    className={styles.input}
-                  >
-                    {[1, 2, 3, 4, 5, 6, 7, 8].map(num => (
-                      <option key={num} value={num}>
-                        {num} {num === 1 ? 'persona' : 'persone'}
-                      </option>
-                    ))}
-                  </select>
-                  <label className={styles.label}>Numero di ospiti</label>
-                  <span className={styles.focusBorder} />
-                </motion.div>
+                    <motion.div className={styles.timeSelection} variants={itemVariants}>
+                      <p className={styles.sectionLabel}>Seleziona orario:</p>
+                      <div className={styles.timeOptions}>
+                        {availableTimes.map(time => (
+                          <div 
+                            key={time}
+                            className={`${styles.timeOption} ${formData.time === time ? styles.active : ''}`}
+                            onClick={() => handleChange({ target: { name: 'time', value: time } })}
+                          >
+                            {time}
+                          </div>
+                        ))}
+                      </div>
+                    </motion.div>
+
+                    <motion.div className={styles.inputGroup} variants={itemVariants}>
+                      <select
+                        name="guests"
+                        value={formData.guests}
+                        onChange={handleChange}
+                        required
+                        className={styles.input}
+                      >
+                        {[1, 2, 3, 4, 5, 6, 7, 8].map(num => (
+                          <option key={num} value={num}>
+                            {num} {num === 1 ? 'persona' : 'persone'}
+                          </option>
+                        ))}
+                      </select>
+                      <label className={styles.label}>Numero di ospiti</label>
+                      <span className={styles.focusBorder} />
+                    </motion.div>
+
+                    <motion.div className={styles.inputGroup} variants={itemVariants}>
+                      <select
+                        name="children"
+                        value={formData.children}
+                        onChange={handleChange}
+                        className={styles.input}
+                      >
+                        {[0, 1, 2, 3, 4].map(num => (
+                          <option key={num} value={num}>
+                            {num} {num === 1 ? 'bambino' : 'bambini'}
+                          </option>
+                        ))}
+                      </select>
+                      <label className={styles.label}>Di cui bambini</label>
+                      <span className={styles.focusBorder} />
+                      {errors.children && <p className={styles.errorMessage}>{errors.children}</p>}
+                    </motion.div>
+
+                    <motion.div className={styles.noteBox} variants={itemVariants}>
+                      <p>Il nostro ambiente è di alto livello ed i bambini sono graditi ma devono comportarsi in modo consono.</p>
+                    </motion.div>
+                  </>
+                )}
               </motion.div>
             )}
 
             {currentStep === 3 && (
               <motion.div className={styles.formStep}>
+                <motion.div className={styles.noteBox} variants={itemVariants}>
+                  <p>Vi invitiamo a segnalare eventuali allergie o intolleranze alimentari nelle note.</p>
+                </motion.div>
                 <motion.div className={styles.inputGroup} variants={itemVariants}>
                   <textarea
                     name="message"
@@ -230,7 +435,9 @@ const ReservationForm = () => {
                     rows="4"
                   />
                   <label className={styles.label}>Note aggiuntive</label>
-                  <span className={styles.focusBorder} />
+                </motion.div>
+                <motion.div className={styles.noteBox} variants={itemVariants}>
+                  <p>La prenotazione è valida fino a 30 minuti dopo l'orario prenotato con preavviso. Altrimenti ci riserveremo il diritto di cancellarla.</p>
                 </motion.div>
               </motion.div>
             )}
@@ -254,14 +461,19 @@ const ReservationForm = () => {
                   className={styles.buttonPrimary}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  disabled={
+                    (currentStep === 2 && (!formData.mealType || !formData.time || !formData.date)) ||
+                    Object.keys(errors).length > 0
+                  }
                 >
                   Avanti
                 </motion.button>
               ) : (
                 <motion.button
-                  type="submit"
+                  type="button" 
+                  onClick={handleSubmit}
                   className={styles.buttonPrimary}
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || Object.keys(errors).length > 0}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -278,6 +490,15 @@ const ReservationForm = () => {
                 </motion.button>
               )}
             </motion.div>
+            {errors.submit && (
+              <motion.div 
+                className={styles.errorBox}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                {errors.submit}
+              </motion.div>
+            )}
           </motion.form>
         )}
       </AnimatePresence>

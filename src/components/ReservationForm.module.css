@@ -123,7 +123,8 @@
 .input:focus + .label,
 .input:not(:placeholder-shown) + .label,
 .textarea:focus + .label,
-.textarea:not(:placeholder-shown) + .label {
+.textarea:not(:placeholder-shown) + .label,
+.label.active {
   top: -1.5rem;
   left: 0;
   font-size: 0.875rem;
@@ -216,6 +217,191 @@
   font-size: 1rem;
 }
 
+/* Stili per selezione pranzo/cena */
+.sectionLabel {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.mealTypeSelection {
+  margin-bottom: 1.5rem;
+}
+
+.mealOptions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mealOption {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mealOption:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.mealOption.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Stili per selezione orari */
+.timeSelection {
+  margin-bottom: 1.5rem;
+}
+
+.timeOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.timeOption {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.timeOption:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.timeOption.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Stile per box note */
+.noteBox {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0 1rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.noteBox p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Stili per DatePicker */
+.datepickerWrapper {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.datepicker {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.datepicker:focus {
+  outline: none;
+  border-bottom-color: white;
+}
+
+.calendar {
+  background-color: #001939 !important;
+  border: 2px solid white !important;
+  border-radius: 8px !important;
+  color: white !important;
+  font-family: "Roboto", sans-serif !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+}
+
+:global(.react-datepicker) {
+  background-color: #001939 !important;
+  border: 2px solid white !important;
+  border-radius: 8px !important;
+}
+
+:global(.react-datepicker__header) {
+  background-color: #001939 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+:global(.react-datepicker__current-month),
+:global(.react-datepicker__day-name),
+:global(.react-datepicker__day) {
+  color: white !important;
+}
+
+:global(.react-datepicker__current-month) {
+  font-size: 3rem !important;
+  margin-top: 5% !important;
+  margin-bottom: 5% !important;
+  font-weight: normal !important;
+}
+
+:global(.react-datepicker__day:hover) {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+:global(.react-datepicker__day--selected),
+:global(.react-datepicker__day--keyboard-selected) {
+  background-color: white !important;
+  color: #001939 !important;
+}
+
+:global(.react-datepicker__navigation-icon::before) {
+  border-color: white !important;
+}
+
+:global(.react-datepicker__day--disabled) {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Stili per messaggi di errore */
+.errorMessage {
+  color: #ff6b6b;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  padding-left: 1rem;
+}
+
+.errorBox {
+  background-color: rgba(255, 107, 107, 0.1);
+  border-left: 3px solid #ff6b6b;
+  color: #ff6b6b;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
 /* Animazioni personalizzate per i campi */
 @keyframes float {
   0% { transform: translateY(0px); }
@@ -249,6 +435,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Stile per bottoni disabilitati */
+.buttonPrimary:disabled {
+  background: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .formContainer {
@@ -265,7 +459,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     gap: 1rem;
   }
 
-  .input, .textarea {
+  .input, .textarea, .datepicker {
     padding: 0.75rem;
     font-size: 0.9rem;
   }
@@ -282,5 +476,35 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   .step {
     width: 20px;
     height: 20px;
+  }
+
+  .mealOptions {
+    flex-direction: column;
+  }
+
+  .timeOptions {
+    gap: 0.4rem;
+  }
+
+  .timeOption {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .noteBox {
+    padding: 0.4rem 0.6rem;
+    margin: 0.3rem 0 0.6rem;
+    border-left-width: 2px;
+  }
+  
+  .noteBox p {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+  
+  .errorBox {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    margin-top: 0.75rem;
   }
 }
