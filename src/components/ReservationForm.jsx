@@ -8,12 +8,9 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { registerLocale } from 'react-datepicker';
 import it from 'date-fns/locale/it';
 import { format, isToday, isBefore, addDays } from 'date-fns';
-import emailjs from 'emailjs-com';
+import axios from 'axios';
 
 registerLocale('it', it);
-
-// Configurazione EmailJS
-emailjs.init("wdgc smro okea heia");
 
 const ReservationForm = () => {
   const [formData, setFormData] = useState({
@@ -155,11 +152,13 @@ const ReservationForm = () => {
     try {
       // Formattazione dei dati per l'email
       const formattedDate = formData.date ? format(formData.date, 'dd/MM/yyyy') : '';
-      const emailData = {
-        from_name: "Vistamare Prenotazioni",
-        to_email: "simoncinidiego10@gmail.com",
-        reply_to: formData.email || "noreply@vistamare.com",
-        message: `
+      
+      // Preparazione del corpo dell'email
+      const emailBody = {
+        from: "reservationwebbitz@gmail.com",
+        to: "simoncinidiego10@gmail.com",
+        subject: `Prenotazione ${formData.mealType === 'lunch' ? 'Pranzo' : 'Cena'} - ${formData.name} - ${formattedDate}`,
+        text: `
           Nuova prenotazione:
           
           Nome: ${formData.name}
@@ -175,19 +174,18 @@ const ReservationForm = () => {
           
           Note aggiuntive: ${formData.message || 'Nessuna nota'}
         `,
-        subject: `Prenotazione ${formData.mealType === 'lunch' ? 'Pranzo' : 'Cena'} - ${formData.name} - ${formattedDate}`
+        token: "wdgc smro okea heia" // Token per autenticazione
       };
       
-      // Invio dell'email
-      await emailjs.send(
-        'default_service', // Service ID
-        'template_reservation', // Template ID
-        emailData,
-        'aaaa aaaa aaaa aaaa' // User ID / Token
-      );
+      // Invio dell'email tramite API server-side
+      const response = await axios.post('/api/send-email', emailBody);
       
-      setIsSubmitting(false);
-      setShowSuccess(true);
+      if (response.status === 200) {
+        setIsSubmitting(false);
+        setShowSuccess(true);
+      } else {
+        throw new Error('Errore nell\'invio dell\'email');
+      }
     } catch (error) {
       console.error('Errore nell\'invio dell\'email:', error);
       setErrors(prev => ({
@@ -266,8 +264,8 @@ const ReservationForm = () => {
             >
               ✓
             </motion.div>
-            <h3>Prenotazione confermata!</h3>
-            <p>Ti abbiamo inviato una mail di conferma con tutti i dettagli.</p>
+            <h3>Abbiamo ricevuto la tua richiesta!</h3>
+            <p>Ti contatteremo a breve per confermare la prenotazione. Grazie. </p>
           </motion.div>
         ) : (
           <motion.form
@@ -352,7 +350,7 @@ const ReservationForm = () => {
                           dateFormat="dd/MM/yyyy"
                           minDate={today}
                           locale="it"
-                          placeholderText="Seleziona una data"
+                          
                           className={styles.datepicker}
                           calendarClassName={styles.calendar}
                           required
@@ -386,7 +384,7 @@ const ReservationForm = () => {
                         className={styles.input}
                       >
                         {[1, 2, 3, 4, 5, 6, 7, 8].map(num => (
-                          <option key={num} value={num}>
+                          <option key={num} value={num} style={{ color: 'black' }}>
                             {num} {num === 1 ? 'persona' : 'persone'}
                           </option>
                         ))}
@@ -403,7 +401,7 @@ const ReservationForm = () => {
                         className={styles.input}
                       >
                         {[0, 1, 2, 3, 4].map(num => (
-                          <option key={num} value={num}>
+                          <option key={num} value={num} style={{ color: 'black' }}>
                             {num} {num === 1 ? 'bambino' : 'bambini'}
                           </option>
                         ))}
