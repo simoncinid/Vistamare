@@ -50,27 +50,22 @@ const WineList = () => {
       {/* Sezione titolo con sfondo blu */}
       <section className={styles.menuTitleSection}>
         <h1 className={styles.menuTitle}>La Nostra Carta dei Vini</h1>
-        <AnimatedText delay={getDelay(200)}>
-          <p className={styles.menuDescription}>
-            <span className={styles.highlight}>Scopri</span> la nostra selezione di vini 
-            <span className={styles.highlight}> pregiati</span> da tutto il mondo.
-            <br />
-            Ogni bottiglia è stata <span className={styles.highlight}>scelta</span> con cura 
-            per accompagnare al meglio i nostri piatti.
+        {/* Sezione con bottone per aprire la wine list completa */}
+      <section className={styles.pdfSection}>
+        <AnimatedText delay={getDelay(600)}>
+          {/*<h2 className={styles.sectionTitle}>Scopri la Nostra Selezione Completa</h2>*/}
+          <p className={styles.pdfText}>
+            Esplora l'intera selezione della nostra cantina con la lista completa dei vini disponibili.
           </p>
+          <button 
+            className={styles.pdfButton}
+            onClick={openWineListPDF}
+            aria-label="Apri la carta dei vini completa in PDF"
+          >
+            Visualizza la Carta dei Vini
+          </button>
         </AnimatedText>
       </section>
-      
-      {/* Sezione citazione */}
-      <section className={styles.quoteSection}>
-        <div className={styles.quoteContainer}>
-          <AnimatedText delay={getDelay(300)}>
-            <p className={styles.quote}>
-              Il vino prepara i cuori e li rende più pronti alla passione.
-            </p>
-            <p className={styles.quoteAuthor}>- Ovidio</p>
-          </AnimatedText>
-        </div>
       </section>
       
       {/* Nuova sezione descrizione stile Philosophy */}
@@ -80,8 +75,11 @@ const WineList = () => {
         </div>
         <div className={styles.textPartWine}>
           <div className={styles.boxWine}>
-            <h2 style={{ fontStyle: 'italic' }}>la nostra</h2>
-            <h1 className={styles.wineSelectionTitle}>selezione</h1>
+            <h2 className={styles.wineSelectionTitle}>
+              "Il vino prepara i cuori e li rende più pronti alla passione."
+              <span className={styles.quoteAuthorStyle}>- Ovidio</span>
+            </h2>
+            
             <p>
               Dai <span className={styles.highlight}>rossi corposi</span> ai <span className={styles.highlight}>bianchi freschi</span>, 
               ogni bottiglia è <span className={styles.highlight}>selezionata</span> dalla nostra sommelier per esperienze 
@@ -108,24 +106,7 @@ const WineList = () => {
         </div>
       </section>
       
-      {/* Sezione con bottone per aprire la wine list completa */}
-      <section className={styles.pdfSection}>
-        <AnimatedText delay={getDelay(600)}>
-          {/*<h2 className={styles.sectionTitle}>Scopri la Nostra Selezione Completa</h2>*/}
-          <p className={styles.pdfText}>
-            Esplora l'intera selezione della nostra cantina con la lista completa dei vini disponibili.
-          </p>
-          <button 
-            className={styles.pdfButton}
-            onClick={openWineListPDF}
-            aria-label="Apri la carta dei vini completa in PDF"
-          >
-            Visualizza la Carta dei Vini
-          </button>
-        </AnimatedText>
-      </section>
-      
-      {/* Sezione finale */}
+      {/* Sezione finale 
       <section className={styles.finalSection}>
         <AnimatedText delay={getDelay(700)}>
           <p className={styles.finalText}>
@@ -137,7 +118,7 @@ const WineList = () => {
             <span className={styles.highlight}> sensazioni</span> attraverso il meraviglioso mondo del vino.
           </p>
         </AnimatedText>
-      </section>
+      </section>*/}
       
       <Footer />
     </div>
