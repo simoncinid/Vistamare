@@ -309,7 +309,7 @@ const Menu = () => {
         </AnimatedText>
       </section>
 
-      {/* Sezione Gift Card */}
+      {/* Sezione Gift Card 
       <section className={styles.giftCardSection}>
         <h2 className={styles.giftCardTitle}>Regala un'Esperienza</h2>
         <p className={styles.menuDescription}>
@@ -319,7 +319,7 @@ const Menu = () => {
           <br />
           Per maggiori informazioni, contattaci al <span className={styles.highlight}>333333333</span> o via email a <span className={styles.highlight}>ristorantevistamare@gmail.com</span>
         </p>
-      </section>
+      </section>*/}
 
       <Footer />
     </div>
