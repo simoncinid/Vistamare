@@ -251,7 +251,7 @@ const Menu = () => {
 
       {/* Elenco delle proposte */}
       <section className={styles.proposteSection}>
-        <h2 className={styles.proposteTitle}>Le Nostre Proposte</h2>
+        <h2 className={styles.proposteTitle}>Menu "À la carte"</h2>
         <div className={styles.proposteList}>
           {dishesData.map((dish) => (
             <div key={dish.id} className={styles.proposteItem}>
