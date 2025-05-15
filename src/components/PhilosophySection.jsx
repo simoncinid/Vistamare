@@ -26,11 +26,18 @@ const PhilosophySection = () => {
   return (
     <section className={styles.philosophy}>
       <div className={styles.imagePart}>
-        <img
-          src={images[current]}
-          alt={`Filosofia ${current + 1}`}
-          className={styles.slideImage}
-        />
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`${styles.slide} ${index === current ? styles.active : ''}`}
+          >
+            <img 
+              src={image} 
+              alt={`Filosofia ${index + 1}`} 
+              className={styles.slideImage} 
+            />
+          </div>
+        ))}
         <button 
           className={styles.prevButton} 
           onClick={prevSlide}

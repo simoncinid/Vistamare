@@ -153,19 +153,40 @@ const Menu = () => {
       
       {/* Sezione titolo con sfondo blu */}
       <section className={styles.menuTitleSection}>
-        <h1 className={styles.menuTitle}>Menù</h1>
-        <AnimatedText delay={200}>
-        <p className={styles.menuDescription}>
-          Le nostre proposte variano <span className={styles.highlight}> giornalmente</span> in base al pescato fresco 
-          disponibile. 
-          <br></br>
-          Il nostro chef <span className={styles.highlight}> seleziona</span> personalmente gli ingredienti 
-          migliori per offrirvi un'<span className={styles.highlight}> esperienza</span> culinaria autentica e di alta qualità.
-          <br></br>
-          <span className={styles.highlight}> Freschezza</span> e <span className={styles.highlight}>qualità</span> sono la nostra 
-          <span className={styles.highlight}> priorità</span>.
-        </p>
-        </AnimatedText>
+        <h1 className={styles.wineSelectionTitle}>
+          "La grande raffinatezza consiste nella sintesi e nella semplicità"
+          <span className={styles.quoteAuthorStyle}>- Toulouse Lautrec</span>
+        </h1>
+      </section>
+
+      {/* Nuova sezione per il menù degustazione in stile winePhilosophy */}
+      <section className={styles.degustazioneSection}>
+        <div className={styles.imagePart}>
+          <img src="/assets/1.png" alt="Menu degustazione" className={styles.degustazioneImage} />
+        </div>
+        <div className={styles.textPart}>
+          <div className={styles.boxDegustazione}>
+            <h2 className={styles.degustazioneTitle}>Menù degustazione "A mano libera"</h2>
+            
+            <p className={styles.degustazioneDescription}>
+              Menu degustazione di 9 passi a sorpresa dello chef.
+              <br></br>
+              Si prega di comunicare in anticipo eventuali allergie o intolleranze, per poter offrire un percorso ottimale.
+              <br></br>
+              Il menù degustazione viene servito per tutti i componenti del tavolo.
+              <br></br>
+              <span className={styles.highlight} style={{fontSize: '1.3em', fontWeight: 'bold'}}>90€</span> vini esclusi
+            </p>
+            
+            <p className={styles.degustazioneDescription} style={{marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(4, 6, 45, 0.2)'}}>
+              <span style={{fontSize: '1.1em', fontWeight: 'bold'}}>Proposta di abbinamento vini</span>
+              <br></br>
+              Al menù degustazione è possibile abbinare la nostra selezione
+              <br></br>
+              "<span className={styles.highlight}>Da Nord a Sud</span>" <span className={styles.highlight} style={{fontSize: '1.3em', fontWeight: 'bold'}}>40€</span>
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Sezione galleria */}
@@ -293,24 +314,9 @@ const Menu = () => {
         </div>
       </section>
 
-      {/* Paragrafo finale identico a quello iniziale */}
-      <section className={styles.menuBottomSection}>
-        <AnimatedText delay={200}>
-        <p className={styles.menuDescription}>
-          Le nostre proposte variano <span className={styles.highlight}> giornalmente</span> in base al pescato fresco 
-          disponibile. 
-          <br></br>
-          Il nostro chef <span className={styles.highlight}> seleziona</span> personalmente gli ingredienti 
-          migliori per offrirvi un'<span className={styles.highlight}> esperienza</span> culinaria autentica e di alta qualità.
-          <br></br>
-          <span className={styles.highlight}> Freschezza</span> e <span className={styles.highlight}>qualità</span> sono la nostra 
-          <span className={styles.highlight}> priorità</span>.
-        </p>
-        </AnimatedText>
-      </section>
-
-      {/* Sezione Gift Card 
-      <section className={styles.giftCardSection}>
+      {/* Rimuovo la vecchia sezione ripetuta */}
+      {/* Sezione Gift Card */}
+      {/* <section className={styles.giftCardSection}>
         <h2 className={styles.giftCardTitle}>Regala un'Esperienza</h2>
         <p className={styles.menuDescription}>
           Dona ai tuoi cari un'esperienza <span className={styles.highlight}>indimenticabile</span> con una gift card del Ristorante Vistamare.

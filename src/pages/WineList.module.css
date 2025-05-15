@@ -171,12 +171,13 @@
   font-family: "Tangerine", cursive;
   font-weight: 700;
   font-style: normal;
-  font-size: clamp(3rem, 8vw, 7rem);
-  color: #04062d;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  color: #ffffff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  margin-top: -1.5rem;
+  margin-top: 0;
   margin-bottom: 1.5rem;
-  line-height: 1;
+  line-height: 1.2;
+  padding: 0 1rem;
 }
 
 .quoteAuthorStyle {
@@ -269,9 +270,11 @@
   background-color: #6db1ff;
   color: #04062d;
   border: none;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   font-size: 1.2rem;
-  font-family: 'Playfair Display', serif;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4.5px;
   font-weight: 500;
   border-radius: 0;
   cursor: pointer;
@@ -380,12 +383,13 @@
   }
   
   .wineSelectionTitle {
-    font-size: clamp(3rem, 7vw, 6rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.3;
+    padding: 0 0.5rem;
   }
   
   .quoteAuthorStyle {
-    font-size: clamp(1.8rem, 4vw, 3.5rem);
-    margin-top: 0.4rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
   }
   
   .boxWine h2 {
@@ -492,8 +496,10 @@
     background: linear-gradient(to right, rgba(224, 227, 251, 0.95), rgba(255, 255, 255, 0.95));
     margin: 3rem 1rem;
     height: auto;
-    padding: 3rem 1.5rem;
+    padding: 1.5rem;
     border-radius: 8px;
+    overflow-y: auto;
+    max-height: 60vh;
   }
   
   .boxWine h2 {
@@ -502,14 +508,13 @@
   }
   
   .wineSelectionTitle {
-    font-size: 5rem;
-    margin-top: -1.2rem;
-    margin-bottom: 1.2rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.3;
+    padding: 0 0.5rem;
   }
   
   .quoteAuthorStyle {
-    font-size: 3rem;
-    margin-top: 0.3rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
   }
   
   .boxWine p {
@@ -628,7 +633,9 @@
   
   .boxWine {
     margin: 2.5rem 0.8rem;
-    padding: 2.5rem 1.2rem;
+    padding: 1rem;
+    max-height: 65vh;
+    overflow-y: auto;
   }
   
   .boxWine h2 {
@@ -637,13 +644,13 @@
   }
   
   .wineSelectionTitle {
-    font-size: 4.5rem;
-    margin-top: -1rem;
+    font-size: clamp(1.8rem, 4vw, 3rem);
     margin-bottom: 1rem;
+    padding: 0 0.5rem;
   }
   
   .quoteAuthorStyle {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-top: 0.2rem;
   }
   
@@ -752,7 +759,9 @@
   
   .boxWine {
     margin: 2rem 0.6rem;
-    padding: 2rem 1rem;
+    padding: 1rem;
+    max-height: 65vh;
+    overflow-y: auto;
   }
   
   .boxWine h2 {
@@ -761,13 +770,13 @@
   }
   
   .wineSelectionTitle {
-    font-size: 4rem;
-    margin-top: -0.8rem;
-    margin-bottom: 0.8rem;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
   }
   
   .quoteAuthorStyle {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-top: 0.2rem;
   }
   
