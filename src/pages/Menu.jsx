@@ -174,19 +174,23 @@ const Menu = () => {
               Si prega di comunicare in anticipo eventuali allergie o intolleranze, per poter offrire un percorso ottimale.
               <br></br>
               Il menù degustazione viene servito per tutti i componenti del tavolo.
-              <br></br>
-              <span className={styles.highlight} style={{fontSize: '1.3em', fontWeight: 'bold'}}>90€</span> vini esclusi
             </p>
-            
-            <p className={styles.degustazioneDescription} style={{marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(4, 6, 45, 0.2)'}}>
-              <span style={{fontSize: '1.1em', fontWeight: 'bold'}}>Proposta di abbinamento vini</span>
-              <br></br>
-              Al menù degustazione è possibile abbinare la nostra selezione
-              <br></br>
-              "<span className={styles.highlight}>Da Nord a Sud</span>" <span className={styles.highlight} style={{fontSize: '1.3em', fontWeight: 'bold'}}>40€</span>
-            </p>
+            <div className={styles.priceHighlight}>90€</div>
+            <p className={styles.wineNote}>vini esclusi</p>
           </div>
         </div>
+      </section>
+
+      {/* Nuova sezione per l'abbinamento vini */}
+      <section className={styles.paragraphSection} style={{marginTop: '-1px'}}>
+        <p>
+          <span style={{fontSize: '1.1em', fontWeight: 'bold'}}>Proposta di abbinamento vini</span>
+          <br></br>
+          Al menù degustazione è possibile abbinare la nostra selezione
+          <br></br>
+          "<span className={styles.highlight}>Da Nord a Sud</span>"
+        </p>
+        <div className={styles.priceHighlight}>40€</div>
       </section>
 
       {/* Sezione galleria */}

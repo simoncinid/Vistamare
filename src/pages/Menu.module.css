@@ -522,7 +522,7 @@
 }
 
 .paragraphSection {
-  padding: 5rem 3rem 0rem 3rem;
+  padding: 3rem 3rem 3rem 3rem;
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -553,13 +553,14 @@
   }
 
   .paragraphSection {
-    padding: 3rem 1rem 1rem 1rem;
+    padding: 2rem 1rem 2rem 1rem;
   }
 
   .paragraphSection p {
     font-size: 1.1rem;
     line-height: 1.8;
-    padding: 2rem 0.5rem;
+    padding: 1.5rem 0.5rem;
+    letter-spacing: 3px;
   }
 }
 
@@ -570,8 +571,26 @@
   }
 
   .paragraphSection p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.7;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .giftCardSection {
+    padding: 2rem 0.8rem;
+  }
+  
+  .paragraphSection {
+    padding: 1.5rem 0.8rem;
+  }
+  
+  .paragraphSection p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    letter-spacing: 1.5px;
+    padding: 1rem 0.5rem;
   }
 }
 
@@ -801,12 +820,50 @@
   margin: 0 auto;
 }
 
-/* Media queries per la degustazione */
+/* Evidenziazione prezzi con font Tangerine */
+.priceHighlight {
+  display: block;
+  font-family: 'Tangerine', cursive;
+  color: #6db1ff;
+  font-weight: 700;
+  font-size: 3.5em;
+  position: relative;
+  padding: 0.2em 0 0;
+  margin: 0.2em auto 0;
+  text-align: center;
+  line-height: 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.priceHighlight::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 30%;
+  width: 40%;
+  height: 1px;
+  background: rgba(109, 177, 255, 0.4);
+}
+
+/* Stile per la nota "vini esclusi" */
+.wineNote {
+  text-align: center;
+  margin-top: 0.2em;
+  font-size: 1em;
+  letter-spacing: 2px;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
 @media (max-width: 768px) {
   .degustazioneSection {
     height: auto;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
   
   .imagePart {
@@ -817,6 +874,16 @@
   .textPart {
     width: 100%;
     height: auto;
+    margin-bottom: 0;
+  }
+  
+  .paragraphSection {
+    padding: 0 1rem 2rem 1rem;
+    margin-top: 0;
+  }
+  
+  .degustazioneSection + .paragraphSection {
+    padding-top: 0;
   }
   
   .degustazioneTitle {
@@ -845,6 +912,15 @@
     padding: 1.5rem;
     overflow-y: auto;
     max-height: 60vh;
+  }
+  
+  .priceHighlight {
+    font-size: 3em;
+    margin-top: 0.2em;
+  }
+  
+  .wineNote {
+    font-size: 0.9em;
   }
 }
 
@@ -883,4 +959,19 @@
     margin-bottom: 1rem;
     padding: 0 0.5rem;
   }
+  
+  .priceHighlight {
+    font-size: 2.5em;
+    margin-top: 0.1em;
+  }
+  
+  .wineNote {
+    font-size: 0.8em;
+    letter-spacing: 1.5px;
+  }
+}
+
+.degustazioneSection + .paragraphSection {
+  margin-top: 0;
+  border-top: none;
 }
