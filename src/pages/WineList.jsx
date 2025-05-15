@@ -49,7 +49,10 @@ const WineList = () => {
       
       {/* Sezione titolo con sfondo blu */}
       <section className={styles.menuTitleSection}>
-        <h1 className={styles.menuTitle}>La Nostra Carta dei Vini</h1>
+        <h1 className={styles.wineSelectionTitle}>
+          "Il vino prepara i cuori e li rende più pronti alla passione."
+          <span className={styles.quoteAuthorStyle}>- Ovidio</span>
+        </h1>
         {/* Sezione con bottone per aprire la wine list completa */}
       <section className={styles.pdfSection}>
         <AnimatedText delay={getDelay(600)}>
@@ -76,8 +79,7 @@ const WineList = () => {
         <div className={styles.textPartWine}>
           <div className={styles.boxWine}>
             <h2 className={styles.wineSelectionTitle}>
-              "Il vino prepara i cuori e li rende più pronti alla passione."
-              <span className={styles.quoteAuthorStyle}>- Ovidio</span>
+              La nostra selezione di vini
             </h2>
             
             <p>
@@ -99,7 +101,7 @@ const WineList = () => {
             <p className={styles.paragraphText}>
               La nostra cantina è il cuore pulsante di Vistamare, uno spazio dove 
               <span className={styles.highlight}> passione</span> e <span className={styles.highlight}>ricerca</span> si fondono.
-              Con oltre <span className={styles.highlight}>300 etichette</span>, rappresentiamo 
+              Con oltre <span className={styles.highlight}>100 etichette</span>, rappresentiamo 
               l'eccellenza vitivinicola italiana e internazionale.
             </p>
           </AnimatedText>
