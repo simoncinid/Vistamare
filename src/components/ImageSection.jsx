@@ -62,10 +62,10 @@ export default function ImageSection() {
         }>
           {/*<Link to="/esperienze" className={styles.text + ' ' + styles.textMobile + ' ' + styles.underlineMobile} tabIndex={0}>Esperienze</Link>*/}
           <a 
-          href="/esperienze" 
-          className={`${styles.text + ' ' + styles.textMobile + ' ' + styles.underlineMobile} ${location.pathname === '/esperienze' ? styles.active : ''}`}
+          href="/wine-list" 
+          className={`${styles.text + ' ' + styles.textMobile + ' ' + styles.underlineMobile} ${location.pathname === '/wine-list' ? styles.active : ''}`}
         >
-          Esperienze
+          wine-list
         </a>
         </div>
       </div>

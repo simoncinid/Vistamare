@@ -24,8 +24,8 @@ export default function ModernLinksSection() {
         </div>
       </a>
       <a
-        href="/esperienze"
-        className={`${styles.card} ${location.pathname === '/esperienze' ? styles.active : ''}`}
+        href="/wine-list"
+        className={`${styles.card} ${location.pathname === '/wine-list' ? styles.active : ''}`}
         style={{ backgroundImage: `url(${img3})` }}
       >
         <div className={styles.cardOverlay}></div>

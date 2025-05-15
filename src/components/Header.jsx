@@ -34,8 +34,8 @@ export default function Header() {
           i Menù
         </a>
         <a 
-          href="/esperienze" 
-          className={`${styles.link} ${location.pathname === '/esperienze' ? styles.active : ''}`}
+          href="/wine-list" 
+          className={`${styles.link} ${location.pathname === '/wine-list' ? styles.active : ''}`}
         >
           wine list
         </a>

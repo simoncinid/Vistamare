@@ -1,0 +1,799 @@
+/* src/pages/WineList.module.css */
+
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Tangerine:wght@400;700&display=swap');
+
+/* Stili di base */
+.pageContainer {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #04062d;
+  overflow-x: hidden;
+}
+
+/* Sezione titolo */
+.menuTitleSection {
+  background-color: #04062d;
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+  color: white;
+}
+
+.menuTitle {
+  font-family: 'Tangerine', cursive;
+  font-size: 5rem;
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.menuDescription {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  letter-spacing: 5px;
+  font-weight: 500;
+  padding: 2rem 0;
+  text-transform: uppercase;
+}
+
+.highlight {
+  color: #6db1ff;
+  margin: 0;
+  line-height: 0.5;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+/* Sezione citazione */
+.quoteSection {
+  background-color: #04062d;
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.quoteContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  position: relative;
+}
+
+.quote::before, .quote::after {
+  content: '"';
+  font-family: 'Georgia', serif;
+  font-size: 4rem;
+  position: absolute;
+  opacity: 0.3;
+  color: #6db1ff;
+}
+
+.quote::before {
+  top: -2rem;
+  left: -2rem;
+}
+
+.quote::after {
+  bottom: -2rem;
+  right: -2rem;
+}
+
+.quoteAuthor {
+  font-family: 'Tangerine', cursive;
+  font-size: 3rem;
+  color: #6db1ff;
+  margin-top: 1rem;
+}
+
+/* Nuova sezione stile Philosophy */
+.winePhilosophySection {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  position: relative;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
+
+.imagePartWine {
+  width: 33.33%; /* 1/3 della pagina */
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.wineImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.wineImage:hover {
+  transform: scale(1.05);
+}
+
+.textPartWine {
+  width: 66.67%; /* 2/3 della pagina */
+  height: 100%;
+  background-color: #04062d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxWine {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(224, 227, 251, 0.897), rgb(255, 255, 255));
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.boxWine h2 {
+  font-family: 'Playfair Display', cursive;
+  font-size: clamp(30px, 0.5vw, 100px);
+  font-weight: 300;
+  color: #04062d;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.121);
+  margin-bottom: 2rem;
+}
+
+.wineSelectionTitle {
+  font-family: "Tangerine", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: clamp(3rem, 8vw, 7rem);
+  color: #04062d;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin-top: -1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+.boxWine p {
+  font-family: "Roboto", sans-serif;
+  color: #2c2c2c;
+  font-size: clamp(12px, 5vw, 17px);
+  line-height: 1.8;
+  letter-spacing: 3px;
+  padding: 2rem 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Sezione parallax */
+.parallaxSection {
+  height: 70vh;
+  background-image: url('/assets/cantina1.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.parallaxOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(4, 6, 45, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.sectionTitle {
+  font-family: 'Tangerine', cursive;
+  font-size: 5rem;
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.paragraphText {
+  max-width: 800px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  letter-spacing: 3px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Sezione PDF */
+.pdfSection {
+  background-color: #04062d;
+  padding: 6rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.pdfText {
+  max-width: 700px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 4px;
+  font-weight: 500;
+  margin: 0 auto 3rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.pdfButton {
+  background-color: #6db1ff;
+  color: #04062d;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.pdfButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.pdfButton:hover {
+  background-color: #5a9be7;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pdfButton:hover::before {
+  left: 100%;
+}
+
+.pdfButton:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sezione finale */
+.finalSection {
+  background-color: #04062d;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.finalText {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  letter-spacing: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Media queries */
+@media (max-width: 1200px) {
+  .menuTitleSection {
+    padding: 5rem 1.5rem 3rem;
+  }
+  
+  .quoteSection {
+    padding: 5rem 1.5rem;
+  }
+  
+  .boxWine p {
+    max-width: 95%;
+    font-size: clamp(12px, 4vw, 16px);
+    letter-spacing: 2.5px;
+  }
+  
+  .pdfSection, .finalSection {
+    padding: 5rem 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .parallaxSection {
+    background-attachment: scroll;
+    height: 60vh;
+  }
+  
+  .menuTitle {
+    font-size: 4.8rem;
+  }
+  
+  .menuDescription {
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    padding: 1.5rem 0;
+  }
+  
+  .quoteContainer {
+    max-width: 800px;
+  }
+  
+  .quote {
+    font-size: 2.2rem;
+  }
+  
+  .quoteAuthor {
+    font-size: 2.8rem;
+  }
+  
+  .winePhilosophySection {
+    height: 70vh;
+  }
+  
+  .wineSelectionTitle {
+    font-size: clamp(3rem, 7vw, 6rem);
+  }
+  
+  .boxWine h2 {
+    font-size: 28px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .paragraphText {
+    font-size: 1.2rem;
+    letter-spacing: 2.5px;
+    max-width: 700px;
+  }
+  
+  .pdfText {
+    font-size: 1.1rem;
+    letter-spacing: 3.5px;
+  }
+  
+  .finalText {
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuTitleSection {
+    padding: 4.5rem 1.2rem 2.5rem;
+  }
+  
+  .menuTitle {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .menuDescription {
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    padding: 1.2rem 0;
+  }
+  
+  .quoteSection {
+    padding: 4.5rem 1.2rem;
+  }
+  
+  .quote {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .quote::before, .quote::after {
+    font-size: 3.5rem;
+  }
+  
+  .quote::before {
+    top: -1.8rem;
+    left: -1.8rem;
+  }
+  
+  .quote::after {
+    bottom: -1.8rem;
+    right: -1.8rem;
+  }
+  
+  .quoteAuthor {
+    font-size: 2.5rem;
+  }
+  
+  .winePhilosophySection {
+    height: auto;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .imagePartWine {
+    width: 100%;
+    height: 50vh;
+  }
+  
+  .textPartWine {
+    width: 100%;
+    height: auto;
+    min-height: 50vh;
+    background-color: #04062d;
+  }
+  
+  .boxWine {
+    padding: 2.5rem 1.2rem;
+  }
+  
+  .boxWine h2 {
+    font-size: 26px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .wineSelectionTitle {
+    font-size: 5rem;
+    margin-top: -1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .boxWine p {
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 1.5rem 0;
+    line-height: 1.7;
+  }
+  
+  .parallaxSection {
+    height: 60vh;
+  }
+  
+  .sectionTitle {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .paragraphText {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    max-width: 600px;
+    padding: 0 1rem;
+  }
+  
+  .pdfSection, .finalSection {
+    padding: 4.5rem 1.2rem;
+  }
+  
+  .pdfText {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+  }
+  
+  .pdfButton {
+    padding: 0.9rem 1.8rem;
+    font-size: 1.1rem;
+  }
+  
+  .finalText {
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .menuTitleSection {
+    padding: 4rem 1rem 2rem;
+  }
+  
+  .menuTitle {
+    font-size: 4rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .menuDescription {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    padding: 1rem 0;
+    line-height: 1.7;
+  }
+  
+  .quoteSection {
+    padding: 4rem 1rem;
+  }
+  
+  .quote {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .quote::before, .quote::after {
+    font-size: 3rem;
+  }
+  
+  .quote::before {
+    top: -1.5rem;
+    left: -1.5rem;
+  }
+  
+  .quote::after {
+    bottom: -1.5rem;
+    right: -1.5rem;
+  }
+  
+  .quoteAuthor {
+    font-size: 2.2rem;
+  }
+  
+  .imagePartWine {
+    height: 40vh;
+  }
+  
+  .textPartWine {
+    min-height: 60vh;
+  }
+  
+  .boxWine {
+    padding: 2rem 1rem;
+  }
+  
+  .boxWine h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+  }
+  
+  .wineSelectionTitle {
+    font-size: 4.5rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .boxWine p {
+    font-size: 14px;
+    letter-spacing: 1.8px;
+    padding: 1.2rem 0;
+    max-width: 100%;
+    line-height: 1.6;
+  }
+  
+  .parallaxSection {
+    height: 50vh;
+  }
+  
+  .sectionTitle {
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .paragraphText {
+    font-size: 1rem;
+    letter-spacing: 1.8px;
+    max-width: 100%;
+    padding: 0 0.8rem;
+    line-height: 1.7;
+  }
+  
+  .pdfSection, .finalSection {
+    padding: 4rem 1rem;
+  }
+  
+  .pdfText {
+    font-size: 0.95rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .pdfButton {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .finalText {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuTitleSection {
+    padding: 3.5rem 0.8rem 1.8rem;
+  }
+  
+  .menuTitle {
+    font-size: 3.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .menuDescription {
+    font-size: 0.9rem;
+    letter-spacing: 1.8px;
+    padding: 0.8rem 0;
+    line-height: 1.6;
+  }
+  
+  .quoteSection {
+    padding: 3.5rem 0.8rem;
+  }
+  
+  .quote {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .quote::before, .quote::after {
+    font-size: 2.5rem;
+  }
+  
+  .quote::before {
+    top: -1.2rem;
+    left: -1.2rem;
+  }
+  
+  .quote::after {
+    bottom: -1.2rem;
+    right: -1.2rem;
+  }
+  
+  .quoteAuthor {
+    font-size: 2rem;
+  }
+  
+  .imagePartWine {
+    height: 35vh;
+  }
+  
+  .boxWine h2 {
+    font-size: 22px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .wineSelectionTitle {
+    font-size: 4rem;
+    margin-top: -0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .boxWine p {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    padding: 1rem 0;
+  }
+  
+  .parallaxSection {
+    height: 45vh;
+  }
+  
+  .sectionTitle {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .paragraphText {
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .pdfSection, .finalSection {
+    padding: 3.5rem 0.8rem;
+  }
+  
+  .pdfText {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.8rem;
+  }
+  
+  .pdfButton {
+    padding: 0.7rem 1.3rem;
+    font-size: 1rem;
+  }
+  
+  .finalText {
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .menuTitle {
+    font-size: 3.5rem;
+  }
+  
+  .menuDescription {
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .quote {
+    font-size: 1.4rem;
+  }
+  
+  .quote::before, .quote::after {
+    font-size: 2.2rem;
+  }
+  
+  .quote::before {
+    top: -1rem;
+    left: -1rem;
+  }
+  
+  .quote::after {
+    bottom: -1rem;
+    right: -1rem;
+  }
+  
+  .quoteAuthor {
+    font-size: 1.8rem;
+  }
+  
+  .boxWine h2 {
+    font-size: 20px;
+  }
+  
+  .wineSelectionTitle {
+    font-size: 3.5rem;
+  }
+  
+  .boxWine p {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    padding: 0.8rem 0;
+  }
+  
+  .sectionTitle {
+    font-size: 3rem;
+  }
+  
+  .paragraphText {
+    font-size: 0.85rem;
+    letter-spacing: 1.2px;
+  }
+  
+  .pdfButton {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+  
+  .finalText {
+    font-size: 0.85rem;
+    letter-spacing: 1.2px;
+  }
+} 

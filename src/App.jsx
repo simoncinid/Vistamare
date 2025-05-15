@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
-import Esperienze from './pages/Esperienze';
+import WineList from './pages/WineList';
 import CookiePolicy from './pages/CookiePolicy';
 import ScrollProgress from './components/ScrollProgress';
 import CustomCursor from './components/CustomCursor';
@@ -28,7 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
-        <Route path="/esperienze" element={<Esperienze />} />
+        <Route path="/wine-list" element={<WineList />} />
         <Route path="/cookiepolicy" element={<CookiePolicy />} />
       </Routes>
     </div>
