@@ -54,7 +54,7 @@
 /* Sezione citazione */
 .quoteSection {
   background-color: #04062d;
-  padding: 0 2rem 6rem 2rem;
+  padding: 6rem 2rem 6rem 2rem;
   position: relative;
 }
 
@@ -66,40 +66,26 @@
 }
 
 .quote {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5rem;
-  font-weight: 300;
-  font-style: italic;
-  line-height: 1.4;
+  font-family: "Tangerine", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
   margin-bottom: 1.5rem;
-  color: #ffffff;
+  line-height: 1.2;
+  padding: 0 1rem;
   position: relative;
 }
 
-.quote::before, .quote::after {
-  content: '"';
-  font-family: 'Georgia', serif;
-  font-size: 4rem;
-  position: absolute;
-  opacity: 0.3;
-  color: #6db1ff;
-}
-
-.quote::before {
-  top: -2rem;
-  left: -2rem;
-}
-
-.quote::after {
-  bottom: -2rem;
-  right: -2rem;
-}
-
 .quoteAuthor {
+  display: block;
   font-family: 'Tangerine', cursive;
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 4rem);
   color: #6db1ff;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  font-weight: 700;
 }
 
 /* Nuova sezione stile Philosophy */
@@ -371,11 +357,12 @@
   }
   
   .quote {
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    line-height: 1.3;
   }
   
   .quoteAuthor {
-    font-size: 2.8rem;
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
   }
   
   .winePhilosophySection {
@@ -431,30 +418,17 @@
   }
   
   .quoteSection {
-    padding: 0 1.2rem 4.5rem 1.2rem;
+    padding: 4.5rem 1.2rem 4.5rem 1.2rem;
   }
   
   .quote {
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
-  }
-  
-  .quote::before, .quote::after {
-    font-size: 3.5rem;
-  }
-  
-  .quote::before {
-    top: -1.8rem;
-    left: -1.8rem;
-  }
-  
-  .quote::after {
-    bottom: -1.8rem;
-    right: -1.8rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.3;
+    padding: 0 0.5rem;
   }
   
   .quoteAuthor {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
   }
   
   .winePhilosophySection {
@@ -596,31 +570,18 @@
   }
   
   .quoteSection {
-    padding: 0 1rem 4rem 1rem;
+    padding: 4rem 1rem 4rem 1rem;
   }
   
   .quote {
-    font-size: 1.7rem;
+    font-size: clamp(1.8rem, 4vw, 3rem);
     margin-bottom: 1rem;
-    padding: 0 1rem;
-  }
-  
-  .quote::before, .quote::after {
-    font-size: 3rem;
-  }
-  
-  .quote::before {
-    top: -1.5rem;
-    left: -1.5rem;
-  }
-  
-  .quote::after {
-    bottom: -1.5rem;
-    right: -1.5rem;
+    padding: 0 0.5rem;
   }
   
   .quoteAuthor {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    margin-top: 0.2rem;
   }
   
   .winePhilosophySection {
@@ -723,30 +684,18 @@
   }
   
   .quoteSection {
-    padding: 0 0.8rem 3.5rem 0.8rem;
+    padding: 3.5rem 0.8rem 3.5rem 0.8rem;
   }
   
   .quote {
-    font-size: 1.5rem;
-    margin-bottom: 0.8rem;
-  }
-  
-  .quote::before, .quote::after {
-    font-size: 2.5rem;
-  }
-  
-  .quote::before {
-    top: -1.2rem;
-    left: -1.2rem;
-  }
-  
-  .quote::after {
-    bottom: -1.2rem;
-    right: -1.2rem;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
   }
   
   .quoteAuthor {
     font-size: 2rem;
+    margin-top: 0.2rem;
   }
   
   .winePhilosophySection {
@@ -839,25 +788,14 @@
   }
   
   .quote {
-    font-size: 1.4rem;
-  }
-  
-  .quote::before, .quote::after {
-    font-size: 2.2rem;
-  }
-  
-  .quote::before {
-    top: -1rem;
-    left: -1rem;
-  }
-  
-  .quote::after {
-    bottom: -1rem;
-    right: -1rem;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
   }
   
   .quoteAuthor {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    margin-top: 0.1rem;
   }
   
   .boxWine h2 {
