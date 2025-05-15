@@ -317,9 +317,9 @@
 
 /* Media queries */
 @media (max-width: 1200px) {
-  .menuTitleSection {
+  /*.menuTitleSection {
     padding: 5rem 1.5rem 3rem;
-  }
+  }*/
   
   .quoteSection {
     padding: 0 1.5rem 5rem 1.5rem;
@@ -402,9 +402,9 @@
 }
 
 @media (max-width: 768px) {
-  .menuTitleSection {
+  /*.menuTitleSection {
     padding: 4.5rem 1.2rem 2.5rem;
-  }
+  }*/
   
   .menuTitle {
     font-size: 4.5rem;
@@ -553,9 +553,9 @@
 }
 
 @media (max-width: 576px) {
-  .menuTitleSection {
+  /*.menuTitleSection {
     padding: 4rem 1rem 2rem;
-  }
+  }*/
   
   .menuTitle {
     font-size: 4rem;
@@ -667,9 +667,9 @@
 }
 
 @media (max-width: 480px) {
-  .menuTitleSection {
+  /*.menuTitleSection {
     padding: 3.5rem 0.8rem 1.8rem;
-  }
+  }*/
   
   .menuTitle {
     font-size: 3.8rem;
@@ -801,7 +801,7 @@
   .boxWine h2 {
     font-size: 20px;
   }
-  
+
   .quoteAuthorStyle {
     font-size: 2rem;
     margin-top: 0.1rem;
