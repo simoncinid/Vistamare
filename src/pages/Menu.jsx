@@ -328,7 +328,7 @@ const Menu = () => {
           <br />
           Le nostre gift card hanno un valore di <span className={styles.highlight}>€90</span> e possono essere utilizzate per una cena completa.
           <br />
-          Per maggiori informazioni, contattaci al <span className={styles.highlight}>333333333</span> o via email a <span className={styles.highlight}>ristorantevistamare@gmail.com</span>
+          Per maggiori informazioni, contattaci al <span className={styles.highlight}>0586 762289</span> o via email a <span className={styles.highlight}>vistamarerosignano@gmail.com</span>
         </p>
       </section>
 
