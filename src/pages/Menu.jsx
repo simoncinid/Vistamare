@@ -156,8 +156,8 @@ const Menu = () => {
         <div className={styles.imagePart}>
           <img src="/assets/1.png" alt="Menu degustazione" className={styles.degustazioneImage} />
         </div>
-        <div className={styles.textPart}>
-          <div className={styles.boxDegustazione}>
+        <div className={styles.textPart} style={{backgroundColor: "transparent"}}>
+          <div className={styles.boxDegustazione} style={{marginTop: "-1px"}}>
             <h2 className={styles.proposteTitle} style={{color: "#04062d", fontWeight: "bold", marginBottom: "2rem", paddingTop: "3rem"}}>"A mano libera"</h2>
             
             <p className={styles.degustazioneDescription} style={{color: "#04062d", marginTop: "0", paddingBottom: "1rem"}}>

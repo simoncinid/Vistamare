@@ -424,6 +424,7 @@
     width: 100%;
     margin-bottom: 0;
     order: 2 !important;
+    background-color: transparent !important;
   }
   
   .paragraphSection {
@@ -455,6 +456,7 @@
     padding: 1rem;
     min-height: auto;
     overflow-y: visible;
+    margin-top: -1px !important;
   }
   
   .priceHighlight {
@@ -980,6 +982,7 @@
     width: 100%;
     margin-bottom: 0;
     order: 2 !important;
+    background-color: transparent !important;
   }
   
   .paragraphSection {
@@ -1018,6 +1021,7 @@
     padding: 1rem;
     min-height: auto;
     overflow-y: visible;
+    margin-top: -1px !important;
   }
   
   .priceHighlight {

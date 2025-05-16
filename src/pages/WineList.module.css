@@ -509,12 +509,14 @@
     width: 100%;
     margin-bottom: 0;
     order: 2 !important;
+    background-color: transparent !important;
   }
   
   .boxWine {
     padding: 1rem;
     min-height: auto;
     overflow-y: visible;
+    margin-top: -1px !important;
   }
   
   .boxWine h2 {
@@ -524,14 +526,14 @@
   }
   
   .wineSelectionTitle {
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
     margin-bottom: 0.4rem;
     margin-top: 1rem;
     line-height: 1.1;
   }
   
   .quoteAuthorStyle {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-top: 0.3rem;
     display: block;
   }
@@ -600,7 +602,7 @@
   }
   
   .pdfSection {
-    padding: 1.5rem 1rem;
+    padding: 0.5rem 0.5rem;
   }
 }
 
@@ -777,14 +779,14 @@
   }
   
   .wineSelectionTitle {
-    font-size: 1.8rem !important;
+    font-size: 1.3rem !important;
     margin-bottom: 0.2rem;
     margin-top: 0.5rem;
     line-height: 1.1;
   }
   
   .quoteAuthorStyle {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     margin-top: 0.2rem;
   }
   
@@ -816,7 +818,7 @@
   }
   
   .pdfSection {
-    padding: 1rem 0.8rem;
+    padding: 0.3rem 0.3rem;
   }
   
   .pdfText {

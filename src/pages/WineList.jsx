@@ -52,8 +52,8 @@ const WineList = () => {
         <div className={styles.imagePartWine}>
           <img src="/assets/27.png" alt="Wine selection" className={styles.wineImage} />
         </div>
-        <div className={styles.textPartWine}>
-          <div className={styles.boxWine}>
+        <div className={styles.textPartWine} style={{backgroundColor: "transparent"}}>
+          <div className={styles.boxWine} style={{marginTop: "-1px"}}>
             <h2 className={styles.proposteTitle} style={{color: "#04062d", fontWeight: "bold", marginBottom: "1rem", paddingTop: "4rem"}}>
               La nostra selezione di vini
             </h2>
@@ -82,7 +82,7 @@ const WineList = () => {
       {/* Sezione PDF con citazione */}
       <section className={styles.pdfSection}>
         <AnimatedText delay={getDelay(500)}>
-          <h2 className={styles.wineSelectionTitle}>
+          <h2 className={styles.wineSelectionTitle} style={{fontSize: "1.3rem", marginTop: "0.5rem", marginBottom: "0.2rem"}}>
             "Il vino prepara i cuori e li rende più pronti alla passione."
             <span className={styles.quoteAuthorStyle}>- Ovidio</span>
           </h2>
