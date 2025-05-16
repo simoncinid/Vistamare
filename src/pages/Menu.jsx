@@ -151,24 +151,16 @@ const Menu = () => {
     <div className={styles.menuPage}>
       <Header />
       
-      {/* Sezione titolo con sfondo blu */}
-      <section className={styles.menuTitleSection}>
-        <h1 className={styles.wineSelectionTitle}>
-          "La grande raffinatezza consiste nella sintesi e nella semplicità"
-          <span className={styles.quoteAuthorStyle}>- Toulouse Lautrec</span>
-        </h1>
-      </section>
-
       {/* Nuova sezione per il menù degustazione in stile winePhilosophy */}
-      <section className={styles.degustazioneSection}>
+      <section className={styles.degustazioneSection} style={{height: "600px"}}>
         <div className={styles.imagePart}>
           <img src="/assets/1.png" alt="Menu degustazione" className={styles.degustazioneImage} />
         </div>
         <div className={styles.textPart}>
           <div className={styles.boxDegustazione}>
-            <h2 className={styles.degustazioneTitle}>Menù degustazione "A mano libera"</h2>
+            <h2 className={styles.proposteTitle} style={{color: "#04062d", fontWeight: "bold", marginBottom: "2rem", paddingTop: "3rem"}}>"A mano libera"</h2>
             
-            <p className={styles.degustazioneDescription}>
+            <p className={styles.degustazioneDescription} style={{color: "#04062d", marginTop: "0", paddingBottom: "1rem"}}>
               Menu degustazione di 9 passi a sorpresa dello chef.
               <br></br>
               Si prega di comunicare in anticipo eventuali allergie o intolleranze, per poter offrire un percorso ottimale.

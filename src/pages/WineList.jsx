@@ -47,50 +47,46 @@ const WineList = () => {
     <div className={styles.pageContainer}>
       <Header />
       
-      {/* Sezione titolo con sfondo blu */}
-      <section className={styles.menuTitleSection}>
-        <h1 className={styles.wineSelectionTitle}>
-          "Il vino prepara i cuori e li rende più pronti alla passione."
-          <span className={styles.quoteAuthorStyle}>- Ovidio</span>
-        </h1>
-        {/* Sezione con bottone per aprire la wine list completa */}
-      <section className={styles.pdfSection}>
-        <AnimatedText delay={getDelay(600)}>
-          {/*<h2 className={styles.sectionTitle}>Scopri la Nostra Selezione Completa</h2>*/}
-          <p className={styles.pdfText}>
-            Esplora l'intera selezione della nostra cantina con la lista completa dei vini disponibili.
-          </p>
-          <button 
-            className={styles.pdfButton}
-            onClick={openWineListPDF}
-            aria-label="Apri la carta dei vini completa in PDF"
-          >
-            Visualizza la Carta dei Vini
-          </button>
-        </AnimatedText>
-      </section>
-      </section>
-      
       {/* Nuova sezione descrizione stile Philosophy */}
-      <section className={styles.winePhilosophySection}>
+      <section className={styles.winePhilosophySection} style={{height: "600px"}}>
         <div className={styles.imagePartWine}>
           <img src="/assets/27.png" alt="Wine selection" className={styles.wineImage} />
         </div>
         <div className={styles.textPartWine}>
           <div className={styles.boxWine}>
-            <h2 className={styles.wineSelectionTitle}>
+            <h2 className={styles.proposteTitle} style={{color: "#04062d", fontWeight: "bold", marginBottom: "1rem", paddingTop: "4rem"}}>
               La nostra selezione di vini
             </h2>
             
-            <p>
+            <p style={{color: "#04062d", marginTop: "0", paddingBottom: "1rem"}}>
               Dai <span className={styles.highlight}>rossi corposi</span> ai <span className={styles.highlight}>bianchi freschi</span>, 
               ogni bottiglia è <span className={styles.highlight}>selezionata</span> dalla nostra sommelier per esperienze 
               <span className={styles.highlight}> indimenticabili</span>. Un viaggio sensoriale che racconta 
               <span className={styles.highlight}> territori</span> e <span className={styles.highlight}>tradizioni</span> 
               per accompagnare perfettamente i sapori dei nostri piatti.
             </p>
+            
+            <AnimatedText delay={getDelay(600)}>
+              <button 
+                className={styles.pdfButton}
+                onClick={openWineListPDF}
+                aria-label="Apri la carta dei vini completa in PDF"
+              >
+                Visualizza la Carta dei Vini
+              </button>
+            </AnimatedText>
           </div>
         </div>
+      </section>
+      
+      {/* Sezione PDF con citazione */}
+      <section className={styles.pdfSection}>
+        <AnimatedText delay={getDelay(500)}>
+          <h2 className={styles.wineSelectionTitle}>
+            "Il vino prepara i cuori e li rende più pronti alla passione."
+            <span className={styles.quoteAuthorStyle}>- Ovidio</span>
+          </h2>
+        </AnimatedText>
       </section>
       
       {/* Sezione parallax */}

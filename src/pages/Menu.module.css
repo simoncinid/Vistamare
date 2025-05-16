@@ -6,6 +6,7 @@
   position: relative;
   overflow-x: hidden;
   font-family: var(--font-body);
+  background-color: #04062d;
 }
 
 /* Sezione titolo con sfondo blu */
@@ -156,6 +157,13 @@
   font-size: 5rem;
   text-align: center;
   margin-bottom: 3rem;
+}
+
+/* Stile specifico per il titolo "A mano libera" */
+.boxDegustazione .proposteTitle {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: #04062d;
 }
 
 .proposteList {
@@ -381,6 +389,18 @@
     width: 100%;
     object-fit: cover;
   }
+  
+  .boxDegustazione .proposteTitle {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .degustazioneDescription {
+    font-size: 0.9rem;
+    padding: 0;
+    letter-spacing: 2px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -416,6 +436,18 @@
   /*.highlight {
     font-size: 2.2rem;
   }*/
+  
+  .boxDegustazione .proposteTitle {
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .degustazioneDescription {
+    font-size: 0.85rem;
+    padding: 0;
+    letter-spacing: 1.5px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 400px) {
@@ -522,7 +554,7 @@
 }
 
 .paragraphSection {
-  padding: 3rem 3rem 3rem 3rem;
+  padding: 2rem 2rem 2rem 2rem;
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -541,7 +573,7 @@
   line-height: 1.8;
   letter-spacing: 5px;
   font-weight: 500;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   text-transform: uppercase;
 }
 
@@ -736,7 +768,6 @@
 /* Nuova sezione per il menù degustazione in stile winePhilosophy */
 .degustazioneSection {
   width: 100vw;
-  height: 80vh;
   display: flex;
   position: relative;
   max-width: 100vw;
@@ -745,13 +776,19 @@
   left: 50%;
   right: 50%;
   transform: translateX(-50%);
+  border-top: none;
+  overflow: hidden;
+  align-items: stretch;
+  height: auto;
 }
 
 .imagePart {
   width: 33.33%; /* 1/3 della pagina */
-  height: 100%;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .degustazioneImage {
@@ -768,11 +805,11 @@
 
 .textPart {
   width: 66.67%; /* 2/3 della pagina */
-  height: 100%;
   background-color: #04062d;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top: none;
 }
 
 .boxDegustazione {
@@ -787,7 +824,8 @@
   align-items: center;
   text-align: center;
   z-index: 1;
-  overflow-y: auto;
+  overflow-y: visible;
+  border-top: none;
 }
 
 .degustazioneTitle {
@@ -813,7 +851,7 @@
   font-size: clamp(12px, 5vw, 17px);
   line-height: 1.8;
   letter-spacing: 3px;
-  padding: 2rem 0;
+  padding: 0;
   text-transform: uppercase;
   font-weight: 600;
   max-width: 90%;
@@ -864,16 +902,18 @@
     min-height: auto;
     margin-bottom: 0;
     padding-bottom: 0;
+    margin-top: 0;
+    align-items: stretch;
   }
   
   .imagePart {
     width: 100%;
     height: 50vh;
+    flex-direction: row;
   }
   
   .textPart {
     width: 100%;
-    height: auto;
     margin-bottom: 0;
   }
   
@@ -894,8 +934,9 @@
   
   .degustazioneDescription {
     font-size: 0.9rem;
-    padding: 1rem 0;
+    padding: 0;
     letter-spacing: 2px;
+    margin: 0 auto;
   }
   
   .wineSelectionTitle {
@@ -910,8 +951,8 @@
   
   .boxDegustazione {
     padding: 1.5rem;
-    overflow-y: auto;
-    max-height: 60vh;
+    overflow-y: visible;
+    min-height: auto;
   }
   
   .priceHighlight {
@@ -927,6 +968,7 @@
 @media (max-width: 480px) {
   .degustazioneSection {
     min-height: auto;
+    margin-top: 0;
   }
   
   .imagePart {
@@ -935,7 +977,8 @@
   
   .boxDegustazione {
     padding: 1rem;
-    max-height: 65vh;
+    min-height: auto;
+    overflow-y: visible;
   }
   
   .degustazioneTitle {
@@ -945,8 +988,9 @@
   
   .degustazioneDescription {
     font-size: 0.85rem;
-    padding: 0.8rem 0;
+    padding: 0;
     letter-spacing: 1.5px;
+    margin: 0 auto;
   }
   
   .quoteAuthorStyle {

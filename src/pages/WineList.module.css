@@ -44,7 +44,7 @@
 }
 
 .highlight {
-  color: #6db1ff;
+  color: #2d73c2;
   margin: 0;
   line-height: 0.5;
   font-family: "Roboto", sans-serif;
@@ -91,7 +91,6 @@
 /* Nuova sezione stile Philosophy */
 .winePhilosophySection {
   width: 100vw;
-  height: 80vh;
   display: flex;
   position: relative;
   max-width: 100vw;
@@ -100,13 +99,20 @@
   left: 50%;
   right: 50%;
   transform: translateX(-50%);
+  border-top: none;
+  overflow: hidden;
+  align-items: stretch;
+  height: auto;
+  min-height: 500px;
 }
 
 .imagePartWine {
   width: 33.33%; /* 1/3 della pagina */
-  height: 100%;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .wineImage {
@@ -123,11 +129,11 @@
 
 .textPartWine {
   width: 66.67%; /* 2/3 della pagina */
-  height: 100%;
   background-color: #04062d;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top: none;
 }
 
 .boxWine {
@@ -142,26 +148,29 @@
   align-items: center;
   text-align: center;
   z-index: 1;
+  overflow-y: visible;
+  border-top: none;
 }
 
 .boxWine h2 {
-  font-family: 'Playfair Display', cursive;
-  font-size: clamp(30px, 0.5vw, 100px);
-  font-weight: 300;
+  font-family: 'Tangerine', cursive;
+  font-size: 5rem;
+  font-weight: bold;
   color: #04062d;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.121);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  padding-top: 3.5rem;
+  text-align: center;
 }
 
 .wineSelectionTitle {
   font-family: "Tangerine", cursive;
   font-weight: 700;
   font-style: normal;
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-size: 80px !important;
   color: #ffffff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
   line-height: 1.2;
   padding: 0 1rem;
 }
@@ -186,6 +195,53 @@
   font-weight: 600;
   max-width: 90%;
   margin: 0 auto;
+}
+
+/* Stile del pulsante PDF all'interno del boxWine */
+.boxWine .pdfButton {
+  background-color: #6db1ff;
+  color: #04062d;
+  border: none;
+  padding: 1.5rem 2rem;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4.5px;
+  font-weight: 500;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.boxWine .pdfButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.boxWine .pdfButton:hover {
+  background-color: #5a9be7;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.boxWine .pdfButton:hover::before {
+  left: 100%;
+}
+
+.boxWine .pdfButton:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Sezione parallax */
@@ -236,7 +292,7 @@
 /* Sezione PDF */
 .pdfSection {
   background-color: #04062d;
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   text-align: center;
   color: white;
 }
@@ -246,10 +302,11 @@
   font-family: "Roboto", sans-serif;
   letter-spacing: 4px;
   font-weight: 500;
-  margin: 0 auto 3rem;
+  margin: 0 auto;
   font-size: 1.2rem;
   line-height: 1.6;
   text-transform: uppercase;
+  margin-top: 2rem;
 }
 
 .pdfButton {
@@ -434,57 +491,40 @@
   .winePhilosophySection {
     height: auto;
     flex-direction: column;
-    min-height: 100vh;
-    background-image: url('/assets/27.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-  }
-  
-  .winePhilosophySection::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(4, 6, 45, 0.4); /* Overlay semi-trasparente blu scuro */
-    z-index: 0;
+    min-height: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    align-items: stretch;
   }
   
   .imagePartWine {
-    display: none;
+    width: 100%;
+    height: 50vh;
+    flex-direction: row;
   }
   
   .textPartWine {
     width: 100%;
-    height: auto;
-    min-height: 70vh;
-    background-color: transparent;
-    position: relative;
-    z-index: 1;
+    margin-bottom: 0;
   }
   
   .boxWine {
-    background: linear-gradient(to right, rgba(224, 227, 251, 0.95), rgba(255, 255, 255, 0.95));
-    margin: 3rem 1rem;
-    height: auto;
     padding: 1.5rem;
-    border-radius: 8px;
-    overflow-y: auto;
-    max-height: 60vh;
+    overflow-y: visible;
+    min-height: auto;
   }
   
   .boxWine h2 {
-    font-size: 26px;
-    margin-bottom: 1.2rem;
+    font-size: 4rem;
+    padding-top: 2.5rem;
+    margin-bottom: 1.5rem;
   }
   
   .wineSelectionTitle {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    line-height: 1.3;
-    padding: 0 0.5rem;
+    font-size: 80px !important;
+    margin-bottom: 0.4rem;
+    margin-top: 2rem;
   }
   
   .quoteAuthorStyle {
@@ -538,17 +578,24 @@
   .pdfText {
     font-size: 1rem;
     letter-spacing: 3.5px;
+    margin-top: 1.5rem;
   }
   
-  .pdfButton {
-    padding: 0.9rem 1.8rem;
-    font-size: 1.1rem;
+  .boxWine .pdfButton {
+    padding: 1.2rem 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    margin-top: 1rem;
   }
   
   .finalText {
     font-size: 1.1rem;
     letter-spacing: 3px;
     padding: 0 1rem;
+  }
+  
+  .pdfSection {
+    padding: 3rem 1.5rem;
   }
 }
 
@@ -586,6 +633,7 @@
   
   .winePhilosophySection {
     min-height: 90vh;
+    margin-top: 4rem;
   }
   
   .textPartWine {
@@ -605,7 +653,7 @@
   }
   
   .wineSelectionTitle {
-    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-size: 80px !important;
     margin-bottom: 1rem;
     padding: 0 0.5rem;
   }
@@ -643,20 +691,20 @@
     line-height: 1.6;
   }
   
-  .pdfSection, .finalSection {
-    padding: 4rem 1rem;
+  .pdfSection {
+    padding: 2.5rem 1rem;
   }
   
   .pdfText {
     font-size: 0.95rem;
     letter-spacing: 2.5px;
-    margin-bottom: 2rem;
-    line-height: 1.6;
+    margin-top: 1.2rem;
   }
   
-  .pdfButton {
-    padding: 0.8rem 1.5rem;
-    font-size: 1.1rem;
+  .boxWine .pdfButton {
+    padding: 1rem 1.2rem;
+    font-size: 0.9rem;
+    letter-spacing: 2.5px;
   }
   
   .finalText {
@@ -699,7 +747,12 @@
   }
   
   .winePhilosophySection {
-    min-height: 85vh;
+    min-height: auto;
+    margin-top: 0;
+  }
+  
+  .imagePartWine {
+    height: 40vh;
   }
   
   .textPartWine {
@@ -707,21 +760,21 @@
   }
   
   .boxWine {
-    margin: 2rem 0.6rem;
     padding: 1rem;
-    max-height: 65vh;
-    overflow-y: auto;
+    min-height: auto;
+    overflow-y: visible;
   }
   
   .boxWine h2 {
-    font-size: 22px;
-    margin-bottom: 0.8rem;
+    font-size: 3.5rem;
+    padding-top: 2rem;
+    margin-bottom: 1rem;
   }
   
   .wineSelectionTitle {
-    font-size: clamp(1.8rem, 4vw, 3rem);
-    margin-bottom: 1rem;
-    padding: 0 0.5rem;
+    font-size: 80px !important;
+    margin-bottom: 0.3rem;
+    margin-top: 1.5rem;
   }
   
   .quoteAuthorStyle {
@@ -756,19 +809,21 @@
     padding: 0 0.6rem;
   }
   
-  .pdfSection, .finalSection {
-    padding: 3.5rem 0.8rem;
+  .pdfSection {
+    padding: 2rem 0.8rem;
   }
   
   .pdfText {
     font-size: 0.9rem;
     letter-spacing: 2px;
-    margin-bottom: 1.8rem;
+    margin-top: 1rem;
   }
   
-  .pdfButton {
-    padding: 0.7rem 1.3rem;
-    font-size: 1rem;
+  .boxWine .pdfButton {
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    width: 80%;
   }
   
   .finalText {
@@ -799,7 +854,9 @@
   }
   
   .boxWine h2 {
-    font-size: 20px;
+    font-size: 3rem;
+    padding-top: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .quoteAuthorStyle {
@@ -825,9 +882,11 @@
     padding: 0 0.5rem;
   }
   
-  .pdfButton {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.95rem;
+  .boxWine .pdfButton {
+    width: 90%;
+    padding: 0.8rem 0.8rem;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
   }
   
   .finalText {
@@ -867,7 +926,6 @@
     font-size: 0.85rem;
     letter-spacing: 1.2px;
     line-height: 1.4;
-    padding: 0 0.5rem;
   }
   
   .pdfText {
@@ -876,13 +934,19 @@
     line-height: 1.4;
   }
   
-  .pdfButton {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.95rem;
+  .boxWine .pdfButton {
+    padding: 0.8rem 0.8rem;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
   }
   
   .finalText {
     font-size: 0.85rem;
     letter-spacing: 1.2px;
+  }
+  
+  .wineSelectionTitle {
+    font-size: 80px !important;
+    margin-bottom: 0.2rem;
   }
 } 
