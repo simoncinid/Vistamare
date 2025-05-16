@@ -480,7 +480,7 @@
   .priceHighlight {
     font-size: 2.2rem;
     margin-top: 0.2em;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.08em;    
   }
   
   .wineNote {
@@ -778,7 +778,7 @@
 
 .giftCardTitle {
   font-family: 'Roboto', sans-serif;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 4vw, 3rem);
   color: #04062d;
   margin-bottom: 2rem;
   font-weight: 700;
@@ -802,7 +802,7 @@
   }
   
   .giftCardTitle {
-    font-size: 4rem;
+    /* Le dimensioni saranno gestite dal clamp di base */
     margin-bottom: 1.5rem;
   }
 }
@@ -820,7 +820,7 @@
   }
   
   .giftCardTitle {
-    font-size: 3.5rem;
+    /* Le dimensioni saranno gestite dal clamp di base */
     margin-bottom: 1rem;
   }
 }
@@ -837,14 +837,15 @@
   }
   
   .giftCardTitle {
-    font-size: 3rem;
+    /* Le dimensioni saranno gestite dal clamp di base */
     margin-bottom: 0.8rem;
   }
 }
 
 @media (max-width: 400px) {
   .giftCardTitle {
-    font-size: 2.8rem;
+    /* Le dimensioni saranno gestite dal clamp di base */
+    font-weight: 600;
   }
 }
 

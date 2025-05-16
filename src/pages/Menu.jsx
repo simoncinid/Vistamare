@@ -323,7 +323,7 @@ const Menu = () => {
 
       {/* Rimuovo la vecchia sezione ripetuta */}
       {/* Sezione Gift Card */}
-      {/* <section className={styles.giftCardSection}>
+       <section className={styles.giftCardSection}>
         <h2 className={styles.giftCardTitle}>Regala un'Esperienza</h2>
         <p className={styles.menuDescription}>
           Dona ai tuoi cari un'esperienza <span className={styles.highlight}>indimenticabile</span> con una gift card del Ristorante Vistamare.
@@ -332,7 +332,7 @@ const Menu = () => {
           <br />
           Per maggiori informazioni, contattaci al <span className={styles.highlight}>333333333</span> o via email a <span className={styles.highlight}>ristorantevistamare@gmail.com</span>
         </p>
-      </section>*/}
+      </section>
 
       <Footer />
     </div>
