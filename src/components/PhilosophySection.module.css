@@ -52,15 +52,15 @@
 }
 
 .filosofiaTitle {
-  font-family: "Tangerine", cursive;
-  font-weight: 700;
-  font-style: normal;
-  font-size: clamp(3rem, 8vw, 7rem);
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
   color: #04062d;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2rem;
   margin-top: -1.5rem;
-  margin-bottom: 1.5rem;
-  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 .box p {
@@ -271,9 +271,10 @@
   }
   
   .filosofiaTitle {
-    font-size: 5rem;
+    font-size: 2.7rem;
     margin-top: -1rem;
     margin-bottom: 1rem;
+    letter-spacing: 0.1em;
   }
   
   .box p {
@@ -307,11 +308,10 @@
     margin-bottom: 0.8rem;
   }
   
-  /*.filosofiaTitle {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    margin-top: -0.3rem;
-    margin-bottom: 0.8rem;
-  }*/
+  .filosofiaTitle {
+    font-size: 2.2rem;
+    letter-spacing: 0.08em;
+  }
   
   .box p {
     font-size: 0.85rem;
@@ -403,4 +403,16 @@
   .arrow {
     font-size: 20px;
   }
+}
+
+.quoteText {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 } 

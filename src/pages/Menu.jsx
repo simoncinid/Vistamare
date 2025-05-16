@@ -165,7 +165,7 @@ const Menu = () => {
                 fontWeight: "bold", 
                 marginBottom: "2rem", 
                 paddingTop: "3rem",
-                fontSize: "clamp(2.5rem, 5vw, 5rem)"
+                fontSize: "clamp(1.2rem, 5vw, 3rem)"
               }}
             >
               "A mano libera"

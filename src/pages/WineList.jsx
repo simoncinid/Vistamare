@@ -68,7 +68,7 @@ const WineList = () => {
                 fontWeight: "bold", 
                 marginBottom: "1rem", 
                 paddingTop: "4rem",
-                fontSize: "clamp(2.5rem, 5vw, 5rem)"
+                fontSize: "clamp(1.2rem, 5vw, 3rem)"
               }}
             >
               La nostra selezione di vini

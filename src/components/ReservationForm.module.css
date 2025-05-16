@@ -507,6 +507,47 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     font-size: 0.75rem;
     margin-top: 0.75rem;
   }
+
+  .modalHeader h2 {
+    /* Le dimensioni saranno gestite dal clamp di base */
+  }
+}
+
+@media (max-width: 480px) {
+  .modalOverlay {
+    padding: 10px;
+  }
+  
+  .policyModal {
+    max-height: 85vh;
+  }
+  
+  .modalHeader {
+    padding: 0.8rem 1.2rem 0 1.2rem;
+  }
+  
+  .modalBody {
+    padding: 1.2rem;
+  }
+
+  .modalHeader h2 {
+    /* Le dimensioni saranno gestite dal clamp di base */
+  }
+}
+
+@media (max-width: 400px) {
+  .modalOverlay {
+    padding: 8px;
+  }
+  
+  .modalHeader h2 {
+    /* Le dimensioni saranno gestite dal clamp di base */
+    font-weight: 500;
+  }
+  
+  .modalHeader {
+    padding: 0.7rem 1rem 0 1rem;
+  }
 }
 
 /* Link della Restaurant Policy */
@@ -584,7 +625,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .modalHeader h2 {
   margin: 0 auto;
-  font-size: clamp(3rem, 8vw, 7rem)!important;
+  font-size: clamp(1.3rem, 4vw, 2.5rem) !important;
   color: #001939 !important;
   font-weight: 600;  
 }
@@ -645,7 +686,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   }
   
   .modalHeader h2 {
-    font-size: 1.4rem;
+    /* Le dimensioni saranno gestite dal clamp di base */
   }
   
   .modalBody {

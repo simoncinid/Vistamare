@@ -1,7 +1,7 @@
 /* src/pages/WineList.module.css */
 
 /* Import font */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Roboto:wght@300;400;500;700;900&display=swap');
 
 /* Stili di base */
 .pageContainer {
@@ -21,12 +21,13 @@
 }
 
 .menuTitle {
-  font-family: 'Tangerine', cursive;
-  font-size: 5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.8rem;
   color: white;
   margin-bottom: 2rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .menuDescription {
@@ -66,26 +67,30 @@
 }
 
 .quote {
-  font-family: "Tangerine", cursive;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   margin-top: 0;
   margin-bottom: 1.5rem;
-  line-height: 1.2;
+  line-height: 1.3;
   padding: 0 1rem;
   position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 .quoteAuthor {
   display: block;
-  font-family: 'Tangerine', cursive;
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(1.3rem, 2.5vw, 2.2rem);
   color: #6db1ff;
   margin-top: 0.5rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 /* Nuova sezione stile Philosophy */
@@ -153,35 +158,41 @@
 }
 
 .boxDegustazione h2 {
-  font-family: 'Tangerine', cursive;
-  font-size: 5rem;
-  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
   color: #04062d;
   margin-bottom: 1rem;
   padding-top: 3.5rem;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 .wineSelectionTitle {
-  font-family: "Tangerine", cursive;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 80px !important;
+  font-size: clamp(1.3rem, 4vw, 2.7rem);
   color: #ffffff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   margin-top: 3rem;
   margin-bottom: 0.5rem;
-  line-height: 1.2;
+  line-height: 1.3;
   padding: 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 .quoteAuthorStyle {
   display: block;
-  font-family: 'Tangerine', cursive;
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(1.3rem, 2.5vw, 2.2rem);
   color: #6db1ff;
   margin-top: 0.5rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .boxDegustazione p {
@@ -271,11 +282,13 @@
 }
 
 .sectionTitle {
-  font-family: 'Tangerine', cursive;
-  font-size: 5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
   color: white;
   margin-bottom: 2rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 .paragraphText {
@@ -774,10 +787,10 @@
   }
   
   .wineSelectionTitle {
-    font-size: 1.3rem !important;
+    font-size: 2rem !important;
     margin-bottom: 0.2rem;
     margin-top: 0.5rem;
-    line-height: 1.1;
+    line-height: 1.2;
   }
   
   .quoteAuthorStyle {
@@ -955,7 +968,6 @@
   }
   
   .wineSelectionTitle {
-    font-size: 80px !important;
     margin-bottom: 0.2rem;
   }
 }

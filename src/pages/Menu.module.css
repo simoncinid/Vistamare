@@ -18,12 +18,13 @@
 }
 
 .menuTitle {
-  font-family: 'Tangerine', cursive;
-  font-size: 5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.8rem;
   color: white;
   margin-bottom: 2rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .menuDescription {
@@ -153,10 +154,13 @@
 }
 
 .proposteTitle {
-  font-family: 'Tangerine', cursive;
-  font-size: 5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 3rem);
   text-align: center;
   margin-bottom: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 /* Stile specifico per il titolo "A mano libera" */
@@ -190,17 +194,23 @@
 }
 
 .proposteName {
-  font-family: 'Tangerine', cursive;
-  font-size: 2.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
   margin: 0;
   flex: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .propostePrice {
-  font-family: 'Tangerine', cursive;
-  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
   margin: 0 2rem;
   color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .expandButton {
@@ -322,11 +332,14 @@
 
 /* Titolo TripAdvisor */
 .tripAdvisorTitle {
-  font-family: 'Tangerine', cursive;
-  font-size: 3.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.2rem;
   text-align: center;
   margin-bottom: 2rem;
   color: #04062d;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 .tripAdvisorSection {
@@ -337,7 +350,8 @@
 /* Media queries */
 @media (max-width: 768px) {
   .menuTitle {
-    font-size: 4rem;
+    font-size: 2.4rem;
+    letter-spacing: 0.12em;
   }
   
   .galleryContainer {
@@ -359,15 +373,19 @@
   }
   
   .proposteTitle {
-    font-size: 4rem;
+    /* Le dimensioni saranno gestite dal clamp di base */
+    letter-spacing: 0.1em;
   }
   
   .proposteName {
-    font-size: 2.2rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.07em;
+    font-weight: 400;
   }
   
   .propostePrice {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.07em;
   }
   
   .proposteHeader {
@@ -443,7 +461,7 @@
   }
   
   .wineSelectionTitle {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    /* Le dimensioni saranno gestite dal clamp di base */
     line-height: 1.3;
     padding: 0 0.5rem;
   }
@@ -460,8 +478,9 @@
   }
   
   .priceHighlight {
-    font-size: 3em;
+    font-size: 2.2rem;
     margin-top: 0.2em;
+    letter-spacing: 0.08em;
   }
   
   .wineNote {
@@ -471,7 +490,8 @@
 
 @media (max-width: 480px) {
   .menuTitle {
-    font-size: 3rem;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
   }
   
   .menuDescription {
@@ -487,15 +507,19 @@
   }
   
   .proposteTitle {
-    font-size: 3rem;
+    /* Le dimensioni saranno gestite dal clamp di base */
+    letter-spacing: 0.08em;
   }
   
   .proposteName {
-    font-size: 2rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.06em;
+    font-weight: 400;
   }
   
   .propostePrice {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.06em;
     margin: 0 1rem;
   }
   
@@ -513,23 +537,40 @@
     letter-spacing: 1.5px;
     margin: 0 auto;
   }
+  
+  .priceHighlight {
+    font-size: 2rem;
+    margin-top: 0.1em;
+    letter-spacing: 0.07em;
+  }
+  
+  .wineSelectionTitle {
+    /* Le dimensioni saranno gestite dal clamp di base */
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+  }
 }
 
 @media (max-width: 400px) {
   .menuTitle {
-    font-size: 2.8rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.08em;
   }
   
   .proposteTitle {
-    font-size: 2.8rem;
+    /* Le dimensioni saranno gestite dal clamp di base */
+    letter-spacing: 0.07em;
   }
   
   .proposteName {
-    font-size: 1.8rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    font-weight: 400;
   }
   
   .propostePrice {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
   }
   
   /*.highlight {
@@ -736,14 +777,15 @@
 }
 
 .giftCardTitle {
-  font-family: 'Tangerine', cursive;
-  font-size: 5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
   color: #04062d;
   margin-bottom: 2rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   position: relative;
   z-index: 1;
+  text-transform: uppercase;
 }
 
 /* Responsive per la sezione Gift Card */
@@ -809,25 +851,29 @@
 /* Stile per la citazione */
 .quoteAuthorStyle {
   display: block;
-  font-family: 'Tangerine', cursive;
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(1.3rem, 2.5vw, 2.2rem);
   color: #6db1ff;
   margin-top: 0.5rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 /* Stile per il titolo citazione */
 .wineSelectionTitle {
-  font-family: "Tangerine", cursive;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-size: clamp(1.3rem, 4vw, 2.6rem);
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   margin-top: 0;
   margin-bottom: 1.5rem;
-  line-height: 1.2;
+  line-height: 1.3;
   padding: 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 /* Nuova sezione per il menù degustazione in stile winePhilosophy */
@@ -923,19 +969,21 @@
   margin: 0 auto;
 }
 
-/* Evidenziazione prezzi con font Tangerine */
+/* Evidenziazione prezzi con font Roboto */
 .priceHighlight {
   display: block;
-  font-family: 'Tangerine', cursive;
+  font-family: 'Roboto', sans-serif;
   color: #6db1ff;
   font-weight: 700;
-  font-size: 3.5em;
+  font-size: 2.4rem;
   position: relative;
   padding: 0.2em 0 0;
   margin: 0.2em auto 0;
   text-align: center;
   line-height: 1;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .priceHighlight::before {
@@ -1008,7 +1056,7 @@
   }
   
   .wineSelectionTitle {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    /* Le dimensioni saranno gestite dal clamp di base */
     line-height: 1.3;
     padding: 0 0.5rem;
   }
@@ -1025,7 +1073,7 @@
   }
   
   .priceHighlight {
-    font-size: 3em;
+    font-size: 2.2rem;
     margin-top: 0.2em;
   }
   
@@ -1068,13 +1116,13 @@
   }
   
   .wineSelectionTitle {
-    font-size: clamp(1.8rem, 4vw, 3rem);
+    /* Le dimensioni saranno gestite dal clamp di base */
     margin-bottom: 1rem;
     padding: 0 0.5rem;
   }
   
   .priceHighlight {
-    font-size: 2.5em;
+    font-size: 2rem;
     margin-top: 0.1em;
   }
   
