@@ -508,6 +508,15 @@
       opacity: 1;
     }
   }
+
+  .fadeBottom h1 {
+    display: none; /* Nascondiamo il titolo "Scopri cosa offriamo" su mobile */
+  }
+  
+  .fadeBottom {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 @media (max-width: 576px) {
