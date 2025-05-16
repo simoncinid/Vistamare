@@ -75,11 +75,8 @@ const WineList = () => {
             </h2>
             
             <p className={styles.degustazioneDescription} style={{color: "#04062d", marginTop: "0", paddingBottom: "1rem"}}>
-              Dai <span className={styles.highlight}>rossi corposi</span> ai <span className={styles.highlight}>bianchi freschi</span>, 
-              ogni bottiglia è <span className={styles.highlight}>selezionata</span> dalla nostra sommelier per esperienze 
-              <span className={styles.highlight}> indimenticabili</span>. Un viaggio sensoriale che racconta 
-              <span className={styles.highlight}> territori</span> e <span className={styles.highlight}>tradizioni</span> 
-              per accompagnare perfettamente i sapori dei nostri piatti.
+            Dai rossi <span className={styles.highlight}>strutturati</span> ai bianchi più <span className={styles.highlight}>eleganti</span>, passando per una curata proposta di <span className={styles.highlight}>Champagne</span>, ogni etichetta è scelta con attenzione dalla nostra sommelier.
+            Un percorso enologico che attraversa territori, tradizioni e bollicine <span className={styles.highlight}>d'eccellenza</span>, pensato per esaltare ogni piatto e rendere l'esperienza ancora più memorabile.
             </p>
             
             <AnimatedText delay={getDelay(600)}>

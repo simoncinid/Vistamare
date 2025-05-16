@@ -172,11 +172,9 @@ const Menu = () => {
             </h2>
             
             <p className={styles.degustazioneDescription} style={{color: "#04062d", marginTop: "0", paddingBottom: "1rem"}}>
-              Menu degustazione di 9 passi a sorpresa dello chef.
-              <br></br>
-              Si prega di comunicare in anticipo eventuali allergie o intolleranze, per poter offrire un percorso ottimale.
-              <br></br>
-              Il menù degustazione viene servito per tutti i componenti del tavolo.
+            Percorso di 9 portate a sorpresa, ideato dallo Chef e ispirato al pescato del giorno.<br></br>
+            Si prega di comunicare in anticipo eventuali allergie o intolleranze per consentirci di offrire un'esperienza ottimale.<br></br>
+            Il menù degustazione viene servito per l'intero tavolo.
             </p>
             <div className={styles.priceHighlight}>90€</div>
             <p className={styles.wineNote}>vini esclusi</p>
@@ -189,8 +187,8 @@ const Menu = () => {
         <p>
           <span style={{fontSize: '1.1em', fontWeight: 'bold'}}>Proposta di abbinamento vini</span>
           <br></br>
-          Al menù degustazione è possibile abbinare la nostra selezione
-          <br></br>
+          È possibile arricchire il percorso degustazione con la nostra proposta di abbinamento vini, studiata per valorizzare ogni portata.<br></br>
+          La selezione può variare quotidianamente in base al menù proposto e alla disponibilità delle etichette.<br></br>
           "<span className={styles.highlight}>Da Nord a Sud</span>"
         </p>
         <div className={styles.priceHighlight}>40€</div>
