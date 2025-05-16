@@ -9,6 +9,7 @@ const WineList = () => {
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== 'undefined' ? window.innerWidth : 0
   );
+  const [isMobile, setIsMobile] = useState(false);
 
   // Funzione per aprire il PDF in una nuova finestra
   const openWineListPDF = () => {
@@ -18,7 +19,9 @@ const WineList = () => {
   // Gestiamo il ridimensionamento della finestra
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+      const width = window.innerWidth;
+      setWindowWidth(width);
+      setIsMobile(width <= 768);
     };
 
     if (typeof window !== 'undefined') {
@@ -50,11 +53,24 @@ const WineList = () => {
       {/* Sezione principale - struttura identica a Menu.jsx */}
       <section className={styles.degustazioneSection} style={{height: "600px"}}>
         <div className={styles.imagePart}>
-          <img src="/assets/27.png" alt="Wine selection" className={styles.degustazioneImage} />
+          <img 
+            src={isMobile ? "/assets/cantina1.png" : "/assets/27.png"} 
+            alt="Wine selection" 
+            className={styles.degustazioneImage} 
+          />
         </div>
         <div className={styles.textPart} style={{backgroundColor: "transparent"}}>
           <div className={styles.boxDegustazione} style={{marginTop: "-1px"}}>
-            <h2 className={styles.proposteTitle} style={{color: "#04062d", fontWeight: "bold", marginBottom: "1rem", paddingTop: "4rem"}}>
+            <h2 
+              className={styles.proposteTitle} 
+              style={{
+                color: "#04062d", 
+                fontWeight: "bold", 
+                marginBottom: "1rem", 
+                paddingTop: "4rem",
+                fontSize: "clamp(2.5rem, 5vw, 5rem)"
+              }}
+            >
               La nostra selezione di vini
             </h2>
             

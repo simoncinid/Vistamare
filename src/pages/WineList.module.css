@@ -489,8 +489,8 @@
   }
   
   .degustazioneSection {
-    height: auto !important;
     flex-direction: column;
+    height: auto !important;
     min-height: auto;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -501,48 +501,52 @@
   .imagePart {
     width: 100%;
     height: 40vh;
-    flex-direction: row;
-    order: 1 !important;
+    order: 1;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .degustazioneImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
   }
   
   .textPart {
     width: 100%;
-    margin-bottom: 0;
-    order: 2 !important;
+    order: 2;
+    margin: 0;
+    padding: 0;
     background-color: transparent !important;
   }
   
   .boxDegustazione {
+    margin: 0 !important;
     padding: 1rem;
     min-height: auto;
     overflow-y: visible;
-    margin-top: -1px !important;
+    border-top: none;
   }
   
   .boxDegustazione h2 {
-    font-size: 4rem;
     padding-top: 1.5rem;
     margin-bottom: 1rem;
   }
   
-  .wineSelectionTitle {
-    font-size: 1.5rem !important;
-    margin-bottom: 0.4rem;
-    margin-top: 1rem;
-    line-height: 1.1;
-  }
-  
-  .quoteAuthorStyle {
-    font-size: 1.5rem;
-    margin-top: 0.3rem;
-    display: block;
-  }
-  
-  .boxDegustazione p {
-    font-size: 15px;
+  .degustazioneDescription {
+    font-size: 0.9rem;
     letter-spacing: 2px;
-    padding: 1.5rem 0;
-    line-height: 1.7;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .boxDegustazione .pdfButton {
+    padding: 1.2rem 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    margin-top: 1rem;
   }
   
   .parallaxSection {
@@ -586,13 +590,6 @@
     font-size: 1rem;
     letter-spacing: 3.5px;
     margin-top: 1.5rem;
-  }
-  
-  .boxDegustazione .pdfButton {
-    padding: 1.2rem 1.5rem;
-    font-size: 1rem;
-    letter-spacing: 3px;
-    margin-top: 1rem;
   }
   
   .finalText {
@@ -639,42 +636,43 @@
   }
   
   .degustazioneSection {
-    min-height: 90vh;
-    margin-top: 4rem;
+    min-height: auto;
+    margin-top: 0;
+  }
+  
+  .imagePart {
+    height: 45vh;
+    margin: 0;
+    padding: 0;
   }
   
   .textPart {
-    min-height: 90vh;
+    margin: 0;
+    padding: 0;
   }
   
   .boxDegustazione {
-    margin: 2.5rem 0.8rem;
+    margin: 0 !important;
     padding: 1rem;
-    max-height: 65vh;
-    overflow-y: auto;
   }
   
   .boxDegustazione h2 {
-    font-size: 24px;
+    padding-top: 1rem;
     margin-bottom: 1rem;
   }
   
-  .wineSelectionTitle {
-    font-size: 80px !important;
-    margin-bottom: 1rem;
-    padding: 0 0.5rem;
+  .degustazioneDescription {
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    margin: 0 auto;
+    padding: 0;
   }
   
-  .quoteAuthorStyle {
-    font-size: 2rem;
-    margin-top: 0.2rem;
-  }
-  
-  .boxDegustazione p {
-    font-size: 15px;
+  .boxDegustazione .pdfButton {
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
     letter-spacing: 2px;
-    padding: 1.5rem 0;
-    line-height: 1.7;
+    width: 80%;
   }
   
   .parallaxSection {
@@ -706,12 +704,6 @@
     font-size: 0.95rem;
     letter-spacing: 2.5px;
     margin-top: 1.2rem;
-  }
-  
-  .boxDegustazione .pdfButton {
-    padding: 1rem 1.2rem;
-    font-size: 0.9rem;
-    letter-spacing: 2.5px;
   }
   
   .finalText {
@@ -760,20 +752,23 @@
   
   .imagePart {
     height: 45vh;
+    margin: 0;
+    padding: 0;
   }
   
   .textPart {
-    min-height: 85vh;
+    margin: 0;
+    padding: 0;
   }
   
   .boxDegustazione {
+    margin: 0 !important;
     padding: 1rem;
     min-height: auto;
     overflow-y: visible;
   }
   
   .boxDegustazione h2 {
-    font-size: 3.5rem;
     padding-top: 1rem;
     margin-bottom: 1rem;
   }
@@ -862,7 +857,6 @@
   }
   
   .boxDegustazione h2 {
-    font-size: 3rem;
     padding-top: 1.5rem;
     margin-bottom: 0.5rem;
   }
@@ -903,17 +897,24 @@
   }
   
   .degustazioneSection {
-    min-height: 100vh;
-    padding: 1.5rem 0;
+    min-height: auto;
+    padding: 0;
+  }
+  
+  .imagePart {
+    height: 40vh;
+    margin: 0;
+    padding: 0;
   }
   
   .textPart {
-    min-height: 90vh;
+    margin: 0;
+    padding: 0;
   }
   
   .boxDegustazione {
-    margin: 1.5rem 0.5rem;
-    padding: 1.8rem 0.8rem;
+    margin: 0 !important;
+    padding: 1rem 0.8rem;
   }
   
   .parallaxSection {
