@@ -508,9 +508,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     margin-top: 0.75rem;
   }
 
-  .modalHeader h2 {
-    /* Le dimensioni saranno gestite dal clamp di base */
-  }
+  /*.modalHeader h2 {
+    Le dimensioni saranno gestite dal clamp di base 
+  }*/
 }
 
 @media (max-width: 480px) {
@@ -530,9 +530,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     padding: 1.2rem;
   }
 
-  .modalHeader h2 {
-    /* Le dimensioni saranno gestite dal clamp di base */
-  }
+  /*.modalHeader h2 {
+    Le dimensioni saranno gestite dal clamp di base 
+  }*/
 }
 
 @media (max-width: 400px) {
@@ -685,9 +685,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     padding: 1rem 1.5rem 0 1.5rem;
   }
   
-  .modalHeader h2 {
-    /* Le dimensioni saranno gestite dal clamp di base */
-  }
+   /*.modalHeader h2 {
+    Le dimensioni saranno gestite dal clamp di base 
+  }*/
   
   .modalBody {
     padding: 1.5rem;
