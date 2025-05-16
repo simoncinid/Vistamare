@@ -439,9 +439,9 @@ const ReservationForm = () => {
                         {errors.children && <p className={styles.errorMessage}>{errors.children}</p>}
                       </motion.div>
 
-                      <motion.div className={styles.noteBox} variants={itemVariants}>
+                      {/*<motion.div className={styles.noteBox} variants={itemVariants}>
                         <p>Il nostro ambiente è di alto livello ed i bambini sono graditi ma devono comportarsi in modo consono.</p>
-                      </motion.div>
+                      </motion.div>*/}
                     </>
                   )}
                 </motion.div>
