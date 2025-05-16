@@ -19,8 +19,8 @@ export default function Footer() {
     };
   }, []);
 
-  // URL semplificato della mappa
-  const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3054596008694!2d12.490412999999999!3d41.9021774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f604f678640a9%3A0xcad165fa2036ce2c!2sColosseo!5e0!3m2!1sit!2sit!4v1691496572408!5m2!1sit!2sit";
+  // URL corretto per l'incorporamento della mappa
+  const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.7121614892244!2d10.428314!3d43.388432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d5e357a60fbbcd%3A0xa1c276a0d7e382d8!2sVia%20del%20Popolo%2C%2076%2C%2057016%20Rosignano%20Solvay-Castiglioncello%20LI!5e0!3m2!1sit!2sit!4v1621234567890!5m2!1sit!2sit";
 
   return (
     <footer className={styles.footer}>
@@ -29,7 +29,7 @@ export default function Footer() {
         {!isMobile && (
           <div className={styles.column}>
             <h3>Dove Siamo</h3>
-            <img src={logo} alt="Vistamare Logo" className={styles.logoFooterMap} />
+            {/*<img src={logo} alt="Vistamare Logo" className={styles.logoFooterMap} />*/}
             <iframe
               title="Mappa"
               src={mapUrl}
@@ -44,17 +44,17 @@ export default function Footer() {
         {/* Contatti */}
         <div className={styles.column}>
           <h3>Contatti</h3>
-          <p>Via Lungomare, 123</p>
-          <p>Porto Elegante</p>
-          <p>Tel. +39 012 345 6789</p>
-          <p>Email: info@vistamare.it</p>
+          <p>Via del Popolo, 76</p>
+          <p>57016 Rosignano Solvay-Castiglioncello LI</p>
+          <p>Tel. <a style={{color: 'white'}} href="tel:0586762289">0586 762289</a></p>
+          <p>Email: <a style={{color: 'white'}} href="mailto:vistamarerosignano@gmail.com">vistamarerosignano@gmail.com</a></p>
         </div>
 
         {/* Orari */}
         <div className={styles.column}>
           <h3>Orari</h3>
-          <p>Lunedì - Venerdì: 12:00 - 15:00, 19:00 - 23:00</p>
-          <p>Sabato - Domenica: 12:00 - 15:00, 19:00 - 00:00</p>
+          <p>Lunedì - Domenica: 12:30 - 14:30, 19:30 - 22:00</p>
+          <p>Martedì: chiuso</p>
         </div>
 
         {/* Mappa Mobile - con stile inline per forzare la visualizzazione */}
@@ -110,10 +110,10 @@ export default function Footer() {
               justifyContent: 'center',
               alignItems: 'center'
             }}>
-              <a href="#" aria-label="Instagram" style={{ color: '#cbd5e0', fontSize: '1.5rem' }}><FaInstagram /></a>
-              <a href="#" aria-label="Facebook" style={{ color: '#cbd5e0', fontSize: '1.5rem' }}><FaFacebook /></a>
-              <a href="#" aria-label="TripAdvisor" style={{ color: '#cbd5e0', fontSize: '1.5rem' }}><FaTripadvisor /></a>
-              <a href="#" aria-label="WhatsApp" style={{ color: '#cbd5e0', fontSize: '1.5rem' }}><FaWhatsapp /></a>
+              <a href="https://www.instagram.com/ristorantevistamare/" target="_blank" aria-label="Instagram" style={{ color: '#cbd5e0', fontSize: '1.5rem' }}><FaInstagram /></a>
+              <a href="https://www.facebook.com/ristorantevistamarecheffabiosimpatia/" target="_blank" aria-label="Facebook" style={{ color: '#cbd5e0', fontSize: '1.5rem' }}><FaFacebook /></a>
+              <a href="https://www.tripadvisor.it/Restaurant_Review-g1186329-d12335425-Reviews-Vistamare-Rosignano_Solvay_Province_of_Livorno_Tuscany.html" target="_blank" aria-label="TripAdvisor" style={{ color: '#cbd5e0', fontSize: '1.5rem' }}><FaTripadvisor /></a>
+              {/*<a href="#" aria-label="WhatsApp" style={{ color: '#cbd5e0', fontSize: '1.5rem' }}><FaWhatsapp /></a>*/}
             </div>
           </div>
         ) : (
@@ -121,10 +121,10 @@ export default function Footer() {
           <div className={styles.column}>
             <h3>Seguici</h3>
             <div className={styles.socialLinks}>
-              <a href="#" aria-label="Instagram"><FaInstagram /></a>
-              <a href="#" aria-label="Facebook"><FaFacebook /></a>
-              <a href="#" aria-label="TripAdvisor"><FaTripadvisor /></a>
-              <a href="#" aria-label="WhatsApp"><FaWhatsapp /></a>
+              <a href="https://www.instagram.com/ristorantevistamare/" target="_blank" aria-label="Instagram"><FaInstagram /></a>
+              <a href="https://www.facebook.com/ristorantevistamarecheffabiosimpatia/" target="_blank" aria-label="Facebook"><FaFacebook /></a>
+              <a href="https://www.tripadvisor.it/Restaurant_Review-g1186329-d12335425-Reviews-Vistamare-Rosignano_Solvay_Province_of_Livorno_Tuscany.html" target="_blank" aria-label="TripAdvisor"><FaTripadvisor /></a>
+              {/*<a href="#" target="_blank" aria-label="WhatsApp"><FaWhatsapp /></a>*/}
             </div>
           </div>
         )}
