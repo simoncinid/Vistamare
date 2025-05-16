@@ -516,8 +516,9 @@
   .fadeBottom {
     padding: 0;
     margin: 0;
-    min-height: 0 !important; /* Rimuovo l'altezza minima */
-    height: 0 !important; /* Imposto l'altezza a zero */
+    min-height: 20rem !important; /* Ripristino l'altezza minima */
+    height: auto !important; /* Ripristino l'altezza auto */
+    background-color: #04062d; /* Ripristino lo sfondo blu */
   }
 }
 

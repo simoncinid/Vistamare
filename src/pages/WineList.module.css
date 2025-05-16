@@ -89,7 +89,7 @@
 }
 
 /* Nuova sezione stile Philosophy */
-.winePhilosophySection {
+.degustazioneSection {
   width: 100vw;
   display: flex;
   position: relative;
@@ -106,7 +106,7 @@
   min-height: 500px;
 }
 
-.imagePartWine {
+.imagePart {
   width: 33.33%; /* 1/3 della pagina */
   position: relative;
   overflow: hidden;
@@ -115,7 +115,7 @@
   height: 100%;
 }
 
-.wineImage {
+.degustazioneImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -123,11 +123,11 @@
   transition: transform 0.5s ease;
 }
 
-.wineImage:hover {
+.degustazioneImage:hover {
   transform: scale(1.05);
 }
 
-.textPartWine {
+.textPart {
   width: 66.67%; /* 2/3 della pagina */
   background-color: #04062d;
   display: flex;
@@ -136,7 +136,7 @@
   border-top: none;
 }
 
-.boxWine {
+.boxDegustazione {
   width: 100%;
   height: 100%;
   background: linear-gradient(to right, rgba(224, 227, 251, 0.897), rgb(255, 255, 255));
@@ -152,7 +152,7 @@
   border-top: none;
 }
 
-.boxWine h2 {
+.boxDegustazione h2 {
   font-family: 'Tangerine', cursive;
   font-size: 5rem;
   font-weight: bold;
@@ -184,7 +184,7 @@
   font-weight: 700;
 }
 
-.boxWine p {
+.boxDegustazione p {
   font-family: "Roboto", sans-serif;
   color: #2c2c2c;
   font-size: clamp(12px, 5vw, 17px);
@@ -198,7 +198,7 @@
 }
 
 /* Stile del pulsante PDF all'interno del boxWine */
-.boxWine .pdfButton {
+.boxDegustazione .pdfButton {
   background-color: #6db1ff;
   color: #04062d;
   border: none;
@@ -217,7 +217,7 @@
   display: inline-block;
 }
 
-.boxWine .pdfButton::before {
+.boxDegustazione .pdfButton::before {
   content: '';
   position: absolute;
   top: 0;
@@ -229,17 +229,17 @@
   z-index: 1;
 }
 
-.boxWine .pdfButton:hover {
+.boxDegustazione .pdfButton:hover {
   background-color: #5a9be7;
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.boxWine .pdfButton:hover::before {
+.boxDegustazione .pdfButton:hover::before {
   left: 100%;
 }
 
-.boxWine .pdfButton:active {
+.boxDegustazione .pdfButton:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -382,7 +382,7 @@
     padding: 0 1.5rem 5rem 1.5rem;
   }
   
-  .boxWine p {
+  .boxDegustazione p {
     max-width: 95%;
     font-size: clamp(12px, 4vw, 16px);
     letter-spacing: 2.5px;
@@ -422,7 +422,7 @@
     font-size: clamp(1.8rem, 4vw, 3.5rem);
   }
   
-  .winePhilosophySection {
+  .degustazioneSection {
     height: 70vh;
   }
   
@@ -436,7 +436,7 @@
     font-size: clamp(1.5rem, 4vw, 2.5rem);
   }
   
-  .boxWine h2 {
+  .boxDegustazione h2 {
     font-size: 28px;
     margin-bottom: 1.5rem;
   }
@@ -488,7 +488,7 @@
     font-size: clamp(1.5rem, 4vw, 2.5rem);
   }
   
-  .winePhilosophySection {
+  .degustazioneSection {
     height: auto !important;
     flex-direction: column;
     min-height: auto;
@@ -498,28 +498,28 @@
     align-items: stretch;
   }
   
-  .imagePartWine {
+  .imagePart {
     width: 100%;
     height: 40vh;
     flex-direction: row;
     order: 1 !important;
   }
   
-  .textPartWine {
+  .textPart {
     width: 100%;
     margin-bottom: 0;
     order: 2 !important;
     background-color: transparent !important;
   }
   
-  .boxWine {
+  .boxDegustazione {
     padding: 1rem;
     min-height: auto;
     overflow-y: visible;
     margin-top: -1px !important;
   }
   
-  .boxWine h2 {
+  .boxDegustazione h2 {
     font-size: 4rem;
     padding-top: 1.5rem;
     margin-bottom: 1rem;
@@ -538,7 +538,7 @@
     display: block;
   }
   
-  .boxWine p {
+  .boxDegustazione p {
     font-size: 15px;
     letter-spacing: 2px;
     padding: 1.5rem 0;
@@ -588,7 +588,7 @@
     margin-top: 1.5rem;
   }
   
-  .boxWine .pdfButton {
+  .boxDegustazione .pdfButton {
     padding: 1.2rem 1.5rem;
     font-size: 1rem;
     letter-spacing: 3px;
@@ -638,23 +638,23 @@
     margin-top: 0.2rem;
   }
   
-  .winePhilosophySection {
+  .degustazioneSection {
     min-height: 90vh;
     margin-top: 4rem;
   }
   
-  .textPartWine {
+  .textPart {
     min-height: 90vh;
   }
   
-  .boxWine {
+  .boxDegustazione {
     margin: 2.5rem 0.8rem;
     padding: 1rem;
     max-height: 65vh;
     overflow-y: auto;
   }
   
-  .boxWine h2 {
+  .boxDegustazione h2 {
     font-size: 24px;
     margin-bottom: 1rem;
   }
@@ -670,7 +670,7 @@
     margin-top: 0.2rem;
   }
   
-  .boxWine p {
+  .boxDegustazione p {
     font-size: 15px;
     letter-spacing: 2px;
     padding: 1.5rem 0;
@@ -708,7 +708,7 @@
     margin-top: 1.2rem;
   }
   
-  .boxWine .pdfButton {
+  .boxDegustazione .pdfButton {
     padding: 1rem 1.2rem;
     font-size: 0.9rem;
     letter-spacing: 2.5px;
@@ -753,26 +753,26 @@
     margin-top: 0.2rem;
   }
   
-  .winePhilosophySection {
+  .degustazioneSection {
     min-height: auto;
     margin-top: 0;
   }
   
-  .imagePartWine {
+  .imagePart {
     height: 45vh;
   }
   
-  .textPartWine {
+  .textPart {
     min-height: 85vh;
   }
   
-  .boxWine {
+  .boxDegustazione {
     padding: 1rem;
     min-height: auto;
     overflow-y: visible;
   }
   
-  .boxWine h2 {
+  .boxDegustazione h2 {
     font-size: 3.5rem;
     padding-top: 1rem;
     margin-bottom: 1rem;
@@ -790,7 +790,7 @@
     margin-top: 0.2rem;
   }
   
-  .boxWine p {
+  .boxDegustazione p {
     font-size: 13px;
     letter-spacing: 1.5px;
     padding: 1rem 0;
@@ -827,7 +827,7 @@
     margin-top: 1rem;
   }
   
-  .boxWine .pdfButton {
+  .boxDegustazione .pdfButton {
     padding: 0.8rem 1rem;
     font-size: 0.85rem;
     letter-spacing: 2px;
@@ -861,7 +861,7 @@
     margin-top: 0.1rem;
   }
   
-  .boxWine h2 {
+  .boxDegustazione h2 {
     font-size: 3rem;
     padding-top: 1.5rem;
     margin-bottom: 0.5rem;
@@ -872,7 +872,7 @@
     margin-top: 0.1rem;
   }
   
-  .boxWine p {
+  .boxDegustazione p {
     font-size: 12px;
     letter-spacing: 1.2px;
     padding: 0.8rem 0;
@@ -890,7 +890,7 @@
     padding: 0 0.5rem;
   }
   
-  .boxWine .pdfButton {
+  .boxDegustazione .pdfButton {
     width: 90%;
     padding: 0.8rem 0.8rem;
     font-size: 0.8rem;
@@ -902,16 +902,16 @@
     letter-spacing: 1.2px;
   }
   
-  .winePhilosophySection {
+  .degustazioneSection {
     min-height: 100vh;
     padding: 1.5rem 0;
   }
   
-  .textPartWine {
+  .textPart {
     min-height: 90vh;
   }
   
-  .boxWine {
+  .boxDegustazione {
     margin: 1.5rem 0.5rem;
     padding: 1.8rem 0.8rem;
   }
@@ -942,7 +942,7 @@
     line-height: 1.4;
   }
   
-  .boxWine .pdfButton {
+  .boxDegustazione .pdfButton {
     padding: 0.8rem 0.8rem;
     font-size: 0.8rem;
     letter-spacing: 1.5px;
@@ -957,4 +957,107 @@
     font-size: 80px !important;
     margin-bottom: 0.2rem;
   }
+}
+
+/* Manteniamo le classi originali come alias per compatibilità */
+.winePhilosophySection {
+  width: 100vw;
+  display: flex;
+  position: relative;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  border-top: none;
+  overflow: hidden;
+  align-items: stretch;
+  height: auto;
+  min-height: 500px;
+}
+
+.imagePartWine {
+  width: 33.33%; /* 1/3 della pagina */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.wineImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.wineImage:hover {
+  transform: scale(1.05);
+}
+
+.textPartWine {
+  width: 66.67%; /* 2/3 della pagina */
+  background-color: #04062d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: none;
+}
+
+.boxWine {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(224, 227, 251, 0.897), rgb(255, 255, 255));
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  overflow-y: visible;
+  border-top: none;
+}
+
+/* Aggiungiamo la classe degustazioneDescription */
+.degustazioneDescription {
+  font-family: "Roboto", sans-serif;
+  color: #2c2c2c;
+  font-size: clamp(12px, 5vw, 17px);
+  line-height: 1.8;
+  letter-spacing: 3px;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Aggiungiamo la classe paragraphSection */
+.paragraphSection {
+  padding: 2rem 2rem 2rem 2rem;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  background-color: #04062d;
+}
+
+.paragraphSection p {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  letter-spacing: 5px;
+  font-weight: 500;
+  padding: 1.5rem 0;
+  text-transform: uppercase;
 } 

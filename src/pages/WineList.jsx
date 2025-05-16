@@ -47,18 +47,18 @@ const WineList = () => {
     <div className={styles.pageContainer}>
       <Header />
       
-      {/* Nuova sezione descrizione stile Philosophy */}
-      <section className={styles.winePhilosophySection} style={{height: "600px"}}>
-        <div className={styles.imagePartWine}>
-          <img src="/assets/27.png" alt="Wine selection" className={styles.wineImage} />
+      {/* Sezione principale - struttura identica a Menu.jsx */}
+      <section className={styles.degustazioneSection} style={{height: "600px"}}>
+        <div className={styles.imagePart}>
+          <img src="/assets/27.png" alt="Wine selection" className={styles.degustazioneImage} />
         </div>
-        <div className={styles.textPartWine} style={{backgroundColor: "transparent"}}>
-          <div className={styles.boxWine} style={{marginTop: "-1px"}}>
+        <div className={styles.textPart} style={{backgroundColor: "transparent"}}>
+          <div className={styles.boxDegustazione} style={{marginTop: "-1px"}}>
             <h2 className={styles.proposteTitle} style={{color: "#04062d", fontWeight: "bold", marginBottom: "1rem", paddingTop: "4rem"}}>
               La nostra selezione di vini
             </h2>
             
-            <p style={{color: "#04062d", marginTop: "0", paddingBottom: "1rem"}}>
+            <p className={styles.degustazioneDescription} style={{color: "#04062d", marginTop: "0", paddingBottom: "1rem"}}>
               Dai <span className={styles.highlight}>rossi corposi</span> ai <span className={styles.highlight}>bianchi freschi</span>, 
               ogni bottiglia è <span className={styles.highlight}>selezionata</span> dalla nostra sommelier per esperienze 
               <span className={styles.highlight}> indimenticabili</span>. Un viaggio sensoriale che racconta 
@@ -79,14 +79,15 @@ const WineList = () => {
         </div>
       </section>
       
-      {/* Sezione PDF con citazione */}
-      <section className={styles.pdfSection}>
-        <AnimatedText delay={getDelay(500)}>
-          <h2 className={styles.wineSelectionTitle} style={{fontSize: "1.3rem", marginTop: "0.5rem", marginBottom: "0.2rem"}}>
-            "Il vino prepara i cuori e li rende più pronti alla passione."
-            <span className={styles.quoteAuthorStyle}>- Ovidio</span>
-          </h2>
-        </AnimatedText>
+      {/* Sezione citazione - equivalente alla sezione abbinamento vini nel Menu */}
+      <section className={styles.paragraphSection} style={{marginTop: '-1px'}}>
+        <p>
+          <span style={{fontSize: '1.1em', fontWeight: 'bold'}}>Il vino prepara i cuori</span>
+          <br></br>
+          e li rende più pronti alla passione
+          <br></br>
+          "<span className={styles.highlight}>Ovidio</span>"
+        </p>
       </section>
       
       {/* Sezione parallax */}
@@ -103,20 +104,6 @@ const WineList = () => {
           </AnimatedText>
         </div>
       </section>
-      
-      {/* Sezione finale 
-      <section className={styles.finalSection}>
-        <AnimatedText delay={getDelay(700)}>
-          <p className={styles.finalText}>
-            Il nostro sommelier è a tua <span className={styles.highlight}>disposizione</span> per 
-            guidarti nella scelta del vino perfetto in base ai tuoi <span className={styles.highlight}>gusti</span> 
-            e alle tue <span className={styles.highlight}>preferenze</span>.
-            <br />
-            Chiedi consiglio per scoprire nuove <span className={styles.highlight}>emozioni</span> e
-            <span className={styles.highlight}> sensazioni</span> attraverso il meraviglioso mondo del vino.
-          </p>
-        </AnimatedText>
-      </section>*/}
       
       <Footer />
     </div>
