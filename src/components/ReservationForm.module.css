@@ -508,3 +508,173 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     margin-top: 0.75rem;
   }
 }
+
+/* Link della Restaurant Policy */
+.policyLink {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.policyLink a {
+  color: white;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.policyLink a:hover {
+  text-decoration: underline;
+}
+
+.policyLink a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.policyLink a:hover::after {
+  width: 100%;
+}
+
+/* Stili per il modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*background-color: rgba(0, 0, 0, 0.7);*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 15px;
+}
+
+.policyModal {
+  background-color: white;
+  color: #333;
+  width: 100%;
+  max-width: 800px;
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem 0 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;  
+}
+
+.modalHeader h2 {
+  margin: 0 auto;
+  font-size: clamp(3rem, 8vw, 7rem)!important;
+  color: #001939 !important;
+  font-weight: 600;  
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #001939;
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  color: #003366;
+  transform: scale(1.1);
+}
+
+.modalBody {
+  padding: 2rem;
+}
+
+.policySection {
+  margin-bottom: 2.5rem;
+}
+
+.policySection h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #001939;
+  font-size: 1.4rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.5rem;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.policyContent {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Responsive per mobile */
+@media (max-width: 768px) {
+  .policyModal {
+    max-width: 100%;
+    height: auto;
+    max-height: 90vh;
+    margin: 0;
+    border-radius: 8px;
+  }
+  
+  .modalHeader {
+    padding: 1rem 1.5rem 0 1.5rem;
+  }
+  
+  .modalHeader h2 {
+    font-size: 1.4rem;
+  }
+  
+  .modalBody {
+    padding: 1.5rem;
+  }
+  
+  .policySection h3 {
+    font-size: 1.2rem;
+  }
+  
+  .policyContent {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modalOverlay {
+    padding: 10px;
+  }
+  
+  .policyModal {
+    max-height: 85vh;
+  }
+  
+  .modalHeader {
+    padding: 0.8rem 1.2rem 0 1.2rem;
+  }
+  
+  .modalBody {
+    padding: 1.2rem;
+  }
+}
