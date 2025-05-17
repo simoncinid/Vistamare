@@ -2,6 +2,7 @@
 //  src/pages/Home.jsx   •   Pagina Home completa
 // ─────────────────────────────────────────────────────────────
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import HeroStatic from '../components/HeroStatic';
 import Carousel from '../components/Carousel';
 import ReservationForm from '../components/ReservationForm';
@@ -19,6 +20,10 @@ import ModernLinksSection from '../components/ModernLinksSection';
 export default function Home() {
   return (
     <div className={styles.page}>
+      <Helmet>
+        <title>Vistamare | Ristorante a Rosignano Solvay</title>
+        <meta name="description" content="Ristorante Vistamare - Cucina di pesce fresco a Rosignano Solvay. Materie prime locali e stagionali, in un ambiente accogliente con vista mare." />
+      </Helmet>
       <Header />
       
       <div>

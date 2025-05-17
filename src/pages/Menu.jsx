@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import styles from './Menu.module.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -149,6 +150,10 @@ const Menu = () => {
 
   return (
     <div className={styles.menuPage}>
+      <Helmet>
+        <title>Menu | Vistamare Ristorante</title>
+        <meta name="description" content="Scopri il nostro menu di pesce fresco - Carpacci, primi piatti, secondi e il menu degustazione 'A mano libera' dello chef." />
+      </Helmet>
       <Header />
       
       {/* Nuova sezione per il menù degustazione in stile winePhilosophy */}

@@ -2,6 +2,7 @@
 //  src/pages/Home.jsx   •   Pagina Home completa
 // ─────────────────────────────────────────────────────────────
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import styles from './Home.module.css';
 import AnimatedText from '../components/AnimatedText';
 import Footer from '../components/Footer';
@@ -18,6 +19,10 @@ export default function CookiePolicy() {
 
   return (
     <div className={styles.page}>
+      <Helmet>
+        <title>Cookie Policy | Vistamare Ristorante</title>
+        <meta name="description" content="Informativa sull'utilizzo dei cookie nel sito del ristorante Vistamare: come gestiamo i tuoi dati di navigazione." />
+      </Helmet>
       <Header />
       <div className={styles.contentSection} ref={contentRef} style={{ paddingTop: '120px' }}>
         <div className={styles.intro} style={{ maxWidth: '900px', padding: '2rem' }}>

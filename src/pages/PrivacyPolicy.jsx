@@ -2,6 +2,7 @@
 //  src/pages/PrivacyPolicy.jsx   •   Pagina Privacy Policy completa
 // ─────────────────────────────────────────────────────────────
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import styles from './Home.module.css';
 import AnimatedText from '../components/AnimatedText';
 import Footer from '../components/Footer';
@@ -24,6 +25,10 @@ export default function PrivacyPolicy() {
 
   return (
     <div className={styles.page} style={{ backgroundColor: 'rgba(13, 17, 38, 0.98)' }}>
+      <Helmet>
+        <title>Privacy Policy | Vistamare Ristorante</title>
+        <meta name="description" content="Informativa sulla privacy del ristorante Vistamare: come trattiamo e proteggiamo i tuoi dati personali." />
+      </Helmet>
       <Header />
       <div className={styles.contentSection} style={{ 
         backgroundColor: 'rgba(13, 17, 38, 0.98)', 

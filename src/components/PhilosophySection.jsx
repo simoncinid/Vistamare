@@ -65,7 +65,7 @@ const PhilosophySection = () => {
       </div>
       <div className={styles.textPart}>
         <div className={styles.box}>
-          <h2 style={{ fontStyle: 'italic' }}>la nostra</h2>
+          <h2 style={{ fontStyle: 'roboto sans-serif', textTransform: 'uppercase', paddingBottom: '0rem', lineHeight: '0.3'  }}>la nostra</h2>
           <h1 className={styles.filosofiaTitle}>filosofia</h1>
           <p>Scegliamo ingredienti <span className={styles.highlight}>locali</span> e <span className={styles.highlight}>biologici</span>, seguendo la stagionalità,
             dal pescato fresco alla frutta e verdura di stagione,

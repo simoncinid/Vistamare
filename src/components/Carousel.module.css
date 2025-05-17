@@ -163,7 +163,7 @@
   }
 
   .title {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-size: clamp(3.5rem, 10vw, 5rem);
     letter-spacing: clamp(3px, 1.5vw, 10px);
   }
 

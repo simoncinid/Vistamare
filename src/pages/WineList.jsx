@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import styles from './WineList.module.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -48,6 +49,10 @@ const WineList = () => {
 
   return (
     <div className={styles.pageContainer}>
+      <Helmet>
+        <title>Carta dei Vini | Vistamare Ristorante</title>
+        <meta name="description" content="Scopri la nostra selezione di vini: bianchi, rossi, bollicine e champagne d'eccellenza scelti dalla nostra sommelier per accompagnare ogni piatto." />
+      </Helmet>
       <Header />
       
       {/* Sezione principale - struttura identica a Menu.jsx */}
