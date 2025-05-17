@@ -1,27 +1,44 @@
 // ─────────────────────────────────────────────────────────────
 //  src/pages/PrivacyPolicy.jsx   •   Pagina Privacy Policy completa
 // ─────────────────────────────────────────────────────────────
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import styles from './Home.module.css';
 import AnimatedText from '../components/AnimatedText';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
 export default function PrivacyPolicy() {
-  const contentRef = useRef(null);
-
-  // Scroll to content immediato quando la pagina viene caricata
+  // Scroll to top immediato quando la pagina viene caricata
   useEffect(() => {
-    if (contentRef.current) {
-      contentRef.current.scrollIntoView({ block: 'start' });
-    }
+    document.body.scrollTop = 0; // Per Safari
+    document.documentElement.scrollTop = 0; // Per Chrome, Firefox, IE e Opera
+    
+    // Riapplica lo scroll dopo un brevissimo delay per assicurarsi che funzioni
+    const timer = setTimeout(() => {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }, 10);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className={styles.page}>
+    <div className={styles.page} style={{ backgroundColor: 'rgba(13, 17, 38, 0.98)' }}>
       <Header />
-      <div className={styles.contentSection} ref={contentRef}>
-        <div className={styles.intro} style={{ maxWidth: '900px', padding: '2rem' }}>
+      <div className={styles.contentSection} style={{ 
+        backgroundColor: 'rgba(13, 17, 38, 0.98)', 
+        border: 'none',
+        boxShadow: 'none'
+      }}>
+        <div style={{ 
+          maxWidth: '900px', 
+          margin: '0 auto',
+           
+          padding: '2rem',
+          backgroundColor: 'rgba(13, 17, 38, 0.98)',
+          border: 'none',
+          textAlign: 'center'
+        }}>
           <AnimatedText>
             <h1 style={{
               color: '#3bb0ff', 
@@ -29,6 +46,7 @@ export default function PrivacyPolicy() {
               fontSize: 'clamp(2rem, 5vw, 3rem)',
               marginBottom: '2rem',
               letterSpacing: '2px',
+              paddingTop: '80px',
               textTransform: 'uppercase',
               fontWeight: 'bold'
             }}>
