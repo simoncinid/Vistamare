@@ -95,7 +95,14 @@ function Carousel() {
             className={styles.logo} 
           />*/}
           <h1 style={{textTransform: 'uppercase'}} className={styles.title}>Vistamare</h1>
-          <h3 style={{color: 'var(--white)', textTransform: 'uppercase'}}>RISTORANTE</h3>
+          <h3 style={{
+            color: 'var(--white)', 
+            textTransform: 'uppercase',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+            fontSize: 'clamp(18px, 5vw, 35px)',
+            fontWeight: 'bold',
+            letterSpacing: 'clamp(2px, 1vw, 10px)'
+          }}>RISTORANTE</h3>
         </div>
         
         {/* Pulsanti di navigazione */}

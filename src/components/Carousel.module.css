@@ -165,11 +165,14 @@
   .title {
     font-size: clamp(3.5rem, 10vw, 5rem);
     letter-spacing: clamp(3px, 1.5vw, 10px);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
   }
 
   .overlay h3 {
-    font-size: clamp(15px, 3vw, 25px);
-    letter-spacing: clamp(2px, 0.8vw, 8px);
+    font-size: clamp(20px, 6vw, 35px) !important;
+    letter-spacing: clamp(3px, 1.2vw, 10px) !important;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7) !important;
+    font-weight: bold !important;
   }
 
   .prevButton,
