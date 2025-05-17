@@ -14,35 +14,67 @@ export default function CookiePolicy() {
         <AnimatedText>
           <h1 style={{color: '#3bb0ff'}}>Cookie Policy</h1>
           <p>
-            Informativa e acquisizione del consenso per l'uso dei cookie sul portale web www.vistamare.com ai sensi del Provvedimento n. 229 dell'8 maggio 2014 del Garante per la protezione dei dati personali.
+            La presente Cookie Policy ha lo scopo di informare gli utenti sulle procedure seguite per la raccolta, tramite i cookie e/o altre tecnologie di monitoraggio, delle informazioni fornite quando si utilizza il sito web www.vistamare.com (il "Sito").
+          </p>
 
-Cosa sono i cookie?
-Di seguito la definizione contenuta nel punto 1 della premessa al Provvedimento del Garante di cui sopra:
+          <h2>Titolare del trattamento</h2>
+          <p>
+            Il Titolare del trattamento dei dati è Vistamare [inserire dati completi del titolare], contattabile all'indirizzo email: [inserire email].
+          </p>
 
-Considerazioni preliminari. I cookie sono stringhe di testo di piccole dimensioni che i siti visitati dall'utente inviano al suo terminale (solitamente al browser),
-dove vengono memorizzati per essere poi ritrasmessi agli stessi siti alla successiva visita del medesimo utente.
-Nel corso della navigazione su un sito, l'utente può ricevere sul suo terminale anche cookie che vengono inviati da siti o da web server diversi (c.d. “terze parti”),
-sui quali possono risiedere alcuni elementi (quali, ad esempio, immagini, mappe, suoni, specifici link a pagine di altri domini) presenti sul sito che lo stesso sta visitando.
+          <h2>Cosa sono i cookie?</h2>
+          <p>
+            I cookie sono piccoli file di testo che i siti visitati inviano al dispositivo dell'utente, dove vengono memorizzati per essere ritrasmessi agli stessi siti alla visita successiva.
+          </p>
 
-Cookie tecnici. I cookie tecnici sono quelli utilizzati al solo fine di “effettuare la trasmissione di una comunicazione su una rete di comunicazione elettronica,
-o nella misura strettamente necessaria al fornitore di un servizio della società dell'informazione esplicitamente richiesto dall'abbonato o dall'utente a erogare tale servizio” (cfr. art. 122, comma 1, del Codice).
-Essi non vengono utilizzati per scopi ulteriori e sono normalmente installati direttamente dal titolare o gestore del sito web.
-Possono essere suddivisi in cookie di navigazione o di sessione, che garantiscono la normale navigazione e fruizione del sito web (permettendo, ad esempio, di realizzare un acquisto o autenticarsi per accedere ad aree riservate);
-cookie analytics, assimilati ai cookie tecnici laddove utilizzati direttamente dal gestore del sito per raccogliere informazioni, in forma aggregata, sul numero degli utenti e su come questi visitano il sito stesso;
-cookie di funzionalità, che permettono all'utente la navigazione in funzione di una serie di criteri selezionati (ad esempio, la lingua, i prodotti selezionati per l'acquisto) al fine di migliorare il servizio reso allo stesso.
+          <h2>Tipologie di cookie utilizzati</h2>
+          <h3>1. Cookie tecnici necessari</h3>
+          <p>
+            Questi cookie sono essenziali per il corretto funzionamento del sito. Non possono essere disattivati nei nostri sistemi. Vengono impostati solo in risposta alle azioni dell'utente, come l'impostazione delle preferenze di privacy, l'accesso o la compilazione di moduli.
+          </p>
 
-Per l'installazione di tali cookie non è richiesto il preventivo consenso degli utenti, mentre resta fermo l'obbligo di dare l'informativa ai sensi degli art. 13 e 14 del Regolamento (UE) 2016/679,
-che il gestore del sito potrà fornire con le modalità che ritiene più idonee.
+          <h3>2. Cookie analitici</h3>
+          <p>
+            Utilizziamo cookie analitici per comprendere come i visitatori interagiscono con il nostro sito web. Questi cookie ci aiutano a fornire informazioni sulle metriche del numero di visitatori, la frequenza di rimbalzo, la fonte di traffico, ecc. Tutti i dati raccolti sono aggregati e quindi anonimi.
+          </p>
 
-Non viene fatto uso di cookie per la trasmissione di informazioni di carattere personale.
-L'uso di c.d. cookie di sessione (che non vengono memorizzati in modo persistente sul computer dell'utente e svaniscono con la chiusura del browser) è strettamente limitato alla trasmissione di identificativi
-di sessione (costituiti da numeri casuali generati dal server) necessari per consentire l'esplorazione sicura ed efficiente del sito.
+          <h2>Base giuridica del trattamento</h2>
+          <p>
+            Il trattamento dei dati personali mediante l'utilizzo di cookie tecnici necessari si basa sul legittimo interesse del titolare (Art. 6.1.f GDPR).
+            Per i cookie analitici e di profilazione, la base giuridica è il consenso dell'interessato (Art. 6.1.a GDPR).
+          </p>
 
-Se non ci autorizzi a usare i cookie, determinate funzioni e pagine non possono funzionare come previsto.
+          <h2>Durata dei cookie</h2>
+          <p>
+            - Cookie di sessione: vengono cancellati alla chiusura del browser
+            - Cookie persistenti: hanno una durata massima di 12 mesi
+          </p>
 
-Sul sito www.vistamare.com potrebbero essere presenti cookie di sessione e analytics. Se desideri eliminarli modifica le impostazioni del tuo computer.
+          <h2>I tuoi diritti</h2>
+          <p>
+            In qualità di interessato, hai il diritto di:
+            - Revocare il consenso in qualsiasi momento
+            - Accedere ai tuoi dati personali
+            - Richiedere la rettifica o la cancellazione dei dati
+            - Richiedere la limitazione del trattamento
+            - Opporti al trattamento
+            - Richiedere la portabilità dei dati
+          </p>
 
-Oltre a ciò, diversi browser forniscono diversi metodi per bloccare ed eliminare i cookie utilizzati dai siti web. Puoi modificare le impostazioni del tuo browser per bloccare / eliminare i cookie. Per saperne di più su come gestire ed eliminare i cookie, visitare wikipedia.org, www.allaboutcookies.org.Should you decide to change your preferences later through your browsing session, you can click on the “Privacy & Cookie Policy” tab on your screen. This will display the consent notice again enabling you to change your preferences or withdraw your consent entirely.In addition to this, different browsers provide different methods to block and delete cookies used by websites. You can change the settings of your browser to block/delete the cookies. To find out more out more on how to manage and delete cookies, visit wikipedia.org, www.allaboutcookies.org.
+          <h2>Come gestire i cookie</h2>
+          <p>
+            Puoi modificare le tue preferenze sui cookie in qualsiasi momento attraverso il banner presente sul sito. Inoltre, puoi gestire i cookie attraverso le impostazioni del tuo browser:
+            - Chrome
+            - Firefox
+            - Safari
+            - Edge
+            - Opera
+          </p>
+
+          <h2>Aggiornamenti</h2>
+          <p>
+            La presente Cookie Policy può essere soggetta a modifiche. Ogni aggiornamento sarà pubblicato sul nostro sito web.
+            Ultima modifica: [inserire data]
           </p>
         </AnimatedText>
        
