@@ -98,7 +98,6 @@
   width: 100%;
   background-color: var(--blue-dark);
   background-image: linear-gradient(rgba(0, 44, 95, 0.795), rgba(255, 255, 255, 0.808)), url('/assets/backform.png');
-  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -108,6 +107,14 @@
   padding: 6rem 1rem 5rem;
   z-index: 3;
 }
+
+/* Aggiungiamo una media query per gestire il background fixed solo su dispositivi non-iOS */
+@supports not (-webkit-touch-callout: none) {
+  .reservationStrip {
+    background-attachment: fixed;
+  }
+}
+
 .reservationStrip h2{
   font-family: var(--font-heading);
   font-size: clamp(1.6rem, 5vw, 2.5rem);
