@@ -1,16 +1,5 @@
 {
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/node",
-      "config": {
-        "install": {
-          "nodeVersion": "20.x"
-        }
-      }
-    }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 } 
