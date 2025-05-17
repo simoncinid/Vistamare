@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Menu from './pages/Menu';
 import WineList from './pages/WineList';
 import CookiePolicy from './pages/CookiePolicy';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import ScrollProgress from './components/ScrollProgress';
 import CustomCursor from './components/CustomCursor';
 import SmoothScroll from './components/SmoothScroll';
@@ -30,6 +31,7 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/wine-list" element={<WineList />} />
         <Route path="/cookiepolicy" element={<CookiePolicy />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
       </Routes>
     </div>
   );

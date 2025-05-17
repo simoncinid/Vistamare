@@ -133,7 +133,7 @@ export default function Footer() {
       <div className={styles.bottomBarFull}>
         <p>&copy; {new Date().getFullYear()} Vistamare. Tutti i diritti riservati.</p>
         <div className={styles.legalLinksFull}>
-          <a href="#">Privacy Policy</a>
+          <a href="/privacypolicy">Privacy Policy</a>
           <a href="#" onClick={() => window.openCookieModal()}>Gestisci cookie</a>
           <a href="#">Termini e Condizioni</a>
         </div>
