@@ -120,7 +120,7 @@
 
 /* Stile per parole evidenziate */
 .highlight {
-  color: #6db1ff;
+  color: #337bcc;
   /*font-size: 3rem;*/
   margin: 0;
   line-height: 0.5;
@@ -354,7 +354,7 @@
     /*font-size: 2.5rem;*/
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-    color: #6db1ff;
+    color: #397ac5;
     line-height: 1;    
   }
   

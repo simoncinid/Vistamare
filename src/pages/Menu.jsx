@@ -326,7 +326,7 @@ const Menu = () => {
         <p className={styles.menuDescription}>
           Dona ai tuoi cari un'esperienza <span className={styles.highlight}>indimenticabile</span> con una gift card del Ristorante Vistamare.
           <br />
-          Le nostre gift card hanno un valore di <span className={styles.highlight}>€90</span> e possono essere utilizzate per una cena completa.
+          Le nostre gift card possono essere utilizzate per una <span className={styles.highlight}>cena completa</span>.
           <br />
           Per maggiori informazioni, contattaci al <span className={styles.highlight}>0586 762289</span> o via email a <span className={styles.highlight}>vistamarerosignano@gmail.com</span>
         </p>

@@ -589,7 +589,7 @@ const ReservationForm = () => {
                   <h3>Animali Domestici</h3>
                   <div className={styles.policyContent}>
                     {/* Contenuto da inserire */}
-                    Gli amici a 4 zampe di piccola taglia per un massimo di 10 kg sono i benvenuti nelle sale del ristorante. La preghiamo di segnalare la loro presenza nel campo note all'atto della prenotazione.
+                    Gli amici a 4 zampe sono i benvenuti nelle sale del ristorante. La preghiamo di segnalare la loro presenza nel campo note all'atto della prenotazione.
                   </div>
                 </div>
               </div>

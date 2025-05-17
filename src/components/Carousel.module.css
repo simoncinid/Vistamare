@@ -128,6 +128,7 @@
   z-index: 2;
   letter-spacing: clamp(3px, 1vw, 12.5px);
   white-space: nowrap;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .title {
@@ -162,12 +163,12 @@
   }
 
   .title {
-    font-size: clamp(2rem, 6vw, 4rem);
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
     letter-spacing: clamp(3px, 1.5vw, 10px);
   }
 
   .overlay h3 {
-    font-size: clamp(10px, 2.5vw, 25px);
+    font-size: clamp(15px, 3vw, 25px);
     letter-spacing: clamp(2px, 0.8vw, 8px);
   }
 
