@@ -407,13 +407,13 @@ const Menu = () => {
                           transition={{ duration: 0.3 }}
                         >
                           <div className={styles.detailsContainer}>
-                            <div className={styles.dishImageContainer}>
+                            {/*<div className={styles.dishImageContainer}>
                               <img 
                                 src="/assets/6.png" 
                                 alt={`Immagine di ${dish.name}`} 
                                 className={styles.dishImage}
                               />
-                            </div>
+                            </div>*/}
                             
                             <div className={styles.dishInfo}>
                               <p className={styles.proposteDescription}>{dish.description}</p>
