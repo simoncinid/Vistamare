@@ -8,16 +8,26 @@ import { BsChevronDown, BsChevronUp, BsArrowLeftShort, BsArrowRightShort, BsX } 
 import TripAdvisorReviews from '../components/TripAdvisorReviews';
 import AnimatedText from '../components/AnimatedText';
 
+// Importazione delle immagini degli allergeni
+import latteIcon from '../assets/latte.png';
+import glutineIcon from '../assets/glutine.png';
+import arachidiIcon from '../assets/arachidi.png';
+import uovaIcon from '../assets/uova.png';
+import crostaceiIcon from '../assets/crostacei.png';
+import molluschiIcon from '../assets/molluschi.png';
+import fruttaIcon from '../assets/frutta.png';
+import pesceIcon from '../assets/pesce.png';
+
 // Percorsi delle immagini per gli allergeni
 const allergensIcons = {
-  latte: '/assets/allergens/latte.png',
-  glutine: '/assets/allergens/glutine.png',
-  arachidi: '/assets/allergens/arachidi.png',
-  uova: '/assets/allergens/uova.png',
-  crostacei: '/assets/allergens/crostacei.png',
-  molluschi: '/assets/allergens/molluschi.png',
-  frutta: '/assets/allergens/frutta.png',
-  pesce: '/assets/allergens/pesce.png'
+  latte: latteIcon,
+  glutine: glutineIcon,
+  arachidi: arachidiIcon,
+  uova: uovaIcon,
+  crostacei: crostaceiIcon,
+  molluschi: molluschiIcon,
+  frutta: fruttaIcon,
+  pesce: pesceIcon
 };
 
 // Dati piatti - aggiorno con allergie e immagini galleria
