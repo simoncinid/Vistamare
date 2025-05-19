@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import styles from './ModernLinksSection.module.css';
 import { FaUtensils, FaWineGlassAlt } from 'react-icons/fa';
 import img1 from '../assets/1.png';
-import img3 from '../assets/15.png';
+import img3 from '/assets/cantina1.png';
 
 export default function ModernLinksSection() {
   const location = useLocation();
