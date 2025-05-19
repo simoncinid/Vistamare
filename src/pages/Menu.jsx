@@ -17,9 +17,11 @@ import crostaceiIcon from '../assets/crostacei.png';
 import molluschiIcon from '../assets/molluschi.png';
 import fruttaIcon from '../assets/frutta.png';
 import pesceIcon from '../assets/pesce.png';
+import soiaIcon from '../assets/soia.png';
 
 // Percorsi delle immagini per gli allergeni
 const allergensIcons = {
+  soia: soiaIcon,
   latte: latteIcon,
   glutine: glutineIcon,
   arachidi: arachidiIcon,
