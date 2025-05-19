@@ -513,16 +513,18 @@
   
   .imagePart {
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     order: 1;
     margin: 0;
     padding: 0;
+    overflow: hidden;
   }
   
   .degustazioneImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 30%;
     display: block;
     margin: 0;
   }
@@ -655,8 +657,6 @@
   
   .imagePart {
     height: 45vh;
-    margin: 0;
-    padding: 0;
   }
   
   .textPart {
@@ -724,6 +724,14 @@
     letter-spacing: 2px;
     line-height: 1.7;
   }
+  
+  .imagePart {
+    height: 45vh;
+  }
+  
+  .degustazioneImage {
+    object-position: center 25%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -764,9 +772,7 @@
   }
   
   .imagePart {
-    height: 45vh;
-    margin: 0;
-    padding: 0;
+    height: 38vh;
   }
   
   .textPart {
@@ -846,6 +852,10 @@
     font-size: 0.9rem;
     letter-spacing: 1.5px;
   }
+  
+  .degustazioneImage {
+    object-position: center 20%;
+  }
 }
 
 @media (max-width: 400px) {
@@ -915,7 +925,7 @@
   }
   
   .imagePart {
-    height: 40vh;
+    height: 35vh;
     margin: 0;
     padding: 0;
   }
@@ -969,6 +979,10 @@
   
   .wineSelectionTitle {
     margin-bottom: 0.2rem;
+  }
+  
+  .degustazioneImage {
+    object-position: center 15%;
   }
 }
 
