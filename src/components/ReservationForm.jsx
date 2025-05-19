@@ -32,8 +32,8 @@ const ReservationForm = () => {
   const [errors, setErrors] = useState({});
   const [showPolicyModal, setShowPolicyModal] = useState(false);
 
-  const lunchTimes = ['12:00', '12:30', '13:00', '13:30', '14:00'];
-  const dinnerTimes = ['19:00', '19:30', '20:00', '20:30', '21:00', '21:30', '22:00'];
+  const lunchTimes = ['12:00', '12:30', '13:00', '13:30', '14:00', '14:30'];
+  const dinnerTimes = ['19:00', '19:30', '20:00', '20:30', '21:00', '21:30'];
 
   // Ottieni la data di oggi
   const today = new Date();

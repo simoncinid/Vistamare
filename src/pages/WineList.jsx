@@ -116,7 +116,7 @@ const WineList = () => {
             <p className={styles.paragraphText}>
               La nostra cantina è il cuore pulsante di Vistamare, uno spazio dove 
               <span className={styles.highlight}> passione</span> e <span className={styles.highlight}>ricerca</span> si fondono.
-              Con oltre <span className={styles.highlight}>100 etichette</span>, rappresentiamo 
+              Con oltre <span className={styles.highlight}>150 etichette</span>, rappresentiamo 
               l'eccellenza vitivinicola italiana e internazionale.
             </p>
           </AnimatedText>

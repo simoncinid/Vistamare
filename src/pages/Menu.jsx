@@ -21,86 +21,193 @@ const allergensIcons = {
 };
 
 // Dati piatti - aggiorno con allergie e immagini galleria
-const dishesData = [
+const menuData = {
+  antipasti: {
+    title: "GLI ANTIPASTI",
+    dishes: [
+      {
+        id: 1,
+        name: "Capesante scottate al burro della Normandia",
+        description: "Capesante scottate al burro della Normandia, funghi Shiitake e profumo di mozzarella di bufala",
+        price: "€20",
+        allergens: ["latte", "molluschi"]  // 7, 14
+      },
+      {
+        id: 2,
+        name: "Riso venere, uovo pochè, scampi e crudo di verdure",
+        description: "Riso venere servito con uovo pochè, accompagnato da scampi freschi e crudo di verdure di stagione",
+        price: "€20",
+        allergens: ["uova", "crostacei"]  // 2, 3
+      },
+      {
+        id: 3,
+        name: "Quinto quarto di pescato del giorno",
+        description: "Quinto quarto di pescato del giorno con cipollina e salsa di pane",
+        price: "€18",
+        allergens: ["pesce", "glutine"]  // 1, 4
+      },
+      {
+        id: 4,
+        name: "Crudo di mazzancolla",
+        description: "Crudo di mazzancolla, salsa di pomodorino del Piennolo, mentuccia, limone e caviale, ai profumi di faggio",
+        price: "€25",
+        allergens: ["crostacei", "pesce"]  // 2, 4
+      },
+      {
+        id: 5,
+        name: "Il mare in bocca: carpaccio di tracina",
+        description: "Carpaccio di tracina fresco",
+        price: "€25",
+        allergens: ["pesce", "frutta"]  // 4, 9
+      }
+    ]
+  },
+  primi: {
+    title: "I PRIMI",
+    dishes: [
+      {
+        id: 6,
+        name: "Ricordo di gioventù: sciatielli ai frutti di mare",
+        description: "Sciatielli ai frutti di mare",
+        price: "€26",
+        allergens: ["glutine", "uova", "pesce", "molluschi"]  // 1, 2, 4, 14
+      },
+      {
+        id: 7,
+        name: "Linguine con calamaretto spillo, agretti e caviale",
+        description: "Linguine con calamaretto spillo, agretti e caviale",
+        price: "€28",
+        allergens: ["glutine", "molluschi"]  // 1, 14
+      },
+      {
+        id: 8,
+        name: "Calle ripiene di mazzancolla e provola",
+        description: "Calle ripiene di mazzancolla e provola",
+        price: "€24",
+        allergens: ["glutine", "uova", "latte", "frutta secca"]  // 1, 2, 7, 12
+      },
+      {
+        id: 9,
+        name: "Fettucce di pasta fresca con baccalà",
+        description: "Fettucce di pasta fresca con baccalà, olive nostraline e pomodorino giallo del Piennolo",
+        price: "€22",
+        allergens: ["glutine", "pesce", "frutta secca"]  // 1, 4, 12
+      },
+      {
+        id: 10,
+        name: "Malfatti con pescato del giorno",
+        description: "Malfatti con pescato del giorno e polvere di cacao",
+        price: "€25",
+        allergens: ["glutine", "pesce", "frutta secca"]  // 1, 4, 12
+      }
+    ]
+  },
+  secondi: {
+    title: "I SECONDI",
+    dishes: [
+      {
+        id: 11,
+        name: "Filetto di spigola",
+        description: "Filetto di spigola, salsa di datterino giallo e scarola riccia",
+        price: "€25",
+        allergens: ["pesce"]  // 4
+      },
+      {
+        id: 12,
+        name: "Polpo verace cucinato secondo la tradizione partenopea",
+        description: "Polpo verace cucinato secondo la tradizione partenopea",
+        price: "€24",
+        allergens: ["frutta secca", "molluschi"]  // 12, 14
+      },
+      {
+        id: 13,
+        name: "Palamita cotta ai ferri",
+        description: "Palamita cotta ai ferri con acqua di peperoni e barbabietola alla scapece",
+        price: "€22",
+        allergens: ["pesce"]  // 4
+      },
+      {
+        id: 14,
+        name: "Tataki di pescato",
+        description: "Tataki di pescato con farina di nocciole, maionese di soia e polvere di bietola",
+        price: "€25",
+        allergens: ["pesce", "arachidi", "soia"]  // 4, 6, 8
+      },
+      {
+        id: 15,
+        name: "La nostra frittura di calamari locali",
+        description: "La nostra frittura di calamari locali e turbante di verdure di stagione",
+        price: "€27",
+        allergens: ["glutine", "molluschi"]  // 1, 14
+      },
+      {
+        id: 16,
+        name: "Pescato locale del giorno",
+        description: "Pescato locale del giorno",
+        price: "€9/hg",
+        allergens: ["pesce"]  // 4
+      },
+      {
+        id: 17,
+        name: "Aragosta e lupicante",
+        description: "Aragosta e lupicante",
+        price: "€13/hg",
+        allergens: ["crostacei"]  // 3
+      }
+    ]
+  },
+  contorni: {
+    title: "I NOSTRI CONTORNI",
+    dishes: [
+      {
+        id: 18,
+        name: "Contorni del giorno",
+        description: "I nostri contorni variano ogni giorno a seconda della reperibilità e della stagionalità. Chiedere al personale di sala.",
+        price: "",
+        allergens: []
+      }
+    ]
+  },
+  dessert: {
+    title: "DESSERT DI NOSTRA PRODUZIONE",
+    dishes: [
+      {
+        id: 19,
+        name: "Pastiera napoletana",
+        description: "Pastiera napoletana",
+        price: "€7",
+        allergens: ["glutine", "uova", "latte", "frutta secca"]  // 1, 3, 7, 8
+      },
+      {
+        id: 20,
+        name: "Babà",
+        description: "Babà",
+        price: "€7",
+        allergens: ["glutine", "uova", "frutta secca"]  // 1, 3, 12
+      },
+      {
+        id: 21,
+        name: "Eden",
+        description: "Brumoise di frutta fresca di stagione, acqua di lattuga al miele, perle di tapioca aromatizzate al lime e quenelle di yogurt",
+        price: "€9",
+        allergens: ["latte"]  // 7
+      }
+    ]
+  }
+};
+
+const serviceItems = [
   {
-    id: 1,
-    name: "Carpaccio di Tonno",
-    description: "Carpaccio di tonno fresco con scorza di limone, olio d'oliva e sale marino",
-    price: "€18",
-    allergens: ["pesce", "frutta"],
-    images: ["/assets/1.png", "/assets/2.png", "/assets/3.png", "/assets/4.png"]
+    name: "Acqua naturale Maniva",
+    price: "€3,00"
   },
   {
-    id: 2,
-    name: "Linguine allo Scoglio",
-    description: "Linguine con frutti di mare misti del giorno, aglio, peperoncino e prezzemolo",
-    price: "€22",
-    allergens: ["glutine", "crostacei", "molluschi"],
-    images: ["/assets/6.png", "/assets/7.png", "/assets/8.png", "/assets/9.png"]
+    name: "Acqua gassata Maniva",
+    price: "€2,50"
   },
   {
-    id: 3,
-    name: "Orata alla Griglia",
-    description: "Orata fresca alla griglia servita con patate e verdure di stagione",
-    price: "€24",
-    allergens: ["pesce"],
-    images: ["/assets/2.png", "/assets/3.png", "/assets/4.png", "/assets/5.png"]
-  },
-  {
-    id: 4,
-    name: "Fritto Misto",
-    description: "Selezione di pesce fritto misto con calamari, gamberi e pescato del giorno",
-    price: "€22",
-    allergens: ["glutine", "pesce", "crostacei", "molluschi"],
-    images: ["/assets/7.png", "/assets/8.png", "/assets/9.png", "/assets/10.png"]
-  },
-  {
-    id: 5,
-    name: "Risotto alla Pescatora",
-    description: "Risotto con frutti di mare, pomodorini e un tocco di zafferano",
-    price: "€20",
-    allergens: ["latte", "crostacei", "molluschi"],
-    images: ["/assets/3.png", "/assets/4.png", "/assets/5.png", "/assets/6.png"]
-  },
-  {
-    id: 6,
-    name: "Polpo alla Griglia",
-    description: "Polpo grigliato servito su crema di patate con olive e capperi",
-    price: "€26",
-    allergens: ["molluschi", "latte"],
-    images: ["/assets/8.png", "/assets/9.png", "/assets/10.png", "/assets/1.png"]
-  },
-  {
-    id: 7,
-    name: "Tartare di Ricciola",
-    description: "Tartare di ricciola fresca con avocado, lime e sale maldon",
-    price: "€20",
-    allergens: ["pesce", "frutta"],
-    images: ["/assets/4.png", "/assets/5.png", "/assets/6.png", "/assets/7.png"]
-  },
-  {
-    id: 8,
-    name: "Spaghetti alle Vongole",
-    description: "Spaghetti con vongole veraci fresche, aglio, olio e prezzemolo",
-    price: "€20",
-    allergens: ["glutine", "molluschi"],
-    images: ["/assets/9.png", "/assets/10.png", "/assets/1.png", "/assets/2.png"]
-  },
-  {
-    id: 9,
-    name: "Grigliata Mista",
-    description: "Selezione del pescato del giorno alla griglia con verdure di stagione",
-    price: "€28",
-    allergens: ["pesce", "crostacei", "molluschi"],
-    images: ["/assets/5.png", "/assets/6.png", "/assets/7.png", "/assets/8.png"]
-  },
-  {
-    id: 10,
-    name: "Millefoglie ai Frutti di Mare",
-    description: "Millefoglie di pasta fresca con frutti di mare e salsa al basilico",
-    price: "€24",
-    allergens: ["glutine", "uova", "crostacei", "molluschi", "latte"],
-    images: ["/assets/10.png", "/assets/1.png", "/assets/2.png", "/assets/3.png"]
+    name: "Coperto",
+    price: "€4,00"
   }
 ];
 
@@ -263,62 +370,75 @@ const Menu = () => {
       <section className={styles.proposteSection}>
         <h2 className={styles.proposteTitle}>Menu "À la carte"</h2>
         <div className={styles.proposteList}>
-          {dishesData.map((dish) => (
-            <div key={dish.id} className={styles.proposteItem}>
-              <div 
-                className={styles.proposteHeader} 
-                onClick={() => toggleDish(dish.id)}
-              >
-                <h3 className={styles.proposteName}>{dish.name}</h3>
-                <span className={styles.propostePrice}>{dish.price}</span>
-                <button className={styles.expandButton}>
-                  {expandedDish === dish.id ? <BsChevronUp /> : <BsChevronDown />}
-                </button>
-              </div>
-
-              {/* Dettagli espandibili */}
-              <AnimatePresence>
-                {expandedDish === dish.id && (
-                  <motion.div
-                    className={styles.proposteDetails}
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className={styles.detailsContainer}>
-                      {/* Immagine piatto a sinistra */}
-                      <div className={styles.dishImageContainer}>
-                        <img 
-                          src="/assets/6.png" 
-                          alt={`Immagine di ${dish.name}`} 
-                          className={styles.dishImage}
-                        />
-                      </div>
-                      
-                      {/* Descrizione e allergeni a destra */}
-                      <div className={styles.dishInfo}>
-                        <p className={styles.proposteDescription}>{dish.description}</p>
-                        
-                        {/* Allergeni */}
-                        {dish.allergens && dish.allergens.length > 0 && (
-                          <div className={styles.allergensContainer}>
-                            {dish.allergens.map((allergen, index) => (
-                              <div key={index} className={styles.allergenIcon}>
-                                <img 
-                                  src={allergensIcons[allergen]} 
-                                  alt={`Allergene: ${allergen}`} 
-                                />
-                                <span className={styles.allergenTooltip}>{allergen}</span>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                      </div>
+          {Object.entries(menuData).map(([category, { title, dishes }]) => (
+            <div key={category} className={styles.categorySection}>
+              <h3 className={styles.categoryTitle}>{title}</h3>
+              <div className={styles.categoryDishes}>
+                {dishes.map((dish) => (
+                  <div key={dish.id} className={styles.proposteItem}>
+                    <div 
+                      className={styles.proposteHeader} 
+                      onClick={() => toggleDish(dish.id)}
+                    >
+                      <h3 className={styles.proposteName}>{dish.name}</h3>
+                      <span className={styles.propostePrice}>{dish.price}</span>
+                      <button className={styles.expandButton}>
+                        {expandedDish === dish.id ? <BsChevronUp /> : <BsChevronDown />}
+                      </button>
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+
+                    <AnimatePresence>
+                      {expandedDish === dish.id && (
+                        <motion.div
+                          className={styles.proposteDetails}
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <div className={styles.detailsContainer}>
+                            <div className={styles.dishImageContainer}>
+                              <img 
+                                src="/assets/6.png" 
+                                alt={`Immagine di ${dish.name}`} 
+                                className={styles.dishImage}
+                              />
+                            </div>
+                            
+                            <div className={styles.dishInfo}>
+                              <p className={styles.proposteDescription}>{dish.description}</p>
+                              
+                              {dish.allergens && dish.allergens.length > 0 && (
+                                <div className={styles.allergensContainer}>
+                                  {dish.allergens.map((allergen, index) => (
+                                    <div key={index} className={styles.allergenIcon}>
+                                      <img 
+                                        src={allergensIcons[allergen]} 
+                                        alt={`Allergene: ${allergen}`} 
+                                      />
+                                      <span className={styles.allergenTooltip}>{allergen}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Service Items Section */}
+        <div className={styles.serviceSection}>
+          {serviceItems.map((item, index) => (
+            <div key={index} className={styles.serviceItem}>
+              <span className={styles.serviceName}>{item.name}</span>
+              <span className={styles.servicePrice}>{item.price}</span>
             </div>
           ))}
         </div>
@@ -329,7 +449,7 @@ const Menu = () => {
        <section className={styles.giftCardSection}>
         <h2 className={styles.giftCardTitle}>Regala un'Esperienza</h2>
         <p className={styles.menuDescription}>
-          Dona ai tuoi cari un'esperienza <span className={styles.highlight}>indimenticabile</span> con una gift card del Ristorante Vistamare.
+          Dona un'esperienza <span className={styles.highlight}>indimenticabile</span> con una gift card del Ristorante Vistamare.
           <br />
           Le nostre gift card possono essere utilizzate per una <span className={styles.highlight}>cena completa</span>.
           <br />

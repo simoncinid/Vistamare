@@ -123,7 +123,7 @@ export default function Home() {
                   fontWeight: '600',
                   marginTop: '-5px'
                 }} className={styles.descriptionGamberoRosso}>
-                  Nella Guida Gambero Rosso dal 2023
+                  Nella Guida Gambero Rosso dal 2024
                 </p>
               </div>
             </AnimatedText>
