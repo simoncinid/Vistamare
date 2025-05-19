@@ -10,14 +10,14 @@ import AnimatedText from '../components/AnimatedText';
 
 // Percorsi delle immagini per gli allergeni
 const allergensIcons = {
-  latte: '/src/assets/latte.png',
-  glutine: '/src/assets/glutine.png',
-  arachidi: '/src/assets/arachidi.png',
-  uova: '/src/assets/uova.png',
-  crostacei: '/src/assets/crostacei.png',
-  molluschi: '/src/assets/molluschi.png',
-  frutta: '/src/assets/frutta.png',
-  pesce: '/src/assets/pesce.png'
+  latte: '/assets/allergens/latte.png',
+  glutine: '/assets/allergens/glutine.png',
+  arachidi: '/assets/allergens/arachidi.png',
+  uova: '/assets/allergens/uova.png',
+  crostacei: '/assets/allergens/crostacei.png',
+  molluschi: '/assets/allergens/molluschi.png',
+  frutta: '/assets/allergens/frutta.png',
+  pesce: '/assets/allergens/pesce.png'
 };
 
 // Dati piatti - aggiorno con allergie e immagini galleria
