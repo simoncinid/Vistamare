@@ -94,21 +94,21 @@ const menuData = {
         name: "Calle ripiene di mazzancolla e provola",
         description: "Calle ripiene di mazzancolla e provola",
         price: "€24",
-        allergens: ["glutine", "uova", "latte", "frutta secca"]  // 1, 2, 7, 12
+        allergens: ["glutine", "uova", "latte", "arachidi"]  // 1, 2, 7, 12
       },
       {
         id: 9,
         name: "Fettucce di pasta fresca con baccalà",
         description: "Fettucce di pasta fresca con baccalà, olive nostraline e pomodorino giallo del Piennolo",
         price: "€22",
-        allergens: ["glutine", "pesce", "frutta secca"]  // 1, 4, 12
+        allergens: ["glutine", "pesce", "arachidi"]  // 1, 4, 12
       },
       {
         id: 10,
         name: "Malfatti con pescato del giorno",
         description: "Malfatti con pescato del giorno e polvere di cacao",
         price: "€25",
-        allergens: ["glutine", "pesce", "frutta secca"]  // 1, 4, 12
+        allergens: ["glutine", "pesce", "arachidi"]  // 1, 4, 12
       }
     ]
   },
@@ -127,7 +127,7 @@ const menuData = {
         name: "Polpo verace cucinato secondo la tradizione partenopea",
         description: "Polpo verace cucinato secondo la tradizione partenopea",
         price: "€24",
-        allergens: ["frutta secca", "molluschi"]  // 12, 14
+        allergens: ["arachidi", "molluschi"]  // 12, 14
       },
       {
         id: 13,
@@ -186,14 +186,14 @@ const menuData = {
         name: "Pastiera napoletana",
         description: "Pastiera napoletana",
         price: "€7",
-        allergens: ["glutine", "uova", "latte", "frutta secca"]  // 1, 3, 7, 8
+        allergens: ["glutine", "uova", "latte", "arachidi"]  // 1, 3, 7, 8
       },
       {
         id: 20,
         name: "Babà",
         description: "Babà",
         price: "€7",
-        allergens: ["glutine", "uova", "frutta secca"]  // 1, 3, 12
+        allergens: ["glutine", "uova", "arachidi"]  // 1, 3, 12
       },
       {
         id: 21,
