@@ -49,19 +49,6 @@ export default function Home() {
           </AnimatedText>
         </section>
 
-        {/* Nuova sezione Gambero Rosso */}
-        <div className={styles.gamberoRossoSection}>
-          <AnimatedText delay={300}>
-            <div className={styles.gamberoRossoContent}>
-              <div className={styles.gamberoRossoText}>
-                Siamo orgogliosi di essere stati selezionati nella Guida
-                <span className={styles.gamberoRossoHighlight}>"Gambero Rosso"</span>
-                2024
-              </div>
-            </div>
-          </AnimatedText>
-        </div>
-
         <div className={styles.divPhilosophy} style={{ position: 'relative', zIndex: 1}}>
           <PhilosophySection />
         </div>        
