@@ -188,6 +188,7 @@
   padding: clamp(1rem, 3vw, 1.5rem) clamp(0.5rem, 2vw, 1rem);
   cursor: pointer;
   transition: background-color 0.3s;
+  gap: 1rem;
 }
 
 .proposteHeader:hover {
@@ -196,22 +197,26 @@
 
 .proposteName {
   font-family: 'Roboto', sans-serif;
-  font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+  font-size: clamp(0.9rem, 2vw, 1.8rem);
   margin: 0;
   flex: 1;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  padding-right: min(2rem, max(1.5rem, 3vw));
+  margin-right: 1rem;
 }
 
 .propostePrice {
   font-family: 'Roboto', sans-serif;
-  font-size: clamp(1rem, 2.5vw, 1.6rem);
-  margin: 0 clamp(1rem, 2vw, 2rem);
+  font-size: clamp(0.9rem, 2vw, 1.6rem);
+  margin: 0;
   color: white;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  white-space: nowrap;
+  min-width: max-content;
 }
 
 .expandButton {
@@ -378,14 +383,11 @@
   }
   
   .proposteName {
-    font-size: 1.4rem;
-    letter-spacing: 0.07em;
-    font-weight: 400;
+    padding-right: clamp(0.8rem, 2vw, 1.5rem);
   }
   
   .propostePrice {
-    font-size: 1.4rem;
-    letter-spacing: 0.07em;
+    margin: 0 clamp(0.4rem, 1.5vw, 1rem);
   }
   
   .proposteHeader {
@@ -512,15 +514,11 @@
   }
   
   .proposteName {
-    font-size: 1.2rem;
-    letter-spacing: 0.06em;
-    font-weight: 400;
+    padding-right: clamp(0.6rem, 1.5vw, 1rem);
   }
   
   .propostePrice {
-    font-size: 1.2rem;
-    letter-spacing: 0.06em;
-    margin: 0 1rem;
+    margin: 0 clamp(0.3rem, 1vw, 0.8rem);
   }
   
   /*.highlight {
@@ -563,19 +561,12 @@
   }
   
   .proposteName {
-    font-size: 1.1rem;
-    letter-spacing: 0.05em;
-    font-weight: 400;
+    padding-right: clamp(0.6rem, 1.5vw, 1rem);
   }
   
   .propostePrice {
-    font-size: 1.1rem;
-    letter-spacing: 0.05em;
+    padding-left: clamp(0.3rem, 1vw, 0.8rem);
   }
-  
-  /*.highlight {
-    font-size: 2rem;
-  }*/
 }
 
 .prevButton,
