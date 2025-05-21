@@ -266,7 +266,7 @@
   color: white;
   font-size: 1.3rem;
   line-height: 1.8;
-  padding: 7rem 0 2rem 0;
+  padding: 7rem 0 5rem 0;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: 500;
@@ -433,7 +433,7 @@
   }
   .sectionSpacerLarge p {
     color: #fff;
-    padding: 2rem 0;
+    padding: 2rem 0 3rem 0;
   }
   /* Gallery: tolgo fasce blu sopra e sotto */
   .fadeBottom {
@@ -579,5 +579,87 @@
   
   .fadeBottomMenu, .fadeBottomEsperienze {
     font-size: 1.5rem;
+  }
+}
+
+/* Nuova sezione Gambero Rosso */
+.gamberoRossoSection {
+  width: 100%;
+  background: linear-gradient(120deg, #337bcc 0%, #6db1ff 100%);
+  padding: 1.5rem 1rem;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  z-index: 2;
+}
+
+.gamberoRossoSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/assets/pattern2.png');
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.gamberoRossoContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.gamberoRossoText {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+  line-height: 1.6;
+  padding: 0.5rem 0;
+}
+
+.gamberoRossoHighlight {
+  font-weight: 700;
+  display: inline-block;
+  margin: 0 0.5rem;
+  position: relative;
+  padding: 0 0.5rem;
+}
+
+.gamberoRossoHighlight::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .gamberoRossoSection {
+    padding: 1.2rem 1rem;
+  }
+
+  .gamberoRossoText {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gamberoRossoSection {
+    padding: 1rem 0.8rem;
+  }
+
+  .gamberoRossoText {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
   }
 }

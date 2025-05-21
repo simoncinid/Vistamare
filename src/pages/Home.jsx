@@ -49,6 +49,19 @@ export default function Home() {
           </AnimatedText>
         </section>
 
+        {/* Nuova sezione Gambero Rosso */}
+        <div className={styles.gamberoRossoSection}>
+          <AnimatedText delay={300}>
+            <div className={styles.gamberoRossoContent}>
+              <div className={styles.gamberoRossoText}>
+                Siamo orgogliosi di essere stati selezionati nella Guida
+                <span className={styles.gamberoRossoHighlight}>"Gambero Rosso"</span>
+                2024
+              </div>
+            </div>
+          </AnimatedText>
+        </div>
+
         <div className={styles.divPhilosophy} style={{ position: 'relative', zIndex: 1}}>
           <PhilosophySection />
         </div>        
@@ -84,49 +97,18 @@ export default function Home() {
                 Vistamare è più di un ristorante: è un invito a vivere in modo più attento, più <span className={styles.highlight}>semplice</span>, più sostenibile.</p>
             </AnimatedText>
 
-            <AnimatedText delay={700}>
-              <div style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '20px',
-                width: '100%'
-              }}>
-                <div style={{
-                  width: '200px',
-                  height: '200px',
-                  backgroundColor: 'white',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '15px'
-                }}>
-                  <img 
-                    src="/assets/GamberoRosso.png" 
-                    alt="Gambero Rosso Logo" 
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'contain'
-                    }}
-                  />
+            {/* Sezione Gambero Rosso */}
+            <div className={styles.gamberoRossoSection}>
+              <AnimatedText delay={700}>
+                <div className={styles.gamberoRossoContent}>
+                  <div className={styles.gamberoRossoText}>
+                    Siamo orgogliosi di essere stati selezionati nella Guida
+                    <span className={styles.gamberoRossoHighlight}>"Gambero Rosso"</span>
+                    2024
+                  </div>
                 </div>
-                <p style={{
-                  color: 'white',
-                  fontSize: 'clamp(1.3rem, 2vw, 1.5rem)',
-                  fontFamily: 'var(--font-body)',
-                  letterSpacing: '3px',
-                  textAlign: 'center',
-                  textTransform: 'uppercase',
-                  fontWeight: '600',
-                  marginTop: '-5px'
-                }} className={styles.descriptionGamberoRosso}>
-                  Nella Guida Gambero Rosso dal 2024
-                </p>
-              </div>
-            </AnimatedText>
+              </AnimatedText>
+            </div>
             
         </div>
        
