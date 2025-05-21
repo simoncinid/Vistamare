@@ -230,17 +230,19 @@ const Menu = () => {
 
   // Immagini per lo slider
   const sliderImages = [
-    '/assets/1.png',
-    '/assets/2.png',
-    '/assets/3.png',
-    '/assets/4.png',
-    '/assets/5.png'
+    '/assets/img_scelte/17.png',
+    '/assets/img_scelte/20.png',
+    '/assets/img_scelte/21.png',
+    '/assets/img_scelte/22.png',
+    '/assets/img_scelte/23.png',
+    '/assets/img_scelte/25.png',
+    '/assets/img_scelte/30.png'
   ];
 
   // Immagini statiche
   const staticImages = [
-    '/assets/16.png',
-    '/assets/17.png'
+    '/assets/img_scelte/19.png',
+    '/assets/img_scelte/32.png'
   ];
 
   // Gestione responsive
@@ -420,7 +422,7 @@ const Menu = () => {
                             <div className={styles.dishInfo}>
                               <p className={styles.proposteDescription}>{dish.description}</p>
                               
-                              {dish.allergens && dish.allergens.length > 0 && (
+                              {/*{dish.allergens && dish.allergens.length > 0 && (
                                 <div className={styles.allergensContainer}>
                                   {dish.allergens.map((allergen, index) => (
                                     <div key={index} className={styles.allergenIcon}>
@@ -432,7 +434,7 @@ const Menu = () => {
                                     </div>
                                   ))}
                                 </div>
-                              )}
+                              )}*/}
                             </div>
                           </div>
                         </motion.div>

@@ -16,17 +16,17 @@ function GallerySlider() {
 
   // Immagini per lo slider principale (lato sinistro)
   const sliderImages = [
-    '/assets/1.png',
-    '/assets/2.png',
+    '/assets/img_scelte/29.png',
+    '/assets/img_scelte/31.png',
     '/assets/3.png',
-    '/assets/4.png',
-    '/assets/5.png'
+    '/assets/menu/piatto22.png',
+    '/assets/img_scelte/26.png'
   ];
 
   // Solo due immagini statiche per la parte destra
   const staticImages = [
-    '/assets/16.png',
-    '/assets/17.png'
+    '/assets/img_scelte/28.png',
+    '/assets/menu/piatto17.png'
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
