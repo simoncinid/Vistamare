@@ -163,15 +163,18 @@
   .modernSection {
     flex-direction: row;
     gap: 1rem;
-    padding: 1rem 1.5rem 3rem 1.5rem;
-    margin-top: 1rem;
+    padding: 0;
+    margin: 0;
+    min-height: auto;
   }
   
   .card {
     min-width: 42%;
     max-width: 48%;
     width: 48%;
-    height: 220px;
+    height: 350px;
+    border-radius: 0;
+    box-shadow: none;
   }
   
   .title {
@@ -183,6 +186,7 @@
     font-size: 0.9rem;
     letter-spacing: 2px;
     max-width: 95%;
+    display: block;
   }
 
   .iconWrapper {
@@ -197,20 +201,21 @@
 
 @media (max-width: 576px) {
   .modernSection {
-    padding: 2rem 1rem;
-    gap: 1rem;
+    padding: 0;
+    gap: 0.5rem;
     flex-direction: row;
   }
 
   .card {
-    height: 180px;
+    height: 320px;
     width: 48%;
     min-width: 42%;
     max-width: 48%;
+    border-radius: 0;
   }
 
   .title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     letter-spacing: 2px;
   }
 
@@ -219,6 +224,7 @@
     letter-spacing: 1px;
     max-width: 95%;
     margin-top: 0.3rem;
+    display: block;
   }
 
   .iconWrapper {
@@ -233,7 +239,7 @@
 
 @media (max-width: 480px) {
   .card {
-    height: 160px;
+    height: 300px;
   }
   
   .title {
@@ -244,6 +250,7 @@
   .desc {
     font-size: 0.7rem;
     letter-spacing: 0.8px;
+    display: block;
   }
   
   .iconWrapper {
