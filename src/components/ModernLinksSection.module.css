@@ -161,55 +161,97 @@
 
 @media (max-width: 768px) {
   .modernSection {
-    flex-direction: column;
-    gap: 3rem;
+    flex-direction: row;
+    gap: 1rem;
     padding: 1rem 1.5rem 3rem 1.5rem;
     margin-top: 1rem;
   }
   
   .card {
-    min-width: 280px;
-    max-width: 95%;
-    width: 95%;
-    height: 320px;
+    min-width: 42%;
+    max-width: 48%;
+    width: 48%;
+    height: 220px;
   }
   
   .title {
-    font-size: 2.3rem;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
   }
   
   .desc {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    max-width: 95%;
+  }
+
+  .iconWrapper {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .icon {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 576px) {
   .modernSection {
-    padding: 2.5rem 1rem;
-    gap: 2.5rem;
+    padding: 2rem 1rem;
+    gap: 1rem;
+    flex-direction: row;
   }
 
   .card {
-    height: 280px;
-    width: 100%;
+    height: 180px;
+    width: 48%;
+    min-width: 42%;
+    max-width: 48%;
   }
 
   .title {
-    font-size: 2rem;
-    letter-spacing: 3px;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
   }
 
   .desc {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
     max-width: 95%;
+    margin-top: 0.3rem;
   }
 
   .iconWrapper {
-    padding: 1.2rem;
-    margin-bottom: 1rem;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
   }
 
   .icon {
-    font-size: 2.3rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    height: 160px;
+  }
+  
+  .title {
+    font-size: 1.4rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .desc {
+    font-size: 0.7rem;
+    letter-spacing: 0.8px;
+  }
+  
+  .iconWrapper {
+    padding: 0.7rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .icon {
+    font-size: 1.5rem;
   }
 } 
