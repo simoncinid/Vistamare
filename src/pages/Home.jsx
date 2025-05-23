@@ -86,7 +86,7 @@ export default function Home() {
 
             {/* Sezione Gambero Rosso */}
             <div className={styles.gamberoRossoSection}>
-              <AnimatedText delay={700}>
+              <AnimatedText delay={500}>
                 <div className={styles.gamberoRossoContent}>
                   <div className={styles.gamberoRossoText}>
                     Siamo orgogliosi di essere stati selezionati nella Guida
