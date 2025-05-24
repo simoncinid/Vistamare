@@ -135,7 +135,6 @@ export default function Footer() {
         <div className={styles.legalLinksFull}>
           <a href="/privacypolicy">Privacy Policy</a>
           <a href="#" onClick={() => window.openCookieModal()}>Gestisci cookie</a>
-          <a href="#">Termini e Condizioni</a>
         </div>
       </div>
     </footer>

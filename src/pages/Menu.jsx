@@ -384,12 +384,34 @@ const Menu = () => {
       <section className={styles.proposteSection}>
         <h2 className={styles.proposteTitle}>Menu "À la carte"</h2>
         <div className={styles.proposteList}>
-          {Object.entries(menuData).map(([category, { title, dishes }]) => (
-            <div key={category} className={styles.categorySection}>
+          {Object.entries(menuData).map(([category, { title, dishes }], categoryIndex) => (
+            <motion.div 
+              key={category} 
+              className={styles.categorySection}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 0.8,
+                delay: categoryIndex * 0.2,
+                ease: [0.22, 1, 0.36, 1]
+              }}
+            >
               <h3 className={styles.categoryTitle}>{title}</h3>
               <div className={styles.categoryDishes}>
-                {dishes.map((dish) => (
-                  <div key={dish.id} className={styles.proposteItem}>
+                {dishes.map((dish, index) => (
+                  <motion.div 
+                    key={dish.id} 
+                    className={styles.proposteItem}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ 
+                      duration: 0.6,
+                      delay: (categoryIndex * 0.1) + (index * 0.1),
+                      ease: [0.22, 1, 0.36, 1]
+                    }}
+                  >
                     <div 
                       className={styles.proposteHeader} 
                       onClick={() => toggleDish(dish.id)}
@@ -440,10 +462,10 @@ const Menu = () => {
                         </motion.div>
                       )}
                     </AnimatePresence>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 

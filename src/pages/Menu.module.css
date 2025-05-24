@@ -174,11 +174,15 @@
 .proposteList {
   max-width: 1000px;
   margin: 0 auto;
+  will-change: transform, opacity;
+  perspective: 1000px;
 }
 
 .proposteItem {
   margin-bottom: 1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 
 .proposteHeader {
@@ -1133,7 +1137,8 @@
 }
 
 .categorySection {
-  margin-bottom: 4rem;
+  margin-bottom: 1.5rem;
+  will-change: transform, opacity;
 }
 
 .categoryTitle {
