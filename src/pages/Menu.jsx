@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import { BsChevronDown, BsChevronUp, BsArrowLeftShort, BsArrowRightShort, BsX } from 'react-icons/bs';
 import TripAdvisorReviews from '../components/TripAdvisorReviews';
 import AnimatedText from '../components/AnimatedText';
+import ScrollReveal from '../components/ScrollReveal';
 
 // Importazione delle immagini degli allergeni
 import latteIcon from '../assets/latte.png';
@@ -297,11 +298,13 @@ const Menu = () => {
               "A mano libera"
             </h2>
             
-            <p className={styles.degustazioneDescription} style={{color: "#04062d", marginTop: "0", paddingBottom: "1rem"}}>
-            Percorso di 9 portate a sorpresa, ideato dallo Chef e ispirato al pescato del giorno.<br></br>
-            Si prega di comunicare in anticipo eventuali allergie o intolleranze per consentirci di offrire un'esperienza ottimale.<br></br>
-            Il menù degustazione viene servito per l'intero tavolo.
-            </p>
+            <ScrollReveal delay={100}>
+              <p className={styles.degustazioneDescription} style={{color: "#04062d", marginTop: "0", paddingBottom: "1rem"}}>
+              Percorso di 9 portate a sorpresa, ideato dallo Chef e ispirato al pescato del giorno.<br></br>
+              Si prega di comunicare in anticipo eventuali allergie o intolleranze per consentirci di offrire un'esperienza ottimale.<br></br>
+              Il menù degustazione viene servito per l'intero tavolo.
+              </p>
+            </ScrollReveal>
             <div className={styles.priceHighlight}>90€</div>
             <p className={styles.wineNote}>vini esclusi</p>
           </div>
@@ -310,13 +313,15 @@ const Menu = () => {
 
       {/* Nuova sezione per l'abbinamento vini */}
       <section className={styles.paragraphSection} style={{marginTop: '-1px'}}>
-        <p>
-          <span style={{fontSize: '1.1em', fontWeight: 'bold'}}>Proposta di abbinamento vini</span>
-          <br></br>
-          È possibile arricchire il percorso degustazione con la nostra proposta di abbinamento vini, studiata per valorizzare ogni portata.<br></br>
-          La selezione può variare quotidianamente in base al menù proposto e alla disponibilità delle etichette.<br></br>
-          "<span className={styles.highlight}>Da Nord a Sud</span>"
-        </p>
+        <ScrollReveal delay={200}>
+          <p>
+            <span style={{fontSize: '1.1em', fontWeight: 'bold'}}>Proposta di abbinamento vini</span>
+            <br></br>
+            È possibile arricchire il percorso degustazione con la nostra proposta di abbinamento vini, studiata per valorizzare ogni portata.<br></br>
+            La selezione può variare quotidianamente in base al menù proposto e alla disponibilità delle etichette.<br></br>
+            "<span className={styles.highlight}>Da Nord a Sud</span>"
+          </p>
+        </ScrollReveal>
         <div className={styles.priceHighlight}>40€</div>
       </section>
 
@@ -484,13 +489,15 @@ const Menu = () => {
       {/* Sezione Gift Card */}
        <section className={styles.giftCardSection}>
         <h2 className={styles.giftCardTitle}>Regala un'Esperienza</h2>
-        <p className={styles.menuDescription}>
-          Dona un'esperienza <span className={styles.highlight}>indimenticabile</span> con una gift card del Ristorante Vistamare.
-          <br />
-          Le nostre gift card possono essere utilizzate per una <span className={styles.highlight}>cena completa</span>.
-          <br />
-          Per maggiori informazioni, contattaci al <span className={styles.highlight}>0586 762289</span> o via email a <span className={styles.highlight}>vistamarerosignano@gmail.com</span>
-        </p>
+        <ScrollReveal delay={300}>
+          <p className={styles.menuDescription}>
+            Dona un'esperienza <span className={styles.highlight}>indimenticabile</span> con una gift card del Ristorante Vistamare.
+            <br />
+            Le nostre gift card possono essere utilizzate per una <span className={styles.highlight}>cena completa</span>.
+            <br />
+            Per maggiori informazioni, contattaci al <span className={styles.highlight}>0586 762289</span> o via email a <span className={styles.highlight}>vistamarerosignano@gmail.com</span>
+          </p>
+        </ScrollReveal>
       </section>
 
       <Footer />

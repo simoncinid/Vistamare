@@ -1,0 +1,36 @@
+.scrollReveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+}
+
+.scrollReveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Varianti per diversi tipi di animazione */
+.scrollReveal.fadeInUp {
+  transform: translateY(50px);
+}
+
+.scrollReveal.fadeInUp.visible {
+  transform: translateY(0);
+}
+
+.scrollReveal.fadeInLeft {
+  transform: translateX(-30px);
+}
+
+.scrollReveal.fadeInLeft.visible {
+  transform: translateX(0);
+}
+
+.scrollReveal.fadeInRight {
+  transform: translateX(30px);
+}
+
+.scrollReveal.fadeInRight.visible {
+  transform: translateX(0);
+} 

@@ -16,6 +16,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PrenotaOraButton from '../components/PrenotaOraButton';
 import ModernLinksSection from '../components/ModernLinksSection';
+import ScrollReveal from '../components/ScrollReveal';
 
 export default function Home() {
   return (
@@ -41,10 +42,12 @@ export default function Home() {
           </AnimatedText>
           <AnimatedText delay={200}>
           {/*<img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />*/}
-            <p>
-            Benvenuti da Vistamare, dove ogni piatto racconta una storia di <span className={styles.highlight}>stagionalità</span>, <span className={styles.highlight}>sostenibilità</span> e <span className={styles.highlight}>territorio</span>.
-            Crediamo che mangiare bene significhi scegliere con cura — per il gusto, per la salute e per l'ambiente.              
-            </p>
+            <ScrollReveal delay={100}>
+              <p>
+              Benvenuti da Vistamare, dove ogni piatto racconta una storia di <span className={styles.highlight}>stagionalità</span>, <span className={styles.highlight}>sostenibilità</span> e <span className={styles.highlight}>territorio</span>.
+              Crediamo che mangiare bene significhi scegliere con cura — per il gusto, per la salute e per l'ambiente.              
+              </p>
+            </ScrollReveal>
             {/*<img src="/assets/decorazione.png" alt="" className={styles.decoration} />*/}
           </AnimatedText>
         </section>
@@ -63,8 +66,10 @@ export default function Home() {
           {/*<img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />*/}
           </AnimatedText>
           <AnimatedText delay={600}>
-            <p> Utilizziamo <span className={styles.highlight}>materie prime fresche</span> e limitiamo l'uso della plastica grazie a filiere corte e pratiche di riuso.
-            Ogni giorno, piccoli gesti per un futuro più <span className={styles.highlight}>sostenibile</span>.</p>
+            <ScrollReveal delay={200}>
+              <p> Utilizziamo <span className={styles.highlight}>materie prime fresche</span> e limitiamo l'uso della plastica grazie a filiere corte e pratiche di riuso.
+              Ogni giorno, piccoli gesti per un futuro più <span className={styles.highlight}>sostenibile</span>.</p>
+            </ScrollReveal>
             </AnimatedText>
           <AnimatedText delay={400}>
             {/*<img src="/assets/decorazione.png" alt="" className={styles.decoration} />*/}
@@ -79,21 +84,25 @@ export default function Home() {
         <div className={styles.sectionSpacerLarge}>
           
             <AnimatedText delay={600}>
-              <p>In un mondo che corre veloce, abbiamo scelto di rallentare.
-                Perché crediamo che solo così si possa tornare a <span className={styles.highlight}>gustare</span> davvero ciò che ci offre la <span className={styles.highlight}>natura</span>.
-                Vistamare è più di un ristorante: è un invito a vivere in modo più attento, più <span className={styles.highlight}>semplice</span>, più sostenibile.</p>
+              <ScrollReveal delay={300}>
+                <p>In un mondo che corre veloce, abbiamo scelto di rallentare.
+                  Perché crediamo che solo così si possa tornare a <span className={styles.highlight}>gustare</span> davvero ciò che ci offre la <span className={styles.highlight}>natura</span>.
+                  Vistamare è più di un ristorante: è un invito a vivere in modo più attento, più <span className={styles.highlight}>semplice</span>, più sostenibile.</p>
+              </ScrollReveal>
             </AnimatedText>
 
             {/* Sezione Gambero Rosso */}
             <div className={styles.gamberoRossoSection}>
               <AnimatedText delay={700}>
-                <div className={styles.gamberoRossoContent}>
-                  <div className={styles.gamberoRossoText}>
-                    Siamo orgogliosi di essere stati selezionati nella Guida
-                    <span className={styles.gamberoRossoHighlight}>"Gambero Rosso"</span>
-                    2024
+                <ScrollReveal delay={400}>
+                  <div className={styles.gamberoRossoContent}>
+                    <div className={styles.gamberoRossoText}>
+                      Siamo orgogliosi di essere stati selezionati nella Guida
+                      <span className={styles.gamberoRossoHighlight}>"Gambero Rosso"</span>
+                      2024
+                    </div>
                   </div>
-                </div>
+                </ScrollReveal>
               </AnimatedText>
             </div>
             
