@@ -430,6 +430,7 @@
   .sectionSpacerLarge {
     background: #04062d !important;
     color: #fff;
+    margin: 1rem 0; /* Aggiungo margine sopra e sotto */
   }
   .sectionSpacerLarge p {
     color: #fff;
