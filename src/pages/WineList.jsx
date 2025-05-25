@@ -76,7 +76,7 @@ const WineList = () => {
                 fontSize: "clamp(1.2rem, 5vw, 3rem)"
               }}
             >
-              La nostra selezione di vini
+              La nostra <br></br> selezione di vini
             </h2>
             
             <p className={styles.degustazioneDescription} style={{color: "#04062d", marginTop: "0", paddingBottom: "1rem"}}>
