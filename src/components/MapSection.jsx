@@ -1,12 +1,15 @@
 import React from 'react';
 import styles from './MapSection.module.css';
 import * as FaIcons from 'react-icons/fa';
+import ScrollReveal from './ScrollReveal';
 
 const MapSection = () => {
   return (
     <section className={styles.mapSection}>
       <h2 className={styles.sectionTitle}>CONTATTI</h2>
-      <p className={styles.sectionDescription}>Ogni ingrediente racconta una storia di territorio. Lavoriamo esclusivamente con produttori locali, garantendo la freschezza e la qualità dei nostri piatti, riducendo al minimo l'impatto ambientale.</p>
+      <ScrollReveal delay={100}>
+        <p className={styles.sectionDescription}>Ogni ingrediente racconta una storia di territorio. Lavoriamo esclusivamente con produttori locali, garantendo la freschezza e la qualità dei nostri piatti, riducendo al minimo l'impatto ambientale.</p>
+      </ScrollReveal>
       
       <div className={styles.sectionContent}>
         <div className={styles.mapContainer}>

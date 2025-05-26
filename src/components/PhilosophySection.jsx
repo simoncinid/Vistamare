@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './PhilosophySection.module.css';
+import ScrollReveal from './ScrollReveal';
 
 import filosofia1 from '../assets/filosofia1.png';
 import filosofia2 from '../assets/filosofia2.png';
@@ -67,9 +68,11 @@ const PhilosophySection = () => {
         <div className={styles.box}>
           <h2 style={{ fontStyle: 'roboto sans-serif', textTransform: 'uppercase', paddingBottom: '0rem', lineHeight: '0.3'  }}>la nostra</h2>
           <h1 className={styles.filosofiaTitle}>filosofia</h1>
-          <p>Scegliamo ingredienti <span className={styles.highlight}>locali</span> e <span className={styles.highlight}>biologici</span>, seguendo la stagionalità,
-            dal pescato fresco alla frutta e verdura di stagione,
-            sostenendo i piccoli produttori del territorio e proponendo un menù <span className={styles.highlight}>essenziale</span>, ma genuino.</p>
+          <ScrollReveal delay={150}>
+            <p>Scegliamo ingredienti <span className={styles.highlight}>locali</span> e <span className={styles.highlight}>biologici</span>, seguendo la stagionalità,
+              dal pescato fresco alla frutta e verdura di stagione,
+              sostenendo i piccoli produttori del territorio e proponendo un menù <span className={styles.highlight}>essenziale</span>, ma genuino.</p>
+          </ScrollReveal>
         </div>
       </div>
     </section>

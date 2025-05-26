@@ -16,6 +16,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PrenotaOraButton from '../components/PrenotaOraButton';
 import ModernLinksSection from '../components/ModernLinksSection';
+import ScrollReveal from '../components/ScrollReveal';
 
 export default function Home() {
   return (
@@ -41,10 +42,12 @@ export default function Home() {
           </AnimatedText>
           <AnimatedText delay={300}>
           {/*<img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />*/}
-            <p>
-            Benvenuti da Vistamare, dove ogni piatto racconta una storia di <span className={styles.highlight}>stagionalità</span>, <span className={styles.highlight}>sostenibilità</span> e <span className={styles.highlight}>territorio</span>.
-            Crediamo che mangiare bene significhi scegliere con cura — per il gusto, per la salute e per l'ambiente.              
-            </p>
+            <ScrollReveal delay={100}>
+              <p>
+              Benvenuti da Vistamare, dove ogni piatto racconta una storia di <span className={styles.highlight}>stagionalità</span>, <span className={styles.highlight}>sostenibilità</span> e <span className={styles.highlight}>territorio</span>.
+              Crediamo che mangiare bene significhi scegliere con cura — per il gusto, per la salute e per l'ambiente.              
+              </p>
+            </ScrollReveal>
             {/*<img src="/assets/decorazione.png" alt="" className={styles.decoration} />*/}
           </AnimatedText>
         </section>

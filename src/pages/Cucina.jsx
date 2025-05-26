@@ -1,6 +1,7 @@
 // src/pages/Cucina.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
+import ScrollReveal from '../components/ScrollReveal';
 
 // array di esempio, sostituisci con i tuoi dati reali
 const dishes = [
@@ -23,14 +24,16 @@ export default function Cucina() {
           La Nostra Cucina
         </motion.h1>
 
-        <motion.p
-          style={{ marginBottom: '3rem', color: 'var(--gray-dark)', lineHeight: 1.6 }}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          Ogni piatto nasce da una ricerca profonda dei sapori del territorio e dalla passione del nostro chef.
-        </motion.p>
+        <ScrollReveal delay={100}>
+          <motion.p
+            style={{ marginBottom: '3rem', color: 'var(--gray-dark)', lineHeight: 1.6 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            Ogni piatto nasce da una ricerca profonda dei sapori del territorio e dalla passione del nostro chef.
+          </motion.p>
+        </ScrollReveal>
 
         <div style={{
           display: 'grid',
