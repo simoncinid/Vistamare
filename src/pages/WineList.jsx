@@ -53,6 +53,7 @@ const WineList = () => {
       <Helmet>
         <title>Carta dei Vini | Vistamare Ristorante</title>
         <meta name="description" content="Scopri la nostra selezione di vini: bianchi, rossi, bollicine e champagne d'eccellenza scelti dalla nostra sommelier per accompagnare ogni piatto." />
+        <meta property="og:image" content="https://vistamare.vercel.app/assets/cantina1.png" />
       </Helmet>
       <Header />
       
