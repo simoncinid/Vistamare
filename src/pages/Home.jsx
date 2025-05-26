@@ -39,7 +39,7 @@ export default function Home() {
               className={styles.logo} 
             />
           </AnimatedText>
-          <AnimatedText delay={200}>
+          <AnimatedText delay={300}>
           {/*<img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />*/}
             <p>
             Benvenuti da Vistamare, dove ogni piatto racconta una storia di <span className={styles.highlight}>stagionalità</span>, <span className={styles.highlight}>sostenibilità</span> e <span className={styles.highlight}>territorio</span>.
@@ -62,7 +62,7 @@ export default function Home() {
           <AnimatedText delay={400}>
           {/*<img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />*/}
           </AnimatedText>
-          <AnimatedText delay={600}>
+          <AnimatedText delay={300}>
             <p> Utilizziamo <span className={styles.highlight}>materie prime fresche</span> e limitiamo l'uso della plastica grazie a filiere corte e pratiche di riuso.
             Ogni giorno, piccoli gesti per un futuro più <span className={styles.highlight}>sostenibile</span>.</p>
             </AnimatedText>
@@ -78,7 +78,7 @@ export default function Home() {
         
         <div className={styles.sectionSpacerLarge}>
           
-            <AnimatedText delay={600}>
+            <AnimatedText delay={300}>
               <p>In un mondo che corre veloce, abbiamo scelto di rallentare.
                 Perché crediamo che solo così si possa tornare a <span className={styles.highlight}>gustare</span> davvero ciò che ci offre la <span className={styles.highlight}>natura</span>.
                 Vistamare è più di un ristorante: è un invito a vivere in modo più attento, più <span className={styles.highlight}>semplice</span>, più sostenibile.</p>
@@ -86,7 +86,7 @@ export default function Home() {
 
             {/* Sezione Gambero Rosso */}
             <div className={styles.gamberoRossoSection}>
-              <AnimatedText delay={500}>
+              <AnimatedText delay={300}>
                 <div className={styles.gamberoRossoContent}>
                   <div className={styles.gamberoRossoText}>
                     Siamo orgogliosi di essere stati selezionati nella Guida
@@ -103,10 +103,10 @@ export default function Home() {
       </div>
 
       <section className={styles.reservationStrip} id="reservation-form">
-        <AnimatedText delay={800}>
+        <AnimatedText delay={300}>
           <h2>Ti aspettiamo</h2>
         </AnimatedText>
-        <AnimatedText delay={900}>
+        <AnimatedText delay={300}>
           <ReservationForm />
         </AnimatedText>
       </section>
