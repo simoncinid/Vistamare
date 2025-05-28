@@ -69,9 +69,8 @@ const PhilosophySection = () => {
           <h2 style={{ fontStyle: 'roboto sans-serif', textTransform: 'uppercase', paddingBottom: '0rem', lineHeight: '0.3'  }}>la nostra</h2>
           <h1 className={styles.filosofiaTitle}>filosofia</h1>
           <ScrollReveal delay={150}>
-            <p>Scegliamo ingredienti <span className={styles.highlight}>locali</span> e <span className={styles.highlight}>biologici</span>, seguendo la stagionalità,
-              dal pescato fresco alla frutta e verdura di stagione,
-              sostenendo i piccoli produttori del territorio e proponendo un menù <span className={styles.highlight}>essenziale</span>, ma genuino.</p>
+            <p>Scegliamo ingredienti <span className={styles.highlight}>locali</span> e <span className={styles.highlight}>biologici</span>, 
+              sostenendo i piccoli produttori del territorio e proponendo un menu che a ogni <span className={styles.highlight}>stagione</span> unisce il rispetto per la tradizione marinara e il desiderio di portarla nel futuro.</p>
           </ScrollReveal>
         </div>
       </div>

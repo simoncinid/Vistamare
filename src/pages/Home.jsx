@@ -66,7 +66,7 @@ export default function Home() {
           {/*<img src="/assets/decorazione.png" alt="" className={styles.decorationUpsideDown} />*/}
           </AnimatedText>
           <AnimatedText delay={300}>
-            <p> Utilizziamo <span className={styles.highlight}>materie prime fresche</span> e limitiamo l'uso della plastica grazie a filiere corte e pratiche di riuso.
+            <p> Utilizziamo <span className={styles.highlight}>materie prime fresche</span> seguendo la stagionalità del mare grazie a filiere corte e pratiche di riuso.
             Ogni giorno, piccoli gesti per un futuro più <span className={styles.highlight}>sostenibile</span>.</p>
             </AnimatedText>
           <AnimatedText delay={400}>
