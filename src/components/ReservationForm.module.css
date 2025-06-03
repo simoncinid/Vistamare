@@ -358,7 +358,8 @@
 }
 
 :global(.react-datepicker__current-month) {
-  font-size: 3rem !important;
+  color: white !important;
+  font-size: 1.2rem !important;
   margin-top: 5% !important;
   margin-bottom: 5% !important;
   font-weight: normal !important;

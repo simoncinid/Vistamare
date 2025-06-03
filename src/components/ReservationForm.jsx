@@ -46,6 +46,15 @@ const ReservationForm = () => {
       [name]: value
     }));
 
+    // Rimuovi l'errore quando l'utente inizia a compilare il campo
+    if (errors[name]) {
+      setErrors(prev => {
+        const newErrors = { ...prev };
+        delete newErrors[name];
+        return newErrors;
+      });
+    }
+
     // Aggiorna gli orari disponibili in base alla scelta pranzo/cena
     if (name === 'mealType') {
       setAvailableTimes(value === 'lunch' ? lunchTimes : dinnerTimes);
@@ -97,29 +106,60 @@ const ReservationForm = () => {
   };
 
   const nextStep = () => {
-    // Validazione prima di passare al passaggio successivo
+    let hasErrors = false;
+    const newErrors = {};
+
+    if (currentStep === 1) {
+      // Validazione per il primo step
+      if (!formData.name.trim()) {
+        newErrors.name = 'Il nome è obbligatorio';
+        hasErrors = true;
+      }
+      if (!formData.phone.trim()) {
+        newErrors.phone = 'Il numero di telefono è obbligatorio';
+        hasErrors = true;
+      }
+    }
+
     if (currentStep === 2) {
+      // Controlla che la data sia selezionata
+      if (!formData.date) {
+        newErrors.date = 'Seleziona una data';
+        hasErrors = true;
+      }
       // Controlla che la data sia valida
-      if (formData.date && isBefore(formData.date, today) && !isToday(formData.date)) {
-        setErrors(prev => ({
-          ...prev,
-          date: 'La data deve essere oggi o nel futuro'
-        }));
-        return;
+      else if (isBefore(formData.date, today) && !isToday(formData.date)) {
+        newErrors.date = 'La data deve essere oggi o nel futuro';
+        hasErrors = true;
+      }
+
+      // Controlla che il tipo di pasto sia selezionato
+      if (!formData.mealType) {
+        newErrors.mealType = 'Seleziona il tipo di pasto';
+        hasErrors = true;
+      }
+
+      // Controlla che l'orario sia selezionato
+      if (!formData.time) {
+        newErrors.time = 'Seleziona un orario';
+        hasErrors = true;
       }
 
       // Controlla che il numero di bambini sia valido
       const guests = parseInt(formData.guests);
       const children = parseInt(formData.children);
       if (children >= guests) {
-        setErrors(prev => ({
-          ...prev,
-          children: 'Il numero di bambini deve essere inferiore al numero totale di ospiti'
-        }));
-        return;
+        newErrors.children = 'Il numero di bambini deve essere inferiore al numero totale di ospiti';
+        hasErrors = true;
       }
     }
 
+    if (hasErrors) {
+      setErrors(newErrors);
+      return;
+    }
+
+    setErrors({});
     setCurrentStep(prev => Math.min(prev + 1, 3));
   };
 
@@ -317,8 +357,9 @@ const ReservationForm = () => {
                       required
                       className={styles.input}
                     />
-                    <label className={styles.label}>Nome e Cognome</label>
+                    <label className={styles.label}>Nome e Cognome *</label>
                     <span className={styles.focusBorder} />
+                    {errors.name && <p className={styles.errorMessage}>{errors.name}</p>}
                   </motion.div>
 
                   <motion.div className={styles.inputGroup} variants={itemVariants}>
@@ -342,8 +383,9 @@ const ReservationForm = () => {
                       required
                       className={styles.input}
                     />
-                    <label className={styles.label}>Telefono</label>
+                    <label className={styles.label}>Telefono *</label>
                     <span className={styles.focusBorder} />
+                    {errors.phone && <p className={styles.errorMessage}>{errors.phone}</p>}
                   </motion.div>
                 </motion.div>
               )}
@@ -351,7 +393,7 @@ const ReservationForm = () => {
               {currentStep === 2 && (
                 <motion.div className={styles.formStep}>
                   <motion.div className={styles.mealTypeSelection} variants={itemVariants}>
-                    <p className={styles.sectionLabel}>Seleziona il tipo di pasto:</p>
+                    <p className={styles.sectionLabel}>Seleziona il tipo di pasto: *</p>
                     <div className={styles.mealOptions}>
                       <div 
                         className={`${styles.mealOption} ${formData.mealType === 'lunch' ? styles.active : ''}`}
@@ -366,6 +408,7 @@ const ReservationForm = () => {
                         <span>Cena</span>
                       </div>
                     </div>
+                    {errors.mealType && <p className={styles.errorMessage}>{errors.mealType}</p>}
                   </motion.div>
 
                   {formData.mealType && (
@@ -378,18 +421,18 @@ const ReservationForm = () => {
                             dateFormat="dd/MM/yyyy"
                             minDate={today}
                             locale="it"
-                            
                             className={styles.datepicker}
                             calendarClassName={styles.calendar}
                             required
+                            placeholderText="Seleziona una data *"
                           />
-                          <label className={`${styles.label} ${formData.date ? styles.active : ''}`}>Data</label>
+                          <label className={`${styles.label} ${formData.date ? styles.active : ''}`}>Data *</label>
                         </div>
                         {errors.date && <p className={styles.errorMessage}>{errors.date}</p>}
                       </motion.div>
 
                       <motion.div className={styles.timeSelection} variants={itemVariants}>
-                        <p className={styles.sectionLabel}>Seleziona orario:</p>
+                        <p className={styles.sectionLabel}>Seleziona orario: *</p>
                         <div className={styles.timeOptions}>
                           {availableTimes.map(time => (
                             <div 
@@ -401,6 +444,7 @@ const ReservationForm = () => {
                             </div>
                           ))}
                         </div>
+                        {errors.time && <p className={styles.errorMessage}>{errors.time}</p>}
                       </motion.div>
 
                       <motion.div className={styles.inputGroup} variants={itemVariants}>
@@ -487,10 +531,6 @@ const ReservationForm = () => {
                     className={styles.buttonPrimary}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    disabled={
-                      (currentStep === 2 && (!formData.mealType || !formData.time || !formData.date)) ||
-                      Object.keys(errors).length > 0
-                    }
                   >
                     Avanti
                   </motion.button>
@@ -499,7 +539,7 @@ const ReservationForm = () => {
                     type="button" 
                     onClick={handleSubmit}
                     className={styles.buttonPrimary}
-                    disabled={isSubmitting || Object.keys(errors).length > 0}
+                    disabled={isSubmitting}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
