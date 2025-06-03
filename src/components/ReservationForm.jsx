@@ -157,7 +157,7 @@ const ReservationForm = () => {
       // Preparazione del corpo dell'email
       const emailBody = {
         from: "reservationwebbitz@gmail.com",
-        to: "simoncinidiego10@gmail.com",
+        to: "vistamarerosignano@gmail.com",
         subject: `Prenotazione ${formData.mealType === 'lunch' ? 'Pranzo' : 'Cena'} - ${formData.name} - ${formattedDate}`,
         text: `
           Nuova prenotazione:
