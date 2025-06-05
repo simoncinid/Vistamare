@@ -201,7 +201,7 @@ const menuData = {
       {
         id: 21,
         name: "Eden",
-        description: "Brumoise di frutta fresca di stagione, acqua di lattuga al miele, perle di tapioca aromatizzate al lime e quenelle di yogurt",
+        description: "Brunoise di frutta fresca di stagione, acqua di lattuga al miele, perle di tapioca aromatizzate al lime e quenelle di yogurt",
         price: "€9",
         allergens: ["latte"]  // 7
       }
