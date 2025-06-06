@@ -68,10 +68,10 @@ const menuData = {
       },
       {
         id: 5,
-        name: "Il mare in bocca: carpaccio di tracina",
-        description: "Carpaccio di tracina fresco",
+        name: "Il mare in bocca",
+        description: "Carpaccio di tonno rosso in acqua di anguria in agro",
         price: "€25",
-        allergens: ["pesce", "frutta"]  // 4, 9
+        allergens: ["pesce", "frutta"] // 4, 9
       }
     ]
   },
@@ -80,38 +80,38 @@ const menuData = {
     dishes: [
       {
         id: 6,
-        name: "Ricordo di gioventù: sciatielli ai frutti di mare",
-        description: "Sciatielli ai frutti di mare",
+        name: "Ricordo di gioventù",
+        description: "Scialatielli ai frutti di mare",
         price: "€26",
-        allergens: ["glutine", "uova", "pesce", "molluschi"]  // 1, 2, 4, 14
+        allergens: ["glutine", "uova", "pesce", "molluschi"] // 1, 2, 4, 14
       },
       {
         id: 7,
-        name: "Linguine con calamaretto spillo, agretti e caviale",
-        description: "Linguine con calamaretto spillo, agretti e caviale",
-        price: "€28",
-        allergens: ["glutine", "molluschi"]  // 1, 14
-      },
-      {
-        id: 8,
         name: "Calle ripiene di mazzancolla e provola",
         description: "Calle ripiene di mazzancolla e provola",
         price: "€24",
-        allergens: ["glutine", "uova", "latte", "arachidi"]  // 1, 2, 7, 12
+        allergens: ["glutine", "uova", "latte", "arachidi"] // 1, 2, 4, 7
+      },
+      {
+        id: 8,
+        name: "Malfatti con pescato del giorno e polvere di cacao",
+        description: "Malfatti con pescato del giorno e polvere di cacao",
+        price: "€25",
+        allergens: ["pesce", "glutine"] // 1, 4
       },
       {
         id: 9,
-        name: "Fettucce di pasta fresca con baccalà",
-        description: "Fettucce di pasta fresca con baccalà, olive nostraline e pomodorino giallo del Piennolo",
-        price: "€22",
-        allergens: ["glutine", "pesce", "arachidi"]  // 1, 4, 12
+        name: "Linguine con rana pescatrice e caviale",
+        description: "Linguine con rana pescatrice e caviale",
+        price: "€26",
+        allergens: ["pesce", "glutine"] // 1, 4
       },
       {
         id: 10,
-        name: "Malfatti con pescato del giorno",
-        description: "Malfatti con pescato del giorno e polvere di cacao",
+        name: "Spaghettone aglio, olio, peperoncino e gambero rosso crudo",
+        description: "Spaghettone aglio, olio, peperoncino e gambero rosso crudo",
         price: "€25",
-        allergens: ["glutine", "pesce", "arachidi"]  // 1, 4, 12
+        allergens: ["glutine", "uova", "crostacei"] // 1, 2, 7
       }
     ]
   },
@@ -120,24 +120,24 @@ const menuData = {
     dishes: [
       {
         id: 11,
-        name: "Filetto di spigola",
-        description: "Filetto di spigola, salsa di datterino giallo e scarola riccia",
-        price: "€25",
-        allergens: ["pesce"]  // 4
+        name: "Scorfano a 360°",
+        description: "Scorfano a 360°",
+        price: "€9/hg",
+        allergens: ["pesce"] // 4
       },
       {
         id: 12,
-        name: "Polpo verace cucinato secondo la tradizione partenopea",
-        description: "Polpo verace cucinato secondo la tradizione partenopea",
-        price: "€24",
-        allergens: ["arachidi", "molluschi"]  // 12, 14
+        name: "Cernia 'green'",
+        description: "Cernia 'green' con crema di cozze e piselli in tre consistenze",
+        price: "€28",
+        allergens: ["molluschi", "latte"] // 4, 14
       },
       {
         id: 13,
-        name: "Palamita cotta ai ferri",
-        description: "Palamita cotta ai ferri con acqua di peperoni e barbabietola alla scapece",
-        price: "€22",
-        allergens: ["pesce"]  // 4
+        name: "Filetto di orata fritto",
+        description: "Filetto di orata fritto e servito in umido",
+        price: "€24",
+        allergens: ["pesce"] // 4
       },
       {
         id: 14,
