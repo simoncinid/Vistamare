@@ -7,14 +7,20 @@ const PrenotaOraButton = () => {
 
   useEffect(() => {
     const form = document.getElementById('reservation-form');
-    if (!form) return;
+    const footer = document.querySelector('footer');
+    if (!form || !footer) return;
 
     const observer = new IntersectionObserver(
-      ([entry]) => setVisible(!entry.isIntersecting),
+      (entries) => {
+        // Il bottone è visibile solo se né il form né il footer sono visibili
+        const shouldHide = entries.some(entry => entry.isIntersecting);
+        setVisible(!shouldHide);
+      },
       { root: null, threshold: 0.5 }
     );
 
     observer.observe(form);
+    observer.observe(footer);
     return () => observer.disconnect();
   }, []);
 
@@ -29,7 +35,7 @@ const PrenotaOraButton = () => {
       className={`${styles.prenotaButton} ${!visible ? styles.hidden : ''}`}
       onClick={handleClick}
     >
-      <i class="fa-regular fa-calendar-check" style={{ marginRight: '10px' }}></i> Prenota ora!
+      <i className="fa-regular fa-calendar-check" style={{ marginRight: '10px' }}></i> Prenota ora!
     </button>
   );
 };
