@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { Analytics } from '@vercel/analytics/react';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import WineList from './pages/WineList';
@@ -35,6 +36,7 @@ function App() {
           <Route path="/cookiepolicy" element={<CookiePolicy />} />
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         </Routes>
+        <Analytics />
       </div>
     </HelmetProvider>
   );
