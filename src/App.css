@@ -14,12 +14,14 @@
   position: relative;
 }*/
 #root, .App {
-  width: 100%;
-  /* min-height: 100vh; */
-  /* overflow-y: auto; */ /* Rimuovi o prova a commentarlo */
-  overflow-x: hidden;
-  /* position: relative; */ /* Safari non ama questo qui */
+  min-height: unset;   /* rimuovilo o annulla */
+  overflow-y: unset;   /* rimuovilo completamente */
+  position: unset;     /* importante */
 }
+.App {
+  width: 100%;
+}
+
 
 /* Stile generico per il cursore */
 html, body, button, input, textarea, select, [role="button"] {
