@@ -83,8 +83,8 @@ export default function Home() {
           
             <AnimatedText delay={300}>
               <p>In un mondo che corre veloce, abbiamo scelto di rallentare.
-                Perché crediamo che solo così si possa tornare a <span className={styles.highlight}>gustare</span> davvero ciò che ci offre la <span className={styles.highlight}>natura</span>.
-                Vistamare è più di un ristorante: è un invito a vivere in modo più attento, più <span className={styles.highlight}>semplice</span>, più sostenibile.</p>
+                Perché solo così possiamo <span className={styles.highlight}>gustare</span> davvero ciò che la <span className={styles.highlight}>natura</span> ci offre.
+                Vistamare è un invito a vivere in modo più <span className={styles.highlight}>semplice</span> e sostenibile.</p>
             </AnimatedText>
 
             {/* Sezione Gambero Rosso */}
