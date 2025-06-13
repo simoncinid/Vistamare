@@ -59,9 +59,7 @@ export default function Footer() {
 
         {/* Mappa Mobile - con stile inline per forzare la visualizzazione */}
         {isMobile && (
-          <div style={{
-            gridColumn: '1 / 3',
-            gridRow: '2',
+          <div className={styles.mobileMapContainer} style={{
             width: '80%',
             margin: '1.5rem auto',
             backgroundColor: '#fff',
@@ -89,9 +87,7 @@ export default function Footer() {
 
         {/* Versione Mobile: Logo e Social in riga */}
         {isMobile ? (
-          <div style={{
-            gridColumn: '1 / 3',
-            gridRow: '3',
+          <div className={styles.mobileLogoSocialContainer} style={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
