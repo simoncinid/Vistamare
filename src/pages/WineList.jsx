@@ -74,7 +74,7 @@ const WineList = () => {
                 color: "#04062d", 
                 fontWeight: "bold", 
                 marginBottom: "1rem", 
-                paddingTop: "4rem",
+                paddingTop: isMobile ? "0" : "4rem",
                 fontSize: "clamp(1.2rem, 5vw, 3rem)"
               }}
             >
@@ -83,7 +83,7 @@ const WineList = () => {
             
             <ScrollReveal delay={100}>
               <p className={styles.degustazioneDescription} style={{color: "#04062d", marginTop: "0", paddingBottom: "1rem"}}>
-              Dai rossi <span className={styles.highlight}>strutturati</span> ai bianchi più <span className={styles.highlight}>eleganti</span>, passando per una curata proposta di <span className={styles.highlight}>Champagne</span>, ogni etichetta è scelta con attenzione dalla nostra sommelier.
+              Dai rossi <span className={styles.highlight}>strutturati</span> ai bianchi più <span className={styles.highlight}>eleganti</span>, passando per una curata proposta di <span className={styles.highlight}>Champagne</span>, ogni etichetta è selezionata con attenzione.
               Un percorso enologico che attraversa territori, tradizioni e bollicine <span className={styles.highlight}>d'eccellenza</span>, pensato per esaltare ogni piatto e rendere l'esperienza ancora più memorabile.
               </p>
             </ScrollReveal>
@@ -105,7 +105,7 @@ const WineList = () => {
       <section className={styles.paragraphSection} style={{marginTop: '-1px'}}>
         <ScrollReveal delay={200}>
           <p>
-            <span style={{fontSize: '1.1em', fontWeight: 'bold'}}>Il vino prepara i cuori</span>
+            <span>Il vino prepara i cuori</span>
             <br></br>
             e li rende più pronti alla passione
             <br></br>

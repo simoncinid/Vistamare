@@ -295,7 +295,7 @@
   max-width: 800px;
   font-family: "Roboto", sans-serif;
   color: white;
-  font-size: 1.3rem;
+  font-size: clamp(15px, 5vw, 1.3rem);
   line-height: 1.8;
   letter-spacing: 3px;
   font-weight: 500;
@@ -805,7 +805,7 @@
   }
   
   .boxDegustazione p {
-    font-size: 13px;
+    font-size: 15px;
     letter-spacing: 1.5px;
     padding: 1rem 0;
   }
@@ -1054,7 +1054,7 @@
 .degustazioneDescription {
   font-family: "Roboto", sans-serif;
   color: #2c2c2c;
-  font-size: clamp(12px, 5vw, 17px);
+  font-size: clamp(15px, 5vw, 17px);
   line-height: 1.8;
   letter-spacing: 3px;
   padding: 0;
@@ -1083,7 +1083,7 @@
   color: white;
   font-size: 1.3rem;
   line-height: 1.8;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   font-weight: 500;
   padding: 1.5rem 0;
   text-transform: uppercase;
