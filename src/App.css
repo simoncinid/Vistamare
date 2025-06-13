@@ -16,7 +16,8 @@
 #root, .App {
   min-height: unset;   /* rimuovilo o annulla */
   overflow-y: unset;   /* rimuovilo completamente */
-  position: unset;     /* importante */
+  position: unset;
+  overflow-x: hidden;     /* importante */
 }
 .App {
   width: 100%;
