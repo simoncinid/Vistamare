@@ -39,11 +39,14 @@
 *::before,
 *::after { box-sizing:border-box; margin:0; padding:0; }
 
-html,body { 
-  height:100%;
+html, body {
+  height: auto;
+  min-height: 100%;
   overflow-x: hidden;
-  scroll-behavior: smooth; /* Smooth scroll base */
- }
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
 
 body{
   font-family:var(--font-body);
