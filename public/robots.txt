@@ -1,3 +1,21 @@
 User-agent: *
 Allow: /
+
+# Sitemap
 Sitemap: https://vistamarerosignano.it/sitemap.xml
+
+# Crawl-delay per evitare sovraccarico server
+Crawl-delay: 1
+
+# Blocca file non necessari per SEO
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: *.json$
+
+# Permetti crawling delle immagini
+Allow: /assets/
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.webp

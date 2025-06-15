@@ -1,0 +1,48 @@
+.prenotaButton {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4A90E2;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  
+    /* prepariamo la transizione */
+    transition: opacity 0.4s ease, transform 0.4s ease, background-color 0.4s ease;
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 1000;
+    cursor: pointer !important;
+  }
+  
+  .prenotaButton:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    background-color: #3bb0ff;
+  }
+  
+  /* la classe che attiva il fade-out */
+  .hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;  /* così non puoi più cliccarlo quando è invisibile */
+  }
+  
+  
+@media (max-width: 600px) {
+  .prenotaButton {
+    bottom: 16px;
+    right: 0;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 12px;
+  }
+} 

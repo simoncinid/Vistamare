@@ -1,0 +1,302 @@
+.footer {
+  background-color: #07162b;
+  color: white;
+  padding: 4rem 2rem 2rem;
+  margin-top: 0;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  min-height: 300px;
+}
+
+.footerMainRow {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.mapFooterColumn {
+  min-width: 200px;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.content {
+  display: contents;
+}
+
+.column {
+  padding: 0 1rem;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.column h3 {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.column p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  color: #cbd5e0;
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.socialLinks a {
+  color: #cbd5e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: white;
+}
+
+.bottomBar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bottomBar p {
+  color: #cbd5e0;
+  font-size: 0.9rem;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.legalLinks a {
+  color: #cbd5e0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.legalLinks a:hover {
+  color: white;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.logoFooterMap {
+  display: block;
+  height: 55px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  margin-bottom: 1rem;
+}
+
+.mapIframe {
+  width: 100%;
+  height: 180px;
+  border: 0;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.bottomBarFull {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.legalLinksFull {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.legalLinksFull a {
+  color: #cbd5e0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.legalLinksFull a:hover {
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .footerMainRow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem 1rem;
+    min-height: auto;
+  }
+  
+  .footerMainRow {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 1.5rem;
+  }
+  
+  .column {
+    text-align: center;
+    padding: 0;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  /* Contatti column */
+  .footerMainRow > .column:nth-child(2) {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  
+  /* Orari column */
+  .footerMainRow > .column:nth-child(3) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .column p {
+    word-break: break-word;
+  }
+  
+  /* Mappa sotto contatti e orari */
+  .mapMobile {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    width: 80%;
+    margin: 2rem auto;
+    display: block;
+  }
+  
+  .mapIframeMobile {
+    width: 100%;
+    height: 180px;
+    border: 0;
+    border-radius: 10px;
+    display: block;
+  }
+  
+  /* Logo e social in riga sotto la mappa */
+  .logoSocialRow {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .logoMobile {
+    height: 45px;
+    width: auto;
+    filter: brightness(0) invert(1);
+  }
+  
+  .footerMainRow > .column:nth-child(4) {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .footerMainRow > .column:nth-child(4) > h3 {
+    display: none;
+  }
+  
+  .socialLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-left: 0.5rem;
+  }
+  
+  .socialLinks a {
+    font-size: 1.5rem;
+    color: #cbd5e0;
+    margin: 0 0.2rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoFooterMap {
+    height: 45px;
+    margin: 0;
+  }
+  
+  .bottomBarFull {
+    padding-top: 1.5rem;
+  }
+  
+  .legalLinksFull {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+}
+
+.mobileMapContainer {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+
+.mobileLogoSocialContainer {
+  grid-column: 1 / -1;
+  grid-row: 4;
+}

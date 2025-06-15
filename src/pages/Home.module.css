@@ -323,9 +323,7 @@
 }
 
 @media (min-width: 769px) {
-  :global(.rightGallery_1u7cr_37) {
-    background-color: #000 !important;
-  }
+  /* Stile spostato in global CSS */
 }
 
 @media (max-width: 768px) {

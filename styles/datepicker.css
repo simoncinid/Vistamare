@@ -1,0 +1,86 @@
+/* Stili globali per react-datepicker */
+.react-datepicker {
+  background-color: #001939 !important;
+  border: 2px solid white !important;
+  border-radius: 8px !important;
+}
+
+.react-datepicker__header {
+  background-color: #001939 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name,
+.react-datepicker__day {
+  color: white !important;
+}
+
+.react-datepicker__current-month {
+  color: white !important;
+  font-size: 1.2rem !important;
+  margin-top: 5% !important;
+  margin-bottom: 5% !important;
+  font-weight: normal !important;
+}
+
+.react-datepicker__day:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: white !important;
+  color: #001939 !important;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: white !important;
+}
+
+.react-datepicker__day--disabled {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Stili per date e time inputs */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* Stili globali per Gallery */
+@media (min-width: 769px) {
+  .rightGallery_1u7cr_37 {
+    background-color: #000 !important;
+  }
+}
+
+/* Stili globali per TripAdvisor widget */
+.widCARN {
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.widCARN .widCARNInner {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.widCARN a {
+  color: #00a0d2 !important;
+}
+
+.widCARN .widCARNTitle {
+  display: none !important;
+}
+
+.widCARN .ui_bubble_rating {
+  margin-right: 4px !important;
+}
+
+.widCARN .widCARNBranding {
+  display: none !important;
+} 

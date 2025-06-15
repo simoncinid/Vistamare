@@ -70,7 +70,7 @@ const PhilosophySection = () => {
           <h1 className={styles.filosofiaTitle}>filosofia</h1>
           <ScrollReveal delay={150}>
             <p>Scegliamo ingredienti <span className={styles.highlight}>locali</span> e <span className={styles.highlight}>biologici</span>, 
-              sostenendo i piccoli produttori del territorio e proponendo un menu che a ogni <span className={styles.highlight}>stagione</span> unisce il rispetto per la tradizione marinara e il desiderio di portarla nel futuro.</p>
+              sostenendo i piccoli produttori del territorio e proponendo un menu che a ogni <span className={styles.highlight}>stagione</span> unisce il rispetto per la tradizione e il desiderio di portarla nel futuro.</p>
           </ScrollReveal>
         </div>
       </div>

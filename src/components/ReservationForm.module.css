@@ -340,48 +340,7 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
 }
 
-:global(.react-datepicker) {
-  background-color: #001939 !important;
-  border: 2px solid white !important;
-  border-radius: 8px !important;
-}
-
-:global(.react-datepicker__header) {
-  background-color: #001939 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-}
-
-:global(.react-datepicker__current-month),
-:global(.react-datepicker__day-name),
-:global(.react-datepicker__day) {
-  color: white !important;
-}
-
-:global(.react-datepicker__current-month) {
-  color: white !important;
-  font-size: 1.2rem !important;
-  margin-top: 5% !important;
-  margin-bottom: 5% !important;
-  font-weight: normal !important;
-}
-
-:global(.react-datepicker__day:hover) {
-  background-color: rgba(255, 255, 255, 0.2) !important;
-}
-
-:global(.react-datepicker__day--selected),
-:global(.react-datepicker__day--keyboard-selected) {
-  background-color: white !important;
-  color: #001939 !important;
-}
-
-:global(.react-datepicker__navigation-icon::before) {
-  border-color: white !important;
-}
-
-:global(.react-datepicker__day--disabled) {
-  color: rgba(255, 255, 255, 0.3) !important;
-}
+/* Stili datepicker spostati in global CSS */
 
 /* Stili per messaggi di errore */
 .errorMessage {
