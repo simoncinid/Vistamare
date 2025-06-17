@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <Helmet>
-        <title>Vistamare | Ristorante a Rosignano Solvay</title>
+        <title>Vistamare | Specialità di pesce fresco a Rosignano Solvay</title>
         <meta name="description" content="Ristorante Vistamare - Cucina di pesce fresco a Rosignano Solvay. Materie prime locali e stagionali, in un ambiente accogliente con vista mare." />
       </Helmet>
       <Header />
