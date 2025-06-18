@@ -19,7 +19,7 @@ export default function Home() {
         <meta name="description" content="Ristorante Vistamare - Cucina di pesce fresco a Rosignano Solvay. Specialità di mare, materie prime locali e stagionali in un ambiente accogliente con vista mare." />
         <meta name="keywords" content="ristorante pesce vistamare, ristorante vistamare, pesce fresco rosignano, ristorante mare castiglioncello, cucina gourmet toscana, ristorante pesce toscana, rosignano solvay ristorante, ristorante pesce castiglioncello, ristorante lusso costa toscana, miglior ristorante pesce livorno" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://vistamarerosignano.it/" />
+        <link rel="canonical" href="https://www.vistamarerosignano.it/" />
         
         <meta property="og:title" content="Ristorante Vistamare | Pesce Fresco Rosignano Solvay" />
         <meta property="og:description" content="Il miglior ristorante di pesce della costa toscana. Cucina stagionale e vista mare." />

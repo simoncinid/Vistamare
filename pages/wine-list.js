@@ -57,7 +57,7 @@ export default function WineList() {
         <meta name="description" content="Scopri la carta dei vini del Ristorante Vistamare - Selezione di vini bianchi, rossi, bollicine e champagne per accompagnare i nostri piatti di pesce" />
         <meta name="keywords" content="carta vini vistamare, vini pesce, bollicine rosignano, champagne ristorante, vini toscani, cantina ristorante" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://vistamarerosignano.it/wine-list" />
+        <link rel="canonical" href="https://www.vistamarerosignano.it/wine-list/" />
         
         <meta property="og:title" content="Carta dei Vini Ristorante Vistamare" />
         <meta property="og:description" content="Selezione di vini pregiati e bollicine per accompagnare la cucina di pesce" />
