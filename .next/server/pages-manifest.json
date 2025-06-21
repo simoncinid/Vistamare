@@ -3,6 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/menu": "pages/menu.js",
-  "/wine-list": "pages/wine-list.js"
+  "/cookiepolicy": "pages/cookiepolicy.js",
+  "/privacypolicy": "pages/privacypolicy.js"
 }

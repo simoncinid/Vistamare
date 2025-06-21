@@ -24,15 +24,15 @@ self.__BUILD_MANIFEST = {
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/menu": [
+    "/cookiepolicy": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/menu.js"
+      "static/chunks/pages/cookiepolicy.js"
     ],
-    "/wine-list": [
+    "/privacypolicy": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/wine-list.js"
+      "static/chunks/pages/privacypolicy.js"
     ]
   },
   "ampFirstPages": []

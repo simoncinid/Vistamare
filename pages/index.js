@@ -19,7 +19,7 @@ export default function Home() {
         <meta name="description" content="Ristorante Vistamare - Cucina di pesce fresco a Rosignano Solvay. Specialità di mare, materie prime locali e stagionali in un ambiente accogliente con vista mare." />
         <meta name="keywords" content="ristorante pesce vistamare, ristorante vistamare, pesce fresco rosignano, ristorante mare castiglioncello, cucina gourmet toscana, ristorante pesce toscana, rosignano solvay ristorante, ristorante pesce castiglioncello, ristorante lusso costa toscana, miglior ristorante pesce livorno" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://vistamarerosignano.it/" />
+        <link rel="canonical" href="https://www.vistamarerosignano.it/" />
         
         <meta property="og:title" content="Ristorante Vistamare | Pesce Fresco Rosignano Solvay" />
         <meta property="og:description" content="Il miglior ristorante di pesce della costa toscana. Cucina stagionale e vista mare." />
@@ -128,8 +128,8 @@ export default function Home() {
           <AnimatedText delay={300}>
             <ScrollReveal delay={100}>
               <p>
-              Benvenuti da <strong>Vistamare</strong>, il <strong>ristorante di pesce fresco</strong> a <strong>Rosignano Solvay</strong> dove ogni piatto racconta una storia di <span className={styles.highlight}>stagionalità</span>, <span className={styles.highlight}>sostenibilità</span> e <span className={styles.highlight}>territorio</span>.
-              <br></br>Situato sulla splendida <strong>costa toscana tra Castiglioncello e Cecina</strong>, crediamo che mangiare bene significhi prima di tutto scegliere con cura — per il gusto, per la salute e per l'ambiente.              
+              Benvenuti da Vistamare, il ristorante di pesce fresco a Rosignano Solvay dove ogni piatto racconta una storia di <span className={styles.highlight}>stagionalità</span>, <span className={styles.highlight}>sostenibilità</span> e <span className={styles.highlight}>territorio</span>.
+              <br></br>Situato sulla splendida costa toscana tra Castiglioncello e Cecina, crediamo che mangiare bene significhi prima di tutto scegliere con cura — per il gusto, per la salute e per l'ambiente.              
               </p>
             </ScrollReveal>
           </AnimatedText>
@@ -146,7 +146,7 @@ export default function Home() {
         
         <div className={styles.sectionSpacerLarge}>
           <AnimatedText delay={300}>
-            <p>Nel nostro <strong>ristorante di pesce a Rosignano Solvay</strong>, utilizziamo <span className={styles.highlight}>materie prime fresche</span> <strong>a kilometro zero</strong> seguendo la stagionalità del mare grazie a filiere corte e pratiche di riuso.
+            <p>Nel nostro ristorante di pesce a Rosignano Solvay, utilizziamo <span className={styles.highlight}>materie prime fresche</span> a kilometro zero seguendo la stagionalità del mare grazie a filiere corte e pratiche di riuso.
             Ogni giorno, portiamo il <span className={styles.highlight}>mare che abbiamo davanti</span> nei piatti che prepariamo.</p>
           </AnimatedText>
         </div>
@@ -157,9 +157,9 @@ export default function Home() {
         
         <div className={styles.sectionSpacerLarge}>
           <AnimatedText delay={300}>
-            <p>In un mondo che corre veloce, il nostro <strong>ristorante sulla costa</strong> ha scelto di rallentare.
+            <p>In un mondo che corre veloce, il nostro ristorante sulla costa ha scelto di rallentare.
               Perché solo così possiamo <span className={styles.highlight}>gustare</span> davvero ciò che la <span className={styles.highlight}>natura del mare</span> ci offre.<br></br>
-              <strong>Vistamare</strong> è un invito a vivere in modo più <span className={styles.highlight}>semplice</span> e sostenibile, nel cuore della <strong>Toscana marittima</strong>.</p>
+              Vistamare è un invito a vivere in modo più <span className={styles.highlight}>semplice</span> e sostenibile, nel cuore della Toscana marittima.</p>
           </AnimatedText>
 
           <div className={styles.gamberoRossoSection}>
@@ -168,7 +168,7 @@ export default function Home() {
                 <div className={styles.gamberoRossoText}>
                   Siamo orgogliosi di essere stati selezionati nella Guida
                   <span className={styles.gamberoRossoHighlight}>"Gambero Rosso"</span>
-                  2024 come <strong>eccellenza della ristorazione di pesce in Toscana</strong>
+                  2024 come eccellenza della ristorazione di pesce in Toscana
                 </div>
               </div>
             </AnimatedText>

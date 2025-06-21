@@ -53,7 +53,7 @@ const WineList = () => {
       <Helmet>
         <title>Carta dei Vini | Vistamare Ristorante</title>
         <meta name="description" content="Scopri la nostra selezione di vini: bianchi, rossi, bollicine e champagne d'eccellenza scelti dalla nostra sommelier per accompagnare ogni piatto." />
-        <meta property="og:image" content="https://vistamare.vercel.app/assets/cantina1.png" />
+        <meta property="og:image" content="https://vistamarerosignano.it/assets/cantina1.png" />
       </Helmet>
       <Header />
       
@@ -61,7 +61,7 @@ const WineList = () => {
       <section className={styles.degustazioneSection} style={{height: "600px"}}>
         <div className={styles.imagePart}>
           <img 
-            src={isMobile ? "/assets/cantina1.png" : "/assets/27.png"} 
+            src={isMobile ? "/assets/cantina1.png" : "/assets/img_scelte/27.png"} 
             alt="Wine selection" 
             className={styles.degustazioneImage} 
           />

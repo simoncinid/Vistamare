@@ -275,7 +275,7 @@ const Menu = () => {
       <Helmet>
         <title>Menu | Vistamare Ristorante</title>
         <meta name="description" content="Scopri il nostro menu di pesce fresco - Carpacci, primi piatti, secondi e il menu degustazione 'A mano libera' dello chef." />
-        <meta property="og:image" content="https://vistamare.vercel.app/assets/menu/heromenu.png" />
+        <meta property="og:image" content="https://vistamarerosignano.it/assets/menu/heromenu.png" />
       </Helmet>
       <Header />
       

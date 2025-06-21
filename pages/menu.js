@@ -270,7 +270,7 @@ export default function Menu() {
         <meta name="description" content="Scopri il menu del Ristorante Vistamare - Specialità di pesce fresco, crudi, primi e secondi piatti gourmet. Materie prime locali e stagionali." />
         <meta name="keywords" content="menu vistamare, menu pesce rosignano, piatti pesce toscana, crudi pesce, primi pesce, secondi pesce, menu ristorante" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://vistamarerosignano.it/menu" />
+        <link rel="canonical" href="https://www.vistamarerosignano.it/menu/" />
         
         <meta property="og:title" content="Menu Ristorante Vistamare | Pesce Fresco" />
         <meta property="og:description" content="Menu con specialità di pesce fresco e cucina gourmet del Ristorante Vistamare" />

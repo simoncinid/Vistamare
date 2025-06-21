@@ -3,6 +3,7 @@ import '../src/App.css'
 import '../styles/datepicker.css'
 import '../components/ScrollProgress.css'
 import Script from 'next/script'
+import Head from 'next/head'
 import { Analytics } from '@vercel/analytics/react'
 import ScrollProgress from '../components/ScrollProgress'
 import CustomCursor from '../components/CustomCursor'
@@ -25,6 +26,17 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        {/* FontAwesome */}
+        <link 
+          rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+          crossOrigin="anonymous" 
+          referrerPolicy="no-referrer" 
+        />
+      </Head>
+      
       {/* Google Fonts */}
       <Script
         src="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tangerine:wght@400;700&display=swap"
@@ -36,12 +48,6 @@ export default function App({ Component, pageProps }) {
       />
       <Script
         src="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        strategy="beforeInteractive"
-      />
-      
-      {/* FontAwesome */}
-      <Script
-        src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         strategy="beforeInteractive"
       />
 
