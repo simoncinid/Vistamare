@@ -29,38 +29,38 @@ const menuData = {
     dishes: [
       {
         id: 1,
-        name: "Capesante scottate al burro della Normandia",
-        description: "Capesante scottate al burro della Normandia, funghi Shiitake e profumo di mozzarella di bufala",
+        name: "Capesante scottate",
+        description: "Capesante scottate al burro della Normandia su gazpacho di pomodoro",
         price: "€20",
-        allergens: ["latte", "molluschi"]
+        allergens: ["molluschi", "latte"]
       },
       {
         id: 2,
-        name: "Riso venere, uovo pochè, scampi e crudo di verdure",
-        description: "Riso venere servito con uovo pochè, accompagnato da scampi freschi e crudo di verdure di stagione",
+        name: "Uovo croccante",
+        description: "Uovo croccante su ratatouille di verdure",
         price: "€20",
-        allergens: ["uova", "crostacei"]
+        allergens: ["uova"]
       },
       {
         id: 3,
-        name: "Quinto quarto di pescato del giorno",
-        description: "Quinto quarto di pescato del giorno con cipollina e salsa di pane",
-        price: "€18",
-        allergens: ["pesce", "glutine"]
+        name: "Julienne di calamari",
+        description: "Julienne di calamari all’insalata con sedano e agrumi",
+        price: "€25",
+        allergens: ["molluschi"]
       },
       {
         id: 4,
-        name: "Crudo di mazzancolla",
-        description: "Crudo di mazzancolla, salsa di pomodorino del Piennolo, mentuccia, limone e caviale, ai profumi di faggio",
-        price: "€25",
-        allergens: ["crostacei", "pesce"]
+        name: "Scampi in tempura",
+        description: "Scampi in tempura con la nostra maionese",
+        price: "€26",
+        allergens: ["crostacei", "uova", "glutine"]
       },
       {
         id: 5,
-        name: "Il mare in bocca",
-        description: "Carpaccio di tonno rosso in acqua di anguria in agro",
-        price: "€25",
-        allergens: ["pesce", "frutta"]
+        name: "Carpaccio di cernia",
+        description: "Carpaccio di cernia con acqua di anguria in agro",
+        price: "€24",
+        allergens: ["pesce"]
       }
     ]
   },
@@ -69,38 +69,38 @@ const menuData = {
     dishes: [
       {
         id: 6,
-        name: "Ricordo di gioventù",
-        description: "Scialatielli ai frutti di mare",
-        price: "€26",
-        allergens: ["glutine", "uova", "pesce", "molluschi"]
+        name: "Pettule fasule e cozze",
+        description: "Pettule fasule e cozze",
+        price: "€24",
+        allergens: ["glutine", "molluschi"]
       },
       {
         id: 7,
-        name: "Calle ripiene di mazzancolla e provola",
-        description: "Calle ripiene di mazzancolla e provola",
-        price: "€24",
-        allergens: ["glutine", "uova", "latte", "arachidi"]
+        name: "Raviolone ripieno",
+        description: "Raviolone ripieno di gamberi e calamari con salsa cacciuccata",
+        price: "€26",
+        allergens: ["glutine", "molluschi"]
       },
       {
         id: 8,
-        name: "Malfatti con pescato del giorno e polvere di cacao",
-        description: "Malfatti con pescato del giorno e polvere di cacao",
-        price: "€25",
-        allergens: ["pesce", "glutine"]
+        name: "Spaghetti al riccio",
+        description: "Spaghetti al riccio e crudo di spigola",
+        price: "€30",
+        allergens: ["glutine", "pesce"]
       },
       {
         id: 9,
-        name: "Linguine con rana pescatrice e caviale",
-        description: "Linguine con rana pescatrice e caviale",
+        name: "Fusillone allo scorfano",
+        description: "Fusillone allo scorfano locale",
         price: "€26",
-        allergens: ["pesce", "glutine"]
+        allergens: ["glutine", "pesce"]
       },
       {
         id: 10,
-        name: "Spaghettone aglio, olio, peperoncino e gambero rosso crudo",
-        description: "Spaghettone aglio, olio, peperoncino e gambero rosso crudo",
-        price: "€25",
-        allergens: ["glutine", "uova", "crostacei"]
+        name: "Linguine razza e caviale",
+        description: "Linguine razza e caviale",
+        price: "€26",
+        allergens: ["glutine", "pesce"]
       }
     ]
   },
@@ -109,23 +109,23 @@ const menuData = {
     dishes: [
       {
         id: 11,
-        name: "Scorfano a 360°",
-        description: "Scorfano a 360°",
-        price: "€9/hg",
-        allergens: ["pesce"]
+        name: "Filetto di ombrina",
+        description: "Filetto di ombrina con creme di piselli e vongole",
+        price: "€28",
+        allergens: ["pesce", "molluschi"]
       },
       {
         id: 12,
-        name: "Cernia 'green'",
-        description: "Cernia 'green' con crema di cozze e piselli in tre consistenze",
-        price: "€28",
-        allergens: ["molluschi", "latte"]
+        name: "Bocconi di astice",
+        description: "Bocconi di astice blu all’acquapazza",
+        price: "€13/hg",
+        allergens: ["crostacei"]
       },
       {
         id: 13,
-        name: "Filetto di orata fritto",
-        description: "Filetto di orata fritto e servito in umido",
-        price: "€24",
+        name: "Tonno rosso scottato",
+        description: "Tonno rosso scottato con crema di cipollina di Tropea",
+        price: "€28",
         allergens: ["pesce"]
       },
       {
@@ -137,14 +137,14 @@ const menuData = {
       },
       {
         id: 15,
-        name: "La nostra frittura di calamari locali",
-        description: "La nostra frittura di calamari locali e turbante di verdure di stagione",
-        price: "€27",
-        allergens: ["glutine", "molluschi"]
+        name: "Idea di frittura",
+        description: "La nostra idea di frittura",
+        price: "€35",
+        allergens: ["glutine", "pesce"]
       },
       {
         id: 16,
-        name: "Pescato locale del giorno",
+        name: "Pescato del giorno",
         description: "Pescato locale del giorno",
         price: "€9/hg",
         allergens: ["pesce"]
