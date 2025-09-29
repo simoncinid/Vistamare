@@ -32,7 +32,7 @@ const menuData = {
         name: "Capesante glassate al burro della Normandia",
         description: "Capesante glassate al burro della Normandia, crema di castagne e kaki vaniglia",
         price: "€20",
-        allergens: ["latte", "molluschi"]
+        allergens: ["molluschi", "latte"]
       },
       {
         id: 2,
@@ -144,7 +144,7 @@ const menuData = {
       },
       {
         id: 16,
-        name: "Pescato locale del giorno",
+        name: "Pescato del giorno",
         description: "Pescato locale del giorno",
         price: "€9/hg",
         allergens: ["pesce"]
