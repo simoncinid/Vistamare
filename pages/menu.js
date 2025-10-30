@@ -29,38 +29,38 @@ const menuData = {
     dishes: [
       {
         id: 1,
-        name: "Capesante glassate al burro della Normandia",
-        description: "Capesante glassate al burro della Normandia, crema di castagne e kaki vaniglia",
+        name: "Mazzancolle, ceviche, Piennolo e caviale",
+        description: "Mazzancolle, ceviche, Piennolo e caviale",
         price: "€20",
-        allergens: ["molluschi", "latte"]
+        allergens: ["molluschi", "pesce"]
       },
       {
         id: 2,
-        name: "La scarola con il cuore di orata",
-        description: "La scarola con il cuore di orata, acqua di melograno e susina",
-        price: "€22",
+        name: "Razza ai profumi di bergamotto",
+        description: "Razza tiepida ai profumi di bergamotto",
+        price: "€20",
         allergens: ["pesce"]
       },
       {
         id: 3,
-        name: "Cipollotto fresco passato al vapore",
-        description: "Cipollotto fresco passato al vapore, rana pescatrice e quintoquarto",
+        name: "Pannocchie e tartufo bianco",
+        description: "Pannocchie, verza, carota e tartufo bianco",
         price: "€22",
         allergens: ["pesce"]
       },
       {
         id: 4,
-        name: "Ricciola cotta nel latte di capra",
-        description: "Ricciola cotta nel latte di capra e foglie di cavolo nero",
+        name: "Battuta di orata e burrata",
+        description: "Battuta di orata e burrata ai lamponi",
         price: "€25",
         allergens: ["pesce", "latte"]
       },
       {
         id: 5,
-        name: "Uovo poché su crema di fagioli borlotti",
-        description: "Uovo poché su crema di fagioli borlotti e scampo",
-        price: "€22",
-        allergens: ["uova", "crostacei"]
+        name: "Parmigiana di baccalà",
+        description: "Parmigiana di baccalà, zucca e provolone del Monaco",
+        price: "€24",
+        allergens: ["pesce", "latte"]
       }
     ]
   },
@@ -69,38 +69,38 @@ const menuData = {
     dishes: [
       {
         id: 6,
-        name: "Bottoni ripieni di scorfano",
-        description: "Bottoni ripieni di scorfano",
+        name: "Scialatiello ai frutti di mare",
+        description: "Scialatiello ai frutti di mare invernali",
         price: "€24",
-        allergens: ["pesce", "glutine", "uova"]
+        allergens: ["molluschi", "crostacei", "glutine"]
       },
       {
         id: 7,
-        name: "Pettule fagioli e cozze",
-        description: "Pettule fagioli e cozze",
-        price: "€24",
-        allergens: ["pesce", "molluschi"]
+        name: "Velelle: ravioli di scorfano",
+        description: "Velelle: ravioli ripieni di scorfano serviti con intenso di mare",
+        price: "€25",
+        allergens: ["pesce", "glutine"]
       },
       {
         id: 8,
-        name: "Zuppetta di verdure con brodo dolce",
-        description: "Zuppetta di verdure con brodo dolce, seppia e ostrica",
+        name: "Linguine ai calamaretti",
+        description: "Linguine ai calamaretti spillo e pomodorini del Piennolo",
+        price: "€26",
+        allergens: ["molluschi", "glutine"]
+      },
+      {
+        id: 9,
+        name: "Ziti al polpo",
+        description: "Ziti al polpo nostrale",
         price: "€26",
         allergens: ["molluschi"]
       },
       {
-        id: 9,
-        name: "Spaghettone ai ricci di mare",
-        description: "Spaghettone ai ricci di mare",
-        price: "€30",
-        allergens: ["glutine", "pesce"]
-      },
-      {
         id: 10,
-        name: "Linguine ai calamaretti spillo",
-        description: "Linguine ai calamaretti spillo con acqua di pomodorino giallo del Piennolo",
-        price: "€28",
-        allergens: ["glutine", "molluschi"]
+        name: "Spaghetti con alici",
+        description: "Spaghetti con alici e bottarga",
+        price: "€22",
+        allergens: ["pesce", "glutine"]
       }
     ]
   },
@@ -109,42 +109,42 @@ const menuData = {
     dishes: [
       {
         id: 11,
-        name: "Lo spiedo di pescato e dell'orto",
-        description: "Lo spiedo di pescato e dell'orto",
-        price: "€30",
-        allergens: ["pesce", "glutine", "uova"]
+        name: "Bocconi di rana pescatrice",
+        description: "Bocconi di rana pescatrice e il suo quinto quarto",
+        price: "€24",
+        allergens: ["pesce"]
       },
       {
         id: 12,
-        name: "Ombrina beurre blanc e caviale rosso",
-        description: "Ombrina beurre blanc e caviale rosso",
-        price: "€26",
+        name: "Sogliola alla mugnaia",
+        description: "Sogliola alla mugnaia, porro e caviale",
+        price: "€28",
         allergens: ["pesce", "latte"]
       },
       {
         id: 13,
-        name: "Filetto di spigola cotto nei fumi di tamerici",
-        description: "Filetto di spigola cotto nei fumi di tamerici con bisque e ortaggi",
-        price: "€28",
-        allergens: ["pesce", "glutine"]
+        name: "Filetto di spigola",
+        description: "Filetto di spigola e brunoise di verdure",
+        price: "€25",
+        allergens: ["pesce"]
       },
       {
         id: 14,
-        name: "Stufato di polpo nostrale",
-        description: "Stufato di polpo nostrale",
-        price: "€25",
-        allergens: ["molluschi"]
+        name: "Ricciola scottata",
+        description: "Ricciola scottata e funghi Shiitake",
+        price: "€26",
+        allergens: ["pesce"]
       },
       {
         id: 15,
-        name: "Riso venere con seppie al nero",
-        description: "Riso venere con seppie al nero",
+        name: "Trancio di dentice",
+        description: "Trancio di dentice in guazzetto con pomodorini e vongole",
         price: "€25",
-        allergens: ["molluschi"]
+        allergens: ["pesce", "molluschi"]
       },
       {
         id: 16,
-        name: "Pescato del giorno",
+        name: "Pescato locale",
         description: "Pescato locale del giorno",
         price: "€9/hg",
         allergens: ["pesce"]
