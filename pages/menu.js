@@ -31,14 +31,14 @@ const menuData = {
         id: 1,
         name: "Ricciola dry, ristretto e lattuga di mare",
         description: "Ricciola in maturazione dry, ristretto di pesce e lattuga di mare",
-        price: "€22",
+        price: "€20",
         allergens: ["pesce"]  // 2, 4
       },
       {
         id: 2,
         name: "Spigola e pannocchia citrus-soy dressing",
         description: "Spigola e pannocchia citrus-soy dressing",
-        price: "€20",
+        price: "€18",
         allergens: ["pesce", "soia"]  // 2, 4, 6, 11
       },
       {
@@ -52,14 +52,14 @@ const menuData = {
         id: 4,
         name: "Patata pavèe, scorfano e tartufo nero",
         description: "Patata pavèe, scorfano e tartufo nero pregiato",
-        price: "€25",
+        price: "€24",
         allergens: ["pesce"]  // 4
       },
       {
         id: 5,
         name: "Tagliatelline passera o rombo al vapore",
         description: "Tagliatelline di passera di mare o rombo al vapore con vinaigrette al lime e finocchio di mare",
-        price: "€24",
+        price: "€22",
         allergens: ["pesce", "glutine"]  // 4
       }
     ]
@@ -111,35 +111,35 @@ const menuData = {
         id: 11,
         name: "Zuppetta dell'orto e uovo pochè",
         description: "Zuppetta dell'orto e uovo pochè",
-        price: "€26",
+        price: "€24",
         allergens: ["uova", "frutta"]
       },
       {
         id: 12,
         name: "Seppie al burro nocciola e limone",
         description: "Seppie dorate al burro nocciola e limone",
-        price: "€26",
+        price: "€24",
         allergens: ["glutine", "latte", "molluschi"]
       },
       {
         id: 13,
         name: "Rombo alla brace e funghi Shiitake",
         description: "Filetto di rombo alla brace e funghi Shiitake",
-        price: "€35",
+        price: "€28",
         allergens: ["pesce"]
       },
       {
         id: 14,
         name: "Sashimi barbabietola e palamita",
         description: "Sashimi di barbabietola e palamita in salsa di mare",
-        price: "€26",
+        price: "€24",
         allergens: ["crostacei", "pesce", "soia", "molluschi"]
       },
       {
         id: 15,
         name: "Dentice fritto, tonno Evoluzione e peperoni",
         description: "Trancio di dentice fritto, carpaccio di tonno \"Evoluzione\" e acqua di peperoni grigliati",
-        price: "€35",
+        price: "€30",
         allergens: ["glutine", "pesce"]
       },
       {
