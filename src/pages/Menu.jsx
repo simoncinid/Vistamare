@@ -40,7 +40,7 @@ const menuData = {
     dishes: [
       {
         id: 1,
-        name: "Ricciola in maturazione dry, ristretto di pesce e lattuga di mare",
+        name: "Ricciola dry, ristretto e lattuga di mare",
         description: "Ricciola in maturazione dry, ristretto di pesce e lattuga di mare",
         price: "€22",
         allergens: ["pesce"]  // 2, 4
@@ -61,14 +61,14 @@ const menuData = {
       },
       {
         id: 4,
-        name: "Patata pavèe, scorfano e tartufo nero pregiato",
+        name: "Patata pavèe, scorfano e tartufo nero",
         description: "Patata pavèe, scorfano e tartufo nero pregiato",
         price: "€25",
         allergens: ["pesce"]  // 4
       },
       {
         id: 5,
-        name: "Tagliatelline di passera di mare o rombo al vapore con vinaigrette al lime e finocchio di mare",
+        name: "Tagliatelline passera o rombo al vapore",
         description: "Tagliatelline di passera di mare o rombo al vapore con vinaigrette al lime e finocchio di mare",
         price: "€24",
         allergens: ["pesce", "glutine"]  // 4
@@ -87,7 +87,7 @@ const menuData = {
       },
       {
         id: 7,
-        name: "Mezzi paccheri ai frutti di mare e pistilli di zafferano",
+        name: "Mezzi paccheri frutti di mare e zafferano",
         description: "Mezzi paccheri ai frutti di mare e pistilli di zafferano",
         price: "€26",
         allergens: ["glutine", "crostacei", "pesce", "molluschi"]  // 1, 2, 4, 14
@@ -127,28 +127,28 @@ const menuData = {
       },
       {
         id: 12,
-        name: "Seppie dorate al burro nocciola e limone",
+        name: "Seppie al burro nocciola e limone",
         description: "Seppie dorate al burro nocciola e limone",
         price: "€26",
         allergens: ["glutine", "latte", "molluschi"]  // 1, 7, 14
       },
       {
         id: 13,
-        name: "Filetto di rombo alla brace e funghi Shiitake",
+        name: "Rombo alla brace e funghi Shiitake",
         description: "Filetto di rombo alla brace e funghi Shiitake",
         price: "€35",
         allergens: ["pesce"]  // 4
       },
       {
         id: 14,
-        name: "Sashimi di barbabietola e palamita in salsa di mare",
+        name: "Sashimi barbabietola e palamita",
         description: "Sashimi di barbabietola e palamita in salsa di mare",
         price: "€26",
         allergens: ["crostacei", "pesce", "soia", "molluschi"]  // 2, 4, 6, 14
       },
       {
         id: 15,
-        name: "Trancio di dentice fritto, carpaccio di tonno \"Evoluzione\" e acqua di peperoni grigliati",
+        name: "Dentice fritto, tonno Evoluzione e peperoni",
         description: "Trancio di dentice fritto, carpaccio di tonno \"Evoluzione\" e acqua di peperoni grigliati",
         price: "€35",
         allergens: ["glutine", "pesce"]  // 1, 4
@@ -307,7 +307,7 @@ const Menu = () => {
               Il menù degustazione viene servito per tutti i componenti del tavolo.
               </p>
             </ScrollReveal>
-            <p className={styles.wineNote} style={{fontStyle: "italic"}}>60€ vini esclusi</p>
+            <p className={styles.priceHighlight} style={{fontStyle: "italic"}}>60€ vini esclusi</p>
           </div>
         </div>
       </section>
