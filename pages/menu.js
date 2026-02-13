@@ -29,38 +29,38 @@ const menuData = {
     dishes: [
       {
         id: 1,
-        name: "Mazzancolle, ceviche, Piennolo e caviale",
-        description: "Mazzancolle, ceviche, Piennolo e caviale",
-        price: "€20",
-        allergens: ["molluschi", "pesce"]
+        name: "Ricciola in maturazione dry, ristretto di pesce e lattuga di mare",
+        description: "Ricciola in maturazione dry, ristretto di pesce e lattuga di mare",
+        price: "€22",
+        allergens: ["pesce"]  // 2, 4
       },
       {
         id: 2,
-        name: "Razza ai profumi di bergamotto",
-        description: "Razza tiepida ai profumi di bergamotto",
+        name: "Spigola e pannocchia citrus-soy dressing",
+        description: "Spigola e pannocchia citrus-soy dressing",
         price: "€20",
-        allergens: ["pesce"]
+        allergens: ["pesce", "soia"]  // 2, 4, 6, 11
       },
       {
         id: 3,
-        name: "Pannocchie e tartufo bianco",
-        description: "Pannocchie, verza, carota e tartufo bianco",
-        price: "€22",
-        allergens: ["pesce"]
+        name: "Capesante e rana pescatrice alla brace",
+        description: "Capesante e rana pescatrice alla brace",
+        price: "€24",
+        allergens: ["pesce", "molluschi"]  // 4, 14
       },
       {
         id: 4,
-        name: "Battuta di orata e burrata",
-        description: "Battuta di orata e burrata ai lamponi",
+        name: "Patata pavèe, scorfano e tartufo nero pregiato",
+        description: "Patata pavèe, scorfano e tartufo nero pregiato",
         price: "€25",
-        allergens: ["pesce", "latte"]
+        allergens: ["pesce"]  // 4
       },
       {
         id: 5,
-        name: "Parmigiana di baccalà",
-        description: "Parmigiana di baccalà, zucca e provolone del Monaco",
+        name: "Tagliatelline di passera di mare o rombo al vapore con vinaigrette al lime e finocchio di mare",
+        description: "Tagliatelline di passera di mare o rombo al vapore con vinaigrette al lime e finocchio di mare",
         price: "€24",
-        allergens: ["pesce", "latte"]
+        allergens: ["pesce", "glutine"]  // 4
       }
     ]
   },
@@ -69,38 +69,38 @@ const menuData = {
     dishes: [
       {
         id: 6,
-        name: "Scialatiello ai frutti di mare",
-        description: "Scialatiello ai frutti di mare invernali",
-        price: "€24",
-        allergens: ["molluschi", "crostacei", "glutine"]
+        name: "Spaghettone riccio e ostriche",
+        description: "Spaghettone riccio e ostriche",
+        price: "€28",
+        allergens: ["glutine", "molluschi"]
       },
       {
         id: 7,
-        name: "Velelle: ravioli di scorfano",
-        description: "Velelle: ravioli ripieni di scorfano serviti con intenso di mare",
-        price: "€25",
-        allergens: ["pesce", "glutine"]
+        name: "Mezzi paccheri ai frutti di mare e pistilli di zafferano",
+        description: "Mezzi paccheri ai frutti di mare e pistilli di zafferano",
+        price: "€26",
+        allergens: ["glutine", "crostacei", "pesce", "molluschi"]
       },
       {
         id: 8,
-        name: "Linguine ai calamaretti",
-        description: "Linguine ai calamaretti spillo e pomodorini del Piennolo",
+        name: "Eliche triglie e sgombro",
+        description: "Eliche triglie e sgombro",
         price: "€26",
-        allergens: ["molluschi", "glutine"]
+        allergens: ["glutine", "pesce"]
       },
       {
         id: 9,
-        name: "Ziti al polpo",
-        description: "Ziti al polpo nostrale",
-        price: "€26",
-        allergens: ["molluschi"]
+        name: "Reginette in zuppetta di pesce di scoglio",
+        description: "Reginette in zuppetta di pesce di scoglio",
+        price: "€24",
+        allergens: ["glutine", "pesce", "molluschi"]
       },
       {
         id: 10,
-        name: "Spaghetti con alici",
-        description: "Spaghetti con alici e bottarga",
-        price: "€22",
-        allergens: ["pesce", "glutine"]
+        name: "Linguine con astice blù",
+        description: "Linguine con astice blù",
+        price: "€35",
+        allergens: ["glutine", "crostacei"]
       }
     ]
   },
@@ -109,42 +109,42 @@ const menuData = {
     dishes: [
       {
         id: 11,
-        name: "Bocconi di rana pescatrice",
-        description: "Bocconi di rana pescatrice e il suo quinto quarto",
-        price: "€24",
-        allergens: ["pesce"]
+        name: "Zuppetta dell'orto e uovo pochè",
+        description: "Zuppetta dell'orto e uovo pochè",
+        price: "€26",
+        allergens: ["uova", "frutta"]
       },
       {
         id: 12,
-        name: "Sogliola alla mugnaia",
-        description: "Sogliola alla mugnaia, porro e caviale",
-        price: "€28",
-        allergens: ["pesce", "latte"]
+        name: "Seppie dorate al burro nocciola e limone",
+        description: "Seppie dorate al burro nocciola e limone",
+        price: "€26",
+        allergens: ["glutine", "latte", "molluschi"]
       },
       {
         id: 13,
-        name: "Filetto di spigola",
-        description: "Filetto di spigola e brunoise di verdure",
-        price: "€25",
+        name: "Filetto di rombo alla brace e funghi Shiitake",
+        description: "Filetto di rombo alla brace e funghi Shiitake",
+        price: "€35",
         allergens: ["pesce"]
       },
       {
         id: 14,
-        name: "Ricciola scottata",
-        description: "Ricciola scottata e funghi Shiitake",
+        name: "Sashimi di barbabietola e palamita in salsa di mare",
+        description: "Sashimi di barbabietola e palamita in salsa di mare",
         price: "€26",
-        allergens: ["pesce"]
+        allergens: ["crostacei", "pesce", "soia", "molluschi"]
       },
       {
         id: 15,
-        name: "Trancio di dentice",
-        description: "Trancio di dentice in guazzetto con pomodorini e vongole",
-        price: "€25",
-        allergens: ["pesce", "molluschi"]
+        name: "Trancio di dentice fritto, carpaccio di tonno \"Evoluzione\" e acqua di peperoni grigliati",
+        description: "Trancio di dentice fritto, carpaccio di tonno \"Evoluzione\" e acqua di peperoni grigliati",
+        price: "€35",
+        allergens: ["glutine", "pesce"]
       },
       {
         id: 16,
-        name: "Pescato locale",
+        name: "Pescato locale del giorno",
         description: "Pescato locale del giorno",
         price: "€9/hg",
         allergens: ["pesce"]
@@ -318,7 +318,7 @@ export default function Menu() {
               className={styles.proposteTitle} 
               style={{
                 color: "#04062d", 
-                fontWeight: "bold", 
+                fontStyle: "italic",
                 marginBottom: "2rem", 
                 paddingTop: "3rem",
                 fontSize: "clamp(1.2rem, 5vw, 3rem)"
@@ -329,13 +329,13 @@ export default function Menu() {
             
             <ScrollReveal delay={100}>
               <p className={styles.degustazioneDescription} style={{color: "#04062d", marginTop: "0", paddingBottom: "1rem"}}>
-              Percorso di 9 portate a sorpresa, ideato dallo Chef e ispirato al pescato del giorno.<br/>
-              Si prega di comunicare in anticipo eventuali allergie o intolleranze per consentirci di offrire un'esperienza ottimale.<br/>
-              Il menù degustazione viene servito per l'intero tavolo.
+              Menù degustazione di 6 passi a sorpresa dello chef.<br/>
+              Si prega di comunicare in anticipo eventuali allergie o intolleranze,<br/>
+              per poter offrire un percorso ottimale.<br/>
+              Il menù degustazione viene servito per tutti i componenti del tavolo.
               </p>
             </ScrollReveal>
-            <div className={styles.priceHighlight}>90€</div>
-            <p className={styles.wineNote}>vini esclusi</p>
+            <p className={styles.wineNote} style={{fontStyle: "italic"}}>60€ vini esclusi</p>
           </div>
         </div>
       </section>
