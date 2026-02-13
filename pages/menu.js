@@ -85,7 +85,7 @@ const menuData = {
         id: 8,
         name: "Eliche triglie e sgombro",
         description: "Eliche triglie e sgombro",
-        price: "€26",
+        price: "€24",
         allergens: ["glutine", "pesce"]
       },
       {
